@@ -3,27 +3,84 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>Hyper - Responsive Bootstrap 4 Admin Dashboard</title>
+        <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+        <title>Pandemia.fi</title>
+        <meta property="og:title" content="Pandemia.fi">
+        <meta property="og:description" content="COVID-19-epidemian syventävä tietopankki">
+        <meta property="og:image" content="assets/images/social_share_2.jpg">
+        <meta property="og:url" content="https://www.pandemia.fi">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <meta property="og:site_name" content="Pandemia.fi">
+        <meta name="twitter:image:alt" content="Seuranta">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-        <meta content="Coderthemes" name="author" />
+        <meta content="Kaikki tieto Koronaviruksesta" name="description" />
+        <meta content="Daniel" name="author" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
 
         <!-- third party css -->
-        <link href="assets/css/vendor/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/vendor/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/vendor/responsive.bootstrap4.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/vendor/buttons.bootstrap4.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/vendor/select.bootstrap4.css" rel="stylesheet" type="text/css" />
         <!-- third party css end -->
 
         <!-- App css -->
         <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/app-creative.min.css" rel="stylesheet" type="text/css" id="light-style" />
         <link href="assets/css/app-creative-dark.min.css" rel="stylesheet" type="text/css" id="dark-style" />
-        
+
+
+        <link rel="stylesheet" href="https://use.typekit.net/xgv5kbo.css">
+<style>
+    body {
+      /* color: #919ca7; */
+      color: #000;
+    }
+
+    a {
+      /* color: #44badc; */
+      color: hsl(193.4, 80%, 40%);
+    }
+
+    .text-white-50 {
+      /* color: rgba(255,255,255,.5) !important; */
+      color: rgba(255,255,255,.9) !important;
+    }
+
+    .bg-dark {
+      /* background-color: #474d56 !important; */
+      background-color: hsl(216, 9.6%, 15.8%) !important;
+    }
+
+    .table {
+      /* color: #919ca7; */
+      color: hsl(210, 11.1%, 20%);
+    }
+
+    .btn-success {
+      /* background-color: #42d29d; */
+      /* border-color: #42d29d; */
+      background-color: hsl(157.9, 61.5%, 45%);
+      border-color: hsl(157.9, 61.5%, 45%);
+    }
+
+    .btn-info {
+      /* background-color: #44badc; */
+      /* border-color: #44badc; */
+      background-color: hsl(193.4, 68.5%, 48%);
+      border-color: hsl(193.4, 68.5%, 48%);
+    }
+
+
+</style>
+
+
 
     </head>
 
     <body class="loading" data-layout="topnav" data-layout-config='{"layoutBoxed":false,"darkMode":false,"showRightSidebarOnStart": true}'>
-        
         <!-- Begin page -->
         <div class="wrapper">
 
@@ -31,546 +88,1049 @@
             <!-- Start Page Content here -->
             <!-- ============================================================== -->
 
-            <div class="content-page">
-                <div class="content">
-                    @@include('./partials/horizontal-nav.html')
-                    
-                    <!-- Start Content-->
-                    <div class="container-fluid">
 
-                        <!-- start page title -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="page-title-box">
-                                    <div class="page-title-right">
-                                        <form class="form-inline">
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control form-control-light" id="dash-daterange">
-                                                    <div class="input-group-append">
-                                                        <span class="input-group-text bg-info border-info text-white">
-                                                            <i class="mdi mdi-calendar-range font-13"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <a href="javascript: void(0);" class="btn btn-info ml-2">
-                                                <i class="mdi mdi-autorenew"></i>
-                                            </a>
-                                        </form>
-                                    </div>
-                                    <h4 class="page-title">Dashboard</h4>
-                                </div>
+        <!-- START HERO -->
+        <section class="hero-section">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-start">
+                    <div class="col-lg-6 col-md-6
+                     col-xl-4">
+                        <div class="mt-md-4">
+                            <div>
+                                <span class="badge badge-info badge-pill">Päivitetty 20.3 15:37</span>
                             </div>
-                        </div>
-                        <!-- end page title -->
+                            <h1 class="text-white mb-4 mt-3 hero-title">
+                                Pandemia.fi
+                            </h1>
 
-                        <div class="row">
-                            <div class="col-xl-5 col-lg-6">
-
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="card widget-flat">
-                                            <div class="card-body">
-                                                <div class="float-right">
-                                                    <i class="mdi mdi-account-multiple widget-icon bg-success-lighten text-success"></i>
-                                                </div>
-                                                <h5 class="text-muted font-weight-normal mt-0" title="Number of Customers">Customers</h5>
-                                                <h3 class="mt-3 mb-3">36,254</h3>
-                                                <p class="mb-0 text-muted">
-                                                    <span class="text-success mr-2"><i class="mdi mdi-arrow-up-bold"></i> 5.27%</span>
-                                                    <span class="text-nowrap">Since last month</span>  
-                                                </p>
-                                            </div> <!-- end card-body-->
-                                        </div> <!-- end card-->
-                                    </div> <!-- end col-->
-
-                                    <div class="col-lg-6">
-                                        <div class="card widget-flat">
-                                            <div class="card-body">
-                                                <div class="float-right">
-                                                    <i class="mdi mdi-cart-plus widget-icon bg-danger-lighten text-danger"></i>
-                                                </div>
-                                                <h5 class="text-muted font-weight-normal mt-0" title="Number of Orders">Orders</h5>
-                                                <h3 class="mt-3 mb-3">5,543</h3>
-                                                <p class="mb-0 text-muted">
-                                                    <span class="text-danger mr-2"><i class="mdi mdi-arrow-down-bold"></i> 1.08%</span>
-                                                    <span class="text-nowrap">Since last month</span>
-                                                </p>
-                                            </div> <!-- end card-body-->
-                                        </div> <!-- end card-->
-                                    </div> <!-- end col-->
-                                </div> <!-- end row -->
-
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="card widget-flat">
-                                            <div class="card-body">
-                                                <div class="float-right">
-                                                    <i class="mdi mdi-currency-usd widget-icon bg-info-lighten text-info"></i>
-                                                </div>
-                                                <h5 class="text-muted font-weight-normal mt-0" title="Average Revenue">Revenue</h5>
-                                                <h3 class="mt-3 mb-3">$6,254</h3>
-                                                <p class="mb-0 text-muted">
-                                                    <span class="text-danger mr-2"><i class="mdi mdi-arrow-down-bold"></i> 7.00%</span>
-                                                    <span class="text-nowrap">Since last month</span>
-                                                </p>
-                                            </div> <!-- end card-body-->
-                                        </div> <!-- end card-->
-                                    </div> <!-- end col-->
-
-                                    <div class="col-lg-6">
-                                        <div class="card widget-flat">
-                                            <div class="card-body">
-                                                <div class="float-right">
-                                                    <i class="mdi mdi-pulse widget-icon bg-warning-lighten text-warning"></i>
-                                                </div>
-                                                <h5 class="text-muted font-weight-normal mt-0" title="Growth">Growth</h5>
-                                                <h3 class="mt-3 mb-3">+ 30.56%</h3>
-                                                <p class="mb-0 text-muted">
-                                                    <span class="text-success mr-2"><i class="mdi mdi-arrow-up-bold"></i> 4.87%</span>
-                                                    <span class="text-nowrap">Since last month</span>
-                                                </p>
-                                            </div> <!-- end card-body-->
-                                        </div> <!-- end card-->
-                                    </div> <!-- end col-->
-                                </div> <!-- end row -->
-
-                            </div> <!-- end col -->
-
-                            <div class="col-xl-7  col-lg-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="dropdown float-right">
-                                            <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-vertical"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Profit</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
-                                            </div>
-                                        </div>
-                                        <h4 class="header-title mb-3">Projections Vs Actuals</h4>
-
-                                        <div id="high-performing-product" class="apex-charts"
-                                            data-colors="#fa6767,#e3eaef"></div>
-
-                                        <!-- <div style="height: 263px;" class="chartjs-chart">
-                                            <canvas id="high-performing-product"></canvas>
-                                        </div> -->
-                                    </div> <!-- end card-body-->
-                                </div> <!-- end card-->
-
-                            </div> <!-- end col -->
-                        </div>
-                        <!-- end row -->
-
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="dropdown float-right">
-                                            <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-vertical"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Profit</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
-                                            </div>
-                                        </div>
-                                        <h4 class="header-title mb-3">Revenue</h4>
-
-                                        <div class="chart-content-bg">
-                                            <div class="row text-center">
-                                                <div class="col-md-6">
-                                                    <p class="text-muted mb-0 mt-3">Current Week</p>
-                                                    <h2 class="font-weight-normal mb-3">
-                                                        <small class="mdi mdi-checkbox-blank-circle text-primary align-middle mr-1"></small>
-                                                        <span>$58,254</span>
-                                                    </h2>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p class="text-muted mb-0 mt-3">Previous Week</p>
-                                                    <h2 class="font-weight-normal mb-3">
-                                                        <small class="mdi mdi-checkbox-blank-circle text-success align-middle mr-1"></small>
-                                                        <span>$69,524</span>
-                                                    </h2>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="dash-item-overlay d-none d-md-block">
-                                            <h5>Today's Earning: $2,562.30</h5>
-                                            <p class="text-muted font-13 mb-3 mt-2">Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-                                                Etiam rhoncus...</p>
-                                            <a href="javascript: void(0);" class="btn btn-outline-primary">View Statements
-                                                <i class="mdi mdi-arrow-right ml-2"></i>
-                                            </a>
-                                        </div>
-
-                                        <div id="revenue-chart" class="apex-charts mt-3" 
-                                            data-colors="#3688fc,#f9bc0d"></div>
-                                    </div> <!-- end card-body-->
-                                </div> <!-- end card-->
-                            </div> <!-- end col-->
-
-                            <div class="col-lg-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="dropdown float-right">
-                                            <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-vertical"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Profit</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
-                                            </div>
-                                        </div>
-                                        <h4 class="header-title">Revenue By Location</h4>
-                                        <div class="mb-4 mt-4">
-                                            <div id="world-map-markers" style="height: 224px"></div>
-                                        </div>
-
-                                        <h5 class="mb-1 mt-0 font-weight-normal">New York</h5>
-                                        <div class="progress-w-percent">
-                                            <span class="progress-value font-weight-bold">72k </span>
-                                            <div class="progress progress-sm">
-                                                <div class="progress-bar bg-dark" role="progressbar" style="width: 72%;" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-
-                                        <h5 class="mb-1 mt-0 font-weight-normal">San Francisco</h5>
-                                        <div class="progress-w-percent">
-                                            <span class="progress-value font-weight-bold">39k </span>
-                                            <div class="progress progress-sm">
-                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 39%;" aria-valuenow="39" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-
-                                        <h5 class="mb-1 mt-0 font-weight-normal">Sydney</h5>
-                                        <div class="progress-w-percent">
-                                            <span class="progress-value font-weight-bold">25k </span>
-                                            <div class="progress progress-sm">
-                                                <div class="progress-bar bg-info" role="progressbar" style="width: 39%;" aria-valuenow="39" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-
-                                        <h5 class="mb-1 mt-0 font-weight-normal">Singapore</h5>
-                                        <div class="progress-w-percent mb-0">
-                                            <span class="progress-value font-weight-bold">61k </span>
-                                            <div class="progress progress-sm">
-                                                <div class="progress-bar bg-success" role="progressbar" style="width: 61%;" aria-valuenow="61" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div> <!-- end card-body-->
-                                </div> <!-- end card-->
-                            </div> <!-- end col-->
-                        </div>
-                        <!-- end row -->
-
-
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-12 order-lg-2 order-xl-1">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <a href="" class="btn btn-sm btn-link float-right mb-3">Export
-                                            <i class="mdi mdi-download ml-1"></i>
-                                        </a>
-                                        <h4 class="header-title mt-2">Top Selling Products</h4>
-
-                                        <div class="table-responsive">
-                                            <table class="table table-centered table-nowrap table-hover mb-0">
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <h5 class="font-14 my-1 font-weight-normal">ASOS Ridley High Waist</h5>
-                                                            <span class="text-muted font-13">07 April 2018</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="font-14 my-1 font-weight-normal">$79.49</h5>
-                                                            <span class="text-muted font-13">Price</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="font-14 my-1 font-weight-normal">82</h5>
-                                                            <span class="text-muted font-13">Quantity</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="font-14 my-1 font-weight-normal">$6,518.18</h5>
-                                                            <span class="text-muted font-13">Amount</span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <h5 class="font-14 my-1 font-weight-normal">Marco Lightweight Shirt</h5>
-                                                            <span class="text-muted font-13">25 March 2018</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="font-14 my-1 font-weight-normal">$128.50</h5>
-                                                            <span class="text-muted font-13">Price</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="font-14 my-1 font-weight-normal">37</h5>
-                                                            <span class="text-muted font-13">Quantity</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="font-14 my-1 font-weight-normal">$4,754.50</h5>
-                                                            <span class="text-muted font-13">Amount</span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <h5 class="font-14 my-1 font-weight-normal">Half Sleeve Shirt</h5>
-                                                            <span class="text-muted font-13">17 March 2018</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="font-14 my-1 font-weight-normal">$39.99</h5>
-                                                            <span class="text-muted font-13">Price</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="font-14 my-1 font-weight-normal">64</h5>
-                                                            <span class="text-muted font-13">Quantity</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="font-14 my-1 font-weight-normal">$2,559.36</h5>
-                                                            <span class="text-muted font-13">Amount</span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <h5 class="font-14 my-1 font-weight-normal">Lightweight Jacket</h5>
-                                                            <span class="text-muted font-13">12 March 2018</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="font-14 my-1 font-weight-normal">$20.00</h5>
-                                                            <span class="text-muted font-13">Price</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="font-14 my-1 font-weight-normal">184</h5>
-                                                            <span class="text-muted font-13">Quantity</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="font-14 my-1 font-weight-normal">$3,680.00</h5>
-                                                            <span class="text-muted font-13">Amount</span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <h5 class="font-14 my-1 font-weight-normal">Marco Shoes</h5>
-                                                            <span class="text-muted font-13">05 March 2018</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="font-14 my-1 font-weight-normal">$28.49</h5>
-                                                            <span class="text-muted font-13">Price</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="font-14 my-1 font-weight-normal">69</h5>
-                                                            <span class="text-muted font-13">Quantity</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="font-14 my-1 font-weight-normal">$1,965.81</h5>
-                                                            <span class="text-muted font-13">Amount</span>
-                                                        </td>
-                                                    </tr>
-
-                                                </tbody>
-                                            </table>
-                                        </div> <!-- end table-responsive-->
-                                    </div> <!-- end card-body-->
-                                </div> <!-- end card-->
-                            </div> <!-- end col-->
-
-                            <div class="col-xl-3 col-lg-6 order-lg-1">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="dropdown float-right">
-                                            <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-vertical"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Profit</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
-                                            </div>
-                                        </div>
-                                        <h4 class="header-title">Total Sales</h4>
-
-                                        <div id="average-sales" class="apex-charts mb-4 mt-4"
-                                            data-colors="#3688fc,#6c757d,#42d29d,#fa6767"></div>
-                                       
-
-                                        <div class="chart-widget-list">
-                                            <p>
-                                                <i class="mdi mdi-square text-primary"></i> Direct
-                                                <span class="float-right">$300.56</span>
-                                            </p>
-                                            <p>
-                                                <i class="mdi mdi-square text-dark"></i> Affilliate
-                                                <span class="float-right">$135.18</span>
-                                            </p>
-                                            <p>
-                                                <i class="mdi mdi-square text-success"></i> Sponsored
-                                                <span class="float-right">$48.96</span>
-                                            </p>
-                                            <p class="mb-0">
-                                                <i class="mdi mdi-square text-danger"></i> E-mail
-                                                <span class="float-right">$154.02</span>
-                                            </p>
-                                        </div>
-                                    </div> <!-- end card-body-->
-                                </div> <!-- end card-->
-                            </div> <!-- end col-->
-
-                            <div class="col-xl-3 col-lg-6 order-lg-1">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="dropdown float-right">
-                                            <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-vertical"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Profit</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
-                                            </div>
-                                        </div>
-                                        <h4 class="header-title mb-2">Recent Activity</h4>
-
-                                        <div data-simplebar style="max-height: 424px;">
-                                            <div class="timeline-alt pb-0">
-                                                <div class="timeline-item">
-                                                    <i class="mdi mdi-upload bg-info-lighten text-info timeline-icon"></i>
-                                                    <div class="timeline-item-info">
-                                                        <a href="#" class="text-info font-weight-bold mb-1 d-block">You sold an item</a>
-                                                        <small>Paul Burgess just purchased “Hyper - Admin Dashboard”!</small>
-                                                        <p class="mb-0 pb-2">
-                                                            <small class="text-muted">5 minutes ago</small>
-                                                        </p>
-                                                    </div>
-                                                </div>
-
-                                                <div class="timeline-item">
-                                                    <i class="mdi mdi-airplane bg-primary-lighten text-primary timeline-icon"></i>
-                                                    <div class="timeline-item-info">
-                                                        <a href="#" class="text-primary font-weight-bold mb-1 d-block">Product on the Bootstrap Market</a>
-                                                        <small>Dave Gamache added
-                                                            <span class="font-weight-bold">Admin Dashboard</span>
-                                                        </small>
-                                                        <p class="mb-0 pb-2">
-                                                            <small class="text-muted">30 minutes ago</small>
-                                                        </p>
-                                                    </div>
-                                                </div>
-
-                                                <div class="timeline-item">
-                                                    <i class="mdi mdi-microphone bg-info-lighten text-info timeline-icon"></i>
-                                                    <div class="timeline-item-info">
-                                                        <a href="#" class="text-info font-weight-bold mb-1 d-block">Robert Delaney</a>
-                                                        <small>Send you message
-                                                            <span class="font-weight-bold">"Are you there?"</span>
-                                                        </small>
-                                                        <p class="mb-0 pb-2">
-                                                            <small class="text-muted">2 hours ago</small>
-                                                        </p>
-                                                    </div>
-                                                </div>
-
-                                                <div class="timeline-item">
-                                                    <i class="mdi mdi-upload bg-primary-lighten text-primary timeline-icon"></i>
-                                                    <div class="timeline-item-info">
-                                                        <a href="#" class="text-primary font-weight-bold mb-1 d-block">Audrey Tobey</a>
-                                                        <small>Uploaded a photo
-                                                            <span class="font-weight-bold">"Error.jpg"</span>
-                                                        </small>
-                                                        <p class="mb-0 pb-2">
-                                                            <small class="text-muted">14 hours ago</small>
-                                                        </p>
-                                                    </div>
-                                                </div>
-
-                                                <div class="timeline-item">
-                                                    <i class="mdi mdi-upload bg-info-lighten text-info timeline-icon"></i>
-                                                    <div class="timeline-item-info">
-                                                        <a href="#" class="text-info font-weight-bold mb-1 d-block">You sold an item</a>
-                                                        <small>Paul Burgess just purchased “Hyper - Admin Dashboard”!</small>
-                                                        <p class="mb-0 pb-2">
-                                                            <small class="text-muted">16 hours ago</small>
-                                                        </p>
-                                                    </div>
-                                                </div>
-
-                                                <div class="timeline-item">
-                                                    <i class="mdi mdi-airplane bg-primary-lighten text-primary timeline-icon"></i>
-                                                    <div class="timeline-item-info">
-                                                        <a href="#" class="text-primary font-weight-bold mb-1 d-block">Product on the Bootstrap Market</a>
-                                                        <small>Dave Gamache added
-                                                            <span class="font-weight-bold">Admin Dashboard</span>
-                                                        </small>
-                                                        <p class="mb-0 pb-2">
-                                                            <small class="text-muted">22 hours ago</small>
-                                                        </p>
-                                                    </div>
-                                                </div>
-
-                                                <div class="timeline-item">
-                                                    <i class="mdi mdi-microphone bg-info-lighten text-info timeline-icon"></i>
-                                                    <div class="timeline-item-info">
-                                                        <a href="#" class="text-info font-weight-bold mb-1 d-block">Robert Delaney</a>
-                                                        <small>Send you message
-                                                            <span class="font-weight-bold">"Are you there?"</span>
-                                                        </small>
-                                                        <p class="mb-0 pb-2">
-                                                            <small class="text-muted">2 days ago</small>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- end timeline -->
-                                        </div> <!-- end slimscroll -->
-                                    </div>
-                                    <!-- end card-body -->
-                                </div>
-                                <!-- end card-->
-                            </div>
-                            <!-- end col -->
-
-                        </div>
-                        <!-- end row -->
+                            <p class="mb-4 font-16 text-white-50">Koronaviruksen iso kuva. Itsenäinen vapaaehtoisvoimin toimitettu sivusto.</p>
+                            <p class="mb-4 font-16 text-white-50">
+                            Sivuston tekijöiden toimittamat tietokannat on lisensoitu <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Nimeä-JaaSamoin 4.0 Kansainvälinen -lisenssillä</a>. </p>
 
                     </div>
-                    <!-- container -->
+                         <div class="alert alert-warning alert-dismissible fade show d-xl-none font-14 font-14" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <i class="dripicons-information mr-2"></i><strong>Mobiilikäyttäjä - </strong> sivustolla on dataa, grafiikoita ja taulukoita, joiden pelkistetyt versiot eivät tarjoa parasta mahdollista käyttäjäkokemusta. Suosittelemme lämpimästi selaamista suurella näytöllä varustetulla laitteella. <br><br>
+
+
+                       <!-- Begin Mailchimp Signup Form -->
+                            <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+                            <style type="text/css">
+        /*#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }*/
+    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+                    <div class="form-group" id="mc_embed_signup">
+                    <form action="https://pandemia.us19.list-manage.com/subscribe/post?u=b3bc75c8b21ac4fc1c8b1ab09&amp;id=bc8649d035" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <div id="mc_embed_signup_scroll">
+                        <label for="simpleinput mce-EMAIL">Muistuta minua myöhemmin</label>
+                        <input style="width:100%; margin-bottom:20px"; type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="pelkkä sähköpostiosoite riittää" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b3bc75c8b21ac4fc1c8b1ab09_bc8649d035" tabindex="-1" value=""></div>
+                        <div class="clear"><input style="width:100%" type="submit" value="Tilaa" name="subscribe" id="mc-embedded-subscribe" class="btn btn-info"></div>
+                        </div>
+                    </form>
+                    </div>
+
+<!--End mc_embed_signup-->
+                    </div><!-- 
+                    <div class="col-md-5 offset-md-2">
+                        <div class="text-md-right mt-3 mt-md-0">
+                            <img src="assets/images/startup.svg" alt=" class="img-fluid" />
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        <!-- END HERO -->
+
+
+
+
+
+
+
+
+<div class="content-page">
+    <div class="content">
+
+                    <!-- Start Content-->
+        <div class="container-fluid">
+
+
+<!------>
+<!------>
+<!------>
+<!--------OMAT GRAFIIKAT -->
+<!------>
+<!------>
+<!------>
+
+
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="header-title mb-4">Pohjoismaat - Logaritminen asteikko</h4>
+                            <div id="daniel-chart1" class="apex-charts" data-colors="#42d29d"></div>
+                         </div>                                                                                                 
+                         <!-- end card body-->
+               </div>                                                                                            
+                                <!-- end card -->
+             </div>                                                                                            
+                            <!-- end col --> 
+ 
+                <div class="col-xl-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="header-title mb-4">Pohjoismaat</h4>
+                                <div id="daniel-chart2" class="apex-charts" data-colors="#f9bc0d,#44badc"></div>
+                        </div> -->
+                                    <!-- end card body-->
+                   </div>                                                                                                     
+                                <!-- end card -->
+          </div>                                                                                                
+                            <!-- end col-->
+          </div>                                                                                           
+                        <!-- end row-->
+
+
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="header-title mb-4">Suomi ja EU - Logaritminen asteikko</h4>
+                            <div id="daniel-chart3" class="apex-charts" data-colors="#42d29d"></div>                               
+                   </div>                                                                                                   
+                                    <!-- end card body-->
+                    </div>                                                                                                     
+                                <!-- end card -->
+                   </div>                                                                                                      
+                            <!-- end col-->
+    
+               <div class="col-xl-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="header-title mb-4">Suomi ja EU</h4>
+                            <div id="daniel-chart4" class="apex-charts" data-colors="#f9bc0d,#44badc"></div>
+                        </div> -->
+                                    <!-- end card body-->
+                   </div>                                                                                                                                     
+                                <!-- end card -->
+                    </div>                                                                                                                                
+                                <!-- end col-->
+                   </div>                                                                                                                          
+                                <!-- end row-->
+
+
+
+<!------>
+<!------>
+<!------>
+<!--------VIRANOMAISTEN OHJEET JA LINKIT -->
+<!------>
+<!------>
+<!------>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+
+                                        <h4 class="header-title">Viranomaisten ohjeet</h4>
+                                        <p class="font-14">
+                                        Suomessa tartuntatautien torjuntatyön järjestäminen perustuu Tartuntatautilakiin. Euroopan tasolla tartuntatautien seuranta ja tieteelliset lausunnot kuuluvat Euroopan tautienehkäisy- ja valvontakeskus ECDC:n toimialaan. Maailman terveysjärjestö, WHO, on YK:n alainen järjestö, joka koordinoi kansainvälisiä toimia.
+                                        </p>
+
+                      
+                                      
+                                                <div class="table-sm">
+                                                    <table class="table table-centered mb-0">
+                                                       
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><img src="assets/images/products/THL_logo.png" alt="contact-img" title="contact-img" class="d-none d-sm-inline-block rounded mr-3" height=50/>
+                                                                <a target="_blank" href="https://thl.fi/web/infektiotaudit-ja-rokotukset/ajankohtaista/wuhanin-koronavirus" type="button" class="btn btn-success">THL Infopankki</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img src="assets/images/products/ECDC_logo.png" alt="contact-img" title="contact-img" class="d-none d-sm-inline-block rounded mr-3" height=50/>
+                                                                <a target="_blank" href="https://www.ecdc.europa.eu/en/novel-coronavirus-china" type="button" class="btn btn-success">ECDC Infopankki</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img src="assets/images/products/WHO_logo.png" alt="contact-img" title="contact-img" class="d-none d-sm-inline-block rounded mr-3" height=50/>
+                                                                <a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" type="button" class="btn btn-success">WHO Infopankki</a></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div> <!-- end table-responsive-->                     
+                                    
+                                        
+
+                        </div> <!-- end card body-->
+                    </div> <!-- end card -->
+                </div><!-- end col-->
+
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="header-title">Seuraa tiedotusta</h4>
+                            <p class="font-14">
+                            Tiedotusvälineiden lisäksi kannattaa seurata sekä <a href="https://valtioneuvosto.fi/etusivu">Suomen hallituksen tiedotusta</a>, että oman asuinkaupungin tai kunnan sivuja: esim. <a href="https://www.hel.fi/helsinki/fi">Helsinki</a>, <a href="https://www.espoo.fi/fi-FI">Espoo</a>, <a href="https://www.tampere.fi/index.html">Tampere</a>, <a href="https://www.vantaa.fi/">Vantaa</a>, <a href="https://www.ouka.fi/etusivu">Oulu</a>, <a href="https://www.turku.fi/">Turku</a>.</p>
+                            <div class="table-sm">
+                                <table class="table table-centered mb-0">
+                                    <tbody>
+                                        <tr>
+                                            <td><img src="assets/images/products/UM_logo.png" alt="contact-img" title="contact-img" class="d-none d-sm-inline-block rounded mr-3" height=50/>
+                                            <a target="_blank" href="https://um.fi/ajankohtaista" type="button" class="btn btn-info">Ulkoministeriön tiedotteet</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="assets/images/products/TTL_logo.png" alt="contact-img" title="contact-img" class="d-none d-sm-inline-block rounded mr-3" height=50/>
+                                            <a target="_blank" href="https://hyvatyo.ttl.fi/koronavirus/ohje-yrityksille" type="button" class="btn btn-info">Työterveyden laitos</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="assets/images/products/OM_logo.png" alt="contact-img" title="contact-img" class="d-none d-sm-inline-block rounded mr-3" height=50/>
+                                            <a target="_blank" href="https://www.finlex.fi/fi/laki/ajantasa/2016/20161227" type="button" class="btn btn-info">Tartuntatautilaki</a> <a target="_blank" href="https://www.finlex.fi/fi/laki/ajantasa/2011/20111552" type="button" class="btn btn-info">Valmiuslaki</a></td>
+                                        </tr>
+                                            <tr>
+                                            <td><img src="assets/images/products/ECDC_logo.png" alt="contact-img" title="contact-img" class="d-none d-sm-inline-block rounded mr-3" height=50/>
+                                            <a target="_blank" href="https://www.ecdc.europa.eu/en/novel-coronavirus-china/sources-updated" type="button" class="btn btn-info">EU-maiden terveysviranomaiset </a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> <!-- end table-responsive-->                     
+                        </div> <!-- end card body-->
+                    </div> <!-- end card -->
+                </div><!-- end col-->
+            </div> <!--end row?-->
+
+<!------>
+<!------>
+<!------>
+<!--------Meltwater -->
+<!------>
+<!------>
+<!------>    
+
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card" style="max-height:100vh!important">
+                        <div class="card-body">
+                            <h3 class="header-title">Viranomaisten tiedotteet I</h3>
+                            <p><a href="https://www.meltwater.com/fi/mediaseuranta/?utm_source=3party&utm_medium=content&utm_campaign=pandemia">Mediaseurannan tarjoaa Meltwater</a></p>  
+                            <p class="font-14"><a href="https://valtioneuvosto.fi/">Valtioneuvoston kanslian</a>, <a href="https://stm.fi/">Sosiaali- ja terveysministeriön</a>, <a href="https://um.fi/">Ulkoministeriön</a> ja <a href="https://thl.fi/">Terveyden ja hyvinvoinnin laitoksen</a> tiedotteet.</p>
+                            <iframe id="melt_viranomaiset" src="https://meltwater.fi/feeds/nf/792a72a276e17b2a0319aaee41fbab2c" style="max-height:85vh;width:100%;border:0"></iframe>
+                            <script src="https://meltwater.fi/_scripts/iframe-resizer/js/custom.js"></script> 
+                        </div> <!-- end card body-->
+                    </div> <!-- end card -->
+                </div><!-- end col-->
+
+
+
+
+                <div class="col-lg-6">
+                    <div class="card" style="max-height:100vh!important">
+                        <div class="card-body">  
+                            <h3 class="header-title">Viranomaisten korona-aiheiset tiedotteet II</h3>
+                            <p class="font-14"><a href="">Eduskunnan</a>, <a href="https://www.lvm.fi/">Liikenne- ja viestintäministeriön</a>, <a href="https://mmm.fi/">Maa- ja metsätalousministeriön</a>, <a href="https://oikeusministerio.fi/">Oikeusministeriön</a>, <a href="https://minedu.fi/">Opetus- ja kulttuuriministeriön</a>, <a href="https://www.defmin.fi/">Puolustusministeriön</a>, <a href="https://intermin.fi/">Sisäministeriön</a>, <a href="https://vm.fi/">Valtiovarainministeriön</a>, <a href="https://tem.fi/">Työ- ja elinkeinoministeriön</a>, <a href="https://www.ym.fi/">Ympäristöministeriön</a>, <a href="">Poliisin</a> ja <a href="https://puolustusvoimat.fi/">Puolustusvoimien</a> koronavirus-tiedotteet.</p>
+                            <p><a href="https://www.meltwater.com/fi/mediaseuranta/?utm_source=3party&utm_medium=content&utm_campaign=pandemia">Mediaseurannan tarjoaa Meltwater</a></p>                             
+                            <iframe src="//meltwater.fi/feeds/nf/d3ed8a8affadaefbec9c3a250bbc79fc" style="max-height:75vh;width:100%;border:0"></iframe>
+                            <script src="//meltwater.fi/_scripts/iframe-resizer/js/custom.js"></script>     
+
+                        </div> <!-- end card body-->
+                    </div> <!-- end card -->
+                </div><!-- end col-->
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="header-title">Suomen luetuimmat korona-uutiset</h3>
+                            <p><a href="https://www.meltwater.com/fi/mediaseuranta/?utm_source=3party&utm_medium=content&utm_campaign=pandemia">Mediaseurannan tarjoaa Meltwater</a></p> 
+                            <iframe id="melt_suosituimmat" src="//meltwater.fi/feeds/nf/c5c5d398d7fc3613fc25425a5309a2c4" style="height:800px;width:100%;border:0"></iframe>
+                            <script src="//meltwater.fi/_scripts/iframe-resizer/js/custom.js"></script>
+                        </div> <!-- end card body-->
+                    </div> <!-- end card -->
+                </div><!-- end col-->    
+            </div>
+
+
+
+
+
+<!------>
+<!------>
+<!------>
+<!--------VISUALISAATIOT -->
+<!------>
+<!------>
+<!------>
+
+
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="header-title">Parhaat visualisaatiot ja reaaliaikaiset seurannat</h4>
+ 
+                        </div> <!-- end card body-->
+                    </div> <!-- end card -->
+
+                </div>
+            </div> <!-- end row -->
+
+            <div class="row">
+
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="header-title font-14">Ensimmäinen ja alkuperäinen visualisointi ja avoin data: Coronavirus Map</h4>
+                            <a target="_blank" href="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6"><img srcset="assets/images/seuranta/johnshopkins_2x.jpg 2x" src="assets/images/seuranta/johnshopkins.jpg" alt="contact-img" title="contact-img" class="rounded mr-3" width=100%/></a>
+                        </div>
+                    </div>
+                </div>            
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="header-title font-14">Reaaliaikainen seuranta: Virus Watch</h4>
+                            <a target="_blank" href="https://www.theviruswatch.com/"><img srcset="assets/images/seuranta/viruswatch_2x.jpg 2x" src="assets/images/seuranta/viruswatch.jpg" alt="contact-img" title="contact-img" class="rounded mr-3"width=100%/></a>
+                        </div>
+                    </div>
+                </div> 
+
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="header-title font-14">Reaaliaikainen seuranta: Worldometers</h4>
+                            <a target="_blank" href="https://www.worldometers.info/coronavirus/"><img srcset="assets/images/seuranta/worldometers_2x.jpg 2x" src="assets/images/seuranta/worldometers.jpg" alt="contact-img" title="contact-img" class="rounded mr-3"width=100%/></a>
+
+                        </div>
+                    </div>
+                </div>            
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="header-title font-14">Havainnollistava visualisointi: Suomen koronavirus-tartuntatilanne</h4>            
+                            <a target="_blank" href="https://korona.kans.io/"><img srcset="assets/images/seuranta/kansio_2x.jpg 2x" src="assets/images/seuranta/kansio.jpg" alt="contact-img" title="contact-img" class="rounded mr-3"width=100%/></a>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="header-title font-14">Viruksen genomin kehittyminen: Nextstrain pathogen evolution</h4>
+                            <a target="_blank" href="https://nextstrain.org/ncov"><img srcset="assets/images/seuranta/nextstrain_2x.jpg 2x" src="assets/images/seuranta/nextstrain.jpg" alt="contact-img" title="contact-img" class="rounded mr-3"width=100%/></a>
+                        </div>
+                    </div>
+                </div>            
+
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card">
+                        <div class="card-body"> 
+                            <h4 class="header-title font-14">Visualisaatio: COVID-19 Outside of Mainland China</h4>           
+                            <a target="_blank" href="https://datastudio.google.com/u/0/reporting/f6ad0988-f203-45f8-8d18-5d726c1d2d8b/page/MGzDB"><img srcset="assets/images/seuranta/UVbio_2x.jpg 2x" src="assets/images/seuranta/UVbio.jpg" alt="contact-img" title="contact-img" class="rounded mr-3"width=100%/></a>
+                        </div>
+                    </div>
+                </div> 
+
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card">
+                        <div class="card-body"> 
+                            <h4 class="header-title font-14">Interaktiivinen simulaatio</h4>           
+                            <a target="_blank" href="https://neherlab.org/covid19/"><img srcset="assets/images/seuranta/neher_2x.jpg 2x" src="assets/images/seuranta/neher.jpg" alt="contact-img" title="contact-img" class="rounded mr-3"width=100%/></a>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card">
+                        <div class="card-body"> 
+                            <h4 class="header-title font-14">Visualisaatio: NYT U.S. Map</h4>           
+                            <a target="_blank" href="https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html"><img srcset="assets/images/seuranta/nytmap_2x.jpg 2x" src="assets/images/seuranta/nytmap.jpg" alt="contact-img" title="contact-img" class="rounded mr-3"width=100%/></a>
+                        </div>
+                    </div>
+                </div> 
+
+            </div>   <!-- end row -->
+
+ 
+<!------>
+<!------>
+<!------>
+<!--------TAULUKOT ALKAA -->
+<!------>
+<!------>
+<!------>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="alert alert-info alert-dismissible fade show d-xl-none font-14" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <i class="dripicons-information mr-2"></i><strong>Mobiilikäyttäjä - taulukossa on useita sarakkeita ja paljon dataa - </strong>  suodattaminen ja lajittelu toimivat parhaiten suurella näytöllä. 
+                            </div>
+                            <h4 class="header-title">Valtionhallinnon ja kuntien toimenpiteet</h4>
+                            <p> Viranomaisten rajoitustoimia ympäri maailman. Lista ei ole kattava.</p>
+                            <p> Sarakkeiden otsikot ovat painikkeita, joita käyttämällä voit lajitella taulukon haluamasi sarakkeen mukaiseen järjestykseen. Voit myös suodattaa tuloksia oikealla olevaa hakukenttää käyttäen.</p>
+                            <table id="datatable_valt" class="table table-striped dt-responsive w-100">
+
+                                                    
+<!-- 
+Copy paste CMS alkaa
+-->
+
+<thead><tr><th>Rajoitus</th><th>Päivämäärä</th><th>Maa</th><th>Lähde</th></tr></thead><tbody>
+<tr><td><a href="https://www.bbc.com/news/world-us-canada-51846923">Kaikki lennot Eurooppaan keskeytetään</a></td><td>12.3.2020</td><td>Yhdysvallat</td><td>BBC</td></tr>
+<tr><td><a href="https://www.iltalehti.fi/koronavirus/a/4d91358f-a125-45f2-9e4a-ba9534464fda">Norja sulkee kaikki maan koulut ja päiväkodit</a></td><td>12.3.2020</td><td>Norja</td><td>Iltalehti</td></tr>
+<tr><td><a href="https://www.bbc.com/news/uk-northern-ireland-51850811">Irlanti sulkee kouluja ja yliopistoja</a></td><td>12.3.2020</td><td>Irlanti</td><td>BBC</td></tr>
+<tr><td><a href="https://www.hs.fi/politiikka/art-2000006436431.html">Yli 500 hengen yleisötilaisuudet perutaan</a></td><td>12.3.2020</td><td>Suomi</td><td>HS</td></tr>
+<tr><td><a href="https://www.bloomberg.com/news/articles/2020-03-03/nyc-school-closed-as-a-precaution-on-suspected-virus-case">New York sulkee varotoimenpiteenä koulut</a></td><td>3.3.2020</td><td>Yhdysvallat</td><td>Bloomberg</td></tr>
+<tr><td><a href="https://www.hs.fi/ulkomaat/art-2000006435048.html">Tanska sulkee koulut ja päiväkodit</a></td><td>11.3.2020</td><td>Tanska</td><td>HS</td></tr>
+<tr><td><a href="https://www.cnbc.com/2020/01/30/coronavirus-russia-closes-border-with-china-to-prevent-spread.html">Venäjä sulkee Kiinan vastaisen rajansa</a></td><td>30.01.2020</td><td>Venäjä</td><td>CNBC</td></tr>
+<tr><td><a href="https://apps.derstandard.at/privacywall/jetzt/livebericht/2000115645725/coronavirus-einreiseverbot-fuer-europaeer-in-die-usa">Itävalta sulkee kaikki koulut ja yliopistot neljäksi viikoksi</a></td><td>12.3.2020</td><td>Itävalta</td><td>Der Standard</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-czech/czech-republic-shutting-schools-events-over-coronavirus-idUSKBN20X0ZL">Tšekki sulkee koulut ja peruu tapahtumia</a></td><td>10.3.2020</td><td>Tšekki</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.dailynk.com/english/north-korea-closes-schools-throughout-country-one-month/">Pohjois-Korea sulkee koulut kuukaudeksi</a></td><td>21.2.2020</td><td>Pohjois-Korea</td><td>Daily NK</td></tr>
+<tr><td><a href="https://www.aa.com.tr/en/middle-east/schools-closing-in-qom-iran-after-coronavirus-outbreak/1739052">Iranissa Qom:n kaupunki sulkee koulut koronaviruksen vuoksi</a></td><td>20.2.2020</td><td>Iran</td><td>AA</td></tr>
+<tr><td><a href="https://english.elpais.com/society/2020-03-12/basque-country-galicia-and-murcia-close-schools-in-bid-to-slow-coronavirus.html">Espanjassa lukuisat itsehallintoalueet sulkevat koulut koronaviruksen leviämisen estämiseksi</a></td><td>12.3.2020</td><td>Espanja</td><td>El Pais</td></tr>
+<tr><td><a href="https://www.france24.com/en/20200303-france-shuts-dozens-of-schools-in-areas-hit-by-coronavirus">Ranska sulkee lukuisia kouluja</a></td><td>3.3.2020</td><td>Ranska</td><td>France24</td></tr>
+<tr><td><a href="https://www.vecer.com/se-dve-osebi-pozitivni-na-novi-koronavirus-v-sloveniji-okuzenih-ze-25-10139481">Slovenia kieltää kaikki yli 500 henkilön kokoontumiset</a></td><td>9.3.2020</td><td>Slovenia</td><td>Vecer</td></tr>
+<tr><td><a href="http://www.ekathimerini.com/250448/article/ekathimerini/news/greek-schools-universities-to-close-for-14-days-to-contain-spread-of-coronavirus">Kreikka sulkee koulut ja yliopistot 14 päiväksi</a></td><td>10.3.2020</td><td>Kreikka</td><td>Ekathimerini</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-albania/albania-confirms-first-coronavirus-cases-in-father-and-son-back-from-italy-idUSKBN20W012">Albania sulkee koulut kahdeksi viikoksi ja pysäyttää lento- ja laivaliikenteen Italiaan</a></td><td>9.3.2020</td><td>Albania</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-norway/norway-to-take-strongest-ever-peacetime-measures-as-coronavirus-spreads-idUSKBN20Z1R8?il=0">Norja ottaa käyttöön laajat hätätilatoimivaltuudet </a></td><td>12.3.2020</td><td>Norja</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-netherlands-events/dutch-ban-public-events-over-coronavirus-idUSKBN20Z2DB?il=0">Hollanti kieltää julkiset tapahtumat</a></td><td>12.3.2020</td><td>Hollanti</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-france-election/france-considers-postponing-local-elections-over-virus-concern-jdd-idUSKBN20Z2J9?il=0">Ranska harkitsee paikallisvaalien siirtämistä koronaviruksen vuoksi</a></td><td>12.3.2020</td><td>Ranska </td><td>Reuters</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-croatia/croatia-closes-schools-for-two-weeks-for-coronavirus-idUSKBN2101F0?il=0">Kroatia sulkee koulut kahdeksi viikoksi</a></td><td>13.3.2020</td><td>Kroatia</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-poland-smolensk/polands-president-calls-off-russia-trip-due-to-coronavirus-official-idUSKBN2100VJ?il=0">Puolan presidentti peruu vierailunsa venäjälle koronaviruksen vuoksi</a></td><td>13.3.2020</td><td>Puola</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-cruise-ship/brazil-isolates-cruise-ship-in-northeastern-port-after-suspected-coronavirus-case-idUSKBN2101OG">Brasilian terveysviranomaiset määräsivät risteilijäaluksen karanteeniin koronavirusepäilyn vuoksi</a></td><td>13.3.2020</td><td>Brasilia</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-czech-travel/czech-government-bans-most-travel-in-and-out-of-country-to-fight-coronavirus-idUSKBN2101K6?il=0">Tšekki rajoittaa matkustamista kovilla toimenpiteillä</a></td><td>13.3.2020</td><td>Tšekki</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-indonesia-masks/indonesia-to-ban-face-mask-exports-to-ensure-domestic-supply-idUSKBN2100JB">Indonesia kieltää henkigitystensuojainten myynnin ulkomaille </a></td><td>13.3.2020</td><td>Indonesia</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-usa-emergency/trump-to-declare-national-emergency-over-coronavirus-bloomberg-citing-sources-idUSKBN2102G3">Presidentti Trump julistaa kansallisen hätätilan Yhdysvalloissa</a></td><td>13.3.2020</td><td>Yhdysvallat</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.theguardian.com/world/2020/mar/13/european-countries-take-radical-steps-to-combat-coronavirus">Espanja julistaa kansallisen hätätilan</a></td><td>13.3.2020</td><td>Espanja</td><td>The Guardian</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-spain/spain-to-impose-nationwide-lockdown-draft-idUSKBN2110LE?il=0">Espanjaan tulossa kansallinen ulkonaliikkumiskielto</a></td><td>14.3.2020</td><td>Espanja</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.politico.eu/article/how-europe-is-responding-to-the-coronavirus-pandemic/">Miten eri EU-maat reagoivat Pandemiaan?</a></td><td>13.3.2020</td><td>EU</td><td>Politico</td></tr>
+<tr><td><a href="https://www.politico.eu/article/uk-to-begin-banning-mass-gatherings-next-week/">Yhdistynyt kuningaskunta kieltää massatapahtumat ensi viikosta alkaen</a></td><td>14.3.2020</td><td>Yhdistynyt kuningaskunta</td><td>Politico</td></tr>
+<tr><td><a href="https://www.politico.eu/article/belgium-closes-schools-bars-and-restaurants/">Belgia sulkee koulut, baarit ja ravintolat</a></td><td>13.3.2020</td><td>Belgia</td><td>Politico</td></tr>
+<tr><td><a href="https://www.politico.eu/article/germany-to-send-face-masks-to-italy-to-help-deal-with-coronavirus/">Saksa lähettää Italiaan kasvosuojia </a></td><td>14.3.2020</td><td>Saksa/Italia</td><td>Politico</td></tr>
+<tr><td><a href="https://www.hs.fi/politiikka/art-2000006439482.html">Suomessa valmius­lain käyttöönotto­asetuksen valmistelu aloitettu</a></td><td>14.3.2020</td><td>Suomi</td><td>HS</td></tr>
+<tr><td><a href="https://www.mtvuutiset.fi/artikkeli/viro-sulkee-koulut-ja-kannustaa-vanhempia-pitamaan-paivakotilapset-kotona-ranskassakin-opinahjot-sulkevat-ovensa-olemme-vasta-kriisin-alussa/7760308#gs.1026znr">Viro sulkee koulut ja kannustaa vanhempia pitämään päiväkotilapset kotona</a></td><td>12.3.2020</td><td>Viro</td><td>MTV Uutiset</td></tr>
+<tr><td><a href="https://www.hs.fi/kotimaa/art-2000006436071.html">Norja sulkee lento­kentät ja satamat</a></td><td>14.3.2020</td><td>Norja</td><td>HS</td></tr>
+<tr><td><a href="https://www.bbc.com/news/world-europe-51892477">Ranska sulkee kaikki "ei välttämättömät"- julkiset tilat</a></td><td>14.3.2020</td><td>Ranska</td><td>BBC</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-usa-travel-exclusi/exclusive-u-s-to-add-britain-ireland-to-european-travel-ban-airline-u-s-officials-idUSKBN2110UF">USA lisää Irlannin ja UK:n matkustuskieltoon</a></td><td>15.3.2020</td><td>Yhdysvallat</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-austria/austria-announces-major-restrictions-on-movement-over-coronavirus-idUSKBN2120D8">Itävalta julisti ottavansa käyttöön järeät matkustusrajoitukset</a></td><td>15.3.2020</td><td>Itävalta</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.spiegel.de/politik/deutschland/coronavirus-deutschland-schliesst-grenzen-zu-frankreich-oesterreich-und-der-schweiz-a-9910fb81-f635-4be5-8138-bcbcbfd491d4">Saksa sulkee rajat Ranskaan, Sveitsiin ja Itävaltaan</a></td><td>15.3.2020</td><td>Saksa</td><td>Spiegel</td></tr>
+<tr><td><a href="https://www.hs.fi/kotimaa/art-2000006440085.html">Viro sulkee tiistaina rajansa ulkomaalaisilta</a></td><td>15.3.2020</td><td>Viro</td><td>HS</td></tr>
+<tr><td><a href="https://www.politico.eu/article/coronavirus-trump-uk-ireland-travel-ban/">Yhdysvallat laajentaa matkustuskieltonsa koskemaan myös Iso-Britanniaa ja Irlantia</a></td><td>14.3.2020</td><td></td><td>Politico</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-colombia/colombia-will-block-entry-by-all-non-residents-from-monday-to-stop-coronavirus-idUSKBN21211B?il=0">Kolumbia estää maahantulon kaikilta kaikilta muilta paitsi sen omilta kansalaisilta</a></td><td>15.3.2020</td><td>Kolumbia</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-algeria/algerian-to-suspend-travel-with-europe-statement-idUSKBN2131ER?il=0">Algeria asettaa matkustusrajoituksen Eurooppaan</a></td><td>16.3.2020</td><td>Algeria</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-egypt/egypt-to-halt-flights-from-thursday-to-halt-spread-of-coronavirus-idUSKBN213222?il=0">Egypti pysäyttää lennot hillitäkseen koronaviruksen leviämistä</a></td><td>16.3.2020</td><td>Egypti</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-tunisia-libya/tunisian-land-border-with-libya-closed-minister-idUSKBN213213?il=0">Tunisia sulkee Libyan vastaisen rajansa</a></td><td>16.3.2020</td><td>Tunisia</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-eu-vonderleyen/eu-executive-proposes-shutting-blocs-external-borders-for-30-days-idUSKBN2132K7?il=0">Euroopan komission puheenjohtaha Vonderleyen ehdottaa rajojen sulkemista määräajaksi</a></td><td>16.3.2020</td><td>EU</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.hs.fi/politiikka/art-2000006441020.html">Tässä ovat kaikki hallituksen poikkeukselliset toimet koronaviruksen hillitsemiseksi – vaikuttavat lähes jokaisen kansalaisen arkeen</a></td><td>16.3.2020</td><td>Suomi</td><td>HS</td></tr>
+<tr><td><a href="https://www.france24.com/en/20200317-france-to-deploy-100-000-police-to-enforce-its-war-on-coronavirus">Ranska komentaa 100000 poliisia valvomaan ulkonaliikkumiskieltoja </a></td><td>17.3.2020</td><td>Ranska</td><td>France24</td></tr>
+<tr><td><a href="https://www.bbc.com/news/world-europe-51918596">Eurooppa suunnittelee kokonaisvaltaista rajojen sulkemista taistelussa pandemiaa vastaan</a></td><td>17.3.2020</td><td>EU</td><td>BBC</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-ukraine/ukraine-plans-more-lockdowns-imf-talks-food-export-curbs-over-coronavirus-idUSKBN2131DE?il=0">Ukraina suunnittelee uusia rajoituksia hillitäkseen koronaviruksen leviämistä</a></td><td>17.3.2020</td><td>Ukraina</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.politico.com/news/2020/03/16/white-house-swat-technocrats-testing-133126">Valkoinen talo ryhtyy poikkeuksellisiin toimiin kasvattaakseen koronaviruksen testauskapasiteettia</a></td><td>17.3.2020</td><td>Yhdysvallat</td><td>Politico</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-indonesia/indonesia-confirms-38-more-coronavirus-cases-total-rises-to-172-idUSKBN214183?il=0">Indonesia confirms 38 more coronavirus cases, total rises to 172</a></td><td>17.3.2020</td><td>Indonesia</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-usa-congress/senate-weighs-emergency-coronavirus-pandemic-funds-trump-seeks-850-billion-more-idUSKBN21420L?il=0">Yhdysvalloissa senaatti harkitsee massiivista hätärahastoa koronaviruspandemian vuoksi</a></td><td>17.3.2020</td><td>Yhdysvallat</td><td>Reuters</td></tr>
+<tr><td><a href="https://yle.fi/uutiset/3-11261530">Ylen erikoislähetys koronatilanteesta käynnissä: Hallitus kertoo valmiuslain käyttöönotosta – seuraamme hetki hetkeltä</a></td><td>17.3.2020</td><td>Suomi</td><td>YLE</td></tr>
+<tr><td><a href="https://valtioneuvosto.fi/paatokset/paatos?decisionId=0900908f8068ec10">Valtioneuvoston kanslia: Poikkeusolojen toteaminen</a></td><td>17.3.2020</td><td>Suomi</td><td>VNK</td></tr>
+<tr><td><a href="https://www.is.fi/politiikka/art-2000006442895.html">Hallitus antoi kaksi valmius­lain käyttöön­otto­asetusta – lääkkeiden myyntiä voidaan rajoittaa</a></td><td>17.3.2020</td><td>Suomi</td><td>Ilta-Sanomat</td></tr>
+<tr><td><a href="https://www.uusisuomi.fi/uutiset/suomi-sulkee-rajat-193-klo-00-pekka-haavisto-tama-on-erittain-vahva-viesti-nyt-kaikille-ei-ulkomaan-matkoja/341d2d8c-9b76-4cfb-bc28-eff432f96d07">Suomi sulkee rajat 19.3. klo 00 – Pekka Haavisto: ”Tämä on erittäin vahva viesti nyt kaikille: ei ulkomaan-matkoja”</a></td><td>17.3.2020</td><td>Suomi</td><td>Uusi Suomi</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-britain-travel/britons-should-stop-all-non-essential-travel-globally-foreign-minister-idUSKBN21428X?il=0"> Britannian ulkoministeri Dominic Raab kehoitti kansalaisia lopettamaan kaiken matkustamisen</a></td><td>17.3.2020</td><td>Yhdistynyt kuningaskunta</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.hs.fi/politiikka/art-2000006443145.html">Hallitus otti heti käyttöön mahdollisuuden rajoittaa lääkkeiden myyntiä – Nämä asiat muuttuvat, kun osia valmiuslaista tulee voimaan</a></td><td>17.3.2020</td><td></td><td>HS</td></tr>
+<tr><td><a href="https://www.ts.fi/uutiset/maailma/4897582/EU+sulki+rajat+ulkopuolisilta+koronan+vuoksi++vain+valttamaton+liikenne+paasee+unionin+puolelle">EU sulki rajat ulkopuolisilta</a></td><td>17.3.2020</td><td>EU</td><td>TS</td></tr>
+<tr><td><a href="https://www.reuters.com/article/health-coronavirus-germany-defence/update-1-german-army-on-standby-to-help-with-coronavirus-crisis-idUSL8N2BC5QD">Saksassa armeija valmiustilaan</a></td><td>19.3.2020</td><td>Saksa</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.bbc.com/news/world-us-canada-51970815">Kaliforniassa asukkaat käskettiin pysymään kotona</a></td><td>20.9.2020</td><td>Yhdysvallat</td><td>BBC</td></tr>
+<tr><td><a href="https://www.hs.fi/kotimaa/art-2000006442706.html">Näin korona­virus näkyy armeijassa: Virka-apu­pyyntöihin varauduttu, varus­miehiä siirretty teltta­majoitukseen ja lomia peruttu</a></td><td>17.3.2020</td><td>Suomi</td><td>HS</td></tr>
+<tr><td><a href="http://www.avi.fi/web/avi/-/aluehallintovirastot-maaraavat-oppilaitokset-suljettavaksi-ja-kieltavat-yli-10-hengen-yleisotilaisuudet">Aluehallintovirastot määräävät oppilaitokset suljettavaksi ja kieltävät yli 10 hengen yleisötilaisuudet</a></td><td>17.3.2020</td><td>Suomi</td><td>AVI</td></tr>
+<tr><td><a href="https://www.helmet.fi/fi-FI/Tapahtumat_ja_vinkit/Uutispalat/Helmetkirjastot_suljettuina_koronaviruse(209231)">Helmet-kirjastot suljettuina koronavirusepidemian aikana </a></td><td>17.3.2020</td><td>Suomi</td><td>Helmet</td></tr>
+<tr><td><a href="https://news.sky.com/story/coronavirus-california-issues-stay-at-home-order-to-40-million-residents-11960646">Coronavirus: California issues 'stay at home' order to 40 million residents </a></td><td>20.3.2020</td><td>Yhdysvallat</td><td>Sky News</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-germany/germans-warned-keep-your-distance-or-face-a-curfew-idUSKBN21716B?il=0">Germans warned: Keep your distance or face a curfew</a></td><td>20.3.2020</td><td>Saksa</td><td>Reuters</td></tr>
+
+
+
+</tbody>
+<!-- 
+Copy paste CMS loppuu
+
+ -->  
+
+
+
+
+
+                            </table>                                           
+                        </div> <!-- end card body-->
+                    </div> <!-- end card -->
+                </div> <!-- end col-->
+            </div> <!-- end row -->
+
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="alert alert-info alert-dismissible fade show d-xl-none font-14" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <i class="dripicons-information mr-2"></i><strong>Mobiilikäyttäjä - taulukossa on useita sarakkeita ja paljon dataa - </strong>  suodattaminen ja lajittelu toimivat parhaiten suurella näytöllä. 
+                            </div>
+                            <h4 class="header-title">Organisaatioiden toimenpiteet</h4>
+                            <p>Merkittäviä peruutuksia, sulkemisia ja rajoituksia yrityksiltä, kansainvälisiltä järjestöiltä ja muilta organisaatioilta. Lista ei ole kattava. Päivitetään vähintään kerran vuorokaudessa.</p>
+                            <p>Sarakkeiden otsikot ovat painikkeita, joita käyttämällä voit lajitella taulukon haluamasi sarakkeen mukaiseen järjestykseen. Voit myös suodattaa tuloksia oikealla olevaa hakukenttää käyttäen.</p>
+
+                                                <table id="datatable_yksityisoikeudelliset" class="table table-striped dt-responsive w-100">
+
+<!-- 
+Copy paste CMS alkaa
+
+ -->
+ <thead><tr><th>Organisaatio</th><th>Päivämäärä</th><th>Organisaation tyyppi</th><th>Sijainti</th></tr></thead><tbody>
+<tr><td><a href="http://www.worldrowing.com/news/communication-joint-decisions-related-the-impact-the-novel-coronavirus-covid-2020-world-rowing-events-italy">Kansainvälinen soutuliitto</a></td><td>10.3.2020</td><td>Kansainvälinen lajiliitto</td><td>Maailma</td></tr>
+<tr><td><a href="https://www.technologyreview.com/f/615340/harvard-tells-students-not-to-return-from-spring-break/">Harvard</a></td><td>10.3.2020</td><td>Yliopisto</td><td>Yhdysvallat</td></tr>
+<tr><td><a href="https://news.cornell.edu/stories/2020/03/classes-move-online-semester-combat-coronavirus">Cornell</a></td><td>10.3.2020</td><td>Yliopisto</td><td>Yhdysvallat</td></tr>
+<tr><td><a href="https://news.mit.edu/2020/letter-regarding-escalating-response-covid-19-0310">MIT</a></td><td>10.3.2020</td><td>Yliopisto</td><td>Yhdysvallat</td></tr>
+<tr><td><a href="https://hub.jhu.edu/novel-coronavirus-information/">Johns Hopkins</a></td><td>11.3.2020</td><td>Yliopisto</td><td>Yhdysvallat</td></tr>
+<tr><td><a href="https://coronavirus.rutgers.edu/">Rutgers</a></td><td>11.3.2020</td><td>Yliopisto</td><td>Yhdysvallat</td></tr>
+<tr><td><a href="https://chancellor.ucla.edu/messages/uclas-transition-online-instruction/">UCLA</a></td><td>10.3.2020</td><td>Yliopisto</td><td>Yhdysvallat</td></tr>
+<tr><td><a href="https://www.hbl.fi/artikel/gymkedja-stanger-anlaggningar-i-hela-norden/">SATS / Elixia</a></td><td>12.3.2020</td><td>Yritys</td><td>Pohjoismaat</td></tr>
+<tr><td><a href="https://www.washington.edu/coronavirus/2020/03/06/moving-classes-online-and-concluding-the-winter-quarter/">University of Washington</a></td><td>6.3.2020</td><td>Yliopisto</td><td>Yhdysvallat</td></tr>
+<tr><td><a href="https://messukeskus.com/press-release/messukeskus-koronavirustilanne/">Messukeskus</a></td><td>12.3.2020</td><td>Yritys</td><td>Suomi</td></tr>
+<tr><td><a href="https://www.is.fi/kotimaa/art-2000006437080.html">Suomen partiolaiset</a></td><td>12.3.2020</td><td>Nuorisojärjestö</td><td>Suomi</td></tr>
+<tr><td><a href="https://info.lse.ac.uk/current-students/Coronavirus-FAQs?fbclid=IwAR2Q10HFkgokquYlIruQ1GAQpM5R2xjrlPomzOQ9VAmK9Tn1CIFZLkIhlhY">London School of Economics</a></td><td>12.3.2020</td><td>Yliopisto</td><td>UK</td></tr>
+<tr><td><a href="https://www.nba.com/article/2020/03/11/coronavirus-pandemic-causes-nba-suspend-season">NBA</a></td><td>11.3.2020</td><td>Ammattiurheilusarja</td><td>USA</td></tr>
+<tr><td><a href="https://www.reuters.com/article/uk-health-coronavirus-russia-forum/russia-cancels-flagship-st-petersburg-economic-forum-over-virus-fears-ifax-idUKKBN20S2DN">Russian Economic forum</a></td><td>5.3.2020</td><td>Konferenssi</td><td>Venäjä</td></tr>
+<tr><td><a href="https://developers.facebook.com/blog/post/2020/02/27/important-f8-2020-update/">Facebook F8</a></td><td>27.2.2020</td><td>Konferenssi</td><td>Yhdysvallat</td></tr>
+<tr><td><a href="https://www.sxsw.com/news/2020/sxsw-update-registration-deferral-details-and-more/">SXSW</a></td><td>12.3.2020</td><td>Festivaali</td><td>Yhdysvallat</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-hsbc-hldg/hsbc-activates-social-distancing-split-site-measures-in-uk-due-to-virus-idUSKBN2101JE?il=0">HSBC</a></td><td>13.3.2020</td><td>Pankki</td><td>UK</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-italy-churches/catholics-rail-against-christ-in-quarantine-church-closures-in-rome-idUSKBN2101JC?il=0">Katolinen kirkko</a></td><td>13.3.2020</td><td>Kirkko</td><td>Italia</td></tr>
+<tr><td><a href="https://www.theverge.com/2020/3/12/21177538/att-broadband-internet-data-cap-coronavirus-suspend">AT&T</a></td><td>13.3.2020</td><td>Yritys</td><td>Yhdysvallat</td></tr>
+<tr><td><a href="https://www.theverge.com/2020/3/13/21178041/premier-league-england-football-suspended-coronavirus-covid-19">UEFA</a></td><td>13.3.2020</td><td>Ammattiurheilusarja</td><td>Maailma</td></tr>
+<tr><td><a href="https://www.bbc.com/sport/formula1/51871615">F1</a></td><td>13.3.2020</td><td>Ammattiurheilusarja</td><td>Maailma</td></tr>
+<tr><td><a href="https://www.bloomberg.com/news/articles/2020-03-12/disney-to-close-disneyland-resort-as-virus-spreads-in-california?srnd=premium-europe">Disney</a></td><td>13.3.2020</td><td>Yritys</td><td>Yhdysvallat</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-autos-ford-motor/gm-ford-to-have-white-collar-employees-work-remotely-starting-monday-idUSKBN2102DB?il=0">Ford</a></td><td>13.3.2020</td><td>Yritys</td><td>Yhdysvallat</td></tr>
+<tr><td><a href="https://www.gamesradar.com/nvidias-calling-on-gaming-pc-owners-to-put-their-systems-to-work-fighting-covid-19/?fbclid=IwAR2Gw75HB5oT4BFdqP5kO4SLbJN4pjYczpIz5r0IYTAyIjElUohouU5S1SM">Nvidia</a></td><td>13.3.2020</td><td>Yritys</td><td>Yhdysvallat</td></tr>
+<tr><td><a href="https://www.ncaa.org/about/resources/media-center/news/ncaa-cancels-remaining-winter-and-spring-championships">NCAA</a></td><td>12.3.2020</td><td>Ammattiurheilusarja</td><td>Yhdysvallat</td></tr>
+<tr><td><a href="https://www.nhl.com/news/nhl-coronavirus-status/c-316155530">NHL</a></td><td>12.3.2020</td><td>Ammattiurheilusarja</td><td>Yhdysvallat</td></tr>
+<tr><td><a href="https://www.mlb.com/news/mlb-2020-season-delayed">MLB</a></td><td>12.3.2020</td><td>Ammattiurheilusarja</td><td>Yhdysvallat</td></tr>
+<tr><td><a href="https://www.mlssoccer.com/2020/covid-19">MLS</a></td><td>12.3.2020</td><td>Ammattiurheilusarja</td><td>Yhdysvallat</td></tr>
+<tr><td><a href="https://www.baa.org/124th-boston-marathon-postponed-september-14">Bostonin Maraton</a></td><td>13.3.2020</td><td>Urheilutapahtuma</td><td>Yhdysvallat</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-britain-marathon/london-marathon-postponed-to-october-due-to-coronavirus-idUSKBN2102S9?feedType=RSS&feedName=sportsNews&utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+reuters%2FsportsNews+%28Reuters+Sports+News%29">Lontoon Maraton</a></td><td>13.3.2020</td><td>Urheilutapahtuma</td><td>UK</td></tr>
+<tr><td><a href="https://www.hs.fi/kotimaa/art-2000006440845.html">Aurinkomatkat</a></td><td>16.3.2020</td><td>Yritys</td><td>Suomi</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-ryanair/ryanair-grounds-most-of-its-fleet-across-europe-for-the-next-week-idUSKBN2131HH?il=0">Ryanair</a></td><td>16.3.2020</td><td>Yritys</td><td>Irlanti</td></tr>
+<tr><td><a href="https://yle.fi/uutiset/3-11259759">VR</a></td><td>16.3.2020</td><td>Yritys</td><td>Suomi</td></tr>
+<tr><td><a href="https://www.finnkino.fi/news/5999/">Finnkino</a></td><td>16.3.2020</td><td>Yritys</td><td>Suomi</td></tr>
+<tr><td><a href="https://www.talouselama.fi/uutiset/caruna-helpottaa-asiakkaidensa-elamaa-koronan-levitessa-antaa-mahdollisuuden-siirtaa-laskunmaksuja/e62e89fe-56ed-4f61-b0f3-c167d431db4e">Caruna</a></td><td>20.3.2020</td><td>Yritys</td><td>Suomi</td></tr>
+
+
+
+
+
+
+
+ </tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+Copy paste CMS loppuu
+
+ -->               
+
+                                                </table>                                           
+                                            </div> <!-- end preview-->
+                                        
+                                         
+                                        
+                                    </div> <!-- end card body-->
+                                </div> <!-- end card -->
+
+
+
+
+
+
+
+
+
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                                                                 <div class="alert alert-info alert-dismissible fade show d-xl-none font-14" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <i class="dripicons-information mr-2"></i><strong>Mobiilikäyttäjä - taulukossa on useita sarakkeita ja paljon dataa - </strong>  suodattaminen ja lajittelu toimivat parhaiten suurella näytöllä. 
+                                        </div>
+
+
+                                        <h4 class="header-title">Mediapoimintoja</h4>
+                                        <p>
+                                            Uutisvirran merkkipaalut ja analyysit. Lista ei ole kattava. Päivitetään vähintään kerran vuorokaudessa.  
+                                        </p>
+                                        <p>Sarakkeiden otsikot ovat painikkeita, joita käyttämällä voit lajitella taulukon haluamasi sarakkeen mukaiseen järjestykseen. Voit myös suodattaa tuloksia oikealla olevaa hakukenttää käyttäen. </p>
+
+                                                <table id="datatable_media" class="table table-striped dt-responsive w-100">
+
+
+<!-- 
+Copy paste CMS alkaa
+
+ -->
+
+<thead><tr><th>Artikkelin nimi</th><th>Päivämäärä</th><th>Media</th></tr></thead><tbody>
+<tr><td><a href="https://www.statnews.com/2020/01/08/who-says-mysterious-illness-in-china-likely-being-caused-by-new-virus/">WHO says mysterious illness in China likely being caused by new virus</a></td><td>8.1.2020</td><td>Stat News</td></tr>
+<tr><td><a href="https://edition.cnn.com/2020/01/08/health/china-wuhan-pneumonia-virus-intl-hnk/index.html">A new virus related to SARS is the culprit in China's mysterious pneumonia outbreak, scientists say</a></td><td>9.1.2020</td><td>CNN</td></tr>
+<tr><td><a href="https://www.nytimes.com/2020/01/10/world/asia/china-virus-wuhan-death.html">China Reports First Death From New Virus</a></td><td>10.1.2020</td><td>NYT</td></tr>
+<tr><td><a href="https://www.bbc.com/news/world-asia-china-51217455">China coronavirus: Lockdown measures rise across Hubei province</a></td><td>23.1.2020</td><td>BBC</td></tr>
+<tr><td><a href="https://www.bbc.com/news/world-51318246">Coronavirus declared global health emergency by WHO</a></td><td>31.1.2020</td><td>BBC</td></tr>
+<tr><td><a href="https://www.foreignaffairs.com/articles/china/2020-01-31/how-prepare-coronavirus-pandemic">How to Prepare for a Coronavirus Pandemic</a></td><td>31.1.2020</td><td>Foreign Affairs</td></tr>
+<tr><td><a href="https://www.theguardian.com/world/2020/feb/11/coronavirus-expert-warns-infection-could-reach-60-of-worlds-population">Coronavirus 'could infect 60% of global population if unchecked'</a></td><td>11.2.2020</td><td>The Guardian</td></tr>
+<tr><td><a href="https://www.nytimes.com/2020/02/15/business/china-coronavirus-lockdown.html">To Tame Coronavirus, Mao-Style Social Control Blankets China</a></td><td>15.2.2020</td><td>NYT</td></tr>
+<tr><td><a href="https://www.theatlantic.com/health/archive/2020/02/covid-vaccine/607000/">You’re Likely to Get the Coronavirus</a></td><td>24.2.2020</td><td>The Atlantic</td></tr>
+<tr><td><a href="https://yle.fi/uutiset/3-10897264">Suomalaisnainen saanut koronavirustartunnan Italiasta</a></td><td>26.2.2020</td><td>YLE</td></tr>
+<tr><td><a href="https://www.cnbc.com/2020/02/19/two-iranians-die-after-testing-positive-for-coronavirus.html">Two Iranians die after testing positive for coronavirus</a></td><td>19.2.2020</td><td>CNBC</td></tr>
+<tr><td><a href="https://yle.fi/uutiset/3-11244867">Tätä koronaviruksesta selvitetään nyt kiireellisesti</a></td><td>6.3.2020</td><td>YLE</td></tr>
+<tr><td><a href="https://www.iltalehti.fi/koronavirus/a/cba2717e-3443-4c4e-9a05-947b4a1595e3">Ulkoministeriö kehottaa välttämään matkustamista</a></td><td>9.3.2020</td><td>Iltalehti</td></tr>
+<tr><td><a href="https://fortune.com/2020/03/09/dow-jones-sp-500-today-nasdaq-stock-market-crash-2020/">Worst day in a decade: Nasdaq, S&P, Dow down nearly 8% in massive market rout</a></td><td>9.3.2020</td><td>Fortune</td></tr>
+<tr><td><a href="https://www.bbc.com/news/world-europe-51810673">Coronavirus: Italy extends emergency measures nationwide</a></td><td>10.3.2020</td><td>BBC</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-who/world-health-organization-describes-coronavirus-outbreak-as-pandemic-idUSKBN20Y2OI">World Health Organization calls coronavirus outbreak 'pandemic' for first time</a></td><td>11.3.2020</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.hs.fi/kotimaa/art-2000006436826.html">HS avaa koronavirusta koskevat uutiset luettavaksi maksutta</a></td><td>12.3.2020</td><td>HS</td></tr>
+<tr><td><a href="https://yle.fi/uutiset/3-11254339">Puolueet antoivat tukensa valmiuslain käyttöönottoon tarvittaessa</a></td><td>12.3.2020</td><td>YLE</td></tr>
+<tr><td><a href="https://yle.fi/uutiset/3-11212596">Uusimmat tiedot koronaviruksesta</a></td><td>19.3.2020</td><td>YLE</td></tr>
+<tr><td><a href="https://www.scmp.com/news/hong-kong/health-environment/article/3074988/coronavirus-some-recovered-patients-may-have">Koronavirus saattaa vaurioittaa keuhkoja – osalla toimintakyky voi heikentyä jopa 30 prosentilla</a></td><td>13.3.2020</td><td>SCMP</td></tr>
+<tr><td><a href="https://www.ft.com/content/5a2ffc78-6550-11ea-b3f3-fe4680ea68b5">Hengityskoneista pulaa Euroopassa – Saksassa armeija komennettu apuu</a></td><td>13.3.2020</td><td>FT</td></tr>
+<tr><td><a href="https://www.bbc.com/news/uk-51889957">Koronaviruksen aiheuttamat kuolemat kaksinkertaistuivat Yhdistyneessä kuningaskunnassa</a></td><td>14.3.2020</td><td>BBC</td></tr>
+<tr><td><a href="https://theconversation.com/coronavirus-can-herd-immunity-really-protect-us-133583">Coronavirus: can herd immunity really protect us?</a></td><td>13.3.2020</td><td>theconversation</td></tr>
+<tr><td><a href="https://yle.fi/uutiset/3-11257376">Koronakriisi on jo saanut Ruotsin kysymään ruokaa Suomesta – Naapurimaan omavaraisuusaste historiallisen alhainen</a></td><td>15.3.2020</td><td>YLE</td></tr>
+<tr><td><a href="https://www.uusisuomi.fi/uutiset/kova-arvio-husista-pulaa-voi-epidemiatilanteessa-tulla-seka-sairaalasangyista-etta-kasipareista/578aefcc-535c-4ebb-b7ef-a5db64275273">Kova arvio HUSista: ”Pulaa voi epidemiatilanteessa tulla sekä sairaalasängyistä että käsipareista”</a></td><td>15.3.2020</td><td>Uusi Suomi</td></tr>
+<tr><td><a href="https://www.nytimes.com/2020/03/14/us/politics/trump-virus-test.html">Trumpin koronavirustesti negatiivinen </a></td><td>14.3.2020</td><td>NYT</td></tr>
+<tr><td><a href="https://www.technologyreview.com/s/615358/worst-case-coronavirus-scenario-214-million-americans-infected-17-million-dead/">Worst-case coronavirus scenario: 214 million Americans infected, 1.7 million dead</a></td><td>13.3.2020</td><td>technologyreview</td></tr>
+<tr><td><a href="https://www.hs.fi/kotimaa/art-2000006440582.html">Aggressiivisesta testaamisesta olisi hyötyä Suomessakin, mutta nyt siihen ei kyetä, sanoo Husin johtaja­ylilääkäri</a></td><td>15.3.2020</td><td>HS</td></tr>
+<tr><td><a href="https://www.mtvuutiset.fi/artikkeli/thl-n-paajohtaja-markku-tervahauta-ylella-suomessa-voi-olla-todellisuudessa-20-30-kertaa-enemman-koronaviruksen-saaneita/7762944#gs.0he22f">HL:n pääjohtaja Markku Tervahauta Ylellä: Suomessa voi olla todellisuudessa 20-30 kertaa enemmän koronaviruksen saaneita</a></td><td>16.3.2020</td><td>MTV3</td></tr>
+<tr><td><a href="https://www.politico.com/news/2020/03/16/coronavirus-pandemic-leadership-131540">The incompetence pandemic </a></td><td>16.3.2020</td><td>Politico</td></tr>
+<tr><td><a href="https://www.theaustralian.com.au/world/the-times/like-drowning-in-air-lung-damage-from-serious-coronavirus-cases-may-take-years-to-heal/news-story/45e58e0725a93870bdc11491786e2f6e?fbclid=IwAR12MAXqg__MY8Y51mtPAHrGXv9sNjrkS5Ov_6hntw8yzb7HsdP4NoWLXyc">‘Like drowning in air: lung damage from serious coronavirus cases may take years to heal</a></td><td>15.3.2020</td><td>The Australian</td></tr>
+<tr><td><a href="https://www.theguardian.com/world/2020/mar/15/uk-coronavirus-crisis-to-last-until-spring-2021-and-could-see-79m-hospitalised?fbclid=IwAR1KJli_781D5aVn0d6jfAb3e1QUWg4W2OLhEi19qYzKR05u_7rOmCsOdKk">UK coronavirus crisis 'to last until spring 2021 and could see 7.9m hospitalised' </a></td><td>15.3.2020</td><td>The Guardian</td></tr>
+<tr><td><a href="https://www.nytimes.com/reuters/2020/03/14/world/europe/14reuters-health-coronavirus-france-drug.html">France Warns Against Use of Anti-Inflammatory Drugs to Tackle Coronavir</a></td><td>14.3.2020</td><td>NYT</td></tr>
+<tr><td><a href="https://www.maaseuduntulevaisuus.fi/kotimaa/artikkeli-1.1020202">THL:n tutkimusprofessori emeritus koronaepidemiasta: "Useimmat COVID-19 kuolemat eivät ole väistämättömiä"</a></td><td>14.3.2020</td><td>Maaseudun Tulevaisuus</td></tr>
+<tr><td><a href="https://www.uusisuomi.fi/uutiset/us/39501cca-6a5d-4e4b-8b4e-a7201988f995">Hallitus julisti poikkeusolot</a></td><td>17.3.2020</td><td>Uusi Suomi</td></tr>
+<tr><td><a href="https://www.hs.fi/kotimaa/art-2000006440845.html">Hallitus tiedottaa valmiuslaista tänään kello 15, Suomessa tehty 3 000 koronavirustestiä</a></td><td>17.3.2020</td><td>HS</td></tr>
+<tr><td><a href="https://www.bbc.com/news/world-australia-51921403">Coronavirus: Australian scientists map how immune system fights virus</a></td><td>17.3.2020</td><td>BBC</td></tr>
+<tr><td><a href="https://medicalxpress.com/news/2020-03-coronavirus-drugs.html">Coronavirus drugs: Who's doing what, and when they might come</a></td><td>16.3.2020</td><td>medicalxpress</td></tr>
+<tr><td><a href="https://medicalxpress.com/news/2020-03-case-covid-.html">WHO chief calls for widespread virus testing as Europe locks down</a></td><td>16.3.2020</td><td>medicalxpress</td></tr>
+<tr><td><a href="https://www.maaseuduntulevaisuus.fi/ruoka/artikkeli-1.1022446?fbclid=IwAR2e7rLl9BUWD7Kp-ZuU4wHGty4cTfluWZWM6GHrrn5VHcd9UYY3f20XeGY">Koronakriisi on jo saanut Ruotsin kysymään ruokaa Suomesta – Naapurimaan omavaraisuusaste historiallisen alhainen</a></td><td>17.3.2020</td><td>Maaseudun Tulevaisuus</td></tr>
+<tr><td><a href="https://www.bloomberg.com/news/articles/2020-03-16/hong-kong-shutdown-is-a-lesson-to-the-world-in-halting-the-virus">Hong Kong Shutdown a Lesson to the World in Halting Virus</a></td><td>16.3.2020</td><td>Bloomberg</td></tr>
+<tr><td><a href="https://www.bloomberg.com/news/articles/2020-03-17/europe-s-doctors-getting-sick-like-in-wuhan-chinese-doctors-say?srnd=premium-europe">Europe’s Doctors Repeat Errors Made in Wuhan, China Medics Say</a></td><td>17.3.2020</td><td>Bloomberg</td></tr>
+<tr><td><a href="https://www.nbcnews.com/news/us-news/coronavirus-upends-justice-system-states-close-courts-halt-trials-n1160961">Coronavirus upends justice system as states close courts and halt trials</a></td><td>17.3.2020</td><td>NBC</td></tr>
+<tr><td><a href="https://www.iltalehti.fi/koronavirus/a/ef9d8f81-ab6d-4ac4-92e1-8b59bdad5702">Professori Lasse Lehtonen: Jos koronaan sairastuneita on 35 prosenttia, tehohoitoa voidaan antaa 15 prosentille sitä tarvitsevista </a></td><td>17.3.2020</td><td>Iltalehti</td></tr>
+<tr><td><a href="https://www.iltalehti.fi/koronavirus/a/7a70930f-2f55-47e9-beb5-879a3472824b">Helsinki avaa toisen koronaterveysaseman Malmille – toimi näin ennen terveysasemalle menoa</a></td><td>17.3.2020</td><td>Iltalehti</td></tr>
+<tr><td><a href="https://www.iltalehti.fi/koronavirus/a/94bda098-1ca1-466e-a55b-b467e901d013">Suomessa yli 300 koronavirustartuntaa – osa tarvinnut sairaalahoitoa</a></td><td>17.3.2020</td><td>Iltalehti</td></tr>
+<tr><td><a href="https://yle.fi/uutiset/3-11212596">Uusimmat tiedot koronaviruksesta: Suomessa nyt 319 varmennettua tartuntaa, Matkailu- ja ravintola-alan liikevaihdosta suli 70 prosenttia, Kiinassa vain yksi tartunta</a></td><td>17.3.2020</td><td>YLE</td></tr>
+<tr><td><a href="https://edition.cnn.com/2020/03/17/health/us-coronavirus-updates-tuesday/index.html">Sweeping restrictions take effect in coronavirus response as health officials warn US is at a tipping point</a></td><td>17.3.2020</td><td>CNN</td></tr>
+<tr><td><a href="https://edition.cnn.com/2020/03/17/politics/white-house-donald-trump-coronavirus-emergency/index.html">Trump, finally, takes the coronavirus emergency seriously</a></td><td>17.3.2020</td><td>CNN</td></tr>
+<tr><td><a href="https://www.kaleva.fi/uutiset/ulkomaat/ranskalaiset-ulkonaliikkumiskieltoon-puolustusvoimat-valjastetaan-sairaaloiden-avuksi/837005/">Ranskalaiset ul­ko­na­liik­ku­mis­kiel­toon – puo­lus­tus­voi­mat valjastetaan sairaaloiden avuksi</a></td><td>17.3.2020</td><td>Kaleva</td></tr>
+<tr><td><a href="https://yle.fi/uutiset/3-11261761">Tähän Suomen hallitus perustaa ratkaisunsa: Huhtikuun lopulla jopa 6 000 suomalaista voi olla sairaalassa koronan takia</a></td><td>17.3.2020</td><td>YLE</td></tr>
+<tr><td><a href="https://www.tiede.fi/blogit/kaiken-takana-loinen/tama-tulee-kestamaan-kauan">Kaiken takana on loinen: Tämä tulee kestämään kauan</a></td><td>17.3.2020</td><td>Tiede</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-turkey/turkey-detains-19-people-over-provocative-coronavirus-posts-idUSKBN2140T9?il=0">Turkey detains 19 people over 'provocative' coronavirus posts</a></td><td>17.3.2020</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.hs.fi/tiede/art-2000006442606.html">Suomi sulki itsensä selvästi aiemmin kuin Wuhan ja Italia – Strategia on nyt ottaa tauti hitaasti vastaan muissa kuin riskiryhmissä</a></td><td>17.3.2020</td><td>HS</td></tr>
+<tr><td><a href="https://www.is.fi/politiikka/art-2000006442474.html">Hallitus julkaisi koronamuistion – ennusteen mukaan jopa 3 miljoonaa suomalaista voi sairastua, 540 – 3 240 kuolla</a></td><td>17.3.2020</td><td>Ilta-Sanomat</td></tr>
+<tr><td><a href="https://www.reuters.com/article/uk-health-coronavirus-jpm-idUKKBN2141CG?taid=5e70e5aae6e3ff0001400c0b&utm_campaign=trueAnthem%3A+Trending+Content&utm_medium=trueAnthem&utm_source=twitter">Sijoituspankki JPMorgan arvioi, että Italian pandemiahuippu on seitsemän päivän kuluttua</a></td><td>17.3.2020</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.bbc.com/news/world-europe-51927790">Espanjassa nyt lähes 500 koronavirukseen kuollutta</a></td><td>17.3.2020</td><td>BBC</td></tr>
+<tr><td><a href="https://edition.cnn.com/world/live-news/coronavirus-outbreak-03-17-20-intl-hnk/index.html">New Yorkin pormestarin mukaan kaupunki ei tällä hetkellä suunnittele karanteenia</a></td><td>17.3.2020</td><td>CNN</td></tr>
+<tr><td><a href="https://www.hs.fi/politiikka/art-2000006443145.html">Hallitus otti heti käyttöön mahdollisuuden rajoittaa lääkkeiden myyntiä – Nämä asiat muuttuvat, kun osia valmiuslaista tulee voimaan</a></td><td>17.3.2020</td><td>HS</td></tr>
+<tr><td><a href="https://www.mtvuutiset.fi/artikkeli/nama-ovat-kriittiset-ammatit-valtioneuvosto-julkaisi-listan-katso-se-taalta/7764394#gs.0458nh">Nämä ovat kriittiset ammatit – valtioneuvosto julkaisi listan, katso se täältä</a></td><td>17.3.2020</td><td>MTV3</td></tr>
+<tr><td><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.google.fi%2Famp%2Fs%2Fwww.sciencealert.com%2Fa-classic-therapy-from-the-1890s-could-help-protect-against-coronavirus-experts-say%3Ffbclid%3DIwAR0fcUoKNsg3FM_4Te0-w4AW5BQNOlSFgGqlZXYzOFug4w-XlqOnkeZR_Jc&h=AT0swpig4NflhmvEDTDC0PFX_MnVeRYY-_v6wkrzLAV3rJ5BZ0egbrQGh3bVWFRApxAIkGCc_HYr2XauuilI9ug-Y30loJC6HYILEx0c5t9qWZkaPZI5csYiyjU5nMBjPChMesgc">Johns Hopkins Experts Are Trying a Clever Antibody Method From The 1890s on COVID-19 </a></td><td>17.3.2020</td><td>sciencealert</td></tr>
+<tr><td><a href="https://www.sciencealert.com/who-warns-more-coronavirus-testing-is-needed">Why More Coronavirus Testing Is One of The Most Important Actions Right Now, According to WHO </a></td><td>17.3.2020</td><td>sciencealert</td></tr>
+<tr><td><a href="https://yle.fi/uutiset/3-11263507">Perustuslakivaliokunta kertoo kantansa valmiuslakiin</a></td><td>18.3.2020</td><td>YLE</td></tr>
+<tr><td><a href="https://www.stylist.co.uk/life/coronavirus-panic-buying-shoppers-stockpiling-rationing-toilet-roll-hand-sanitiser-supermarkets-stores/365688">The psychology of panic buying: why do we feel the need to stockpile?</a></td><td>18.3.2020</td><td>The Stylist</td></tr>
+<tr><td><a href="https://www.bloomberg.com/news/articles/2020-03-18/europe-surpasses-china-in-number-of-confirmed-coronavirus-cases">Europe Passes China in Confirmed Coronavirus Cases, Deaths</a></td><td>18.3.2020</td><td>Bloomberg</td></tr>
+<tr><td><a href="https://www.is.fi/kotimaa/art-2000006445392.html">HUS on siirtynyt täysvalmiuteen</a></td><td>19.3.2020</td><td>Iltasanomat</td></tr>
+<tr><td><a href="https://www.hs.fi/politiikka/art-2000006444716.html">Kuinka moni joutuu korona­viruksen vuoksi teho­hoitoon? THL:n luvut poikkeavat selvästi kansain­välisistä arvioista</a></td><td>19.3.2020</td><td>HS</td></tr>
+<tr><td><a href="https://yle.fi/uutiset/3-11265359?utm_source=twitter-share&utm_medium=social">Tehohoidon ylilääkäri Ylelle: Tehohoitoa joudutaan rajaamaan raskaasti, jos synkimmät ennusteet toteutuvat – 11 tärkeää kysymystä tehohoidosta</a></td><td>20.3.2020</td><td>YLE</td></tr>
+<tr><td><a href="https://www.hs.fi/kotimaa/art-2000006446009.html">Suomi lisää korona­viruksen testaus­kapasiteettia, mutta ei ota testeihin lievä­oireisia: ”Emme totta puhuen ymmärrä WHO:n linjausta”, sanoo THL:n Mika Salminen</a></td><td>20.3.2020</td><td>HS</td></tr>
+<tr><td><a href="https://www.nytimes.com/2020/03/19/health/wuhan-coronavirus-deaths.html?fbclid=IwAR2tODap1x-wF1HyHerS5I3EpXRzrcs0t9__9wCsacng_t2lSfFVyzTo_Sw#click=https://t.co/gB8JEmBjcm">Coronavirus Death Rate in Wuhan Is Lower than Previously Thought, Study Finds</a></td><td>20.3.2020</td><td>NYT</td></tr>
+<tr><td><a href="https://www.theguardian.com/business/2020/mar/17/uk-manufacturers-regear-factories-build-ventilators-nhs">UK manufacturers to regear factories to build ventilators for NHS</a></td><td>17.3.2020</td><td>Guardian</td></tr>
+<tr><td><a href="https://edition.cnn.com/2020/03/12/asia/coronavirus-south-korea-testing-intl-hnk/index.html">How this South Korean company created coronavirus test kits in three weeks</a></td><td>13.3.2020</td><td>CNN</td></tr>
+<tr><td><a href="https://news.sky.com/story/coronavirus-they-call-it-the-apocalypse-inside-italys-hardest-hit-hospital-11960597">Coronavirus: Italy's hardest-hit city wants you to see how COVID-19 is affecting its hospitals </a></td><td>20.3.2020</td><td>Sky News</td></tr>
+<tr><td><a href="https://www.reuters.com/article/us-health-coronavirus-finland-who-idUSKBN2170ZB">Finnish health boss questions WHO coronavirus testing advice</a></td><td>20.3.2020</td><td>Reuters</td></tr>
+<tr><td><a href="https://www.bbc.com/news/world-middle-east-51930856">Is Iran covering up its outbreak?</a></td><td>20.3.2020</td><td>BBC</td></tr>
+<tr><td><a href="https://news.sky.com/story/coronavirus-number-of-cases-in-germany-rises-by-nearly-3-000-to-13-957-overnight-11960726">Coronavirus: COVID-19 cases in Spain and Germany rise by nearly 3,000 overnight</a></td><td>20.3.2020</td><td>Sky News</td></tr>
+<tr><td><a href="https://news.sky.com/story/coronavirus-number-of-covid-19-deaths-in-italy-surpasses-china-as-total-reaches-3-405-11960412">Coronavirus: Number of COVID-19 deaths in Italy surpasses China as total reaches 3,405</a></td><td>20.3.2020</td><td>Sky News</td></tr>
+
+
+
+</tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+Copy paste CMS loppuu
+
+ -->       
+               
+
+                                                </table>                                           
+                                            </div> <!-- end preview-->
+                                        
+                                         
+                                        
+                                    </div> <!-- end card body-->
+                                </div> <!-- end card -->
+
+
+
+
+
+
+
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <h4 class="header-title">Talousvaikutukset, huoltovarmuus, toimitusketjut</h4>
+                                        <p>
+                                            <code>Tulossa... </code> 
+                                        </p>
+                                       <div class="spinner-grow text-info" role="status"></div>
+                                            </div> <!-- end preview-->
+                                        
+                                         
+                                        
+                                    </div> <!-- end card body-->
+                                </div> <!-- end card -->
+
+
+
+
+
+
+
+
+                     
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+
+
+                                                                                 <div class="alert alert-info alert-dismissible fade show d-xl-none font-14" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <i class="dripicons-information mr-2"></i><strong>Mobiilikäyttäjä - taulukossa on useita sarakkeita ja paljon dataa - </strong>  suodattaminen ja lajittelu toimivat parhaiten suurella näytöllä. 
+                                        </div>
+
+
+                                        <h4 class="header-title">Merkittäviä vertaisarvioituja tieteellisiä julkaisuja</h4>
+                                        
+                                            <p>Inkluusiokriteerinä on artikkelin aihe: SARS-Cov-2-virus, josta käytetään myös termejä HCov-19 ja SARS-2; kyseisen viruksen aiheuttama sairaus, COVID-19; kyseisen viruksen leviämisen ehkäisy sekä sairauden hoito. Listan artikkelit on valikoitu yli 600 artikkelin joukosta journaalin vaikuttavuuskertoimen, artikkelin viittausmäärän ja mediaseurannan perusteella.</p>
+
+                                            <p>Verkossa on useita kokoelmia tutkimusta, mutta tämä on tietääksemme ainoa kuratoitu sellainen. Paras lähde kaiken aiheen tutkimuksen seurantaan on   
+                                            vasta-avattu <a href="https://www.ncbi.nlm.nih.gov/research/coronavirus/">LitCovid</a>-palvelu, jonka tuottaa Amerikkalainen National Center for Biotechnology Information (tunnettu <a href="https://www.ncbi.nlm.nih.gov/pubmed/">PubMed</a>:istä). Suodattamattomia tietokantoja akateemisesta tutkimuksesta löytyy mm. <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/global-research-on-novel-coronavirus-2019-ncov">WHO</a>:n, <a href="https://www.microsoft.com/en-us/research/project/academic/articles/microsoft-academic-resources-and-their-application-to-covid-19-research/">Microsoft Academicin</a> sekä <a href="https://pages.semanticscholar.org/coronavirus-research">Semantic Scholarin</a> verkkosivuilta. 
+   
+
+                                                <table id="datatable_science" class="table table-striped dt-responsive w-100">
+                                                  <thead><tr><th>Päivämäärä</th><th>Artikkelin nimi</th><th>Kirjoittanut</th><th>Citations</th><th>Journaali</th><th>IF</th><th>Tags</th></tr></thead><tbody>
+<tr><td>24.1.2020</td><td><a href="https://doi.org/10.1016/S0140-6736(20)30183-5">Clinical features of patients infected with 2019 novel coronavirus in Wuhan, China</td><td>Huang et al.</td><td>931</td><td>The Lancet</td><td>59</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-primary">clinical picture</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-dark">n=41</span></a></td></tr>
+<tr><td>4.2.2020</td><td><a href="https://doi.org/10.1148/radiol.2020200230">CT Imaging Features of 2019 Novel Coronavirus (2019-nCoV)</td><td>Chung et al.</td><td>81</td><td>Radiology</td><td>7.6</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-primary">clinical picture</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-dark">n=21</span></a></td></tr>
+<tr><td>19.2.2020</td><td><a href="https://doi.org/10.1111/all.14238">Clinical characteristics of 140 patients infected with SARS‐CoV‐2 in Wuhan, China</td><td> Zhang et al.</td><td>24</td><td>Allergy</td><td>6.8</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-primary">clinical picture</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-dark">n=140</span></a></td></tr>
+<tr><td>28.2.2020</td><td><a href="https://doi.org/10.1056/NEJMoa2002032">Clinical Characteristics of Coronavirus Disease 2019 in China</td><td>Guan et al.</td><td>74</td><td>NEJM</td><td>70.7</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-primary">clinical picture</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-dark">n=1099</span></a></td></tr>
+<tr><td>24.2.2020</td><td><a href="https://doi.org/10.1001/jama.2020.2648">Characteristics of and Important Lessons From the Coronavirus Disease 2019 (COVID-19) Outbreak in China. Summary of a Report of 72 314 Cases From the Chinese Center for Disease Control and Prevention</td><td>Wu et McGoogan</td><td>78</td><td>JAMA</td><td>51.3</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-primary">clinical picture</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-secondary">epidemiology</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-success">SARS/MERS</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-dark">n=72314</span></a></td></tr>
+<tr><td>5.3.2020</td><td><a href="https://doi.org/10.1056/NEJMoa2001191">First Case of 2019 Novel Coronavirus in the United States</td><td>Holshue et al.</td><td>231</td><td>NEJM</td><td>70.7</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-primary">clinical picture</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">transmission</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-dark">n=1</span></a></td></tr>
+<tr><td>15.2.2020</td><td><a href="https://doi.org/10.1016/S0140-6736(20)30211-7">Epidemiological and clinical characteristics of 99 cases of 2019 novel coronavirus pneumonia in Wuhan, China: a descriptive study</td><td>Chen et al.</td><td>492</td><td>The Lancet</td><td>59</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-primary">clinical picture</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-dark">n=99</span></a></td></tr>
+<tr><td>5.3.2020</td><td><a href="https://doi.org/10.1056/NEJMc2001468">Transmission of 2019-nCoV Infection from an Asymptomatic Contact in Germany</td><td>Rothe et al.</td><td>214</td><td>NEJM</td><td>70.7</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-primary">clinical picture</span></a></td></tr>
+<tr><td>5.3.2020</td><td><a href="https://doi.org/10.2807/1560-7917.ES.2020.25.9.2000178">First cases of coronavirus disease 2019 (COVID-19) in the WHO European Region, 24 January to 21 February 2020.</td><td>Spiteri et al.</td><td>1</td><td>Eurosurveill</td><td>7.4</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-secondary">epidemiology</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">transmission</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-dark">n=38</span></a></td></tr>
+<tr><td>13.3.2020</td><td><a href="https://doi.org/10.1001/jamainternmed.2020.0994">Risk Factors Associated With Acute Respiratory Distress Syndrome and Death in Patients With Coronavirus Disease 2019 Pneumonia in Wuhan, China.</td><td>Wu et al.</td><td>1</td><td>JAMA</td><td>51.3</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-primary">risk factors for severe disease; hoito</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-dark">n=201</span></a></td></tr>
+<tr><td>13.3.2020</td><td><a href="https://doi.org/10.3201/eid2606.200320">Case-Fatality Risk Estimates for COVID-19 Calculated by Using a Lag Time for Fatality.</td><td>Wilson et al.</td><td>0</td><td>Emerg Infect Dis</td><td>7.4</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-dark">mortality</span></a></td></tr>
+<tr><td>13.3.2020</td><td><a href="https://doi.org/10.3201/eid2606.200233">Estimating Risk for Death from 2019 Novel Coronavirus Disease, China, January–February 2020</td><td>Mizumoto et Chowell</td><td>0</td><td>Emerg Infect Dis</td><td>7.4</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-dark">mortality</span></a></td></tr>
+<tr><td>11.3.2020</td><td><a href="https://doi.org/10.1016/S0140-6736(20)30566-3">Clinical course and risk factors for mortality of adult inpatients with COVID-19 in Wuhan, China: a retrospective cohort study</td><td>Zhou et al.</td><td>2</td><td>The Lancet</td><td>59</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-primary">clinical picture</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-dark">mortality</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-dark">n=191</span></a></td></tr>
+<tr><td>21.2.2020</td><td><a href="https://doi.org/10.1001/jama.2020.2565">Presumed Asymptomatic Carrier Transmission of COVID-19</td><td>Bai et al.</td><td>51</td><td>JAMA</td><td>51.3</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">transmission</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-dark">n=5</span></a></td></tr>
+<tr><td>12.3.2020</td><td><a href="https://doi.org/10.1093/cid/ciaa225">A case report of neonatal COVID-19 infection in China.</td><td>Wang et al.</td><td>0</td><td>Clin Infect Dis.</td><td>9.1</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-primary">clinical picture</span></a></td></tr>
+<tr><td>17.2.2020</td><td><a href="https://doi.org/10.3390/jcm9020538">Incubation Period and Other Epidemiological Characteristics of 2019 Novel Coronavirus Infections with Right Truncation: A Statistical Analysis of Publicly Available Case Data.</td><td>Lintone et al.</td><td>12</td><td>J Clin Med</td><td>5.5</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-light">incubation</span></a></td></tr>
+<tr><td>17.5.2016</td><td><a href="https://doi.org/10.1503/cmaj.150835">Effectiveness of N95 respirators versus surgical masks in protecting health care workers from acute respiratory infection: a systematic review and meta-analysis</td><td>Smith et al.</td><td>31</td><td>CMAJ</td><td>6.9</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">preventing spread</span></a></td></tr>
+<tr><td>13.3.2020</td><td><a href="https://doi.org/10.1001/jama.2020.3882">From Containment to Mitigation of COVID-19 in the US</td><td>Parodi et Liu</td><td>0</td><td>JAMA</td><td>51.3</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">preventing spread</span></a></td></tr>
+<tr><td>9.3.2020</td><td><a href="https://doi.org/10.1016/S0140-6736(20)30567-5">How will country-based mitigation measures influence the course of the COVID-19 epidemic?</td><td>Anderson et al.</td><td>2</td><td>Lancet</td><td>59</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">preventing spread</span></a></td></tr>
+<tr><td>13.3.2020</td><td><a href="https://doi.org/10.1001/jamapediatrics.2020.0828">What Does the Coronavirus Disease 2019 (COVID-19) Mean for Families?</td><td>Thompson et Rasmussen</td><td>0</td><td>JAMA Pediatrics</td><td>12</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">preventing spread</span></a></td></tr>
+<tr><td>6.7.2011</td><td><a href="https://doi.org/10.1002/14651858.CD006207.pub4">Physical interventions to interrupt or reduce the spread of respiratory viruses</td><td>Jefferson et al.</td><td>293</td><td>Cochrane Database of Systematic Reviews</td><td>7.8</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">transmission</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">preventing spread</span></a></td></tr>
+<tr><td>19.2.2020</td><td><a href="https://doi.org/10.1056/NEJMc2001737">SARS-CoV-2 Viral Load in Upper Respiratory Specimens of Infected Patients</td><td>Zou et al.</td><td>55</td><td>NEJM</td><td>70.7</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">transmission</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-warning">virus</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-dark">n=18</span></a></td></tr>
+<tr><td>24.2.2020</td><td><a href="https://doi.org/10.1038/s41421-020-0147-1">Comparative genetic analysis of the novel coronavirus (2019-nCoV/SARS-CoV-2) receptor ACE2 in different populations</td><td>Cao et al.</td><td>3</td><td>Cell Disc</td><td>4.6</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-warning">virus</span></a></td></tr>
+<tr><td>20.2.2020</td><td><a href="https://doi.org/10.1056/NEJMoa2001017">A Novel Coronavirus from Patients with Pneumonia in China, 2019</td><td>Zhu et al.</td><td>624</td><td>NEJM</td><td>70.7</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-warning">virus</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-dark">n=3</span></a></td></tr>
+<tr><td>29.1.2020</td><td><a href="https://doi.org/10.1056/NEJMoa2001316">Early Transmission Dynamics in Wuhan, China, of Novel Coronavirus–Infected Pneumonia</td><td>Li et al.</td><td>612</td><td>NEJM</td><td>70.7</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">transmission</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-warning">virus</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-light">incubation</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-dark">n=425</span></a></td></tr>
+<tr><td>22.2.2020</td><td><a href="https://doi.org/10.1016/S0140-6736(20)30251-8">Genomic characterisation and epidemiology of 2019 novel coronavirus: implications for virus origins and receptor binding</td><td>Lu et al.</td><td>295</td><td>The Lancet</td><td>59</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-warning">virus</span></a></td></tr>
+<tr><td>27.2.2020</td><td><a href="https://doi.org/10.1002/jmv.25728">The neuroinvasive potential of SARS‐CoV2 may be at least partially responsible for the respiratory failure of COVID‐19 patients</td><td>Li et al.</td><td>1</td><td>J Med Virol</td><td>2.3</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-warning">virus</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-danger">neuro</span></a></td></tr>
+<tr><td>6.3.2020</td><td><a href="https://doi.org/10.1016/j.cell.2020.02.052">SARS-CoV-2 Cell Entry Depends on ACE2 and TMPRSS2 and Is Blocked by a Clinically Proven Protease Inhibitor</td><td>Hoffmann et al.</td><td>5</td><td>Cell</td><td>43.4</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-warning">virus</span></a></td></tr>
+<tr><td>13.3.2020</td><td><a href="https://doi.org/10.1021/acschemneuro.0c00122">Evidence of the COVID-19 Virus Targeting the CNS: Tissue Distribution, Host-Virus Interaction, and Proposed Neurotropic Mechanisms.</td><td>Baig et al. </td><td>0</td><td>ACS Chem Neurosci</td><td>4.3</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-warning">virus</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-danger">neuro</span></a></td></tr>
+<tr><td>9.3.2020</td><td><a href="https://doi.org/10.1186/s13054-020-2814-x">Preparing for COVID-19: early experience from an intensive care unit in Singapore</td><td>Liew et al.</td><td>0</td><td>BMC</td><td>8.3</td><td></td></tr>
+<tr><td>11.3.2020</td><td><a href="https://doi.org/10.1056/NEJMp2003539">Virtually Perfect? Telemedicine for Covid-19.</td><td>Hollander et Carr</td><td>1</td><td>NEJM</td><td>70.7</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">preventing spread</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-light">healthcare </span></a></td></tr>
+<tr><td>11.3.2020</td><td><a href="https://doi.org/10.7326/M20-0751">Coronavirus Disease 2019 (COVID-19): Protecting Hospitals From the Invisible.</td><td>Klompas</td><td>0</td><td>Ann Intern Med.</td><td>19.3</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">preventing spread</span></a></td></tr>
+<tr><td>11.3.2020</td><td><a href="https://doi.org/10.7326/M20-0907">How Should U.S. Hospitals Prepare for Coronavirus Disease 2019 (COVID-19)?</td><td>Chopra et al.</td><td>0</td><td>Ann Intern Med.</td><td>19.3</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-light">treatment</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-light">healthcare </span></a></td></tr>
+<tr><td>11.3.2020</td><td><a href="https://doi.org/10.1001/jama.2020.3633">Care for Critically Ill Patients With COVID-19</td><td>Murthy et al.</td><td>0</td><td>JAMA</td><td>51.3</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-light">treatment</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-light">healthcare </span></a></td></tr>
+<tr><td>12.3.2020</td><td><a href="https://doi.org/10.1056/NEJMe2004856">Audio Interview: Making Decisions about Covid-19 Testing and Treatment for Your Patients</td><td>Rubin et al.</td><td>0</td><td>NEJM</td><td>70.7</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">preventing spread</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-light">healthcare </span></a></td></tr>
+<tr><td>12.3.2020</td><td><a href="https://doi.org/10.1001/jama.2020.3972">Supporting the Health Care Workforce During the COVID-19 Global Epidemic.</td><td>Adams et Walls</td><td>0</td><td>JAMA</td><td>51.3</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-light">healthcare </span></a></td></tr>
+<tr><td>10.2.2020</td><td><a href="https://doi.org/10.1038/d41573-020-00016-0">Therapeutic options for the 2019 novel coronavirus (2019-nCoV)</td><td>Li et al.</td><td>27</td><td>Nat Rev Drug Disc</td><td>57</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-light">treatment</span></a></td></tr>
+<tr><td>5.3.2020</td><td><a href="https://doi.org/10.1016/j.antiviral.2020.104762">Of chloroquine and COVID-19.</td><td>Touret et Lamballerie</td><td>0</td><td>Antiviral Res</td><td>4.1</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-light">treatment</span></a></td></tr>
+<tr><td>4.3.2020</td><td><a href="https://doi.org/10.1016/j.ijantimicag.2020.105932">Chloroquine and hydroxychloroquine as available weapons to fight COVID-19.</td><td>Colson et al.</td><td>2</td><td>Int J Antimicrob Agents</td><td>4.6</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-light">treatment</span></a></td></tr>
+<tr><td>20.2.2020</td><td><a href="https://doi.org/10.3390/jcm9020575">Characteristics of and Public Health Responses to the Coronavirus Disease 2019 Outbreak in China.</td><td>Deng et Peng </td><td>5</td><td>J Clin Med</td><td>5.6</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-light">treatment</span></a></td></tr>
+<tr><td>4.2.2020</td><td><a href="https://doi.org/10.1038/s41422-020-0282-0">Remdesivir and chloroquine effectively inhibit the recently emerged novel coronavirus (2019-nCoV) in vitro</td><td>Wang et al.</td><td>100</td><td>Cell Res</td><td>15.4</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-light">treatment</span></a></td></tr>
+<tr><td>13.3.2020</td><td><a href="https://doi:10.1001/jama.2020.4031">Critical Care Utilization for the COVID-19 Outbreak in Lombardy, Italy</td><td>Grasselli et al.</td><td>0</td><td>JAMA</td><td>51.3</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-light">healthcare</span></a></td></tr>
+<tr><td>12.3.2020</td><td><a href="https://doi.org/10.1016/S1473-3099(20)30195-X">Real estimates of mortality following COVID-19 infection</td><td>Baud et al.</td><td>3</td><td>Lancet Infect Dis</td><td>27.5</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-dark">mortality</span></a></td></tr>
+<tr><td>16.3.2020</td><td><a href="https://doi.org/10.1126/science.abb3221">Substantial undocumented infection facilitates the rapid dissemination of novel coronavirus (SARS-CoV2)</td><td>Li et al.</td><td>1</td><td>Science</td><td>41</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">transmission</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">preventing spread</span></a></td></tr>
+<tr><td>17.3.2020</td><td><a href="https://doi.org/10.1038/s41591-020-0820-9">The proximal origin of SARS-CoV-2</td><td>Anderson et al.</td><td>2</td><td>Nature Med</td><td>30.6</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-warning">virus</span></a></td></tr>
+<tr><td>17.3.2020</td><td><a href="https://doi.org/10.1093/cid/ciaa226">Perinatal Transmission of COVID-19 Associated SARS-CoV-2: Should We Worry?</td><td>Fan et al.</td><td>0</td><td>Clin Infect Dis.</td><td>9.1</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">transmission</span></a></td></tr>
+<tr><td>17.3.2020</td><td><a href="https://doi.org/10.2214/AJR.20.23034">Coronavirus Disease 2019 (COVID-19): A Systematic Review of Imaging Findings in 919 Patients.</td><td>Salehi et al.</td><td>0</td><td>Am J Roentgenol</td><td>3.2</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-primary">clinical picture</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-dark">n=919</span></a></td></tr>
+<tr><td>12.3.2020</td><td><a href="https://doi.org/10.1016/S0140-6736(20)30360-3">Clinical characteristics and intrauterine vertical transmission potential of COVID-19 infection in nine pregnant women: a retrospective review of medical records</td><td>Chen et al.</td><td>70</td><td>The Lancet</td><td>59</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-primary">clinical picture</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">transmission</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-dark">n=10</span></a></td></tr>
+<tr><td>13.3.2020</td><td><a href="https://doi.org/10.3348/kjr.2020.0157">Evolution of Computed Tomography Manifestations in Five Patients Who Recovered from Coronavirus Disease 2019 (COVID-19) Pneumonia.</td><td>Sun et al.</td><td></td><td>Kor J Radiol</td><td>3.7</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-primary">clinical picture</span></a></td></tr>
+<tr><td>17.3.2020</td><td><a href="https://doi.org/10.7326/L20-0175">COVID-19 and the Risk to Health Care Workers: A Case Report.</td><td>Ng et al.</td><td></td><td>Ann Intern Med</td><td>19.3</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">transmission</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">preventing spread</span></a></td></tr>
+<tr><td>18.3.2020</td><td><a href="https://doi.org/10.1016/j.ijid.2020.03.020">Estimation of the asymptomatic ratio of novel coronavirus infections (COVID-19).</td><td>Nishiura et al.</td><td></td><td>Int J Infect Dis</td><td>3.5</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">transmission</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-warning">virus</span></a></td></tr>
+<tr><td>13.3.2020</td><td><a href="https://doi.org/10.1001/jama.2020.4031">Critical Care Utilization for the COVID-19 Outbreak in Lombardy, Italy. Early Experience and Forecast During an Emergency Response</td><td>Grasseli et al. </td><td></td><td>JAMA</td><td>51.3</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-light">healthcare</span></a></td></tr>
+<tr><td>19.3.2020</td><td><a href="https://doi.org/10.2807/1560-7917.ES.2020.25.10.2000180">Estimating the asymptomatic proportion of coronavirus disease 2019 (COVID-19) cases on board the Diamond Princess cruise ship, Yokohama, Japan, 2020.</td><td>Mizumoto et al.</td><td>5</td><td>Eurosurveill</td><td>7.4</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">transmission</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-danger">preventing spread</span></a></td></tr>
+<tr><td>19.3.2020</td><td><a href="https://doi.org/10.2214/AJR.20.23072">Pregnancy and Perinatal Outcomes of Women With Coronavirus Disease (COVID-19) Pneumonia: A Preliminary Analysis.</td><td>Liu et al.</td><td></td><td>Am J Roentgenol</td><td>3.2</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-primary">clinical picture</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-dark">n=15</span></a></td></tr>
+<tr><td>19.3.2020</td><td><a href="https://doi.org/10.1056/NEJMp2005492">Facing Covid-19 in Italy - Ethics, Logistics, and Therapeutics on the Epidemic's Front Line.</td><td>Rosenbaum</td><td></td><td>NEJM</td><td>70.7</td><td></td></tr>
+<tr><td>19.3.2020</td><td><a href="https://doi.org/10.1056/NEJMe2005759">Audio Interview: New Research on Possible Treatments for Covid-19.</td><td>Rubin et al.</td><td></td><td>NEJM</td><td>70.7</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-light">treatment</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-light">healthcare</span></a></td></tr>
+<tr><td>18.3.2020</td><td><a href="https://doi.org/10.1056/NEJMoa2001282">A Trial of Lopinavir-Ritonavir in Adults Hospitalized with Severe Covid-19</td><td>Cao et al.</td><td></td><td>NEJM</td><td>70.7</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-light">treatment</span></a><a href="#" onclick="return false;"><span class="tagi badge badge-outline-dark">n=200</span></a></td></tr>
+<tr><td>13.2.2020</td><td><a href="https://doi.org/10.1148/radiol.2020200370">Time Course of Lung Changes On Chest CT During Recovery From 2019 Novel Coronavirus (COVID-19) Pneumonia</td><td>Pan et al.</td><td></td><td>Radiology</td><td>7.6</td><td><a href="#" onclick="return false;"><span class="tagi badge badge-primary">clinical picture</span></a></td></tr>
+
+
+</tbody>
+
+
+
+                                                    </tbody>
+
+                                                </table>              
+                                            </div> <!-- end preview-->
+                                        
+                                       
+
+                                    </div> <!-- end card body-->
+                                </div> <!-- end card -->
+
+
+
+
+
+
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <h4 class="header-title">Sekalaisia asiantuntijaresursseja</h4>
+                                        <p>
+                                            Taulukkoon on koottu sivustoja, medioita, yksittäisiä artikkeleita, yksittäisiä ohjeita sekä alalle erikoistuneiden virallisten tutkimuslaitosten vertaisarvioimattomia julkaisuja. Alla olevaa materiaalia yhdistää se, että se on alan ammattilaisten ja asiantuntijoiden toisilleen kirjoittamaa ja suunnattua.  
+                                        </p>
+
+                                         <p>
+                                            Sarakkeiden otsikot ovat painikkeita, joita käyttämällä voit lajitella taulukon haluamasi sarakkeen mukaiseen järjestykseen. Voit myös suodattaa tuloksia oikealla olevaa hakukenttää käyttäen. 
+                                        </p>
+
+                                                <table id="datatable_muut" class="table table-striped dt-responsive w-100">
+
+
+<!-- 
+Copy paste CMS alkaa
+
+ --><thead><tr><th>Otsikko</th><th>Päivämäärä</th><th>Organisaatio</th></tr></thead><tbody>
+<tr><td><a target="_blank" href="https://blogs.bmj.com/bmj/2020/03/12/staff-wearing-beards-and-covid-19-trickier-than-it-looks/">Staff wearing beards and covid-19: trickier than it looks</a></td><td>13.3.2020</td><td>BMJ</td></tr>
+<tr><td><a target="_blank" href="http://virological.org/">Virological - virologian tieteenharjoittajien keskustelufoorumi</a></td><td></td><td></td></tr>
+<tr><td><a target="_blank" href="https://promedmail.org/">Infektiotautien globaali sähköpostilista</a></td><td></td><td></td></tr>
+<tr><td><a target="_blank" href="http://www.microbe.tv/twiv/">This Week in Virology - yli 10 vuotta jatkunut virologian tieteellinen podcast</a></td><td></td><td></td></tr>
+"<tr><td><a target="_blank" href="https://doi.org/10.1001/jama.2020.2467">COVID-19 in Singapore—Current Experience
+Critical Global Issues That Require Attention and Action</a></td><td>20.2.2020</td><td>JAMA</td></tr>"
+<tr><td><a target="_blank" href="https://coronavirustechhandbook.com/">Coronavirus Tech Handbook: Crowdsourced resource </a></td><td></td><td></td></tr>
+<tr><td><a target="_blank" href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30627-9/fulltext">COVID-19 and Italy: what next?</a></td><td>13.3.2020</td><td>The Lancet</td></tr>
+<tr><td><a target="_blank" href="https://emcrit.org/ibcc/COVID19/">Internet Book of Clinical Care COVID-19</a></td><td></td><td>IBCC</td></tr>
+<tr><td><a target="_blank" href="https://www.nejm.org/doi/10.1056/NEJMe2004856">Making decisions about COVID-19, testing and treating your patient</a></td><td>12.3.2020</td><td>NEJM</td></tr>
+<tr><td><a target="_blank" href="https://www.uptodate.com/contents/coronavirus-disease-2019-covid-19?search=covid-19-2019-novel-coronavirus-the-basics&source=search_result&selectedTitle=1~150&usage_type=default&display_rank=1">Coronavirus disease 2019 (COVID-19)</a></td><td>13.3.2020</td><td>UpToDate</td></tr>
+<tr><td><a target="_blank" href="https://www.youtube.com/watch?v=TKS1pahoPRU&feature=youtu.be">Coronavirus in Italy - report from the front lines</a></td><td>13.3.2020</td><td>JAMA</td></tr>
+<tr><td><a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/technical-guidance/risk-communication-and-community-engagement">Risk communication and community engagement</a></td><td>1.3.2020</td><td>WHO</td></tr>
+<tr><td><a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/technical-guidance/points-of-entry-and-mass-gatherings">International points of entry, aviation and maritime sector preparedness</a></td><td>1.3.2020</td><td>WHO</td></tr>
+<tr><td><a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/technical-guidance/points-of-entry-and-mass-gatherings">Interim planning recommendations for Mass Gatherings</a></td><td>1.3.2020</td><td>WHO</td></tr>
+<tr><td><a target="_blank" href="https://www.who.int/news-room/q-a-detail/q-a-on-infection-prevention-and-control-for-health-care-workers-caring-for-patients-with-suspected-or-confirmed-2019-ncov">Q&A on infection prevention and control for health care workers</a></td><td>1.3.2020</td><td>WHO</td></tr>
+<tr><td><a target="_blank" href="https://emergency.cdc.gov/coca/calls/2020/callinfo_031220.asp?deliveryName=USCDC_1052%20DM22033">COVID 19 Information for Clinicians Caring for Children and Pregnant Women</a></td><td>12.3.2020</td><td>CDC</td></tr>
+<tr><td><a target="_blank" href="https://cmmid.github.io/topics/covid19/current-patterns-transmission/cases-from-deaths.html">Inferring cases from recent deaths</a></td><td>3.3.2020</td><td>London School of Hygiene and Tropical Medicine</td></tr>
+<tr><td><a target="_blank" href="https://cmmid.github.io/topics/covid19/control-measures/pre-symptomatic-transmission.html">The Contribution of Pre-symptomatic Transmission to the COVID-19 Outbreak</a></td><td>2.3.2020</td><td>London School of Hygiene and Tropical Medicine</td></tr>
+<tr><td><a target="_blank" href="http://www.centerforhealthsecurity.org/resources/COVID-19/200129-finance-factsheet.pdf">Financing for epidemic response activities</a></td><td>26.1.2020</td><td>John's Hopkins</td></tr>
+<tr><td><a target="_blank" href="http://www.centerforhealthsecurity.org/resources/COVID-19/200129-WHOsRole-factsheet.pdf">WHO’s Role During Health Emergencies</a></td><td>28.1.2020</td><td>John's Hopkins</td></tr>
+<tr><td><a target="_blank" href="https://www.ics.ac.uk/COVID19.aspx?hkey=d176e2cf-d3ba-4bc7-8435-49bc618c345a&WebsiteKey=10967510-ae0c-4d85-8143-a62bf0ca5f3c">Intensive Care Society Guidelines</a></td><td>3.3.2020</td><td>Intensive Care Society</td></tr>
+<tr><td><a target="_blank" href="https://www.gov.uk/government/publications/wuhan-novel-coronavirus-initial-investigation-of-possible-cases/investigation-and-initial-clinical-management-of-possible-cases-of-wuhan-novel-coronavirus-wn-cov-infection">Investigation and initial clinical management of possible cases</a></td><td>13.3.2020</td><td>Public Health England</td></tr>
+<tr><td><a target="_blank" href="https://covid-19.uwmedicine.org/Pages/default.aspx">UW Medicine Screening and Testing Algorithms</a></td><td>1.3.2020</td><td>UW Medicine</td></tr>
+<tr><td><a target="_blank" href="https://www.sccm.org/disaster">Society of Critical Care Medicine Guidelines</a></td><td>1.3.2020</td><td>SCCM</td></tr>
+<tr><td><a target="_blank" href="https://www.youtube.com/watch?v=pv5A0l3p0zs">RSI Guidance, King's College Hospital</a></td><td>12.3.2020</td><td>King's College Hospital</td></tr>
+<tr><td><a target="_blank" href="https://blogs.bmj.com/bmj/2020/03/13/our-experience-with-covid-19-patients-has-led-to-significant-concerns-over-how-they-are-identified-and-isolated/">Our experience with covid-19 patients has led to significant concerns over how they are identified and isolated</a></td><td>13.3.2020</td><td>BMJ</td></tr>
+<tr><td><a target="_blank" href="https://www.bmj.com/content/368/bmj.m953">UK: Covid-19: emergency departments lack proper isolation facilities</a></td><td>13.3.2020</td><td>BMJ</td></tr>
+<tr><td><a target="_blank" href="https://www.bmj.com/content/368/bmj.m978">Englantilaisten lääkärien ohjeistus: paluu aktiivipalveluun eläkkeeltä</a></td><td>9.3.2020</td><td>BMJ</td></tr>
+<tr><td><a target="_blank" href="https://www.ics.ac.uk/COVID19.aspx?hkey=d176e2cf-d3ba-4bc7-8435-49bc618c345a&WebsiteKey=10967510-ae0c-4d85-8143-a62bf0ca5f3c">Intensive Care Society Guidelines</a></td><td>3.3.2020</td><td>Intensive Care Society</td></tr>
+<tr><td><a target="_blank" href="http://www.centerforhealthsecurity.org/resources/COVID-19/200130-nCoV-diagnostics-factsheet.pdf">Diagnostic Testing for COVID-19</a></td><td>28.1.2020</td><td>John's Hopkins</td></tr>
+<tr><td><a target="_blank" href="https://www.who.int/publications-detail/responding-to-community-spread-of-covid-19">Responding to community spread of COVID-19</a></td><td>7.3.2020</td><td>WHO</td></tr>
+<tr><td><a target="_blank" href="https://www.who.int/publications-detail/critical-preparedness-readiness-and-response-actions-for-covid-19">Critical preparedness, readiness and response actions for COVID-19</a></td><td>7.3.2020</td><td>WHO</td></tr>
+<tr><td><a target="_blank" href="https://mailchi.mp/esicm/the-future-of-haemodynamic-monitoring-first-webinar-of-the-year-1009715">Shared experience & guidance from our colleagues in Northern Italy</a></td><td>5.3.2929</td><td>ESICM</td></tr>
+<tr><td><a target="_blank" href="https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/news--wuhan-coronavirus/">MRC Centre for Global Infectious Disease Analysis</a></td><td></td><td>Imperical College London</td></tr>
+<tr><td><a target="_blank" href="https://www.who.int/docs/default-source/coronaviruse/who-china-joint-mission-on-covid-19-final-report.pdf">Report of the WHO-China Joint Mission on Coronavirus Disease 2019 (COVID-19)</a></td><td>24.2.2020</td><td>WHO</td></tr>
+<tr><td><a target="_blank" href="https://www.livescience.com/amp/coronavirus-blood-supply-chain.html">How coronavirus is upsetting the blood supply chain</a></td><td>14.2.2020</td><td></td></tr>
+
+
+
+
+
+
+
+
+
+</tbody>
+<!-- 
+Copy paste CMS loppuu
+
+ -->       
+               
+
+                                                </table>                                           
+                                            </div> <!-- end preview-->
+                                        
+                                         
+                                        
+                                    </div> <!-- end card body-->
+                                </div> <!-- end card -->
+
+
+
+
+
+
+
+
+
+
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                       
+                                          
+                                        
+                                         <h4 class="header-title">Kiistanalaiset, takaisinvedetyt tai virheelliseksi osoitetut</h4>
+                                        <p>
+                                           Lista ei ole kattava. Päivitetään vähintään kerran vuorokaudessa.  
+                                        </p>
+                                         <table id="datatable_blacklist" class="table table-striped dt-responsive w-100">
+
+
+<thead></tr><th>Päivämäärä</th><th>Alkuperäinen julkaisu</th><th>Kritiikki, vastineet, faktantarkistus</th><th>Takaisinveto</th></tr></thead><tbody>
+</tr><td>3.3.2020</td><td><a href="https://academic.oup.com/nsr/advance-article/doi/10.1093/nsr/nwaa036/5775463">On the origin and continuing evolution of SARS-CoV-2</a></td><td><a href="http://virological.org/t/response-to-on-the-origin-and-continuing-evolution-of-sars-cov-2/418">Kiistelty</a></td><td><a href=""></a></td></tr>
+</tr><td>2.2.2020</td><td><a href="https://www.biorxiv.org/content/10.1101/2020.01.30.927871v1">Uncanny similarity of unique inserts in the 2019-nCoV spike protein to HIV-1 gp120 and Gag</a></td><td><a href="https://www.statnews.com/2020/02/03/retraction-faulty-coronavirus-paper-good-moment-for-science/">Virheellinen - tekijöiden takaisinvetämä</a></td><td><a href="https://www.biorxiv.org/content/10.1101/2020.01.30.927871v2">Withdrawn by authors</a></td></tr>
+</tr><td>29.2.2020</td><td><a href="https://www.iltalehti.fi/ulkomaat/a/d1c212c7-25dd-47ab-b62a-c2e716340aab">40 prosenttia amerikkalaisista oluenjuojista ei tilaisi Coronaa nyt missään tilanteessa. Lähes joka viides ei ymmärrä, ettei Corona-oluella ja viruksella ole yhteyttä.</a></td><td><a href="https://www.snopes.com/fact-check/corona-beer-fear-coronavirus/?collection-id=238774">Virheellinen - myynti kasvanut</a></td><td><a href=""></a></td></tr>
+</tr><td>27.2.2020</td><td><a href="https://www.corriere.it/esteri/20_febbraio_27/coronavirus-morta-atleta-23-anni-ora-decessi-iran-sono-26-fe2456be-597d-11ea-af71-899699a3d6d8.shtml?refresh_ce-cp">23-vuotias terve iranilainen futsal-pelaaja on kuollut koronavirukseen</a></td><td><a href="https://www.nytimes.com/2020/02/28/world/middleeast/coronavirus-iran-confusion.html">Kiistelty - ko. henkilö ilmeisesti elossa</a></td><td><a href="https://farsi.alarabiya.net/fa/iran/2020/02/28/%D8%A7%D9%84%D9%87%D8%A7%D9%85-%D8%B4%DB%8C%D8%AE%DB%8C-%D9%81%D9%88%D8%AA%D8%B3%D8%A7%D9%84%DB%8C%D8%B3%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C-%D8%A8%D8%A7-%D9%86%D8%B4%D8%B1-%D9%88%DB%8C%D8%AF%DB%8C%D9%88%DB%8C%DB%8C-%D8%AE%D8%A8%D8%B1-%D9%85%D8%B1%DA%AF%D8%B4-%D8%A8%D8%B1-%D8%A7%D8%AB%D8%B1-%DA%A9%D8%B1%D9%88%D9%86%D8%A7-%D8%B1%D8%A7-%D8%AA%DA%A9%D8%B0%DB%8C%D8%A8-%DA%A9%D8%B1%D8%AF.html">"Kuolleen" henkilön haastattelu</a></td></tr>
+</tr><td>18.3.2020</td><td><a href="https://twitter.com/ExhaustiveWill/status/1239804797441544192/photo/1">Potential False-Positive Rate Among the 'Asymptomatic Infected Individuals' in Close Contacts of COVID-19 Patients</a></td><td><a href="https://doi.org/10.3760/cma.j.cn112338-20200221-00144">Tutkimusta ei ole olemassa vaikka abstrakti löytyykin PubMedistä</a></td><td><a href=""></a></td></tr>
+
+
+
+
+
+
+</tbody>
+    
+                                            </table> 
+                                          </div> <!-- end preview-->                                    
+                                    </div> <!-- end card body-->
+                                </div> <!-- end card -->
+
+                               
+
+
+                        </div>
+                        <!-- end row-->
+
+                            </div><!-- end col-->
+                        </div>
+                        <!-- end row-->
+
+
+                        
+
 
                 </div>
                 <!-- content -->
 
-                @@include('./partials/footer.html')
 
             </div>
 
@@ -578,24 +1138,155 @@
             <!-- End Page content -->
             <!-- ============================================================== -->
 
+        <!-- START FOOTER -->
+        <footer class="bg-dark py-5">
+            <div class="container-fluid" >
+                <div class="row justify-content-between">
+                    <div class="col-12">
+                    <h2 class="text-white">Pandemia.fi</h2></div>
+                    <div class="col-lg-4 font-14">
+                            <h5 class="text-white">Tietoa sivustosta</h5>
+                            <p class="mb-4 font-16 text-white-50">Keräämme tälle sivustolle yhteen tietoa käynnissä olevasta koronavirusepidemiasta.</p>
+                            <p class="mb-4 font-16 text-white-50">Julkaisemme mm. tilastoja, graafeja, reaaliaikaista seurantaa, vertaisarvioituja tutkimuksia, viranomaisten toimenpiteitä ja ohjeita sekä medianostoja. </p>
+                            <p class="mb-4 font-16 text-white-50">
+                            Sivustoa ylläpitää ja päivittää joukko ilmiöstä monesta eri näkökulmasta kiinnostunutta eri alan asiantuntijaa. Työryhmä käsittää tällä hetkellä n. 10 ihmistä. Jos olet kiinnostunut osallistumaan työskentelyyn liity <a target="_blank" href="https://forms.gle/LeTa7zvp6JoFuHPb7">Facebook-ryhmään</a> tai ota yhteyttä <a href="mailto:info@pandemia.fi">info@pandemia.fi</a>.</p>
+
+
+                       <!-- Begin Mailchimp Signup Form -->
+                            <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+                            <style type="text/css">
+        /*#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }*/
+    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+                    <div class="form-group" id="mc_embed_signup">
+                    <form action="https://pandemia.us19.list-manage.com/subscribe/post?u=b3bc75c8b21ac4fc1c8b1ab09&amp;id=bc8649d035" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <div id="mc_embed_signup_scroll">
+                        <label for="simpleinput mce-EMAIL text-white-50"><span class="text-white-50">Tilaa uutiskirje, enintään kerran päivässä</span></label>
+                        <input style="width:100%; margin-bottom:20px"; type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="pelkkä sähköpostiosoite riittää" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b3bc75c8b21ac4fc1c8b1ab09_bc8649d035" tabindex="-1" value=""></div>
+                        <div class="clear"><input style="width:100%" type="submit" value="Tilaa" name="subscribe" id="mc-embedded-subscribe" class="btn btn-info"></div>
+                        </div>
+                    </form>
+                    </div>
+
+<!--End mc_embed_signup-->
+
+                    </div>
+
+                    <div class="col-lg-7">
+                        <h5 class="text-white">Päätoimittajat</h5>
+
+                        <p class="mb-4 font-16 text-white-50"><strong>Daniel Jyllikoski</strong> on seurannut koronavirusta ammatikseen tammikuun alkuviikoista asti. Hänen <a target="_blank" href="https://www.ajmd.fi/">yrityksensä</a> on toiminut neuvonantajana kahdelle kiinalaiselle suuryritykselle ja eurooppalaiselle lentoyhtiölle koronavirus-viestintään ja -varautumiseen liittyvissä asioissa. <a target="_blank" href="https://jyllikoski.fi/">Yhteystiedot</a>, puhelin <a href="tel:+358923163506">+358 9 2316 3506</a> klo 9:00 ja 24:00 välillä.</p> 
+
+                        <p class="mb-4 font-16 text-white-50"><strong>Otto Juote</strong> on viestintäkonsultti, joka on toiminut aiemmin Euroopan parlamentin virkamiehenä ja Eurooppaministerin erityisavustajana. Otto on valmistunut maisteriksi London School of Economics:sta, jossa hänen pääaineensa oli Biomedicine, Bioscience and Society. <a target="_blank" href="https://www.linkedin.com/in/danieljyllikoski/">LinkedIn</a>. </p>
+
+                        <p class="mb-4 font-16 text-white-50"><strong>Jari Kuikanmäki</strong> on sovelluskehittäjä ja yhteiskunnallinen keskustelija. <a href="https://twitter.com/jarikuikanmaki">@jarikuikanmaki</a></p>
+
+                        <p class="mb-4 font-16 text-white-50"><strong>Jaakko Kulhia</strong> on lääkäri, joka sairaalatyönsä ohella harrastaa matematiikkaa ja ohjelmointia. Hän on koulutukseltaan luonnontieteiden kandidaatti (pääaineena matematiikka) ja lääketieteen lisensiaatti. </p>
+
+                    </div>
+
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="mt-5">
+                            <p class="text-white-50 mt-4 text-center mb-0"><p class="mb-4 font-14 text-white-50">
+                            Sivuston tekijöiden toimittamat tietokannat on lisensoitu <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Nimeä-JaaSamoin 4.0 Kansainvälinen -lisenssillä</a>.
+                            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+                                <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- END FOOTER -->
+
+
 
         </div>
         <!-- END wrapper -->
 
-        @@include('./partials/right-sidebar.html')
 
         <!-- bundle -->
         <script src="assets/js/vendor.min.js"></script>
         <script src="assets/js/app.min.js"></script>
 
         <!-- third party js -->
+        <script src="assets/js/vendor/jquery.dataTables.min.js"></script>
+        <script src="assets/js/vendor/dataTables.bootstrap4.js"></script>
+        <script src="assets/js/vendor/dataTables.responsive.min.js"></script>
+        <script src="assets/js/vendor/responsive.bootstrap4.min.js"></script>
+        <script src="assets/js/vendor/dataTables.buttons.min.js"></script>
+        <script src="assets/js/vendor/buttons.bootstrap4.min.js"></script>
+        <script src="assets/js/vendor/buttons.html5.min.js"></script>
+        <script src="assets/js/vendor/buttons.flash.min.js"></script>
+        <script src="assets/js/vendor/buttons.print.min.js"></script>
+        <script src="assets/js/vendor/dataTables.keyTable.min.js"></script>
+        <script src="assets/js/vendor/dataTables.select.min.js"></script>
         <script src="assets/js/vendor/apexcharts.min.js"></script>
-        <script src="assets/js/vendor/jquery-jvectormap-1.2.2.min.js"></script>
-        <script src="assets/js/vendor/jquery-jvectormap-world-mill-en.js"></script>
+
         <!-- third party js ends -->
 
         <!-- demo app -->
-        <script src="assets/js/pages/demo.dashboard.js"></script>
+        <script src="assets/js/pages/demo.datatable-init.js?v2"></script>
         <!-- end demo js-->
+
+        <!-- third party js -->
+        <script src="assets/js/vendor/Chart.bundle.min.js"></script>
+        <!-- third party js ends -->
+
+        <!-- demo app -->
+        <script src="assets/js/pages/demo.chartjs.js"></script>
+        <!-- end demo js-->
+
+        <!-- demo:js -->
+        <script src="assets/js/pages/demo.apex-area.js?v1"></script>
+        <!-- demo end -->
+
+        <script>
+        $("#melt_viranomaiset").on("load", function() {
+          let head = $("#melt_viranomaiset").contents().find("head");
+          let css = '<style>.newsfeed-classic a{color:#44badc!important}</style>';
+          $(head).append(css);
+        });
+        </script>
+
+<!------------->
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '569046559915710');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=569046559915710&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160737802-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-160737802-1');
+</script>
+
+
+<script> (function(){ window.ldfdr = window.ldfdr || {}; (function(d, s, ss, fs){ fs = d.getElementsByTagName(s)[0]; function ce(src){ var cs = d.createElement(s); cs.src = src; setTimeout(function(){fs.parentNode.insertBefore(cs,fs)}, 1); } ce(ss); })(document, 'script', 'https://sc.lfeeder.com/lftracker_v1_YEgkB8l0MoJ8ep3Z.js'); })(); </script>
+
+
+
     </body>
 </html>
