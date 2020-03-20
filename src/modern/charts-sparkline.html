@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Sparkline Charts | Hyper - Responsive Bootstrap 4 Admin Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- App css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app-modern.min.css" rel="stylesheet" type="text/css" id="light-style" />
+        <link href="assets/css/app-modern-dark.min.css" rel="stylesheet" type="text/css" id="dark-style" />
+
+    </head>
+
+    <body class="loading" data-layout="detached" data-layout-config='{"leftSidebarCondensed":false,"darkMode":false, "showRightSidebarOnStart": true}'>
+
+        @@include('./partials/topbar-dark.html')
+        
+        <!-- Start Content-->
+        <div class="container-fluid">
+
+            <!-- Begin page -->
+            <div class="wrapper">
+
+                @@include('./partials/detached-left-sidebar.html')
+
+                <div class="content-page">
+                    <div class="content">
+                        
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Charts</a></li>
+                                            <li class="breadcrumb-item active">Sparkline</li>
+                                        </ol>
+                                    </div>
+                                    <h4 class="page-title">Sparkline Charts</h4>
+                                </div>
+                            </div>
+                        </div>     
+                        <!-- end page title --> 
+
+
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Line Charts</h4>
+    
+                                        <div class="mt-4">
+                                            <div id="sparkline1" data-colors="#f9c851,#35b8e0"></div>
+                                        </div>
+                                    </div> <!-- end card-body -->
+                                </div> <!-- card -->
+                            </div> <!-- end col -->
+
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Bar Chart</h4>
+    
+                                        <div class="mt-4">
+                                            <div id="sparkline2" class="text-center" data-colors="#10c469"></div>
+                                        </div>
+                                    </div> <!-- end card-body -->
+                                </div> <!-- card -->
+                            </div> <!-- end col -->
+
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Pie Chart</h4>
+    
+                                        <div class="mt-4">
+                                            <div id="sparkline3" class="text-center" data-colors="#35b8e0,#536de6,#e3eaef,#ff5b5b"></div>
+                                        </div>
+                                    </div> <!-- end card-body -->
+                                </div> <!-- card -->
+                            </div> <!-- end col -->
+
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Custom Line Chart</h4>
+    
+                                        <div class="mt-4">
+                                            <div id="sparkline4" class="text-center" data-colors="#536de6,#4eb7eb"></div>
+                                        </div>
+                                    </div> <!-- end card-body -->
+                                </div> <!-- card -->
+                            </div> <!-- end col -->
+
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Mouse Speed Chart</h4>
+    
+                                        <div class="mt-4">
+                                            <div id="sparkline5" class="text-center"></div>
+                                        </div>
+                                    </div> <!-- end card-body -->
+                                </div> <!-- card -->
+                            </div> <!-- end col -->
+
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Composite bar Chart</h4>
+    
+                                        <div class="text-center mt-4">
+                                            <div id="sparkline6" class="text-center"></div>
+                                        </div>
+                                    </div> <!-- end card-body -->
+                                </div> <!-- card -->
+                            </div> <!-- end col -->
+
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Discrete Chart</h4>
+    
+                                        <div class="text-center mt-4">
+                                            <div id="sparkline7" class="text-center" data-colors="#6c757d"></div>
+                                        </div>
+                                    </div> <!-- end card-body -->
+                                </div> <!-- card -->
+                            </div> <!-- end col -->
+
+                        </div>
+                        <!-- end row -->
+                        
+                    </div> <!-- End Content -->
+
+                    @@include('./partials/footer.html')
+
+                </div> <!-- content-page -->
+
+            </div> <!-- end wrapper-->
+        </div>
+        <!-- END Container -->
+
+
+        @@include('./partials/right-sidebar.html')
+
+
+        <!-- bundle -->
+        <script src="assets/js/vendor.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
+
+        <!-- Sparkline chart js -->
+        <script src="assets/js/vendor/jquery.sparkline.min.js"></script>
+
+        <!-- Sparkline Init js -->
+        <script src="assets/js/pages/demo.sparkline.js"></script>
+        
+    </body>
+</html>

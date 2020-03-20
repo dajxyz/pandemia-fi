@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Apex Heatmap Charts | Hyper - Responsive Bootstrap 4 Admin Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- App css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app-modern.min.css" rel="stylesheet" type="text/css" id="light-style" />
+        <link href="assets/css/app-modern-dark.min.css" rel="stylesheet" type="text/css" id="dark-style" />
+
+    </head>
+
+    <body class="loading" data-layout="detached" data-layout-config='{"leftSidebarCondensed":false,"darkMode":false, "showRightSidebarOnStart": true}'>
+
+        @@include('./partials/topbar-dark.html')
+        
+        <!-- Start Content-->
+        <div class="container-fluid">
+
+            <!-- Begin page -->
+            <div class="wrapper">
+
+                @@include('./partials/detached-left-sidebar.html')
+
+                <div class="content-page">
+                    <div class="content">
+                        
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Apex</a></li>
+                                            <li class="breadcrumb-item active">Heatmap Charts</li>
+                                        </ol>
+                                    </div>
+                                    <h4 class="page-title">Heatmap Charts</h4>
+                                </div>
+                            </div>
+                        </div>     
+                        <!-- end page title --> 
+
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Basic Heatmap - Single Series</h4>
+                                        <div id="basic-heatmap" class="apex-charts" data-colors="#536de6"></div>
+                                    </div>
+                                    <!-- end card body-->
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <!-- end col-->
+    
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Heatmap - Multiple Series</h4>
+                                        <div id="multiple-series-heatmap" class="apex-charts" data-colors="#10c469,#F27036,#663F59,#6A6E94,#4E88B4,#00A7C6,#18D8D8,#A9D794,#46AF78"></div>
+                                    </div>
+                                    <!-- end card body-->
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <!-- end col-->
+                        </div>
+                        <!-- end row-->
+                        
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title mb-3">Heatmap - Color Range</h4>
+                                        <div id="color-range-heatmap" class="apex-charts" data-colors="#ff5b5b,#f9c851,#35b8e0,#10c469"></div>
+                                    </div>
+                                    <!-- end card body-->
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <!-- end col-->
+    
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title mb-3">Heatmap - Range without Shades</h4>
+                                        <div id="rounded-heatmap" class="apex-charts" data-colors="#35b8e0,#f9c851"></div>
+                                    </div>
+                                    <!-- end card body-->
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <!-- end col-->
+                        </div>
+                        <!-- end row-->
+                        
+                    </div> <!-- End Content -->
+
+                    @@include('./partials/footer.html')
+
+                </div> <!-- content-page -->
+
+            </div> <!-- end wrapper-->
+        </div>
+        <!-- END Container -->
+
+
+        @@include('./partials/right-sidebar.html')
+
+
+        <!-- bundle -->
+        <script src="assets/js/vendor.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
+
+        <!-- third party:js -->
+        <script src="assets/js/vendor/apexcharts.min.js"></script>
+        <!-- third party end -->
+
+        <!-- demo:js -->
+        <script src="assets/js/pages/demo.apex-heatmap.js"></script>
+        <!-- demo end -->
+        
+    </body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Scrollbar | Hyper - Responsive Bootstrap 4 Admin Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- App css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app-creative.min.css" rel="stylesheet" type="text/css" id="light-style" />
+        <link href="assets/css/app-creative-dark.min.css" rel="stylesheet" type="text/css" id="dark-style" />
+
+    </head>
+
+    <body class="loading" data-layout="topnav" data-layout-config='{"layoutBoxed":false,"darkMode":false,"showRightSidebarOnStart": true}'>
+        <!-- Begin page -->
+        <div class="wrapper">
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+                    @@include('./partials/horizontal-nav.html')
+                    
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Extended UI</a></li>
+                                            <li class="breadcrumb-item active">Scrollbar</li>
+                                        </ol>
+                                    </div>
+                                    <h4 class="page-title">Scrollbar</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Default Scroll</h4>
+                                        <p class="text-muted font-14">Just use data attribute <code>data-simplebar</code>
+                                            and add <code>max-height: **px</code> oh fix height</p>
+    
+                                        <ul class="nav nav-tabs nav-bordered mb-3">
+                                            <li class="nav-item">
+                                                <a href="#default-scroll-preview" data-toggle="tab" aria-expanded="false"
+                                                    class="nav-link active">
+                                                    Preview
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#default-scroll-code" data-toggle="tab" aria-expanded="true"
+                                                    class="nav-link">
+                                                    Code
+                                                </a>
+                                            </li>
+                                        </ul> <!-- end nav-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="default-scroll-preview">
+                                                <div data-simplebar style="max-height: 250px;">
+                                                    SimpleBar does only one thing: replace the browser's default scrollbar
+                                                    with a custom CSS-styled one without losing performances.
+                                                    Unlike some popular plugins, SimpleBar doesn't mimic scroll with
+                                                    Javascript, causing janks and strange scrolling behaviours...
+                                                    You keep the awesomeness of native scrolling...with a custom scrollbar!
+                                                    <p>SimpleBar <strong>does NOT implement a custom scroll
+                                                            behaviour</strong>. It keeps the <strong>native</strong>
+                                                        <code>overflow: auto</code> scroll and <strong>only</strong> replace
+                                                        the scrollbar visual appearance.</p>
+                                                    <h5>Design it as you want</h5>
+                                                    <p>SimpleBar uses pure CSS to style the scrollbar. You can easily
+                                                        customize it as you want! Or even have multiple style on the same
+                                                        page...or just keep the default style ("Mac OS" scrollbar style).
+                                                    </p>
+                                                    <h5>Lightweight and performant</h5>
+                                                    <p>Only 6kb minified. SimpleBar doesn't use Javascript to handle
+                                                        scrolling. You keep the performances/behaviours of the native
+                                                        scroll.</p>
+                                                    <h5>Supported everywhere</h5>
+                                                    <p>SimpleBar has been tested on the following browsers: Chrome, Firefox,
+                                                        Safari, Edge, IE11.</p>
+                                                </div>
+                                            </div> <!-- end preview-->
+    
+                                            <div class="tab-pane" id="default-scroll-code">
+                                                <pre class="mb-0">
+                                                    <span class="html escape">
+                                                        &lt;!-- HTML --&gt;
+                                                        &lt;div data-simplebar style=&quot;max-height: 250px;&quot;&gt;
+                                                        &lt;/div&gt; 
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+                                            </div> <!-- end preview code-->
+                                        </div> <!-- end tab-content-->
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card-->
+                            </div> <!-- end col -->
+    
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">RTL Position</h4>
+                                        <p class="text-muted font-14">Just use data attribute <code>data-simplebar data-simplebar-direction='rtl'</code>
+                                            and add <code>max-height: **px</code> oh fix height</p>
+    
+                                        <ul class="nav nav-tabs nav-bordered mb-3">
+                                            <li class="nav-item">
+                                                <a href="#left-scroll-preview" data-toggle="tab" aria-expanded="false"
+                                                    class="nav-link active">
+                                                    Preview
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#left-scroll-code" data-toggle="tab" aria-expanded="true"
+                                                    class="nav-link">
+                                                    Code
+                                                </a>
+                                            </li>
+                                        </ul> <!-- end nav-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="left-scroll-preview">
+                                                <div data-simplebar data-simplebar-direction='rtl' style="max-height: 250px;">
+                                                    SimpleBar does only one thing: replace the browser's default scrollbar
+                                                    with a custom CSS-styled one without losing performances.
+                                                    Unlike some popular plugins, SimpleBar doesn't mimic scroll with
+                                                    Javascript, causing janks and strange scrolling behaviours...
+                                                    You keep the awesomeness of native scrolling...with a custom scrollbar!
+                                                    <p>SimpleBar <strong>does NOT implement a custom scroll
+                                                            behaviour</strong>. It keeps the <strong>native</strong>
+                                                        <code>overflow: auto</code> scroll and <strong>only</strong> replace
+                                                        the scrollbar visual appearance.</p>
+                                                    <h5>Design it as you want</h5>
+                                                    <p>SimpleBar uses pure CSS to style the scrollbar. You can easily
+                                                        customize it as you want! Or even have multiple style on the same
+                                                        page...or just keep the default style ("Mac OS" scrollbar style).
+                                                    </p>
+                                                    <h5>Lightweight and performant</h5>
+                                                    <p>Only 6kb minified. SimpleBar doesn't use Javascript to handle
+                                                        scrolling. You keep the performances/behaviours of the native
+                                                        scroll.</p>
+                                                    <h5>Supported everywhere</h5>
+                                                    <p>SimpleBar has been tested on the following browsers: Chrome, Firefox,
+                                                        Safari, Edge, IE11.</p>
+                                                </div>
+                                            </div> <!-- end preview-->
+    
+                                            <div class="tab-pane" id="left-scroll-code">
+                                                <pre class="mb-0">
+                                                    <span class="html escape">
+                                                        &lt;!-- HTML --&gt;
+                                                        &lt;div data-simplebar data-simplebar-direction='rtl' style=&quot;max-height: 250px;&quot;&gt;
+                                                        &lt;/div&gt; 
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+                                            </div> <!-- end preview code-->
+                                        </div> <!-- end tab-content-->
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card-->
+                            </div> <!-- end col -->
+                        </div>
+                        <!-- end row -->
+    
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Scroll Size</h4>
+                                        <p class="text-muted font-14">Just use data attribute <code>data-simplebar</code>
+                                            and add <code>max-height: **px</code> oh fix height</p>
+    
+                                        <ul class="nav nav-tabs nav-bordered mb-3">
+                                            <li class="nav-item">
+                                                <a href="#size-scroll-preview" data-toggle="tab" aria-expanded="false"
+                                                    class="nav-link active">
+                                                    Preview
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#size-scroll-code" data-toggle="tab" aria-expanded="true"
+                                                    class="nav-link">
+                                                    Code
+                                                </a>
+                                            </li>
+                                        </ul> <!-- end nav-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="size-scroll-preview">
+                                                <div data-simplebar data-simplebar-lg style="max-height: 250px;">
+                                                    SimpleBar does only one thing: replace the browser's default scrollbar
+                                                    with a custom CSS-styled one without losing performances.
+                                                    Unlike some popular plugins, SimpleBar doesn't mimic scroll with
+                                                    Javascript, causing janks and strange scrolling behaviours...
+                                                    You keep the awesomeness of native scrolling...with a custom scrollbar!
+                                                    <p>SimpleBar <strong>does NOT implement a custom scroll
+                                                            behaviour</strong>. It keeps the <strong>native</strong>
+                                                        <code>overflow: auto</code> scroll and <strong>only</strong> replace
+                                                        the scrollbar visual appearance.</p>
+                                                    <h5>Design it as you want</h5>
+                                                    <p>SimpleBar uses pure CSS to style the scrollbar. You can easily
+                                                        customize it as you want! Or even have multiple style on the same
+                                                        page...or just keep the default style ("Mac OS" scrollbar style).
+                                                    </p>
+                                                    <h5>Lightweight and performant</h5>
+                                                    <p>Only 6kb minified. SimpleBar doesn't use Javascript to handle
+                                                        scrolling. You keep the performances/behaviours of the native
+                                                        scroll.</p>
+                                                    <h5>Supported everywhere</h5>
+                                                    <p>SimpleBar has been tested on the following browsers: Chrome, Firefox,
+                                                        Safari, Edge, IE11.</p>
+                                                </div>
+                                            </div> <!-- end preview-->
+    
+                                            <div class="tab-pane" id="size-scroll-code">
+                                                <pre class="mb-0">
+                                                    <span class="html escape">
+                                                        &lt;!-- HTML --&gt;
+                                                        &lt;div data-simplebar data-simplebar-lg style=&quot;max-height: 250px;&quot;&gt;
+                                                        &lt;/div&gt; 
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+                                            </div> <!-- end preview code-->
+                                        </div> <!-- end tab-content-->
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card-->
+                            </div> <!-- end col -->
+    
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Scroll Color</h4>
+                                        <p class="text-muted font-14">Just use data attribute <code>data-simplebar data-simplebar-primary</code>
+                                            and add <code>max-height: **px</code> oh fix height</p>
+    
+                                        <ul class="nav nav-tabs nav-bordered mb-3">
+                                            <li class="nav-item">
+                                                <a href="#color-scroll-preview" data-toggle="tab" aria-expanded="false"
+                                                    class="nav-link active">
+                                                    Preview
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#color-scroll-code" data-toggle="tab" aria-expanded="true"
+                                                    class="nav-link">
+                                                    Code
+                                                </a>
+                                            </li>
+                                        </ul> <!-- end nav-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="color-scroll-preview">
+                                                <div data-simplebar data-simplebar-primary style="max-height: 250px;">
+                                                    SimpleBar does only one thing: replace the browser's default scrollbar
+                                                    with a custom CSS-styled one without losing performances.
+                                                    Unlike some popular plugins, SimpleBar doesn't mimic scroll with
+                                                    Javascript, causing janks and strange scrolling behaviours...
+                                                    You keep the awesomeness of native scrolling...with a custom scrollbar!
+                                                    <p>SimpleBar <strong>does NOT implement a custom scroll
+                                                            behaviour</strong>. It keeps the <strong>native</strong>
+                                                        <code>overflow: auto</code> scroll and <strong>only</strong> replace
+                                                        the scrollbar visual appearance.</p>
+                                                    <h5>Design it as you want</h5>
+                                                    <p>SimpleBar uses pure CSS to style the scrollbar. You can easily
+                                                        customize it as you want! Or even have multiple style on the same
+                                                        page...or just keep the default style ("Mac OS" scrollbar style).
+                                                    </p>
+                                                    <h5>Lightweight and performant</h5>
+                                                    <p>Only 6kb minified. SimpleBar doesn't use Javascript to handle
+                                                        scrolling. You keep the performances/behaviours of the native
+                                                        scroll.</p>
+                                                    <h5>Supported everywhere</h5>
+                                                    <p>SimpleBar has been tested on the following browsers: Chrome, Firefox,
+                                                        Safari, Edge, IE11.</p>
+                                                </div>
+                                            </div> <!-- end preview-->
+    
+                                            <div class="tab-pane" id="color-scroll-code">
+                                                <pre class="mb-0">
+                                                    <span class="html escape">
+                                                        &lt;!-- HTML --&gt;
+                                                        &lt;div data-simplebar data-simplebar-primary style=&quot;max-height: 250px;&quot;&gt;
+                                                        &lt;/div&gt; 
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+                                            </div> <!-- end preview code-->
+                                        </div> <!-- end tab-content-->
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card-->
+                            </div> <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </div>
+                    <!-- container -->
+
+                </div>
+                <!-- content -->
+
+                @@include('./partials/footer.html')
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+        @@include('./partials/right-sidebar.html')
+
+        <!-- bundle -->
+        <script src="assets/js/vendor.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
+
+        <!-- component js -->
+        <script src="assets/js/ui/component.scrollbar.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Badges | Hyper - Responsive Bootstrap 4 Admin Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- App css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="light-style" />
+        <link href="assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style" />
+
+    </head>
+
+    <body class="loading" data-layout-config='{"leftSideBarTheme":"dark","layoutBoxed":false, "leftSidebarCondensed":false, "leftSidebarScrollable":false,"darkMode":false, "showRightSidebarOnStart": true}'>
+        <!-- Begin page -->
+        <div class="wrapper">
+            @@include('./partials/left-sidebar.html')
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+                    @@include('./partials/topbar.html')
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+                        
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Base UI</a></li>
+                                            <li class="breadcrumb-item active">Badges</li>
+                                        </ol>
+                                    </div>
+                                    <h4 class="page-title">Badges</h4>
+                                </div>
+                            </div>
+                        </div>     
+                        <!-- end page title --> 
+
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Default</h4>
+                                        <p class="text-muted font-14 mb-3">
+                                            A simple labeling component. Badges scale to match the size of the immediate parent element by using relative font sizing and <code>em</code> units.
+                                        </p>
+
+                                        <ul class="nav nav-tabs nav-bordered mb-3">
+                                            <li class="nav-item">
+                                                <a href="#default-sizes-preview" data-toggle="tab" aria-expanded="false"
+                                                    class="nav-link active">
+                                                    Preview
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#default-sizes-code" data-toggle="tab" aria-expanded="true"
+                                                    class="nav-link">
+                                                    Code
+                                                </a>
+                                            </li>
+                                        </ul> <!-- end nav-->
+
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="default-sizes-preview">
+                                                <h1>h1.Example heading <span class="badge badge-secondary">New</span></h1>
+                                                <h2>h2.Example heading <span class="badge badge-success-lighten">New</span></h2>
+                                                <h3>
+                                                    h3.Example heading 
+                                                    <button type="button" class="btn btn-sm btn-primary">
+                                                        Notifications <span class="badge badge-light">4</span>
+                                                    </button>
+                                                </h3>
+                                                <h4>h4.Example heading <a href="#" class="badge badge-info-lighten">Info Link</a></h4>
+                                                <h5>h5.Example heading <span class="badge badge-outline-warning">New</span></h5>
+                                                <h6>h6.Example heading <span class="badge badge-danger">New</span></h6>
+                                            </div> <!-- end preview-->
+
+                                            <div class="tab-pane" id="default-sizes-code">
+                                                <pre class="mb-0">
+                                                    <span class="html escape">
+                                                        &lt;h1&gt;h1.Example heading &lt;span class=&quot;badge badge-secondary&quot;&gt;New&lt;/span&gt;&lt;/h1&gt;
+                                                        &lt;h2&gt;h2.Example heading &lt;span class=&quot;badge badge-success-lighten&quot;&gt;New&lt;/span&gt;&lt;/h2&gt;
+                                                        &lt;h3&gt;
+                                                            h3.Example heading 
+                                                            &lt;button type=&quot;button&quot; class=&quot;btn btn-sm btn-primary&quot;&gt;
+                                                                Notifications &lt;span class=&quot;badge badge-light&quot;&gt;4&lt;/span&gt;
+                                                            &lt;/button&gt;
+                                                        &lt;/h3&gt;
+                                                        &lt;h4&gt;h4.Example heading &lt;a href=&quot;#&quot; class=&quot;badge badge-info-lighten&quot;&gt;Info Link&lt;/a&gt;&lt;/h4&gt;
+                                                        &lt;h5&gt;h5.Example heading &lt;span class=&quot;badge badge-outline-warning&quot;&gt;New&lt;/span&gt;&lt;/h5&gt;
+                                                        &lt;h6&gt;h6.Example heading &lt;span class=&quot;badge badge-danger&quot;&gt;New&lt;/span&gt;&lt;/h6&gt;
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+                                            </div> <!-- end preview code-->
+                                        </div> <!-- end tab-content-->
+
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card-->
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Pill Badges</h4>
+                                        <p class="text-muted font-14 mb-3">
+                                            Use the <code>.badge-pill</code> modifier class to make badges more rounded.
+                                        </p>
+
+                                        <ul class="nav nav-tabs nav-bordered mb-3">
+                                            <li class="nav-item">
+                                                <a href="#pill-badges-preview" data-toggle="tab" aria-expanded="false"
+                                                    class="nav-link active">
+                                                    Preview
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#pill-badges-code" data-toggle="tab" aria-expanded="true"
+                                                    class="nav-link">
+                                                    Code
+                                                </a>
+                                            </li>
+                                        </ul> <!-- end nav-->
+
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="pill-badges-preview">
+                                                
+                                                <span class="badge badge-primary badge-pill">Primary</span>
+                                                <span class="badge badge-secondary badge-pill">Secondary</span>
+                                                <span class="badge badge-success badge-pill">Success</span>
+                                                <span class="badge badge-danger badge-pill">Danger</span>
+                                                <span class="badge badge-warning badge-pill">Warning</span>
+                                                <span class="badge badge-info badge-pill">Info</span>
+                                                <span class="badge badge-light badge-pill">Light</span>
+                                                <span class="badge badge-dark badge-pill">Dark</span>
+
+                                                <h5 class="mt-4">Lighten Badges</h5>
+                                                <p class="text-muted font-14 mb-3">
+                                                    Use the <code>.badge-*-lighten</code> modifier class to make badges lighten.
+                                                </p>
+
+                                                <span class="badge badge-primary-lighten badge-pill">Primary</span>
+                                                <span class="badge badge-secondary-lighten badge-pill">Secondary</span>
+                                                <span class="badge badge-success-lighten badge-pill">Success</span>
+                                                <span class="badge badge-danger-lighten badge-pill">Danger</span>
+                                                <span class="badge badge-warning-lighten badge-pill">Warning</span>
+                                                <span class="badge badge-info-lighten badge-pill">Info</span>
+                                                <span class="badge badge-light-lighten badge-pill">Light</span>
+                                                <span class="badge badge-dark-lighten badge-pill">Dark</span>
+
+                                                <h5 class="mt-4">Outline Badges</h5>
+                                                <p class="text-muted font-14 mb-3">
+                                                    Using the <code>.badge-outline-*</code> to quickly create a bordered badges.
+                                                </p>
+        
+                                                <span class="badge badge-outline-primary badge-pill">Primary</span>
+                                                <span class="badge badge-outline-secondary badge-pill">Secondary</span>
+                                                <span class="badge badge-outline-success badge-pill">Success</span>
+                                                <span class="badge badge-outline-danger badge-pill">Danger</span>
+                                                <span class="badge badge-outline-warning badge-pill">Warning</span>
+                                                <span class="badge badge-outline-info badge-pill">Info</span>
+                                                <span class="badge badge-outline-light badge-pill">Light</span>
+                                                <span class="badge badge-outline-dark badge-pill">Dark</span>
+
+                                            </div> <!-- end preview-->
+
+                                            <div class="tab-pane" id="pill-badges-code">
+                                                <pre class="mb-0">
+                                                    <span class="html escape">
+                                                        &lt;!-- Default Badges --&gt;
+                                                        &lt;span class=&quot;badge badge-primary badge-pill&quot;&gt;Primary&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-secondary badge-pill&quot;&gt;Secondary&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-success badge-pill&quot;&gt;Success&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-danger badge-pill&quot;&gt;Danger&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-warning badge-pill&quot;&gt;Warning&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-info badge-pill&quot;&gt;Info&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-light badge-pill&quot;&gt;Light&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-dark badge-pill&quot;&gt;Dark&lt;/span&gt;
+                                                        
+                                                        &lt;!-- Lighten Badges --&gt;
+                                                        &lt;span class=&quot;badge badge-primary-lighten badge-pill&quot;&gt;Primary&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-secondary-lighten badge-pill&quot;&gt;Secondary&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-success-lighten badge-pill&quot;&gt;Success&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-danger-lighten badge-pill&quot;&gt;Danger&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-warning-lighten badge-pill&quot;&gt;Warning&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-info-lighten badge-pill&quot;&gt;Info&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-light-lighten badge-pill&quot;&gt;Light&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-dark-lighten badge-pill&quot;&gt;Dark&lt;/span&gt;
+
+                                                        &lt;!-- Outline Badges --&gt;
+                                                        &lt;span class=&quot;badge badge-outline-primary badge-pill&quot;&gt;Primary&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-outline-secondary badge-pill&quot;&gt;Secondary&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-outline-success badge-pill&quot;&gt;Success&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-outline-danger badge-pill&quot;&gt;Danger&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-outline-warning badge-pill&quot;&gt;Warning&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-outline-info badge-pill&quot;&gt;Info&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-outline-light badge-pill&quot;&gt;Light&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-outline-dark badge-pill&quot;&gt;Dark&lt;/span&gt;
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+                                            </div> <!-- end preview code-->
+                                        </div> <!-- end tab-content-->
+
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card -->
+                            </div> <!-- end col-->
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Contextual variations</h4>
+                                        <p class="text-muted font-14 mb-3">
+                                            Add any of the below mentioned modifier classes to change the appearance of a badge.
+                                            Badge can be more contextual as well. Just use regular convention e.g. <code>badge-*color</code>, <code>badge-primary</code>
+                                            to have badge with different background.
+                                        </p>
+
+                                        <ul class="nav nav-tabs nav-bordered mb-3">
+                                            <li class="nav-item">
+                                                <a href="#contextual-badges-preview" data-toggle="tab" aria-expanded="false"
+                                                    class="nav-link active">
+                                                    Preview
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#contextual-badges-code" data-toggle="tab" aria-expanded="true"
+                                                    class="nav-link">
+                                                    Code
+                                                </a>
+                                            </li>
+                                        </ul> <!-- end nav-->
+
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="contextual-badges-preview">
+                                                <span class="badge badge-primary">Primary</span>
+                                                <span class="badge badge-secondary">Secondary</span>
+                                                <span class="badge badge-success">Success</span>
+                                                <span class="badge badge-danger">Danger</span>
+                                                <span class="badge badge-warning">Warning</span>
+                                                <span class="badge badge-info">Info</span>
+                                                <span class="badge badge-light">Light</span>
+                                                <span class="badge badge-dark">Dark</span>
+        
+                                                <h5 class="mt-4">Lighten Badges</h5>
+                                                <p class="text-muted font-14 mb-3">
+                                                    Using the <code>.badge-*-lighten</code> modifier class, you can have more soften variation.
+                                                </p>
+        
+                                                <span class="badge badge-primary-lighten">Primary</span>
+                                                <span class="badge badge-secondary-lighten">Secondary</span>
+                                                <span class="badge badge-success-lighten">Success</span>
+                                                <span class="badge badge-danger-lighten">Danger</span>
+                                                <span class="badge badge-warning-lighten">Warning</span>
+                                                <span class="badge badge-info-lighten">Info</span>
+                                                <span class="badge badge-light-lighten">Light</span>
+                                                <span class="badge badge-dark-lighten">Dark</span>
+
+                                                <h5 class="mt-4">Outline Badges</h5>
+                                                <p class="text-muted font-14 mb-3">
+                                                    Using the <code>.badge-outline-*</code> to quickly create a bordered badges.
+                                                </p>
+        
+                                                <span class="badge badge-outline-primary">Primary</span>
+                                                <span class="badge badge-outline-secondary">Secondary</span>
+                                                <span class="badge badge-outline-success">Success</span>
+                                                <span class="badge badge-outline-danger">Danger</span>
+                                                <span class="badge badge-outline-warning">Warning</span>
+                                                <span class="badge badge-outline-info">Info</span>
+                                                <span class="badge badge-outline-light">Light</span>
+                                                <span class="badge badge-outline-dark">Dark</span>
+            
+                                            </div> <!-- end preview-->
+
+                                            <div class="tab-pane" id="contextual-badges-code">
+                                                <pre class="mb-0">
+                                                    <span class="html escape">
+                                                        &lt;!-- Default Badges --&gt;
+                                                        &lt;span class=&quot;badge badge-primary&quot;&gt;Primary&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-secondary&quot;&gt;Secondary&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-success&quot;&gt;Success&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-danger&quot;&gt;Danger&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-warning&quot;&gt;Warning&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-info&quot;&gt;Info&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-light&quot;&gt;Light&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-dark&quot;&gt;Dark&lt;/span&gt;
+                                                        
+                                                        &lt;!-- Lighten Badges --&gt;
+                                                        &lt;span class=&quot;badge badge-primary-lighten&quot;&gt;Primary&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-secondary-lighten&quot;&gt;Secondary&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-success-lighten&quot;&gt;Success&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-danger-lighten&quot;&gt;Danger&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-warning-lighten&quot;&gt;Warning&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-info-lighten&quot;&gt;Info&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-light-lighten&quot;&gt;Light&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-dark-lighten&quot;&gt;Dark&lt;/span&gt;
+
+                                                        &lt;!-- Outline Badges --&gt;
+                                                        &lt;span class=&quot;badge badge-outline-primary&quot;&gt;Primary&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-outline-secondary&quot;&gt;Secondary&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-outline-success&quot;&gt;Success&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-outline-danger&quot;&gt;Danger&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-outline-warning&quot;&gt;Warning&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-outline-info&quot;&gt;Info&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-outline-light&quot;&gt;Light&lt;/span&gt;
+                                                        &lt;span class=&quot;badge badge-outline-dark&quot;&gt;Dark&lt;/span&gt;
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+                                            </div> <!-- end preview code-->
+                                        </div> <!-- end tab-content-->
+
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card-->
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Links Badges</h4>
+                                        <p class="text-muted font-14 mb-3">
+                                            Using the contextual <code>.badge-*</code> classes on an <code>&lt;a&gt;</code> element quickly provide <em>actionable</em> badges with hover and focus states.
+                                        </p>
+
+                                        <ul class="nav nav-tabs nav-bordered mb-3">
+                                            <li class="nav-item">
+                                                <a href="#links-badges-preview" data-toggle="tab" aria-expanded="false"
+                                                    class="nav-link active">
+                                                    Preview
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#links-badges-code" data-toggle="tab" aria-expanded="true"
+                                                    class="nav-link">
+                                                    Code
+                                                </a>
+                                            </li>
+                                        </ul> <!-- end nav-->
+
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="links-badges-preview">
+                                                <a href="#" class="badge badge-primary">Primary</a>
+                                                <a href="#" class="badge badge-secondary">Secondary</a>
+                                                <a href="#" class="badge badge-success">Success</a>
+                                                <a href="#" class="badge badge-danger">Danger</a>
+                                                <a href="#" class="badge badge-warning">Warning</a>
+                                                <a href="#" class="badge badge-info">Info</a>
+                                                <a href="#" class="badge badge-light">Light</a>
+                                                <a href="#" class="badge badge-dark">Dark</a>
+        
+                                                <h5 class="mt-4">Lighten Badges</h5>
+                                                <p class="text-muted font-14 mb-3">
+                                                    Use the <code>.badge-*-lighten</code> modifier class to make badges lighten.
+                                                </p>
+        
+                                                <a href="#" class="badge badge-primary-lighten">Primary</a>
+                                                <a href="#" class="badge badge-secondary-lighten">Secondary</a>
+                                                <a href="#" class="badge badge-success-lighten">Success</a>
+                                                <a href="#" class="badge badge-danger-lighten">Danger</a>
+                                                <a href="#" class="badge badge-warning-lighten">Warning</a>
+                                                <a href="#" class="badge badge-info-lighten">Info</a>
+                                                <a href="#" class="badge badge-light-lighten">Light</a>
+                                                <a href="#" class="badge badge-dark-lighten">Dark</a>
+
+                                                <h5 class="mt-4">Outline Badges</h5>
+                                                <p class="text-muted font-14 mb-3">
+                                                    Using the <code>.badge-outline-*</code> to quickly create a bordered badges.
+                                                </p>
+        
+                                                <a href="#" class="badge badge-outline-primary">Primary</a>
+                                                <a href="#" class="badge badge-outline-secondary">Secondary</a>
+                                                <a href="#" class="badge badge-outline-success">Success</a>
+                                                <a href="#" class="badge badge-outline-danger">Danger</a>
+                                                <a href="#" class="badge badge-outline-warning">Warning</a>
+                                                <a href="#" class="badge badge-outline-info">Info</a>
+                                                <a href="#" class="badge badge-outline-light">Light</a>
+                                                <a href="#" class="badge badge-outline-dark">Dark</a>
+            
+                                            </div> <!-- end preview-->
+
+                                            <div class="tab-pane" id="links-badges-code">
+                                                <pre class="mb-0">
+                                                    <span class="html escape">
+                                                        &lt;!-- Default Badges --&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-primary&quot;&gt;Primary&lt;/a&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-secondary&quot;&gt;Secondary&lt;/a&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-success&quot;&gt;Success&lt;/a&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-danger&quot;&gt;Danger&lt;/a&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-warning&quot;&gt;Warning&lt;/a&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-info&quot;&gt;Info&lt;/a&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-light&quot;&gt;Light&lt;/a&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-dark&quot;&gt;Dark&lt;/a&gt;
+                                                        
+                                                        &lt;!-- Lighten Badges --&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-primary-lighten&quot;&gt;Primary&lt;/a&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-secondary-lighten&quot;&gt;Secondary&lt;/a&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-success-lighten&quot;&gt;Success&lt;/a&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-danger-lighten&quot;&gt;Danger&lt;/a&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-warning-lighten&quot;&gt;Warning&lt;/a&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-info-lighten&quot;&gt;Info&lt;/a&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-light-lighten&quot;&gt;Light&lt;/a&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-dark-lighten&quot;&gt;Dark&lt;/a&gt;
+
+                                                        &lt;!-- Outline Badges --&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-outline-primary&quot;&gt;Primary&lt;/a&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-outline-secondary&quot;&gt;Secondary&lt;/a&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-outline-success&quot;&gt;Success&lt;/a&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-outline-danger&quot;&gt;Danger&lt;/a&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-outline-warning&quot;&gt;Warning&lt;/a&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-outline-info&quot;&gt;Info&lt;/a&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-outline-light&quot;&gt;Light&lt;/a&gt;
+                                                        &lt;a href=&quot;#&quot; class=&quot;badge badge-outline-dark&quot;&gt;Dark&lt;/a&gt;
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+                                            </div> <!-- end preview code-->
+                                        </div> <!-- end tab-content-->
+
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card-->
+                            </div> <!-- end col -->
+                        </div>
+                        <!-- end row -->
+                        
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+                @@include('./partials/footer.html')
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+
+        @@include('./partials/right-sidebar.html')
+
+
+        <!-- bundle -->
+        <script src="assets/js/vendor.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
+        
+    </body>
+</html>

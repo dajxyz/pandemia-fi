@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Notifications | Hyper - Responsive Bootstrap 4 Admin Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- App css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app-creative.min.css" rel="stylesheet" type="text/css" id="light-style" />
+        <link href="assets/css/app-creative-dark.min.css" rel="stylesheet" type="text/css" id="dark-style" />
+
+    </head>
+
+    <body class="loading" data-layout="topnav" data-layout-config='{"layoutBoxed":false,"darkMode":false,"showRightSidebarOnStart": true}'>
+        <!-- Begin page -->
+        <div class="wrapper">
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+                    @@include('./partials/horizontal-nav.html')
+                    
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">UI Kit</a></li>
+                                            <li class="breadcrumb-item active">Notifications</li>
+                                        </ol>
+                                    </div>
+                                    <h4 class="page-title">Notifications</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <h4 class="header-title">Bootstrap Toasts</h4>
+                                        <p class="text-muted font-14">Push notifications to your visitors with a toast, a
+                                            lightweight and easily customizable alert message.</p>
+
+                                        <ul class="nav nav-tabs nav-bordered mb-3">
+                                            <li class="nav-item">
+                                                <a href="#bootstrap-toasts-preview" data-toggle="tab" aria-expanded="false"
+                                                    class="nav-link active">
+                                                    Preview
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#bootstrap-toasts-code" data-toggle="tab" aria-expanded="true"
+                                                    class="nav-link">
+                                                    Code
+                                                </a>
+                                            </li>
+                                        </ul> <!-- end nav-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="bootstrap-toasts-preview">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <h5 class="mb-2">Basic</h5>
+                                                        <p class="text-muted font-14">Toasts are as flexible as you need and
+                                                            have very little required markup. At a minimum, we
+                                                            require a single element to contain your “toasted” content and
+                                                            strongly encourage a dismiss button.</p>
+                                                        <div class="p-3">
+                                                            <div class="toast fade show" role="alert" aria-live="assertive"
+                                                                aria-atomic="true" data-toggle="toast">
+                                                                <div class="toast-header">
+                                                                    <img src="assets/images/logo_sm_dark.png"
+                                                                        alt="brand-logo" height="12" class="mr-1" />
+                                                                    <strong class="mr-auto">Hyper</strong>
+                                                                    <small>11 mins ago</small>
+                                                                    <button type="button" class="ml-2 mb-1 close"
+                                                                        data-dismiss="toast" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
+                                                                <div class="toast-body">
+                                                                    Hello, world! This is a toast message.
+                                                                </div>
+                                                            </div>
+                                                            <!--end toast-->
+
+                                                        </div>
+                                                    </div> <!-- end col-->
+                                                    <div class="col-md-6">
+                                                        <h5 class="mb-2">Translucent</h5>
+                                                        <p class="text-muted font-14">Toasts are slightly translucent, too,
+                                                            so they blend over whatever they might appear over.
+                                                            For browsers that support the backdrop-filter CSS property,
+                                                            we’ll also attempt to blur the elements under a toast.</p>
+
+                                                        <div class="p-3 bg-secondary">
+                                                            <div class="toast fade show" role="alert" aria-live="assertive"
+                                                                aria-atomic="true" data-toggle="toast">
+                                                                <div class="toast-header">
+                                                                    <img src="assets/images/logo_sm_dark.png"
+                                                                        alt="brand-logo" height="12" class="mr-1" />
+                                                                    <strong class="mr-auto">Hyper</strong>
+                                                                    <small>11 mins ago</small>
+                                                                    <button type="button" class="ml-2 mb-1 close"
+                                                                        data-dismiss="toast" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
+                                                                <div class="toast-body">
+                                                                    Hello, world! This is a toast message.
+                                                                </div>
+                                                            </div>
+                                                            <!--end toast-->
+                                                        </div>
+                                                    </div> <!-- end col-->
+                                                </div>
+                                                <!-- end row-->
+
+                                                <div class="row">
+                                                    <div class="col-md-6 mt-4">
+                                                        <h5 class="mb-2">Stacking</h5>
+                                                        <p class="text-muted font-14">When you have multiple toasts, we
+                                                            default to vertiaclly stacking them in a readable manner.</p>
+                                                        <div class="p-3">
+                                                            <div aria-live="polite" aria-atomic="true"
+                                                                style="position: relative; min-height: 200px;">
+                                                                <!-- Position it -->
+                                                                <div style="position: absolute; top: 0; right: 0;">
+
+                                                                    <!-- Then put toasts within -->
+                                                                    <div class="toast fade show" role="alert"
+                                                                        aria-live="assertive" aria-atomic="true"
+                                                                        data-toggle="toast">
+                                                                        <div class="toast-header">
+                                                                            <img src="assets/images/logo_sm_dark.png"
+                                                                                alt="brand-logo" height="12" class="mr-1" />
+                                                                            <strong class="mr-auto">Hyper</strong>
+                                                                            <small class="text-muted">just now</small>
+                                                                            <button type="button" class="ml-2 mb-1 close"
+                                                                                data-dismiss="toast" aria-label="Close">
+                                                                                <span aria-hidden="true">&times;</span>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="toast-body">
+                                                                            See? Just like this.
+                                                                        </div>
+                                                                    </div>
+                                                                    <!--end toast-->
+
+                                                                    <div class="toast fade show" role="alert"
+                                                                        aria-live="assertive" aria-atomic="true"
+                                                                        data-toggle="toast">
+                                                                        <div class="toast-header">
+                                                                            <img src="assets/images/logo_sm_dark.png"
+                                                                                alt="brand-logo" height="12" class="mr-1" />
+                                                                            <strong class="mr-auto">Hyper</strong>
+                                                                            <small class="text-muted">2 seconds ago</small>
+                                                                            <button type="button" class="ml-2 mb-1 close"
+                                                                                data-dismiss="toast" aria-label="Close">
+                                                                                <span aria-hidden="true">&times;</span>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="toast-body">
+                                                                            Heads up, toasts will stack automatically
+                                                                        </div>
+                                                                    </div>
+                                                                    <!--end toast-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div> <!-- end col-->
+                                                    <div class="col-md-6 mt-4">
+                                                        <h5 class="mb-2">Placement</h5>
+                                                        <p class="text-muted font-14">Place toasts with custom CSS as you
+                                                            need them. The top right is often used for
+                                                            notifications, as is the top middle. If you’re only ever going
+                                                            to show one toast at a time, put the positioning
+                                                            styles right on the <code>.toast</code>.</p>
+                                                        <div class="p-3">
+                                                            <div aria-live="polite" aria-atomic="true"
+                                                                class="d-flex justify-content-center align-items-center"
+                                                                style="min-height: 200px;">
+
+                                                                <!-- Then put toasts within -->
+                                                                <div class="toast fade show" role="alert"
+                                                                    aria-live="assertive" aria-atomic="true"
+                                                                    data-toggle="toast">
+                                                                    <div class="toast-header">
+                                                                        <img src="assets/images/logo_sm_dark.png"
+                                                                            alt="brand-logo" height="12" class="mr-1" />
+                                                                        <strong class="mr-auto">Hyper</strong>
+                                                                        <small>11 mins ago</small>
+                                                                        <button type="button" class="ml-2 mb-1 close"
+                                                                            data-dismiss="toast" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="toast-body">
+                                                                        Hello, world! This is a toast message.
+                                                                    </div>
+                                                                </div>
+                                                                <!--end toast-->
+                                                            </div>
+                                                        </div>
+                                                    </div> <!-- end col-->
+                                                </div>
+                                                <!-- end row-->
+                                            </div> <!-- end preview-->
+
+                                            <div class="tab-pane" id="bootstrap-toasts-code">
+                                                <pre class="mb-0">
+                                                        <span class="html escape">
+                                                            &lt;!-- Basic Toast --&gt;
+                                                            &lt;div class=&quot;toast fade show&quot; role=&quot;alert&quot; aria-live=&quot;assertive&quot; aria-atomic=&quot;true&quot; data-toggle=&quot;toast&quot;&gt;
+                                                                &lt;div class=&quot;toast-header&quot;&gt;
+                                                                    &lt;img src=&quot;assets/images/logo_sm_dark.png&quot; alt=&quot;brand-logo&quot; height=&quot;12&quot; class=&quot;mr-1&quot; /&gt;
+                                                                    &lt;strong class=&quot;mr-auto&quot;&gt;Hyper&lt;/strong&gt;
+                                                                    &lt;small&gt;11 mins ago&lt;/small&gt;
+                                                                    &lt;button type=&quot;button&quot; class=&quot;ml-2 mb-1 close&quot; data-dismiss=&quot;toast&quot; aria-label=&quot;Close&quot;&gt;
+                                                                        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                                                                    &lt;/button&gt;
+                                                                &lt;/div&gt;
+                                                                &lt;div class=&quot;toast-body&quot;&gt;
+                                                                    Hello, world! This is a toast message.
+                                                                &lt;/div&gt;
+                                                            &lt;/div&gt; &lt;!--end toast--&gt;
+                                                            
+                                                            &lt;!-- Translucent Toast --&gt;
+                                                            &lt;div class=&quot;toast fade show&quot; role=&quot;alert&quot; aria-live=&quot;assertive&quot; aria-atomic=&quot;true&quot; data-toggle=&quot;toast&quot;&gt;
+                                                                &lt;div class=&quot;toast-header&quot;&gt;
+                                                                    &lt;img src=&quot;assets/images/logo_sm_dark.png&quot; alt=&quot;brand-logo&quot; height=&quot;12&quot; class=&quot;mr-1&quot; /&gt;
+                                                                    &lt;strong class=&quot;mr-auto&quot;&gt;Hyper&lt;/strong&gt;
+                                                                    &lt;small&gt;11 mins ago&lt;/small&gt;
+                                                                    &lt;button type=&quot;button&quot; class=&quot;ml-2 mb-1 close&quot; data-dismiss=&quot;toast&quot; aria-label=&quot;Close&quot;&gt;
+                                                                        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                                                                    &lt;/button&gt;
+                                                                &lt;/div&gt;
+                                                                &lt;div class=&quot;toast-body&quot;&gt;
+                                                                    Hello, world! This is a toast message.
+                                                                &lt;/div&gt;
+                                                            &lt;/div&gt; &lt;!--end toast--&gt;
+                                                            
+                                                            &lt;!-- Stacking Toast --&gt;
+                                                            &lt;div aria-live=&quot;polite&quot; aria-atomic=&quot;true&quot; style=&quot;position: relative; min-height: 200px;&quot;&gt;
+                                                                &lt;!-- Position it --&gt;
+                                                                &lt;div style=&quot;position: absolute; top: 0; right: 0;&quot;&gt;
+                                                                
+                                                                    &lt;!-- Then put toasts within --&gt;
+                                                                    &lt;div class=&quot;toast fade show&quot; role=&quot;alert&quot; aria-live=&quot;assertive&quot; aria-atomic=&quot;true&quot; data-toggle=&quot;toast&quot;&gt;
+                                                                        &lt;div class=&quot;toast-header&quot;&gt;
+                                                                            &lt;img src=&quot;assets/images/logo_sm_dark.png&quot; alt=&quot;brand-logo&quot; height=&quot;12&quot; class=&quot;mr-1&quot; /&gt;
+                                                                            &lt;strong class=&quot;mr-auto&quot;&gt;Hyper&lt;/strong&gt;
+                                                                            &lt;small class=&quot;text-muted&quot;&gt;just now&lt;/small&gt;
+                                                                            &lt;button type=&quot;button&quot; class=&quot;ml-2 mb-1 close&quot; data-dismiss=&quot;toast&quot; aria-label=&quot;Close&quot;&gt;
+                                                                            &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                                                                            &lt;/button&gt;
+                                                                        &lt;/div&gt;
+                                                                        &lt;div class=&quot;toast-body&quot;&gt;
+                                                                            See? Just like this.
+                                                                        &lt;/div&gt;
+                                                                    &lt;/div&gt; &lt;!--end toast--&gt;
+                                                                
+                                                                    &lt;div class=&quot;toast fade show&quot; role=&quot;alert&quot; aria-live=&quot;assertive&quot; aria-atomic=&quot;true&quot; data-toggle=&quot;toast&quot;&gt;
+                                                                        &lt;div class=&quot;toast-header&quot;&gt;
+                                                                            &lt;img src=&quot;assets/images/logo_sm_dark.png&quot; alt=&quot;brand-logo&quot; height=&quot;12&quot; class=&quot;mr-1&quot; /&gt;
+                                                                            &lt;strong class=&quot;mr-auto&quot;&gt;Hyper&lt;/strong&gt;
+                                                                            &lt;small class=&quot;text-muted&quot;&gt;2 seconds ago&lt;/small&gt;
+                                                                            &lt;button type=&quot;button&quot; class=&quot;ml-2 mb-1 close&quot; data-dismiss=&quot;toast&quot; aria-label=&quot;Close&quot;&gt;
+                                                                            &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                                                                            &lt;/button&gt;
+                                                                        &lt;/div&gt;
+                                                                        &lt;div class=&quot;toast-body&quot;&gt;
+                                                                            Heads up, toasts will stack automatically
+                                                                        &lt;/div&gt;
+                                                                    &lt;/div&gt; &lt;!--end toast--&gt;
+                                                                &lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            
+                                                            &lt;!-- Placement Toast --&gt;
+                                                            &lt;div aria-live=&quot;polite&quot; aria-atomic=&quot;true&quot; class=&quot;d-flex justify-content-center align-items-center&quot; style=&quot;min-height: 200px;&quot;&gt;
+                                                                &lt;!-- Then put toasts within --&gt;
+                                                                &lt;div class=&quot;toast fade show&quot; role=&quot;alert&quot; aria-live=&quot;assertive&quot; aria-atomic=&quot;true&quot; data-toggle=&quot;toast&quot;&gt;
+                                                                    &lt;div class=&quot;toast-header&quot;&gt;
+                                                                        &lt;img src=&quot;assets/images/logo_sm_dark.png&quot; alt=&quot;brand-logo&quot; height=&quot;12&quot; class=&quot;mr-1&quot; /&gt;
+                                                                        &lt;strong class=&quot;mr-auto&quot;&gt;Hyper&lt;/strong&gt;
+                                                                        &lt;small&gt;11 mins ago&lt;/small&gt;
+                                                                        &lt;button type=&quot;button&quot; class=&quot;ml-2 mb-1 close&quot; data-dismiss=&quot;toast&quot; aria-label=&quot;Close&quot;&gt;
+                                                                            &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+                                                                        &lt;/button&gt;
+                                                                    &lt;/div&gt;
+                                                                    &lt;div class=&quot;toast-body&quot;&gt;
+                                                                        Hello, world! This is a toast message.
+                                                                    &lt;/div&gt;
+                                                                &lt;/div&gt; &lt;!--end toast--&gt;
+                                                            &lt;/div&gt;
+                                                        </span>
+                                                    </pre> <!-- end highlight-->
+                                            </div> <!-- end preview code-->
+                                        </div> <!-- end tab-content-->
+
+                                    </div> <!-- end card-body-->
+                                </div> <!-- end card-->
+                            </div> <!-- end col-->
+                        </div>
+                        <!-- end row-->
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <h4 class="header-title">Jquery Toast</h4>
+                                        <p class="text-muted font-14">Toasts based notifications can be used to to show
+                                            important alerts or information to users.</p>
+
+                                        <ul class="nav nav-tabs nav-bordered mb-3">
+                                            <li class="nav-item">
+                                                <a href="#jquery-toast-preview" data-toggle="tab" aria-expanded="false"
+                                                    class="nav-link active">
+                                                    Preview
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#jquery-toast-code" data-toggle="tab" aria-expanded="true"
+                                                    class="nav-link">
+                                                    Code
+                                                </a>
+                                            </li>
+                                        </ul> <!-- end nav-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="jquery-toast-preview">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <div class="text-center p-3">
+                                                            <p>Info Example</p>
+                                                            <button type="button" class="btn btn-info btn-sm"
+                                                                id="toastr-one">Click me</button>
+                                                        </div>
+                                                    </div> <!-- end col-->
+                                                    <div class="col-md-3">
+                                                        <div class="text-center p-3">
+                                                            <p>Warning Example</p>
+                                                            <button type="button" class="btn btn-warning btn-sm"
+                                                                id="toastr-two">Click me</button>
+                                                        </div>
+                                                    </div> <!-- end col-->
+                                                    <div class="col-md-3">
+                                                        <div class="text-center p-3">
+                                                            <p>Success Example</p>
+                                                            <button type="button" class="btn btn-success btn-sm"
+                                                                id="toastr-three">Click me</button>
+                                                        </div>
+                                                    </div> <!-- end col-->
+                                                    <div class="col-md-3">
+                                                        <div class="text-center p-3">
+                                                            <p>Danger Example</p>
+                                                            <button type="button" class="btn btn-danger btn-sm"
+                                                                id="toastr-four">Click me</button>
+                                                        </div>
+                                                    </div> <!-- end col-->
+                                                </div>
+                                                <!-- end row-->
+
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <div class="text-center p-3">
+                                                            <p>The text can be an array</p>
+                                                            <button type="button" class="btn btn-light btn-sm"
+                                                                id="toastr-five">Click me</button>
+                                                        </div>
+                                                    </div> <!-- end col-->
+                                                    <div class="col-md-3">
+                                                        <div class="text-center p-3">
+                                                            <p>Put some HTML in the text</p>
+                                                            <button type="button" class="btn btn-light btn-sm"
+                                                                id="toastr-six">Click me</button>
+                                                        </div>
+                                                    </div> <!-- end col-->
+                                                    <div class="col-md-3">
+                                                        <div class="text-center p-3">
+                                                            <p>Making them sticky</p>
+                                                            <button type="button" class="btn btn-light btn-sm"
+                                                                id="toastr-seven">Click me</button>
+                                                        </div>
+                                                    </div> <!-- end col-->
+                                                    <div class="col-md-3">
+                                                        <div class="text-center p-3">
+                                                            <p>Fade transitions</p>
+                                                            <button type="button" class="btn btn-light btn-sm"
+                                                                id="toastr-eight">Click me</button>
+                                                        </div>
+                                                    </div> <!-- end col-->
+                                                </div>
+                                                <!-- end row-->
+                                            </div> <!-- end preview-->
+
+                                            <div class="tab-pane" id="jquery-toast-code">
+                                                <div class="pt-1">
+                                                    <h5 class="mb-1">How to customize the style of toast?</h5>
+                                                    <p class="font-13 text-muted">Open file <code>src/scss/custom/plugins/_toaster.scss</code> and
+                                                        change the different style to change the background, text or other
+                                                        colors.</p>
+                                                </div>
+                                                <pre class="mb-0">
+                                                    <span class="html escape">
+                                                        &lt;script&gt;$.NotificationApp.send(&quot;Title&quot;,&quot;Your awesome message text&quot;,&quot;Position&quot;,&quot;Background color&quot;,&quot;Icon&quot;)&lt;/script&gt;
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+
+                                                <p class="mt-2">Following positions for toast are supported at the moment:</p>
+                                                <ul>
+                                                    <li>
+                                                        <code>bottom-left</code> to show the toast at bottom left position</li>
+                                                    <li>
+                                                        <code>bottom-right</code> to show the toast at bottom right position</li>
+                                                    <li>
+                                                        <code>bottom-center</code> to show the toast at bottom center position</li>
+                                                    <li>
+                                                        <code>top-right</code> to show the toast at top right position</li>
+                                                    <li>
+                                                        <code>top-left</code> to show the toast at top left position</li>
+                                                    <li>
+                                                        <code>top-center</code> to show the toast at top center position</li>
+                                                    <li>
+                                                        <code>mid-center</code> to show the toast at middle position</li>
+                                                </ul>
+
+                                                <p>For more options, please refer to official documentation <a href="https://kamranahmed.info/toast" target="_blank">here</a></p>
+
+                                            </div> <!-- end preview code-->
+                                        </div> <!-- end tab-content-->
+
+                                    </div> <!-- end card-body-->
+                                </div> <!-- end card-->
+                            </div> <!-- end col-->
+                        </div>
+                        <!-- end row-->
+
+                    </div>
+                    <!-- container -->
+
+                </div>
+                <!-- content -->
+
+                @@include('./partials/footer.html')
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+        @@include('./partials/right-sidebar.html')
+
+        <!-- bundle -->
+        <script src="assets/js/vendor.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
+
+        <!-- demo js -->
+        <script src="assets/js/pages/demo.toastr.js"></script>
+        <!-- -->
+
+    </body>
+</html>

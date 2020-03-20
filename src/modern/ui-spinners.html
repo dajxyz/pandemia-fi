@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Spinners | Hyper - Responsive Bootstrap 4 Admin Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- App css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app-modern.min.css" rel="stylesheet" type="text/css" id="light-style" />
+        <link href="assets/css/app-modern-dark.min.css" rel="stylesheet" type="text/css" id="dark-style" />
+
+    </head>
+
+    <body class="loading" data-layout="detached" data-layout-config='{"leftSidebarCondensed":false,"darkMode":false, "showRightSidebarOnStart": true}'>
+
+        @@include('./partials/topbar-dark.html')
+        
+        <!-- Start Content-->
+        <div class="container-fluid">
+
+            <!-- Begin page -->
+            <div class="wrapper">
+
+                @@include('./partials/detached-left-sidebar.html')
+
+                <div class="content-page">
+                    <div class="content">
+                        
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Base UI</a></li>
+                                            <li class="breadcrumb-item active">Spinners</li>
+                                        </ol>
+                                    </div>
+                                    <h4 class="page-title">Spinners</h4>
+                                </div>
+                            </div>
+                        </div>     
+                        <!-- end page title --> 
+
+
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Border spinner</h4>
+                                        <p class="text-muted font-14">Use the border spinners for a lightweight loading indicator.</p>
+                        
+                                        <ul class="nav nav-tabs nav-bordered mb-3">
+                                            <li class="nav-item">
+                                                <a href="#border-spinner-preview" data-toggle="tab" aria-expanded="false" class="nav-link active">
+                                                    Preview
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#border-spinner-code" data-toggle="tab" aria-expanded="true" class="nav-link">
+                                                    Code
+                                                </a>
+                                            </li>
+                                        </ul> <!-- end nav-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="border-spinner-preview">
+                                                <div class="spinner-border m-2" role="status">
+                                                    <span class="sr-only">Loading...</span>
+                                                </div>   
+                                            </div> <!-- end preview-->
+                                        
+                                            <div class="tab-pane" id="border-spinner-code">
+                                                <pre class="mb-0">
+                                                    <span class="html escape">
+                                                        &lt;div class=&quot;spinner-border&quot; role=&quot;status&quot;&gt;
+                                                            &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+                                                        &lt;/div&gt; 
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+                                            </div> <!-- end preview code-->
+                                        </div> <!-- end tab-content-->
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card-->
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Colors</h4>
+                                        <p class="text-muted font-14">You can use any 
+                                                of our text color utilities on the standard spinner.</p>
+                        
+                                        <ul class="nav nav-tabs nav-bordered mb-3">
+                                            <li class="nav-item">
+                                                <a href="#colored-spinner-preview" data-toggle="tab" aria-expanded="false" class="nav-link active">
+                                                    Preview
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#colored-spinner-code" data-toggle="tab" aria-expanded="true" class="nav-link">
+                                                    Code
+                                                </a>
+                                            </li>
+                                        </ul> <!-- end nav-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="colored-spinner-preview">
+                                                <div class="spinner-border text-primary m-2" role="status"></div>
+                                                <div class="spinner-border text-secondary m-2" role="status"></div>
+                                                <div class="spinner-border text-success m-2" role="status"></div>
+                                                <div class="spinner-border text-danger m-2" role="status"></div>
+                                                <div class="spinner-border text-warning m-2" role="status"></div>
+                                                <div class="spinner-border text-info m-2" role="status"></div>
+                                                <div class="spinner-border text-light m-2" role="status"></div>
+                                                <div class="spinner-border text-dark m-2" role="status"></div>                                                
+                                            </div> <!-- end preview-->
+                                        
+                                            <div class="tab-pane" id="colored-spinner-code">
+                                                <pre class="mb-0">
+                                                    <span class="html escape">
+                                                        &lt;div class=&quot;spinner-border text-primary&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                        &lt;div class=&quot;spinner-border text-secondary&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                        &lt;div class=&quot;spinner-border text-success&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                        &lt;div class=&quot;spinner-border text-danger&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                        &lt;div class=&quot;spinner-border text-warning&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                        &lt;div class=&quot;spinner-border text-info&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                        &lt;div class=&quot;spinner-border text-light&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                        &lt;div class=&quot;spinner-border text-dark&quot; role=&quot;status&quot;&gt;&lt;/div&gt;  
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+                                            </div> <!-- end preview code-->
+                                        </div> <!-- end tab-content-->
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card-->
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Alignment</h4>
+                                        <p class="text-muted font-14">Use flexbox utilities, float utilities, or text alignment utilities to place spinners exactly where you need them in any situation.</p>
+                        
+                                        <ul class="nav nav-tabs nav-bordered mb-3">
+                                            <li class="nav-item">
+                                                <a href="#alignment-spinner-preview" data-toggle="tab" aria-expanded="false" class="nav-link active">
+                                                    Preview
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#alignment-spinner-code" data-toggle="tab" aria-expanded="true" class="nav-link">
+                                                    Code
+                                                </a>
+                                            </li>
+                                        </ul> <!-- end nav-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="alignment-spinner-preview">
+                                                <div class="d-flex justify-content-center">
+                                                    <div class="spinner-border" role="status"></div>
+                                                </div>    
+                                            </div> <!-- end preview-->
+                                        
+                                            <div class="tab-pane" id="alignment-spinner-code">
+                                                <pre class="mb-0">
+                                                    <span class="html escape">
+                                                        &lt;div class=&quot;d-flex justify-content-center&quot;&gt;
+                                                            &lt;div class=&quot;spinner-border&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                        &lt;/div&gt; 
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+                                            </div> <!-- end preview code-->
+                                        </div> <!-- end tab-content-->
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card-->
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Size</h4>
+                                        <p class="text-muted font-14">Add <code>.spinner-border-sm</code> and 
+                                            <code>.spinner-border.avatar-**</code> to make a smaller spinner that can quickly be used within other components.</p>
+                        
+                                        <ul class="nav nav-tabs nav-bordered mb-3">
+                                            <li class="nav-item">
+                                                <a href="#size-spinner-preview" data-toggle="tab" aria-expanded="false" class="nav-link active">
+                                                    Preview
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#size-spinner-code" data-toggle="tab" aria-expanded="true" class="nav-link">
+                                                    Code
+                                                </a>
+                                            </li>
+                                        </ul> <!-- end nav-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="size-spinner-preview">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="spinner-border avatar-lg text-primary m-2" role="status"></div>
+                                                        <div class="spinner-grow avatar-lg text-secondary m-2" role="status"></div>
+                                                    </div><!-- end col -->
+        
+                                                    <div class="col-lg-6">
+                                                        <div class="spinner-border avatar-md text-primary m-2" role="status"></div>
+                                                        <div class="spinner-grow avatar-md text-secondary m-2" role="status"></div>
+                                                    </div><!-- end col -->
+                                                    
+                                                    <div class="col-lg-6">
+                                                        <div class="spinner-border avatar-sm text-primary m-2" role="status"></div>
+                                                        <div class="spinner-grow avatar-sm text-secondary m-2" role="status"></div>
+                                                    </div><!-- end col -->
+        
+                                                    <div class="col-lg-6">
+                                                        <div class="spinner-border spinner-border-sm m-2" role="status"></div>
+                                                        <div class="spinner-grow spinner-grow-sm m-2" role="status"></div>
+                                                    </div><!-- end col -->                                            
+                                                </div><!--end row-->                                           
+                                            </div> <!-- end preview-->
+                                        
+                                            <div class="tab-pane" id="size-spinner-code">
+                                                <pre class="mb-0">
+                                                    <span class="html escape">
+                                                        &lt;!-- Large --&gt;
+                                                        &lt;div class=&quot;spinner-border avatar-lg text-primary&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                        &lt;div class=&quot;spinner-grow avatar-lg text-secondary&quot; role=&quot;status&quot;&gt;&lt;/div&gt; 
+                                                        
+                                                        &lt;!--Medium --&gt;
+                                                        &lt;div class=&quot;spinner-border avatar-md text-primary&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                        &lt;div class=&quot;spinner-grow avatar-md text-secondary&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                        
+                                                        &lt;!--Small --&gt;
+                                                        &lt;div class=&quot;spinner-border avatar-sm text-primary&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                        &lt;div class=&quot;spinner-grow avatar-sm text-secondary&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                        
+                                                        &lt;!--Extra Small --&gt;
+                                                        &lt;div class=&quot;spinner-border spinner-border-sm&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                        &lt;div class=&quot;spinner-grow spinner-grow-sm&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+                                            </div> <!-- end preview code-->
+                                        </div> <!-- end tab-content-->
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card-->
+                            </div> <!-- end col -->
+                        
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Growing spinner</h4>
+                                        <p class="text-muted font-14">If you don’t fancy a border spinner, switch to the grow spinner. While it doesn’t technically spin, it does repeatedly grow!</p>
+                        
+                                        <ul class="nav nav-tabs nav-bordered mb-3">
+                                            <li class="nav-item">
+                                                <a href="#growing-spinner-preview" data-toggle="tab" aria-expanded="false" class="nav-link active">
+                                                    Preview
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#growing-spinner-code" data-toggle="tab" aria-expanded="true" class="nav-link">
+                                                    Code
+                                                </a>
+                                            </li>
+                                        </ul> <!-- end nav-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="growing-spinner-preview">
+                                                <div class="spinner-grow m-2" role="status">
+                                                    <span class="sr-only">Loading...</span>
+                                                </div>                                            
+                                            </div> <!-- end preview-->
+                                        
+                                            <div class="tab-pane" id="growing-spinner-code">
+                                                <pre class="mb-0">
+                                                    <span class="html escape">
+                                                        &lt;div class=&quot;spinner-grow&quot; role=&quot;status&quot;&gt;
+                                                            &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+                                                        &lt;/div&gt; 
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+                                            </div> <!-- end preview code-->
+                                        </div> <!-- end tab-content-->
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card-->
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Color Growing spinner</h4>
+                                        <p class="text-muted font-14">You can use any of our text color utilities on the standard spinner.</p>
+                        
+                                        <ul class="nav nav-tabs nav-bordered mb-3">
+                                            <li class="nav-item">
+                                                <a href="#colored-growing-spinner-preview" data-toggle="tab" aria-expanded="false" class="nav-link active">
+                                                    Preview
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#colored-growing-spinner-code" data-toggle="tab" aria-expanded="true" class="nav-link">
+                                                    Code
+                                                </a>
+                                            </li>
+                                        </ul> <!-- end nav-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="colored-growing-spinner-preview">
+                                                <div class="spinner-grow text-primary m-2" role="status"></div>
+                                                <div class="spinner-grow text-secondary m-2" role="status"></div>
+                                                <div class="spinner-grow text-success m-2" role="status"></div>
+                                                <div class="spinner-grow text-danger m-2" role="status"></div>
+                                                <div class="spinner-grow text-warning m-2" role="status"></div>
+                                                <div class="spinner-grow text-info m-2" role="status"></div>
+                                                <div class="spinner-grow text-light m-2" role="status"></div>
+                                                <div class="spinner-grow text-dark m-2" role="status"></div>  
+                                            </div> <!-- end preview-->
+                                        
+                                            <div class="tab-pane" id="colored-growing-spinner-code">
+                                                <pre class="mb-0">
+                                                    <span class="html escape">
+                                                        &lt;div class=&quot;spinner-grow text-primary&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                        &lt;div class=&quot;spinner-grow text-secondary&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                        &lt;div class=&quot;spinner-grow text-success&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                        &lt;div class=&quot;spinner-grow text-danger&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                        &lt;div class=&quot;spinner-grow text-warning&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                        &lt;div class=&quot;spinner-grow text-info&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                        &lt;div class=&quot;spinner-grow text-light&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                        &lt;div class=&quot;spinner-grow text-dark&quot; role=&quot;status&quot;&gt;&lt;/div&gt;
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+                                            </div> <!-- end preview code-->
+                                        </div> <!-- end tab-content-->
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card-->
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Placement</h4>
+                                        <p class="text-muted font-14">Use <code>flexbox utilities</code>, <code>float utilities</code>, or <code>text alignment</code> utilities to place spinners exactly where you need them in any situation.</p>
+                        
+                                        <ul class="nav nav-tabs nav-bordered mb-3">
+                                            <li class="nav-item">
+                                                <a href="#placement-spinner-preview" data-toggle="tab" aria-expanded="false" class="nav-link active">
+                                                    Preview
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#placement-spinner-code" data-toggle="tab" aria-expanded="true" class="nav-link">
+                                                    Code
+                                                </a>
+                                            </li>
+                                        </ul> <!-- end nav-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="placement-spinner-preview">
+                                                <div class="d-flex align-items-center">
+                                                    <strong>Loading...</strong>
+                                                    <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+                                                </div>                                             
+                                            </div> <!-- end preview-->
+                                        
+                                            <div class="tab-pane" id="placement-spinner-code">
+                                                <pre class="mb-0">
+                                                    <span class="html escape">
+                                                        &lt;div class=&quot;d-flex align-items-center&quot;&gt;
+                                                            &lt;strong&gt;Loading...&lt;/strong&gt;
+                                                            &lt;div class=&quot;spinner-border ml-auto&quot; role=&quot;status&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;
+                                                        &lt;/div&gt; 
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+                                            </div> <!-- end preview code-->
+                                        </div> <!-- end tab-content-->
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card-->
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Buttons spinner</h4>
+                                        <p class="text-muted font-14">Use spinners within buttons to indicate an action is currently processing or taking place. 
+                                                You may also swap the text out of the spinner element and utilize button text as needed.</p>
+                        
+                                        <ul class="nav nav-tabs nav-bordered mb-3">
+                                            <li class="nav-item">
+                                                <a href="#buttons-spinner-preview" data-toggle="tab" aria-expanded="false" class="nav-link active">
+                                                    Preview
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#buttons-spinner-code" data-toggle="tab" aria-expanded="true" class="nav-link">
+                                                    Code
+                                                </a>
+                                            </li>
+                                        </ul> <!-- end nav-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="buttons-spinner-preview">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="button-list">
+                                                            <button class="btn btn-primary" type="button" disabled>
+                                                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span><span class="sr-only">Loading...</span>
+                                                            </button>
+                                                            <button class="btn btn-primary" type="button" disabled>
+                                                                <span class="spinner-border spinner-border-sm mr-1" role="status" aria-hidden="true"></span>
+                                                                Loading...
+                                                            </button>    
+                                                        </div>                                                     
+                                                    </div><!-- end col -->
+                                                    <div class="col-lg-6">
+                                                        <div class="button-list">
+                                                            <button class="btn btn-primary" type="button" disabled>
+                                                                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> <span class="sr-only">Loading...</span>
+                                                            </button>
+                                                            <button class="btn btn-primary" type="button" disabled>
+                                                                <span class="spinner-grow spinner-grow-sm mr-1" role="status" aria-hidden="true"></span>
+                                                                Loading...
+                                                            </button>
+                                                        </div>
+                                                    </div><!-- end col -->
+                                                </div> <!-- end row -->                                             
+                                            </div> <!-- end preview-->
+                                        
+                                            <div class="tab-pane" id="buttons-spinner-code">
+                                                <pre class="mb-0">
+                                                    <span class="html escape">
+                                                        &lt;!-- Border Spinner --&gt;
+                                                        &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot; disabled&gt;
+                                                            &lt;span class=&quot;spinner-border spinner-border-sm&quot; role=&quot;status&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+                                                        &lt;/button&gt;
+                                                        &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot; disabled&gt;
+                                                            &lt;span class=&quot;spinner-border spinner-border-sm mr-1&quot; role=&quot;status&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+                                                            Loading...
+                                                        &lt;/button&gt;
+                                                        
+                                                        &lt;!-- Growing Spinner --&gt;
+                                                        &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot; disabled&gt;
+                                                            &lt;span class=&quot;spinner-grow spinner-grow-sm&quot; role=&quot;status&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; &lt;span class=&quot;sr-only&quot;&gt;Loading...&lt;/span&gt;
+                                                        &lt;/button&gt;
+                                                        &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot; disabled&gt;
+                                                            &lt;span class=&quot;spinner-grow spinner-grow-sm mr-1&quot; role=&quot;status&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+                                                            Loading...
+                                                        &lt;/button&gt;
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+                                            </div> <!-- end preview code-->
+                                        </div> <!-- end tab-content-->
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card-->
+                            </div> <!-- end col -->
+                        </div>
+                        <!-- end row -->
+                        
+                    </div> <!-- End Content -->
+
+                    @@include('./partials/footer.html')
+
+                </div> <!-- content-page -->
+
+            </div> <!-- end wrapper-->
+        </div>
+        <!-- END Container -->
+
+
+        @@include('./partials/right-sidebar.html')
+
+
+        <!-- bundle -->
+        <script src="assets/js/vendor.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
+        
+    </body>
+</html>

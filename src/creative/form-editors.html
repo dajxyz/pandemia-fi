@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Editors | Hyper - Responsive Bootstrap 4 Admin Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- Summernote css -->
+        <link href="assets/css/vendor/summernote-bs4.css" rel="stylesheet" type="text/css" />
+        <!-- SimpleMDE css -->
+        <link href="assets/css/vendor/simplemde.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- App css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app-creative.min.css" rel="stylesheet" type="text/css" id="light-style" />
+        <link href="assets/css/app-creative-dark.min.css" rel="stylesheet" type="text/css" id="dark-style" />
+
+    </head>
+
+    <body class="loading" data-layout="topnav" data-layout-config='{"layoutBoxed":false,"darkMode":false,"showRightSidebarOnStart": true}'>
+        <!-- Begin page -->
+        <div class="wrapper">
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+                    @@include('./partials/horizontal-nav.html')
+                    
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
+                                            <li class="breadcrumb-item active">Editors</li>
+                                        </ol>
+                                    </div>
+                                    <h4 class="page-title">Editors</h4>
+                                </div>
+                            </div>
+                        </div>     
+                        <!-- end page title --> 
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+
+                                    <div class="card-body">
+                                        <h4 class="header-title">Summernote</h4>
+                                        <p class="text-muted font-14">Super simple WYSIWYG editor.</p>
+
+                                        <ul class="nav nav-tabs nav-bordered mb-3">
+                                            <li class="nav-item">
+                                                <a href="#basic-preview" data-toggle="tab" aria-expanded="false" class="nav-link active">
+                                                    Preview
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#basic-code" data-toggle="tab" aria-expanded="true" class="nav-link">
+                                                    Code
+                                                </a>
+                                            </li>
+                                        </ul> <!-- end nav-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="basic-preview">
+                                                <!-- basic summernote-->
+                                                <div id="summernote-basic"></div>                                           
+                                            </div> <!-- end preview-->
+                                        
+                                            <div class="tab-pane" id="basic-code">
+                                                <p>Please include following css file at <code>head</code> element</p>
+
+                                                <pre>
+                                                    <span class="html escape">
+                                                        &lt;!-- Summernote css --&gt;
+                                                        &lt;link href=&quot;assets/css/vendor/summernote-bs4.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+
+                                                <p>Make sure to include following js files at end of <code>body</code> element</p>
+
+                                                <pre class="mb-0">
+                                                    <span class="html escape">
+                                                        &lt;!-- plugin js --&gt;
+                                                        &lt;script src=&quot;assets/js/vendor/summernote-bs4.min.js&quot;&gt;&lt;/script&gt;
+                                                        &lt;!-- Summernote demo --&gt;
+                                                        &lt;script src=&quot;assets/js/pages/demo.summernote.js&quot;&gt;&lt;/script&gt;
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+
+                                                <pre class="mb-0">
+                                                    <span class="html escape">
+                                                        &lt;!-- HTML--&gt;
+                                                        &lt;div id=&quot;summernote-basic&quot;&gt;&lt;/div&gt;
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+                                            </div> <!-- end preview code-->
+                                        </div> <!-- end tab-content-->
+                                        
+                                    </div>
+                                    <!-- end card-body -->
+
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <div class="mb-2">
+                                                <h5 class="mb-1">Air-mode (Inline)</h5>
+                                                <p class="text-muted font-14">Air-mode give an interface without the Toolbar. To reveal popover Toolbar, select
+                                                    a text where you want to modify. Simply turn on <code>airMode</code> and just focus on text.
+                                                </p>
+
+                                                <ul class="nav nav-tabs nav-bordered mb-3">
+                                                    <li class="nav-item">
+                                                        <a href="#air-mode-preview" data-toggle="tab" aria-expanded="false" class="nav-link active">
+                                                            Preview
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#air-mode-code" data-toggle="tab" aria-expanded="true" class="nav-link">
+                                                            Code
+                                                        </a>
+                                                    </li>
+                                                </ul> <!-- end nav-->
+                                                <div class="tab-content">
+                                                    <div class="tab-pane show active" id="air-mode-preview">
+                                                        <div id="summernote-airmode">
+                                                            <p>This is an Air-mode editable area.</p>
+                                                            <ul>
+                                                                <li>Select a text to reveal the toolbar.</li>
+                                                                <li>Edit rich document on-the-fly, so elastic!</li>
+                                                            </ul>
+                                                            <p>End of air-mode area</p>
+                                                        </div>                                            
+                                                    </div> <!-- end preview-->
+                                                
+                                                    <div class="tab-pane" id="air-mode-code">
+                                                        <pre class="mb-0">
+                                                            <span class="html escape">
+                                                                &lt;div id=&quot;summernote-airmode&quot;&gt;
+                                                                    &lt;p&gt;This is an Air-mode editable area.&lt;/p&gt;
+                                                                    &lt;ul&gt;
+                                                                        &lt;li&gt;Select a text to reveal the toolbar.&lt;/li&gt;
+                                                                        &lt;li&gt;Edit rich document on-the-fly, so elastic!&lt;/li&gt;
+                                                                    &lt;/ul&gt;
+                                                                    &lt;p&gt;End of air-mode area&lt;/p&gt;
+                                                                &lt;/div&gt;
+                                                            </span>
+                                                        </pre> <!-- end highlight-->
+                                                    </div> <!-- end preview code-->
+                                                </div> <!-- end tab-content-->
+                                    
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="mb-2">
+                                                <h5 class="mb-1">Click to edit</h5>
+                                                <p class="text-muted font-14">You can edit content on the fly.</p>
+
+                                                <ul class="nav nav-tabs nav-bordered mb-3">
+                                                    <li class="nav-item">
+                                                        <a href="#clikabel-preview" data-toggle="tab" aria-expanded="false" class="nav-link active">
+                                                            Preview
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#clikabel-code" data-toggle="tab" aria-expanded="true" class="nav-link">
+                                                            Code
+                                                        </a>
+                                                    </li>
+                                                </ul> <!-- end nav-->
+                                                <div class="tab-content">
+                                                    <div class="tab-pane show active" id="clikabel-preview">
+                                                        <div id="summernote-editmode">
+                                                            <h5>Hello User, </h5>
+                                                            <p>We create simple, flat & responsive admin dashboard template.</p>
+                                                            <p>Please, write text here!</p>
+                                                            <p class="lead">Super simple WYSIWYG editor on bootstrap.</p>
+                                                        </div>
+                                                        <button id="summernote-edit" class="btn btn-primary btn-sm"><i class="mdi mdi-pencil mr-1"></i> Edit</button>
+                                                        <button id="summernote-save" class="btn btn-success btn-sm mt-2" style="display: none;"><i class="mdi mdi-content-save-outline mr-1"></i> Save Changes</button>                                           
+                                                    </div> <!-- end preview-->
+                                                
+                                                    <div class="tab-pane" id="clikabel-code">
+                                                        <pre class="mb-0">
+                                                            <span class="html escape">
+                                                                &lt;div id=&quot;summernote-editmode&quot;&gt;
+                                                                    &lt;h5&gt;Hello User, &lt;/h5&gt;
+                                                                    &lt;p&gt;We create simple, flat &amp; responsive admin dashboard template.&lt;/p&gt;
+                                                                    &lt;p&gt;Please, write text here!&lt;/p&gt;
+                                                                    &lt;p class=&quot;lead&quot;&gt;Super simple WYSIWYG editor on bootstrap.&lt;/p&gt;
+                                                                &lt;/div&gt;
+                                                                &lt;button id=&quot;summernote-edit&quot; class=&quot;btn btn-primary btn-sm&quot;&gt;&lt;i class=&quot;mdi mdi-pencil mr-1&quot;&gt;&lt;/i&gt; Edit&lt;/button&gt;
+                                                                &lt;button id=&quot;summernote-save&quot; class=&quot;btn btn-success btn-sm mt-2&quot; style=&quot;display: none;&quot;&gt;&lt;i class=&quot;mdi mdi-content-save-outline mr-1&quot;&gt;&lt;/i&gt; Save Changes&lt;/button&gt;
+                                                            </span>
+                                                        </pre> <!-- end highlight-->
+                                                    </div> <!-- end preview code-->
+                                                </div> <!-- end tab-content-->
+
+                                            </div>
+                                        </li>
+                                    </ul> <!-- end list-->
+                                </div> <!-- end card-->
+                            </div> <!-- end col-->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">SimpleMDE</h4>
+                                        <p class="text-muted font-14">SimpleMDE is a light-weight, simple, embeddable, and beautiful JS markdown editor</p>
+
+                                        <ul class="nav nav-tabs nav-bordered mb-3">
+                                            <li class="nav-item">
+                                                <a href="#simplemde-preview" data-toggle="tab" aria-expanded="false" class="nav-link active">
+                                                    Preview
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#simplemde-code" data-toggle="tab" aria-expanded="true" class="nav-link">
+                                                    Code
+                                                </a>
+                                            </li>
+                                        </ul> <!-- end nav-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="simplemde-preview">
+                                                <textarea id="simplemde1"></textarea>                                            
+                                            </div> <!-- end preview-->
+                                        
+                                            <div class="tab-pane" id="simplemde-code">
+                                                <p>Please include following css file at <code>head</code> element</p>
+
+                                                <pre>
+                                                    <span class="html escape">
+                                                        &lt;!-- SimpleMDE css --&gt;
+                                                        &lt;link href=&quot;assets/css/vendor/simplemde.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;                                                    
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+
+                                                <p>Make sure to include following js files at end of <code>body</code> element</p>
+
+                                                <pre class="mb-0">
+                                                    <span class="html escape">
+                                                        &lt;!-- SimpleMDE js --&gt;
+                                                        &lt;script src=&quot;assets/js/vendor/simplemde.min.js&quot;&gt;&lt;/script&gt;
+                                                        &lt;!-- SimpleMDE demo --&gt;
+                                                        &lt;script src=&quot;assets/js/pages/demo.simplemde.js&quot;&gt;&lt;/script&gt;
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+
+                                                <pre class="mb-0">
+                                                    <span class="html escape">
+                                                        &lt;!-- HTML --&gt;
+                                                        &lt;textarea id=&quot;simplemde1&quot;&gt;&lt;/textarea&gt; 
+                                                    </span>
+                                                </pre> <!-- end highlight-->
+                                            </div> <!-- end preview code-->
+                                        </div> <!-- end tab-content-->
+
+                                    </div> <!-- end card-body-->
+                                </div> <!-- end card-->
+                            </div> <!-- end col-->
+                        </div>
+                        <!-- end row -->
+
+                    </div>
+                    <!-- container -->
+
+                </div>
+                <!-- content -->
+
+                @@include('./partials/footer.html')
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+        @@include('./partials/right-sidebar.html')
+
+        <!-- bundle -->
+        <script src="assets/js/vendor.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
+
+        <!-- Summernote js -->
+        <script src="assets/js/vendor/summernote-bs4.min.js"></script>
+        <!-- SimpleMDE js -->
+        <script src="assets/js/vendor/simplemde.min.js"></script>
+
+        <!-- Summernote demo -->
+        <script src="assets/js/pages/demo.summernote.js"></script>
+
+        <!-- SimpleMDE demo -->
+        <script src="assets/js/pages/demo.simplemde.js"></script>
+
+    </body>
+</html>

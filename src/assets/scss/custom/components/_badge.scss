@@ -1,0 +1,19 @@
+// 
+// _badges.scss
+// 
+
+// Lighten badge (soft)
+
+@each $color, $value in $theme-colors {
+  .badge-#{$color}-lighten {
+      @include badge-variant-light($value);
+  }
+}
+
+// Outline badge
+
+@each $color, $value in $theme-colors {
+  .badge-outline-#{$color} {
+      @include badge-variant-outline($value);
+  }
+}
