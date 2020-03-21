@@ -32,3 +32,11 @@ jobs:
           CLI: gsutil
         with:
           args: cp -r pandemia-fi/build/* gs://staging.pandemia.fi/
+
+      - uses: actions-hub/gcloud@master
+        env:
+          PROJECT_ID: pandemia-270914
+          APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+          CLI: gsutil
+        with:
+          args: web set -m index.html gs://staging.pandemia.fi
