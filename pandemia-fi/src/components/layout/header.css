@@ -17,3 +17,18 @@
 
   color: rgba(0, 0, 0, 0.87);
 }
+
+.layout__header__brand__link {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5ex;
+}
+
+.layout__header__brand__link:hover,
+.layout__header__brand__link:focus,
+.layout__header__brand__link:active {
+  text-decoration: underline;
+  color: white;
+  background-color: black;
+  border-radius: 4px;
+}

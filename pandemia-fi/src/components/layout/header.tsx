@@ -3,7 +3,11 @@ import "./header.css";
 
 const Header = () => (
   <header className="layout__header">
-    <span className="layout__header__brand">Pandemia.fi</span>
+    <span className="layout__header__brand">
+      <a className="layout__header__brand__link" href="/">
+        Pandemia.fi
+      </a>
+    </span>
   </header>
 );
 
