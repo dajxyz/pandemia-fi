@@ -18,9 +18,9 @@ const HeaderLinks = () => (
       Tietopankki
     </Link>
 
-    {/* <Link type="header__nav" href="/about">
+    <Link type="header__nav" href="/sivustosta">
       Tietoa meistä
-    </Link> */}
+    </Link>
   </nav>
 );
 

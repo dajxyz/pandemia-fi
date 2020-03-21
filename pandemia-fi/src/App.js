@@ -14,7 +14,7 @@ function App() {
           <Route path="/tietopankki">
             <LandingPage />
           </Route>
-          <Route path="/about">
+          <Route path="/sivustosta">
             <LandingPage />
           </Route>
           <Route path="/">
