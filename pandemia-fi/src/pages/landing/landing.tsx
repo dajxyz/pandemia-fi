@@ -30,6 +30,17 @@ const LandingPage: React.FunctionComponent = () => {
           />
         </Card>
       </div>
+      <div className="landing-page__grid-item--large">
+        <Card>
+          <h1>Suomen luetuimmat korona-uutiset</h1>
+        </Card>
+      </div>
+      <div className="landing-page__grid-item">
+        <Card>
+          <h1>Viranomaisten ohjeet</h1>
+          <h1>Seuraa tiedotusta</h1>
+        </Card>
+      </div>
     </div>
   );
 };
