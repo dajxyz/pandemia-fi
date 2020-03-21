@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Pandemia.fi",
+  "name": "COVID-19-epidemian syventävä tietopankki",
   "icons": [
     {
       "src": "favicon.ico",
