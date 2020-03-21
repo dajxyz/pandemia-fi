@@ -1,4 +1,4 @@
-name: Build and Deploy to GKE
+name: Build and push to Google Cloud bucket
 
 on:
   push:
