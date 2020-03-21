@@ -1,0 +1,19 @@
+name: Build and Deploy to GKE
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  setup-build-bucket:
+    name: Setup, Build, and push to Google Cloud Bucket
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: |
+          yarn install
+
+      - name: Build
+        run: |
+          yarn build
