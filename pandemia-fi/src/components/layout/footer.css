@@ -3,4 +3,9 @@
   text-align: center;
   padding: 30px;
   margin-top: auto;
+  font-size: 12px;
+}
+
+.layout__footer a {
+  color: #a6acbe;
 }
