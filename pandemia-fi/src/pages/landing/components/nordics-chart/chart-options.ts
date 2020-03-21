@@ -1,7 +1,7 @@
 const chartLabelFormatter = (y: number): string =>
   `${(y / 50000).toFixed(4)}% väestöstä`;
 
-const chartOptions = {
+const chartOptions = Object.freeze({
   chart: {
     locales: [
       {
@@ -113,7 +113,7 @@ const chartOptions = {
     }
   },
   yaxis: {
-    logarithmic: "true",
+    logarithmic: true,
     opposite: true,
     min: 2,
     labels: {
@@ -150,6 +150,6 @@ const chartOptions = {
       }
     }
   ]
-};
+});
 
 export default chartOptions;

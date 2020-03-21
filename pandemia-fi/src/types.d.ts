@@ -1,0 +1,1 @@
+type ChartScaleType = "linear" | "logarithmic";

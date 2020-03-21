@@ -3,9 +3,31 @@ import Chart from "react-apexcharts";
 import chartOptions from "./chart-options";
 import nordicsTimeSeries from "./nordics-time-series.json";
 
-const NordicsChart = () => {
+interface NordicsChartProps {
+  scale: ChartScaleType;
+}
+
+const chartOptionsByScale = {
+  linear: {
+    ...chartOptions,
+    yaxis: {
+      ...chartOptions.yaxis,
+      logarithmic: false,
+      min: 9
+    }
+  },
+  logarithmic: {
+    ...chartOptions
+  }
+};
+
+const NordicsChart = ({ scale }: NordicsChartProps) => {
   return (
-    <Chart options={chartOptions} series={nordicsTimeSeries} type="line" />
+    <Chart
+      options={chartOptionsByScale[scale]}
+      series={nordicsTimeSeries}
+      type="line"
+    />
   );
 };
 
