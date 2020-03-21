@@ -31,4 +31,4 @@ jobs:
           APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
           CLI: gsutil
         with:
-          args: cp -a pandemia-fi/build/. gs://staging.pandemia.fi/
+          args: cp -r pandemia-fi/build gs://staging.pandemia.fi/
