@@ -1,4 +1,11 @@
 .layout__footer {
-  background: #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  color: #a6acbe;
+  text-align: center;
+  padding: 30px;
+  margin-top: auto;
+  font-size: 12px;
+}
+
+.layout__footer a {
+  color: #a6acbe;
 }

@@ -1,5 +1,15 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Install dependencies
+
+- Open the current directory on your command line terminal.
+- Run the following command to install the npm package dependencies to your local computer.
+
+```sh
+yarn install
+```
+
+
 ## Available Scripts
 
 In the project directory, you can run:

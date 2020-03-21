@@ -1,0 +1,9 @@
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 22px 18px;
+}
+
+.card > h1 {
+  margin-top: 0px;
+}

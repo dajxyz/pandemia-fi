@@ -2,18 +2,14 @@
 
 [Pandemia.fi](https://www.pandemia.fi/) is an information resource and a news aggregator that only an independent team of volunteer individuals could build.
 
+We are building a completely new site as part of the [Hack The Crisis Finland](https://www.hackthecrisisfinland.com/) hackathon during the weekend of March 20 to March 22, 2020.
+
 # Contributing
 
-You can contribute to the project by submitting a PR.
+Contributions are welcome! The new code lives under the `pandemia-fi` directory
+and is a basic `create-react-app` setup. Feel free to post issues and even bake a PR!
 
-## Future
+## We are especially looking for contributions towards
 
-We are looking to ditch the current Bootstrap theme and move to a React based frontend. The work is only beginning now and additional contributors are more than welcome!
-
-## Biggest issues
-
-These are the biggest issues in the current Bootstrap implementation:
-
-- Page load time.
-- Cache busting.
-- Mobile user experience.
+- Setting up GitHub Actions for automated deployes to Google Cloud bucket.
+- React app internationalisation.

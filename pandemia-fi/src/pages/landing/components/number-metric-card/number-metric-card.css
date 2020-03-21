@@ -1,0 +1,15 @@
+.number-metric-card {
+  text-align: center;
+}
+
+.number-metric-card__metric {
+  font-size: 56px;
+  line-height: 62px;
+  margin-bottom: 16px;
+}
+
+.number-metric-card__explainer {
+  font-size: 16px;
+  line-height: 19px;
+  color: #a6acbe;
+}

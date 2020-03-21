@@ -1,0 +1,26 @@
+.button {
+  cursor: pointer;
+  border-radius: 100px;
+  border: none;
+  padding: 6px 12px;
+
+  text-align: center;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 10px;
+
+  color: #ffffff;
+  user-select: none;
+}
+
+.button--primary {
+  background: #6202ee;
+}
+
+.button--muted {
+  background: #cecece;
+}
