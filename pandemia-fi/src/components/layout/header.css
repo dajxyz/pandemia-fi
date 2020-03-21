@@ -3,3 +3,17 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
   padding: 30px;
 }
+
+.layout__header__brand {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  /* or 150% */
+
+  letter-spacing: 0.15px;
+
+  /* Black / High Emphasis */
+
+  color: rgba(0, 0, 0, 0.87);
+}
