@@ -8,10 +8,10 @@ function App() {
     <Layout>
       <Router>
         <Switch>
-          <Route path="/news">
+          <Route path="/uutishuone">
             <LandingPage />
           </Route>
-          <Route path="/actions">
+          <Route path="/toimenpiteet">
             <LandingPage />
           </Route>
           <Route path="/">
