@@ -1,11 +1,12 @@
 import React from "react";
 import Header from "./header";
 import Footer from "./footer";
+import "./layout.css";
 
 const Layout: React.FunctionComponent = ({ children }) => (
   <div className="layout">
     <Header />
-    <main>{children}</main>
+    <main className="layout__content">{children}</main>
     <Footer />
   </div>
 );

@@ -3,3 +3,8 @@
   flex-flow: column nowrap;
   min-height: 100vh;
 }
+
+.layout__content {
+  width: 1024px;
+  margin: 56px auto;
+}
