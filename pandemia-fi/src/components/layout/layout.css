@@ -5,6 +5,9 @@
 }
 
 .layout__content {
+  width: 100%;
   max-width: 1024px;
-  margin: 56px auto;
+  margin-top: 56px;
+  margin-bottom: 56px;
+  align-self: center;
 }
