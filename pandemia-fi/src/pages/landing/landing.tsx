@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../../components/card";
-import NordicsGraph from "./components/nordics-graph";
+import HeroChartCard from "./components/hero-chart-card";
 import "./landing.css";
 
 const LandingPage: React.FunctionComponent = () => {
@@ -8,7 +8,7 @@ const LandingPage: React.FunctionComponent = () => {
     <div className="landing-page__grid-container">
       <div className="landing-page__grid-item--large">
         <Card>
-          <NordicsGraph />
+          <HeroChartCard />
         </Card>
       </div>
       <div className="landing-page__grid-item">

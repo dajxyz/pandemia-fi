@@ -1,11 +1,7 @@
-import React from "react";
-import Chart from "react-apexcharts";
-import timeSeriesData from "./time-series-data.json";
-
 const chartLabelFormatter = (y: number): string =>
   `${(y / 50000).toFixed(4)}% väestöstä`;
 
-const chartOptions: object = {
+const chartOptions = {
   chart: {
     locales: [
       {
@@ -156,8 +152,4 @@ const chartOptions: object = {
   ]
 };
 
-const NordicsGraph = () => {
-  return <Chart options={chartOptions} series={timeSeriesData} type="line" />;
-};
-
-export default NordicsGraph;
+export default chartOptions;
