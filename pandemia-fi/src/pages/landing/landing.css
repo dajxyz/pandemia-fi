@@ -11,4 +11,5 @@
 
 .landing-page__grid-item--large {
   grid-column-start: span 2;
+  grid-row-start: span 3;
 }
