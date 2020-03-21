@@ -9,14 +9,18 @@ jobs:
   setup-build-bucket:
     name: Setup, Build, and push to Google Cloud Bucket
     runs-on: ubuntu-latest
+    env:
+      working-directory: ./pandemia-fi
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
       - name: Install dependencies
+        working-directory: ${{env.working-directory}}
         run: |
           yarn install
 
       - name: Build
+        working-directory: ${{env.working-directory}}
         run: |
           yarn build
