@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../../../../components/button";
 import NordicsChart from "../nordics-chart";
+import FinlandAndEUChart from "../finland-and-eu-chart";
 import "./hero-chart-card.css";
 
 type ChartSubject = "nordics" | "finland-and-eu";
@@ -47,7 +48,8 @@ const HeroChartCard = () => {
           </div>
         </div>
       </div>
-      <NordicsChart scale={scale} />
+      {subject === "nordics" && <NordicsChart scale={scale} />}
+      {subject === "finland-and-eu" && <FinlandAndEUChart scale={scale} />}
     </>
   );
 };

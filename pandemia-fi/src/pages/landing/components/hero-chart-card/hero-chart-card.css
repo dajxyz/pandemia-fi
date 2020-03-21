@@ -1,6 +1,7 @@
 .hero-chart-card__header {
   display: flex;
   align-content: center;
+  margin-bottom: 14px;
 }
 
 .hero-chart-card__header > select {
