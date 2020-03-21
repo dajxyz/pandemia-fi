@@ -11,7 +11,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f8f8f8;
+  scroll-behavior: smooth;
+  background-color: hsl(0, 0%, 86%);
 }
 
 h1 {
