@@ -106,11 +106,8 @@ const chartOptions: object = {
   },
   title: {
     text: "Vahvistetut tapaukset suhteutettuna väkilukuun",
-    align: "left"
-  },
-  subtitle: {
-    text: "Logaritminen asteikko",
-    align: "left"
+    align: "left",
+    offsetX: -10
   },
   xaxis: {
     type: "datetime",
@@ -136,7 +133,11 @@ const chartOptions: object = {
     }
   },
   grid: {
-    borderColor: "#f1f3fa"
+    borderColor: "#f1f3fa",
+    padding: {
+      left: 0,
+      right: 0
+    }
   },
   responsive: [
     {
