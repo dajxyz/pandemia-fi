@@ -3,7 +3,9 @@ import "./footer.css";
 
 const Footer = () => {
   return (
-    <footer className="layout__footer">-- Footer section placeholder --</footer>
+    <footer className="layout__footer">
+      Footer section placeholder
+    </footer>
   );
 };
 
