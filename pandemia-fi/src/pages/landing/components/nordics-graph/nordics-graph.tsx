@@ -1,6 +1,6 @@
 import React from "react";
 import Chart from "react-apexcharts";
-import timeSeriesData from "./time-series-data";
+import timeSeriesData from "./time-series-data.json";
 
 const chartLabelFormatter = (y: number): string =>
   `${(y / 50000).toFixed(4)}% väestöstä`;
