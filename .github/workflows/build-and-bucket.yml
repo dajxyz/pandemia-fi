@@ -27,7 +27,7 @@ jobs:
 
       - uses: actions-hub/gcloud@master
         env:
-          PROJECT_ID: 664231668404
+          PROJECT_ID: pandemia-270914
           APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
           CLI: gsutil
         with:
