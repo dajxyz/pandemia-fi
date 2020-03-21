@@ -2,6 +2,7 @@ import React from "react";
 import Card from "../../components/card";
 import HeroChartCard from "./components/hero-chart-card";
 import NumberMetricCard from "./components/number-metric-card";
+import LinksCard from "./components/links-card";
 import "./landing.css";
 
 const LandingPage: React.FunctionComponent = () => {
@@ -37,8 +38,7 @@ const LandingPage: React.FunctionComponent = () => {
       </div>
       <div className="landing-page__grid-item">
         <Card>
-          <h1>Viranomaisten ohjeet</h1>
-          <h1>Seuraa tiedotusta</h1>
+          <LinksCard />
         </Card>
       </div>
     </div>
