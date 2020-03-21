@@ -1,11 +1,23 @@
 .layout__footer {
-  color: #a6acbe;
+  color: #353842;
   text-align: center;
   padding: 30px;
   margin-top: auto;
-  font-size: 12px;
+  margin: auto auto 0;
+  font-size: 14px;
+  line-height: 3ex;
+  max-width: 30em;
 }
 
 .layout__footer a {
-  color: #a6acbe;
+  color: #353842;
+}
+
+.layout__footer a:hover {
+  color: #000000;
+}
+
+.image__cc_by_sa {
+  display: inline-block;
+  margin: 5px;
 }
