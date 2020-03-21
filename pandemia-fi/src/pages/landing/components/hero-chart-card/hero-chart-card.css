@@ -3,9 +3,14 @@
   align-content: center;
 }
 
-.hero-chart-card__header > h1 {
-  margin-top: 0px;
-  margin-bottom: 0px;
+.hero-chart-card__header > select {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.15px;
+  background: none;
+  border: 1px solid #e2e2e2;
 }
 
 .hero-chart-card__header > .hero-chart-card__header__buttons {

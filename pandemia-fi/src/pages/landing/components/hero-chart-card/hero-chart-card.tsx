@@ -6,6 +6,7 @@ import "./hero-chart-card.css";
 type ChartSubject = "nordics" | "finland-and-eu";
 
 const HeroChartCard = () => {
+  const [subject, setSubject] = React.useState<ChartSubject>("nordics");
   const [scale, setScale] = React.useState<ChartScaleType>("linear");
 
   const setScaleToLinear = () => {
@@ -18,7 +19,15 @@ const HeroChartCard = () => {
   return (
     <>
       <div className="hero-chart-card__header">
-        <h1>Pohjoismaat</h1>
+        <select<ChartSubject>
+          value={subject}
+          onChange={event => {
+            setSubject(event.currentTarget.value as ChartSubject);
+          }}
+        >
+          <option value="nordics">Pohjoismaat</option>
+          <option value="finland-and-eu">Suomi ja EU</option>
+        </select>
         <div className="hero-chart-card__header__buttons">
           <div>
             <Button
