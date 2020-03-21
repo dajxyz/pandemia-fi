@@ -1,7 +1,10 @@
 .layout__header {
-  background: #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
   padding: 30px;
+  color: #fff;
+  background: #2b303f;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#565d71),to(#2b303f));
+  background-image: linear-gradient(to bottom,#565d71,#2b303f);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
 }
 
 .layout__header__brand {
@@ -16,4 +19,19 @@
   /* Black / High Emphasis */
 
   color: rgba(0, 0, 0, 0.87);
+}
+
+.layout__header__brand__link {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5ex;
+}
+
+.layout__header__brand__link:hover,
+.layout__header__brand__link:focus,
+.layout__header__brand__link:active {
+  text-decoration: underline;
+  color: #000;
+  background-color: #fff;
+  border-radius: 4px;
 }

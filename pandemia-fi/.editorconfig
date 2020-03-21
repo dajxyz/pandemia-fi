@@ -15,6 +15,7 @@ indent_size = 2
 # utf-8 and no trailing whitespaces
 charset = utf-8
 trim_trailing_whitespace = true
+
 # might be needed
 [*.md]
 trim_trailing_whitespace = false
