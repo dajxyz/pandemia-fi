@@ -24,3 +24,11 @@ jobs:
         working-directory: ${{env.working-directory}}
         run: |
           yarn build
+
+      - uses: actions-hub/gcloud@master
+        env:
+          PROJECT_ID: 664231668404
+          APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+          CLI: gsutil
+        with:
+          args: cp -a pandemia-fi/build/. gs://staging.pandemia.fi/
