@@ -1,5 +1,5 @@
 import React from "react";
-import {Link, Text, Heading} from 'rebass';
+import {Link, Box, Text, Heading} from 'rebass';
 
 interface NewsFeedItemProps {
   date: Date;
@@ -16,11 +16,14 @@ const NewsFeedItem: React.FunctionComponent<NewsFeedItemProps> = ({
   additionalInfo,
 }) => {
   return (
+
     <Link href={url}>
-      <Heading>{title}</Heading>
-      <Text>{additionalInfo}</Text>
-      <Text>{date.toString()}</Text>
-      {children}
+      <Box py={3}>
+        <Heading fontSize={[ 2,2,2 ]}> {title}</Heading>
+        <Text fontSize={[ 1,1,2 ]} color='gray'>{additionalInfo}</Text>
+        <Text fontSize={[ 1,1,2 ]} color='gray'>{date.toString()}</Text>
+        {children}
+      </Box>
     </Link>
   )
 };

@@ -1,12 +1,13 @@
 // Pandemia.fi theme
 export default {
+  breakpoints: ['40em', '52em', '64em'],
   colors: {
     text: '#000',
     background: '#fff',
-    primary: '#07c',
+    primary: '#6202EE',
     secondary: '#30c',
     muted: '#f6f6f9',
-    gray: '#dddddf',
+    gray: '#808080',
     highlight: 'hsla(205, 100%, 40%, 0.125)',
   },
   fonts: {
@@ -70,6 +71,7 @@ export default {
     },
     link: {
       color: 'primary',
+      textDecoration: 'none',
     },
     nav: {
       fontSize: 1,

@@ -6,7 +6,7 @@ const Uutishuone: React.FunctionComponent = () => {
   return (
     <Flex flexWrap='wrap' mx={2}>
       <Box px={2} width={[ '100%', '100%', '75%' ]}>
-        <Card>
+        <Card p={4}>
           <Heading>Uutishuone</Heading>
           <NewsFeedItem 
             url="https://yle.fi/uutiset/3-11265359?utm_source=twitter-share&utm_medium=social"
