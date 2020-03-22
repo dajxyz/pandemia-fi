@@ -5,36 +5,37 @@ import NumberMetricCard from "./components/number-metric-card";
 import LinksCard from "./components/links-card";
 import "./landing.css";
 
+interface CaseEntry {
+  id: number;
+  date: string;
+  healthCareDistrict: string;
+}
+
 function LandingPage() {
 
   const [numsConfirmed, setNumsConfirmed] = useState(0);
   const [numsConfirmedToday, setNumsConfirmedToday] = useState(0);
   const [numsRecovered, setNumsRecovered] = useState(0);
-  const [numsDeaths, setNumsDeaths] = useState(0);
+  // const [numsDeaths, setNumsDeaths] = useState(0);
+
+  const today = new Date();
 
   useEffect(() => {
     fetch('https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData')
       .then(res => res.json())
       .then(data => {
         setNumsConfirmed(data.confirmed.length);
+        setNumsConfirmedToday(
+          data.confirmed.filter((entry: CaseEntry) => {
+            const d = new Date(entry.date);
+            return d.getFullYear() === today.getFullYear()
+                   && d.getMonth() === today.getMonth()
+                   && d.getDate() === today.getDate();
+                 }).length
+        );
+        setNumsRecovered(data.recovered.length);
+        // setNumsDeaths(data.deaths.length);
       });
-    // const responseJson = await response.json();
-
-    // setNumsConfirmed(responseJson.confirmed.length);
-
-    // this.setState({
-    //   statData: {
-    //     numsConfirmed: responseJson.confirmed.length,
-    //     numsConfirmedToday: responseJson.confirmed.filter(entry => {
-    //       const d = new Date(entry.date);
-    //       return d.getFullYear() === this.today.getFullYear()
-    //              && d.getMonth() === this.today.getMonth()
-    //              && d.getDate() === this.today.getDate();
-    //     }).length,
-    //     numsDeaths: responseJson.deaths.length,
-    //     numsRecovered: responseJson.recovered.length,
-    //   }
-    // });
   });
 
   return (
