@@ -11,6 +11,8 @@
 }
 
 .layout__header__brand {
+  margin-bottom: -inherit;
+  width: 36%;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
