@@ -1,5 +1,7 @@
 import React from "react";
+
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
+
 import Layout from "./components/layout";
 import LandingPage from "./pages/landing";
 import Uutishuone from "./pages/uutishuone";

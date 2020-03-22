@@ -26,12 +26,14 @@ const HeaderLinks = () => (
 
 const Header = () => (
   <header className="layout__header">
-    <span className="layout__header__brand">
-      <Link type="header__brand" href="/">
-        Pandemia.fi
-      </Link>
-    </span>
+    <div className="layout__header__container">
+      <span className="layout__header__brand">
+        <Link type="header__brand" href="/">
+          Pandemia.fi
+        </Link>
+      </span>
     <HeaderLinks />
+    </div>
   </header>
 );
 

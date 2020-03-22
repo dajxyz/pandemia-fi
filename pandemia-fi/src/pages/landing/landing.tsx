@@ -1,47 +1,42 @@
 import React from "react";
-import Card from "../../components/card";
+import { Flex, Box, Card, Heading } from 'rebass';
 import HeroChartCard from "./components/hero-chart-card";
 import NumberMetricCard from "./components/number-metric-card";
 import LinksCard from "./components/links-card";
-import "./landing.css";
 
 const LandingPage: React.FunctionComponent = () => {
   return (
-    <div className="landing-page__grid-container">
-      <div className="landing-page__grid-item--large">
-        <Card>
+    <Flex flexWrap='wrap' mx={2}>
+      <Box px={2} width={[ '100%', '100%', '75%' ]}>
+        <Card mb={3}>
           <HeroChartCard />
         </Card>
-      </div>
-      <div className="landing-page__grid-item">
-        <Card>
+      </Box>
+      <Box px={2} width={[ '100%', '100%', '25%' ]}>
+        <Card mb={3}>
           <NumberMetricCard metric={450} explainer="Tartuntoja Suomessa" />
         </Card>
-      </div>
-      <div className="landing-page__grid-item">
-        <Card>
+        <Card mb={3}>
           <NumberMetricCard metric={50} explainer="Uusia tartuntoja tänään" />
         </Card>
-      </div>
-      <div className="landing-page__grid-item">
-        <Card>
+        <Card mb={3}>
           <NumberMetricCard
             metric={258419}
             explainer="Tartuntoja koko maailmassa"
           />
         </Card>
-      </div>
-      <div className="landing-page__grid-item--large">
+      </Box>
+      <Box px={2} width={[ 1, 1, 2/3 ]}>
         <Card>
-          <h1>Suomen luetuimmat korona-uutiset</h1>
+          <Heading>Suomen luetuimmat korona-uutiset</Heading>
         </Card>
-      </div>
-      <div className="landing-page__grid-item">
+      </Box>
+      <Box px={2} width={[ 1, 1, 1/3 ]}>
         <Card>
           <LinksCard />
         </Card>
-      </div>
-    </div>
+      </Box>
+    </Flex>
   );
 };
 

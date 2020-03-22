@@ -1,21 +1,20 @@
 import React from "react";
-import Card from "../../components/card";
-import "./uutishuone.css";
+import { Card, Heading, Flex, Box, Text } from 'rebass';
 
 const Uutishuone: React.FunctionComponent = () => {
   return (
-    <div className="uutishuone-page__grid-container">
-      <div className="uutishuone-page__grid-item--large">
+    <Flex flexWrap='wrap' mx={2}>
+      <Box px={2} width={[ '100%', '100%', '75%' ]}>
         <Card>
-          <h1>Uutishuone</h1>
+          <Heading>Uutishuone</Heading>
         </Card>
-      </div>
-      <div className="uutishuone-page__grid-item">
+      </Box>
+      <Box>
         <Card>
-          Placeholder text
+          <Text>Placeholder text</Text>
         </Card>
-      </div>
-    </div>
+      </Box>
+    </Flex>
   );
 };
 
