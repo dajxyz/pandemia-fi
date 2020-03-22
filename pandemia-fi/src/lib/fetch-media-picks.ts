@@ -14,8 +14,10 @@ const buildNewsFeedItemFromMediaPick = (
   additionalInfo: sourceItem.sourceName
 });
 
-export const fetchMediaPicks = async (): Promise<NewsFeedItem[]> => {
+const fetchMediaPicks = async (): Promise<NewsFeedItem[]> => {
   const response = await fetch("/data-sources/mediapoiminnat.json");
   const results: MediaPickFromSource[] = await response.json();
   return results.map(buildNewsFeedItemFromMediaPick);
 };
+
+export default fetchMediaPicks;
