@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Flex, Box, Card, Heading } from "rebass";
+import { Flex, Box, Card } from "rebass";
 import HeroChartCard from "./components/hero-chart-card";
 import NumberMetricCard from "./components/number-metric-card";
 import LinksCard from "./components/links-card";
+import GovernmentalBulletinCard from "./components/governmental-bulletin-card";
 
 interface CaseEntry {
   id: number;
@@ -75,7 +76,7 @@ function LandingPage() {
       </Box>
       <Box px={2} width={[1, 1, 2 / 3]}>
         <Card>
-          <Heading>Suomen luetuimmat korona-uutiset</Heading>
+          <GovernmentalBulletinCard />
         </Card>
       </Box>
       <Box px={2} width={[1, 1, 1 / 3]}>
