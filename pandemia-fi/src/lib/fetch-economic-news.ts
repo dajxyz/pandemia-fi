@@ -1,3 +1,5 @@
+import { parseFinnishDateString } from "./helpers";
+
 interface EconomicNewsFromSource {
   date: string;
   title: string;
@@ -7,7 +9,7 @@ interface EconomicNewsFromSource {
 const buildNewsFeedItemFromSource = (
   sourceItem: EconomicNewsFromSource
 ): NewsFeedItem => ({
-  date: new Date(sourceItem.date),
+  date: parseFinnishDateString(sourceItem.date),
   url: sourceItem.url,
   title: sourceItem.title,
   additionalInfo: ""

@@ -1,3 +1,5 @@
+import { parseFinnishDateString } from "./helpers";
+
 interface MediaPickFromSource {
   date: string;
   title: string;
@@ -8,7 +10,7 @@ interface MediaPickFromSource {
 const buildNewsFeedItemFromMediaPick = (
   sourceItem: MediaPickFromSource
 ): NewsFeedItem => ({
-  date: new Date(sourceItem.date),
+  date: parseFinnishDateString(sourceItem.date),
   url: sourceItem.url,
   title: sourceItem.title,
   additionalInfo: sourceItem.sourceName

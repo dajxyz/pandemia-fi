@@ -1,3 +1,5 @@
+import { parseFinnishDateString } from "./helpers";
+
 interface ActionsByNationsFromSource {
   date: string;
   title: string;
@@ -8,7 +10,7 @@ interface ActionsByNationsFromSource {
 const buildNewsFeedItemFromSource = (
   sourceItem: ActionsByNationsFromSource
 ): NewsFeedItem => ({
-  date: new Date(sourceItem.date),
+  date: parseFinnishDateString(sourceItem.date),
   url: sourceItem.url,
   title: sourceItem.title,
   additionalInfo: sourceItem.country

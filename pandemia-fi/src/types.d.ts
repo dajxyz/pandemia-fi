@@ -1,7 +1,7 @@
 type ChartScaleType = "linear" | "logarithmic";
 
 interface NewsFeedItem {
-  date: Date;
+  date: import("moment").Moment;
   url: string;
   title: string;
   additionalInfo: string;
