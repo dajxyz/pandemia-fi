@@ -1,16 +1,15 @@
 import React from "react";
-import Card from "../../components/card";
-import "./about.css";
+import { Card, Flex, Box } from 'rebass';
 
 const About: React.FunctionComponent = () => {
   return (
-    <div className="about-page__grid-container">
-      <div className="about-page__grid-item--large">
+    <Flex>
+      <Box width={1}>
         <Card>
           <h1>Tietoa meistä</h1>
         </Card>
-      </div>
-    </div>
+      </Box>
+    </Flex>
   );
 };
 
