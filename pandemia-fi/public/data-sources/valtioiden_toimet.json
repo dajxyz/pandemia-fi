@@ -1,0 +1,416 @@
+[
+  {
+    "date": "12.3.2020",
+    "title": "Kaikki lennot Eurooppaan keskeytetään",
+    "url": "https://www.bbc.com/news/world-us-canada-51846923",
+    "country": "Yhdysvallat"
+  },
+  {
+    "date": "12.3.2020",
+    "title": "Norja sulkee kaikki maan koulut ja päiväkodit",
+    "url": "https://www.iltalehti.fi/koronavirus/a/4d91358f-a125-45f2-9e4a-ba9534464fda",
+    "country": "Norja"
+  },
+  {
+    "date": "12.3.2020",
+    "title": "Italia sulkee kaikki kaupat ja ravintolat ",
+    "url": "https://www.is.fi/ulkomaat/art-2000006436033.html?ref=rss",
+    "country": "Italia"
+  },
+  {
+    "date": "12.3.2020",
+    "title": "Irlanti sulkee kouluja ja yliopistoja",
+    "url": "https://www.bbc.com/news/uk-northern-ireland-51850811",
+    "country": "Irlanti"
+  },
+  {
+    "date": "12.3.2020",
+    "title": "Yli 500 hengen yleisötilaisuudet perutaan",
+    "url": "https://www.hs.fi/politiikka/art-2000006436431.html",
+    "country": "Suomi"
+  },
+  {
+    "date": "3.3.2020",
+    "title": "New York sulkee varotoimenpiteenä koulut",
+    "url": "https://www.bloomberg.com/news/articles/2020-03-03/nyc-school-closed-as-a-precaution-on-suspected-virus-case",
+    "country": "Yhdysvallat"
+  },
+  {
+    "date": "11.3.2020",
+    "title": "Tanska sulkee koulut ja päiväkodit",
+    "url": "https://www.hs.fi/ulkomaat/art-2000006435048.html",
+    "country": "Tanska"
+  },
+  {
+    "date": "30.01.2020",
+    "title": "Venäjä sulkee Kiinan vastaisen rajansa",
+    "url": "https://www.cnbc.com/2020/01/30/coronavirus-russia-closes-border-with-china-to-prevent-spread.html",
+    "country": "Venäjä"
+  },
+  {
+    "date": "12.3.2020",
+    "title": "Itävalta sulkee kaikki koulut ja yliopistot neljäksi viikoksi",
+    "url": "https://apps.derstandard.at/privacywall/jetzt/livebericht/2000115645725/coronavirus-einreiseverbot-fuer-europaeer-in-die-usa",
+    "country": "Itävalta"
+  },
+  {
+    "date": "10.3.2020",
+    "title": "Tšekki sulkee koulut ja peruu tapahtumia",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-czech/czech-republic-shutting-schools-events-over-coronavirus-idUSKBN20X0ZL",
+    "country": "Tšekki"
+  },
+  {
+    "date": "21.2.2020",
+    "title": "Pohjois-Korea sulkee koulut kuukaudeksi",
+    "url": "https://www.dailynk.com/english/north-korea-closes-schools-throughout-country-one-month/",
+    "country": "Pohjois-Korea"
+  },
+  {
+    "date": "20.2.2020",
+    "title": "Iranissa Qom:n kaupunki sulkee koulut koronaviruksen vuoksi",
+    "url": "https://www.aa.com.tr/en/middle-east/schools-closing-in-qom-iran-after-coronavirus-outbreak/1739052",
+    "country": "Iran"
+  },
+  {
+    "date": "12.3.2020",
+    "title": "Espanjassa lukuisat itsehallintoalueet sulkevat koulut koronaviruksen leviämisen estämiseksi",
+    "url": "https://english.elpais.com/society/2020-03-12/basque-country-galicia-and-murcia-close-schools-in-bid-to-slow-coronavirus.html",
+    "country": "Espanja"
+  },
+  {
+    "date": "3.3.2020",
+    "title": "Ranska sulkee lukuisia kouluja",
+    "url": "https://www.france24.com/en/20200303-france-shuts-dozens-of-schools-in-areas-hit-by-coronavirus",
+    "country": "Ranska"
+  },
+  {
+    "date": "9.3.2020",
+    "title": "Slovenia kieltää kaikki yli 500 henkilön kokoontumiset",
+    "url": "https://www.vecer.com/se-dve-osebi-pozitivni-na-novi-koronavirus-v-sloveniji-okuzenih-ze-25-10139481",
+    "country": "Slovenia"
+  },
+  {
+    "date": "10.3.2020",
+    "title": "Kreikka sulkee koulut ja yliopistot 14 päiväksi",
+    "url": "http://www.ekathimerini.com/250448/article/ekathimerini/news/greek-schools-universities-to-close-for-14-days-to-contain-spread-of-coronavirus",
+    "country": "Kreikka"
+  },
+  {
+    "date": "9.3.2020",
+    "title": "Albania sulkee koulut kahdeksi viikoksi ja pysäyttää lento- ja laivaliikenteen Italiaan",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-albania/albania-confirms-first-coronavirus-cases-in-father-and-son-back-from-italy-idUSKBN20W012",
+    "country": "Albania"
+  },
+  {
+    "date": "12.3.2020",
+    "title": "Norja ottaa käyttöön laajat hätätilatoimivaltuudet ",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-norway/norway-to-take-strongest-ever-peacetime-measures-as-coronavirus-spreads-idUSKBN20Z1R8?il=0",
+    "country": "Norja"
+  },
+  {
+    "date": "12.3.2020",
+    "title": "Hollanti kieltää julkiset tapahtumat",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-netherlands-events/dutch-ban-public-events-over-coronavirus-idUSKBN20Z2DB?il=0",
+    "country": "Hollanti"
+  },
+  {
+    "date": "12.3.2020",
+    "title": "Ranska harkitsee paikallisvaalien siirtämistä koronaviruksen vuoksi",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-france-election/france-considers-postponing-local-elections-over-virus-concern-jdd-idUSKBN20Z2J9?il=0",
+    "country": "Ranska "
+  },
+  {
+    "date": "13.3.2020",
+    "title": "Kroatia sulkee koulut kahdeksi viikoksi",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-croatia/croatia-closes-schools-for-two-weeks-for-coronavirus-idUSKBN2101F0?il=0",
+    "country": "Kroatia"
+  },
+  {
+    "date": "13.3.2020",
+    "title": "Puolan presidentti peruu vierailunsa venäjälle koronaviruksen vuoksi",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-poland-smolensk/polands-president-calls-off-russia-trip-due-to-coronavirus-official-idUSKBN2100VJ?il=0",
+    "country": "Puola"
+  },
+  {
+    "date": "13.3.2020",
+    "title": "Brasilian terveysviranomaiset määräsivät risteilijäaluksen karanteeniin koronavirusepäilyn vuoksi",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-cruise-ship/brazil-isolates-cruise-ship-in-northeastern-port-after-suspected-coronavirus-case-idUSKBN2101OG",
+    "country": "Brasilia"
+  },
+  {
+    "date": "13.3.2020",
+    "title": "Tšekki rajoittaa matkustamista kovilla toimenpiteillä",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-czech-travel/czech-government-bans-most-travel-in-and-out-of-country-to-fight-coronavirus-idUSKBN2101K6?il=0",
+    "country": "Tšekki"
+  },
+  {
+    "date": "13.3.2020",
+    "title": "Indonesia kieltää henkigitystensuojainten myynnin ulkomaille ",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-indonesia-masks/indonesia-to-ban-face-mask-exports-to-ensure-domestic-supply-idUSKBN2100JB",
+    "country": "Indonesia"
+  },
+  {
+    "date": "13.3.2020",
+    "title": "Presidentti Trump julistaa kansallisen hätätilan Yhdysvalloissa",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-usa-emergency/trump-to-declare-national-emergency-over-coronavirus-bloomberg-citing-sources-idUSKBN2102G3",
+    "country": "Yhdysvallat"
+  },
+  {
+    "date": "13.3.2020",
+    "title": "Espanja julistaa kansallisen hätätilan",
+    "url": "https://www.theguardian.com/world/2020/mar/13/european-countries-take-radical-steps-to-combat-coronavirus",
+    "country": "Espanja"
+  },
+  {
+    "date": "14.3.2020",
+    "title": "Espanjaan tulossa kansallinen ulkonaliikkumiskielto",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-spain/spain-to-impose-nationwide-lockdown-draft-idUSKBN2110LE?il=0",
+    "country": "Espanja"
+  },
+  {
+    "date": "13.3.2020",
+    "title": "Miten eri EU-maat reagoivat Pandemiaan?",
+    "url": "https://www.politico.eu/article/how-europe-is-responding-to-the-coronavirus-pandemic/",
+    "country": "EU"
+  },
+  {
+    "date": "14.3.2020",
+    "title": "Yhdistynyt kuningaskunta kieltää massatapahtumat ensi viikosta alkaen",
+    "url": "https://www.politico.eu/article/uk-to-begin-banning-mass-gatherings-next-week/",
+    "country": "Yhdistynyt kuningaskunta"
+  },
+  {
+    "date": "13.3.2020",
+    "title": "Belgia sulkee koulut, baarit ja ravintolat",
+    "url": "https://www.politico.eu/article/belgium-closes-schools-bars-and-restaurants/",
+    "country": "Belgia"
+  },
+  {
+    "date": "14.3.2020",
+    "title": "Saksa lähettää Italiaan kasvosuojia ",
+    "url": "https://www.politico.eu/article/germany-to-send-face-masks-to-italy-to-help-deal-with-coronavirus/",
+    "country": "Saksa/Italia"
+  },
+  {
+    "date": "14.3.2020",
+    "title": "Suomessa valmius­lain käyttöönotto­asetuksen valmistelu aloitettu",
+    "url": "https://www.hs.fi/politiikka/art-2000006439482.html",
+    "country": "Suomi"
+  },
+  {
+    "date": "12.3.2020",
+    "title": "Viro sulkee koulut ja kannustaa vanhempia pitämään päiväkotilapset kotona",
+    "url": "https://www.mtvuutiset.fi/artikkeli/viro-sulkee-koulut-ja-kannustaa-vanhempia-pitamaan-paivakotilapset-kotona-ranskassakin-opinahjot-sulkevat-ovensa-olemme-vasta-kriisin-alussa/7760308#gs.1026znr",
+    "country": "Viro"
+  },
+  {
+    "date": "14.3.2020",
+    "title": "Norja sulkee lento­kentät ja satamat",
+    "url": "https://www.hs.fi/kotimaa/art-2000006436071.html",
+    "country": "Norja"
+  },
+  {
+    "date": "14.3.2020",
+    "title": "Ranska sulkee kaikki \"ei välttämättömät\"- julkiset tilat",
+    "url": "https://www.bbc.com/news/world-europe-51892477",
+    "country": "Ranska"
+  },
+  {
+    "date": "15.3.2020",
+    "title": "USA lisää Irlannin ja UK:n matkustuskieltoon",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-usa-travel-exclusi/exclusive-u-s-to-add-britain-ireland-to-european-travel-ban-airline-u-s-officials-idUSKBN2110UF",
+    "country": "Yhdysvallat"
+  },
+  {
+    "date": "15.3.2020",
+    "title": "Itävalta julisti ottavansa käyttöön järeät matkustusrajoitukset",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-austria/austria-announces-major-restrictions-on-movement-over-coronavirus-idUSKBN2120D8",
+    "country": "Itävalta"
+  },
+  {
+    "date": "15.3.2020",
+    "title": "Saksa sulkee rajat Ranskaan, Sveitsiin ja Itävaltaan",
+    "url": "https://www.spiegel.de/politik/deutschland/coronavirus-deutschland-schliesst-grenzen-zu-frankreich-oesterreich-und-der-schweiz-a-9910fb81-f635-4be5-8138-bcbcbfd491d4",
+    "country": "Saksa"
+  },
+  {
+    "date": "15.3.2020",
+    "title": "Viro sulkee tiistaina rajansa ulkomaalaisilta",
+    "url": "https://www.hs.fi/kotimaa/art-2000006440085.html",
+    "country": "Viro"
+  },
+  {
+    "date": "14.3.2020",
+    "title": "Yhdysvallat laajentaa matkustuskieltonsa koskemaan myös Iso-Britanniaa ja Irlantia",
+    "url": "https://www.politico.eu/article/coronavirus-trump-uk-ireland-travel-ban/",
+    "country": ""
+  },
+  {
+    "date": "15.3.2020",
+    "title": "Kolumbia estää maahantulon kaikilta kaikilta muilta paitsi sen omilta kansalaisilta",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-colombia/colombia-will-block-entry-by-all-non-residents-from-monday-to-stop-coronavirus-idUSKBN21211B?il=0",
+    "country": "Kolumbia"
+  },
+  {
+    "date": "16.3.2020",
+    "title": "Algeria asettaa matkustusrajoituksen Eurooppaan",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-algeria/algerian-to-suspend-travel-with-europe-statement-idUSKBN2131ER?il=0",
+    "country": "Algeria"
+  },
+  {
+    "date": "16.3.2020",
+    "title": "Egypti pysäyttää lennot hillitäkseen koronaviruksen leviämistä",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-egypt/egypt-to-halt-flights-from-thursday-to-halt-spread-of-coronavirus-idUSKBN213222?il=0",
+    "country": "Egypti"
+  },
+  {
+    "date": "16.3.2020",
+    "title": "Tunisia sulkee Libyan vastaisen rajansa",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-tunisia-libya/tunisian-land-border-with-libya-closed-minister-idUSKBN213213?il=0",
+    "country": "Tunisia"
+  },
+  {
+    "date": "16.3.2020",
+    "title": "Euroopan komission puheenjohtaja Vonderleyen ehdottaa rajojen sulkemista määräajaksi",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-eu-vonderleyen/eu-executive-proposes-shutting-blocs-external-borders-for-30-days-idUSKBN2132K7?il=0",
+    "country": "EU"
+  },
+  {
+    "date": "16.3.2020",
+    "title": "Tässä ovat kaikki hallituksen poikkeukselliset toimet koronaviruksen hillitsemiseksi – vaikuttavat lähes jokaisen kansalaisen arkeen",
+    "url": "https://www.hs.fi/politiikka/art-2000006441020.html",
+    "country": "Suomi"
+  },
+  {
+    "date": "17.3.2020",
+    "title": "Ranska komentaa 100000 poliisia valvomaan ulkonaliikkumiskieltoja ",
+    "url": "https://www.france24.com/en/20200317-france-to-deploy-100-000-police-to-enforce-its-war-on-coronavirus",
+    "country": "Ranska"
+  },
+  {
+    "date": "17.3.2020",
+    "title": "Eurooppa suunnittelee kokonaisvaltaista rajojen sulkemista taistelussa pandemiaa vastaan",
+    "url": "https://www.bbc.com/news/world-europe-51918596",
+    "country": "EU"
+  },
+  {
+    "date": "17.3.2020",
+    "title": "Ukraina suunnittelee uusia rajoituksia hillitäkseen koronaviruksen leviämistä",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-ukraine/ukraine-plans-more-lockdowns-imf-talks-food-export-curbs-over-coronavirus-idUSKBN2131DE?il=0",
+    "country": "Ukraina"
+  },
+  {
+    "date": "17.3.2020",
+    "title": "Valkoinen talo ryhtyy poikkeuksellisiin toimiin kasvattaakseen koronaviruksen testauskapasiteettia",
+    "url": "https://www.politico.com/news/2020/03/16/white-house-swat-technocrats-testing-133126",
+    "country": "Yhdysvallat"
+  },
+  {
+    "date": "17.3.2020",
+    "title": "Indonesia confirms 38 more coronavirus cases, total rises to 172",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-indonesia/indonesia-confirms-38-more-coronavirus-cases-total-rises-to-172-idUSKBN214183?il=0",
+    "country": "Indonesia"
+  },
+  {
+    "date": "17.3.2020",
+    "title": "Yhdysvalloissa senaatti harkitsee massiivista hätärahastoa koronaviruspandemian vuoksi",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-usa-congress/senate-weighs-emergency-coronavirus-pandemic-funds-trump-seeks-850-billion-more-idUSKBN21420L?il=0",
+    "country": "Yhdysvallat"
+  },
+  {
+    "date": "17.3.2020",
+    "title": "Ylen erikoislähetys koronatilanteesta käynnissä: Hallitus kertoo valmiuslain käyttöönotosta – seuraamme hetki hetkeltä",
+    "url": "https://yle.fi/uutiset/3-11261530",
+    "country": "Suomi"
+  },
+  {
+    "date": "17.3.2020",
+    "title": "Valtioneuvoston kanslia: Poikkeusolojen toteaminen",
+    "url": "https://valtioneuvosto.fi/paatokset/paatos?decisionId=0900908f8068ec10",
+    "country": "Suomi"
+  },
+  {
+    "date": "17.3.2020",
+    "title": "Hallitus antoi kaksi valmius­lain käyttöön­otto­asetusta – lääkkeiden myyntiä voidaan rajoittaa",
+    "url": "https://www.is.fi/politiikka/art-2000006442895.html",
+    "country": "Suomi"
+  },
+  {
+    "date": "17.3.2020",
+    "title": "Suomi sulkee rajat 19.3. klo 00 – Pekka Haavisto: ”Tämä on erittäin vahva viesti nyt kaikille: ei ulkomaan-matkoja”",
+    "url": "https://www.uusisuomi.fi/uutiset/suomi-sulkee-rajat-193-klo-00-pekka-haavisto-tama-on-erittain-vahva-viesti-nyt-kaikille-ei-ulkomaan-matkoja/341d2d8c-9b76-4cfb-bc28-eff432f96d07",
+    "country": "Suomi"
+  },
+  {
+    "date": "17.3.2020",
+    "title": "Britannian ulkoministeri Dominic Raab kehoitti kansalaisia lopettamaan kaiken matkustamisen",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-britain-travel/britons-should-stop-all-non-essential-travel-globally-foreign-minister-idUSKBN21428X?il=0",
+    "country": "Yhdistynyt kuningaskunta"
+  },
+  {
+    "date": "17.3.2020",
+    "title": "Hallitus otti heti käyttöön mahdollisuuden rajoittaa lääkkeiden myyntiä – Nämä asiat muuttuvat, kun osia valmiuslaista tulee voimaan",
+    "url": "https://www.hs.fi/politiikka/art-2000006443145.html",
+    "country": ""
+  },
+  {
+    "date": "17.3.2020",
+    "title": "EU sulki rajat ulkopuolisilta",
+    "url": "https://www.ts.fi/uutiset/maailma/4897582/EU+sulki+rajat+ulkopuolisilta+koronan+vuoksi++vain+valttamaton+liikenne+paasee+unionin+puolelle",
+    "country": "EU"
+  },
+  {
+    "date": "19.3.2020",
+    "title": "Saksassa armeija valmiustilaan",
+    "url": "https://www.reuters.com/article/health-coronavirus-germany-defence/update-1-german-army-on-standby-to-help-with-coronavirus-crisis-idUSL8N2BC5QD",
+    "country": "Saksa"
+  },
+  {
+    "date": "20.9.2020",
+    "title": "Kaliforniassa asukkaat käskettiin pysymään kotona",
+    "url": "https://www.bbc.com/news/world-us-canada-51970815",
+    "country": "Yhdysvallat"
+  },
+  {
+    "date": "17.3.2020",
+    "title": "Näin korona­virus näkyy armeijassa: Virka-apu­pyyntöihin varauduttu, varus­miehiä siirretty teltta­majoitukseen ja lomia peruttu",
+    "url": "https://www.hs.fi/kotimaa/art-2000006442706.html",
+    "country": "Suomi"
+  },
+  {
+    "date": "17.3.2020",
+    "title": "Aluehallintovirastot määräävät oppilaitokset suljettavaksi ja kieltävät yli 10 hengen yleisötilaisuudet",
+    "url": "http://www.avi.fi/web/avi/-/aluehallintovirastot-maaraavat-oppilaitokset-suljettavaksi-ja-kieltavat-yli-10-hengen-yleisotilaisuudet",
+    "country": "Suomi"
+  },
+  {
+    "date": "17.3.2020",
+    "title": "Helmet-kirjastot suljettuina koronavirusepidemian aikana ",
+    "url": "https://www.helmet.fi/fi-FI/Tapahtumat_ja_vinkit/Uutispalat/Helmetkirjastot_suljettuina_koronaviruse(209231)",
+    "country": "Suomi"
+  },
+  {
+    "date": "20.3.2020",
+    "title": "Coronavirus: California issues 'stay at home' order to 40 million residents ",
+    "url": "https://news.sky.com/story/coronavirus-california-issues-stay-at-home-order-to-40-million-residents-11960646",
+    "country": "Yhdysvallat"
+  },
+  {
+    "date": "20.3.2020",
+    "title": "Germans warned: Keep your distance or face a curfew",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-germany/germans-warned-keep-your-distance-or-face-a-curfew-idUSKBN21716B?il=0",
+    "country": "Saksa"
+  },
+  {
+    "date": "20.3.2020",
+    "title": "Singapore launches contact tracing mobile app to track coronavirus infections",
+    "url": "https://www.reuters.com/article/us-health-coronavirus-singapore-technolo/singapore-launches-contact-tracing-mobile-app-to-track-coronavirus-infections-idUSKBN2171ZQ",
+    "country": "Singapore"
+  },
+  {
+    "date": "21.3.2020",
+    "title": "FEMA issues 'Major Disaster Declaration' for New York",
+    "url": "https://nypost.com/2020/03/20/fema-issues-major-disaster-declaration-for-new-york-over-coronavirus/",
+    "country": "Yhdysvallat"
+  }
+]

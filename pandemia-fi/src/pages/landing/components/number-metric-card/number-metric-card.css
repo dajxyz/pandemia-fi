@@ -11,5 +11,6 @@
 .number-metric-card__explainer {
   font-size: 16px;
   line-height: 19px;
-  color: #a6acbe;
+  color: hsl(0, 0%, 20%);
+  font-weight: 500;
 }

@@ -123,7 +123,7 @@ const chartOptions = Object.freeze({
   legend: {
     horizontalAlign: "center",
     position: "bottom",
-    offsetY: 3,
+    offsetY: 5,
     itemMargin: {
       horizontal: 10
     }
@@ -141,11 +141,11 @@ const chartOptions = Object.freeze({
       options: {
         chart: {
           toolbar: {
-            show: !1
+            show: false
           }
         },
         legend: {
-          show: !1
+          show: false
         }
       }
     }
