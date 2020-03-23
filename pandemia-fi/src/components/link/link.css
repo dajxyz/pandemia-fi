@@ -27,7 +27,8 @@
 }
 
 .link--header__brand {
-  color: #fff !important;
+  color: #000 !important;
+  margin-right: 1.2ex;
 }
 
 .link--header__brand:hover,
@@ -38,14 +39,17 @@
 }
 
 .link--header__nav {
-  color: #fff !important;
-  margin-right: 0.5ex;
+  color: #000 !important;
+  margin-right: 1.2ex;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.85em;
 }
 
 .link--header__nav:hover,
 .link--header__nav:focus,
 .link--header__nav:active {
-  color: #000 !important;
+  color: #6202EE !important;
   background-color: #fff !important;
 }
 

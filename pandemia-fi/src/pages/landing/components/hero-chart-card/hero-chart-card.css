@@ -5,6 +5,7 @@
 }
 
 .hero-chart-card__header > select {
+  padding: 5px 4px;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
