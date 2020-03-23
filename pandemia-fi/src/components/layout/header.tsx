@@ -27,10 +27,14 @@ const HeaderLinks = () => (
 
 const Header = () => (
   <header className="layout__header">
-    <div className="layout__header__inner">
+    <div className="layout__header__container">
       <span className="layout__header__brand">
         <Link type="header__brand" href="/">
-        <img src={LogoPandemia} alt="WHO" className="links-card__link__logo" />
+          <img
+            src={LogoPandemia}
+            alt="WHO"
+            className="links-card__link__logo"
+          />
         </Link>
       </span>
       <HeaderLinks />

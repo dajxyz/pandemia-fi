@@ -1,21 +1,18 @@
 .layout__header {
   padding: 10px 10px 15px;
-  color: #fff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
-  text-align: center;
-  background-color: #002F6C;
+  color: #000;
+  background: #fff;
+  text-align: left;
 }
 
-.layout__header__inner {
+.layout__header__container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 86%;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 .layout__header__brand {
-  margin-bottom: -inherit;
-  width: 36%;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -29,6 +26,5 @@
 
 .layout__header__nav {
   font-size: 18px;
-  font-weight: 500;
   display: inline-block;
 }
