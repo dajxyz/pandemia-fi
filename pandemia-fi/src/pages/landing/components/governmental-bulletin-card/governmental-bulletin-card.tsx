@@ -35,7 +35,7 @@ const GovernmentalBulletinCard = () => {
               onClick={() => setSelectedTab(0)}
               type={selectedTab === 0 ? "primary" : "muted"}
             >
-              Tiedotteed 1
+              Tiedotteet 1
             </Button>
           </div>
           <div>
