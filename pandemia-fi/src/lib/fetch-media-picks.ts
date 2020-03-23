@@ -1,4 +1,7 @@
+import useFetch from "react-fetch-hook";
 import { parseFinnishDateString } from "./helpers";
+
+const feedUrl = "/data-sources/mediapoiminnat.json";
 
 interface MediaPickFromSource {
   date: string;
@@ -21,5 +24,13 @@ const fetchMediaPicks = async (): Promise<NewsFeedItem[]> => {
   const results: MediaPickFromSource[] = await response.json();
   return results.map(buildNewsFeedItemFromMediaPick);
 };
+
+export const useFetchMediaPicks = () =>
+  useFetch<NewsFeedItem[]>(feedUrl, {
+    formatter: async response => {
+      const results: MediaPickFromSource[] = await response.json();
+      return results.map(buildNewsFeedItemFromMediaPick);
+    }
+  });
 
 export default fetchMediaPicks;
