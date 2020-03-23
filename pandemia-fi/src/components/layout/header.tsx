@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "../link";
 import "./header.css";
-import LogoPandemia from "./logo.svg";
 
 const HeaderLinks = () => (
   <nav className="layout__header__nav">
@@ -27,13 +26,13 @@ const HeaderLinks = () => (
 
 const Header = () => (
   <header className="layout__header">
-    <div className="layout__header__inner">
+    <div className="layout__header__container">
       <span className="layout__header__brand">
         <Link type="header__brand" href="/">
-        <img src={LogoPandemia} alt="WHO" className="links-card__link__logo" />
+          Pandemia.fi
         </Link>
       </span>
-      <HeaderLinks />
+    <HeaderLinks />
     </div>
   </header>
 );
