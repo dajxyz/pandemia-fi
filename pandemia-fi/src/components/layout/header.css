@@ -6,13 +6,13 @@
 }
 
 .layout__header__container {
+  display: flex;
+  align-items: center;
   max-width: 1080px;
   margin: 0 auto;
 }
 
 .layout__header__brand {
-  margin-bottom: -inherit;
-  width: 36%;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
