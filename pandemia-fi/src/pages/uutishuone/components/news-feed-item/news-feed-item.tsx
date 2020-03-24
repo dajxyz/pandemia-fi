@@ -1,26 +1,23 @@
 import React from "react";
 import { Link, Box, Text, Heading } from "rebass";
 
-type NewsFeedItemProps = NewsFeedItem;
+interface NewsFeedItemProps {
+  feedItem: FeedItem;
+}
 
 const NewsFeedItem: React.FunctionComponent<NewsFeedItemProps> = ({
-  children,
-  date,
-  url,
-  title,
-  additionalInfo
+  feedItem
 }) => {
   return (
-    <Link href={url}>
+    <Link href={feedItem.link}>
       <Box py={3}>
-        <Heading fontSize={[2, 2, 2]}>{title}</Heading>
+        <Heading fontSize={[2, 2, 2]}>{feedItem.title}</Heading>
         <Text fontSize={[1, 1, 2]} color="gray">
-          {additionalInfo}
+          {feedItem.description}
         </Text>
         <Text fontSize={[1, 1, 2]} color="gray">
-          {date.format("D.M.YYYY")}
+          {feedItem.dateTime.format("D.M.YYYY")}
         </Text>
-        {children}
       </Box>
     </Link>
   );
