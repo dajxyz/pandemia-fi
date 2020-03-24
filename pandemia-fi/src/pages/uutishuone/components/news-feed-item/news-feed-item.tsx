@@ -9,7 +9,7 @@ const NewsFeedItem: React.FunctionComponent<NewsFeedItemProps> = ({
   feedItem
 }) => {
   return (
-    <Link href={feedItem.link}>
+    <Link href={feedItem.link} target="_blank" rel="noreferrer noopener">
       <Box py={3}>
         <Heading fontSize={[2, 2, 2]}>{feedItem.title}</Heading>
         <Text fontSize={[1, 1, 2]} color="gray">
