@@ -30,7 +30,12 @@ const Uutishuone: React.FunctionComponent = () => {
     <Flex flexWrap="wrap">
       <Box width={["100%", "100%", "70%"]}>
         <Card p={4} mr={16}>
-          <Heading>Uutishuone</Heading>
+          <Heading
+            as="h1"
+            fontSize={[ 4, 5 ]}
+          >
+            Uutishuone
+          </Heading>
           {isLoading && "Ladataan uutisia..."}
           {filteredFeedItems.map((feedItem, index) => (
             <NewsFeedItem

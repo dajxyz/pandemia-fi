@@ -1,4 +1,5 @@
 import React from "react";
+import { Heading } from "rebass";
 import LogoTHL from "./logo_thl.png";
 import LogoWHO from "./logo_who.png";
 import LogoECDC from "./logo_ecdc.png";
@@ -10,7 +11,13 @@ import "./links-card.css";
 const LinksCard = () => {
   return (
     <>
-      <h1>Viranomaisten ohjeet</h1>
+      <Heading
+        fontSize={[ 3, 4 ]}
+        mb="1"
+      >
+        Viranomaisten ohjeet
+      </Heading>
+
       <div className="links-card__link">
         <img src={LogoTHL} alt="THL" className="links-card__link__icon" />
         <div className="links-card__link__texts">
@@ -47,7 +54,15 @@ const LinksCard = () => {
           </a>
         </div>
       </div>
-      <h1>Seuraa tiedotusta</h1>
+
+      <Heading
+        fontSize={[ 3, 4 ]}
+        mt="2"
+        mb="1"
+      >
+        Seuraa tiedotusta
+      </Heading>
+
       <div className="links-card__link">
         <img src={LogoUM} alt="UM" className="links-card__link__icon" />
         <div className="links-card__link__texts">

@@ -1,12 +1,17 @@
 import React from "react";
-import { Card, Flex, Box } from 'rebass';
+import { Card, Flex, Box, Heading, Text } from 'rebass';
 
 const About: React.FunctionComponent = () => {
   return (
     <Flex>
       <Box width={1}>
         <Card>
-          <h1>Tietoa meistä</h1>
+          <Heading
+            as="h1"
+            fontSize={[ 4, 5 ]}
+          >
+            Tietoa meistä
+          </Heading>
         </Card>
       </Box>
     </Flex>

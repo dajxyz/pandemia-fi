@@ -19,7 +19,11 @@ const GovernmentalBulletinCard = () => {
     <div>
       <div className="hero-chart-card__header">
         <div>
-          <Heading>Viranomaisten tiedotteet</Heading>
+          <Heading
+            fontSize={[ 3, 4 ]}
+          >
+            Viranomaisten tiedotteet
+          </Heading>
           <a
             href="https://www.meltwater.com/fi/mediaseuranta/?utm_source=3party&utm_medium=content&utm_campaign=pandemia"
             target="_blank"
