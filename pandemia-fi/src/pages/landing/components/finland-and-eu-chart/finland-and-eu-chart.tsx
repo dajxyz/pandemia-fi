@@ -21,6 +21,10 @@ const chartOptionsByScale = {
   }
 };
 
+/**
+ * Finland and EU chart
+ * "Vahvistetut tapaukset suhteutettuna väkilukuun"
+ */
 const FinlandAndEUChart = ({ scale }: FinlandAndEUChartProps) => {
   return (
     <Chart

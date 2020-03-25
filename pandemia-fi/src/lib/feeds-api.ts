@@ -21,6 +21,9 @@ const feedURLs: string[] = [
   "https://app.meltwater.com/gyda/outputs/5e70ed4d97e4a3b2ac4cbf0e/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss"
 ];
 
+/**
+ * Build feed from the raw data
+ */
 const buildFeedFromRawData = (
   rawDataItem: RSSOutput,
   assignedId: number
@@ -31,6 +34,9 @@ const buildFeedFromRawData = (
   description: rawDataItem.description as string
 });
 
+/**
+ * Build feed items from the raw data
+ */
 const buildFeedItemsFromRawData = (
   feed: Feed,
   rawItems: RSSItem[]
@@ -45,6 +51,9 @@ const buildFeedItemsFromRawData = (
     dateTime: moment(rawItem.pubDate)
   }));
 
+/**
+ * Fetch all feeds and items
+ */
 const fetchAllFeedsAndItems = async (): Promise<{
   feeds: Feed[];
   feedItems: FeedItem[];

@@ -9,6 +9,9 @@ interface ButtonProps {
   type?: ButtonType;
 }
 
+/**
+ * Button component
+ */
 const Button: React.FunctionComponent<ButtonProps> = ({
   onClick,
   type = "primary",
