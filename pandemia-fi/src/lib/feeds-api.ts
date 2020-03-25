@@ -3,6 +3,7 @@ import moment from "moment";
 
 const parser = new Parser();
 
+// TODO: Add more colors to the list so that feed list would not run out of colors
 const feedHighlightColors: string[] = [
   "#153084",
   "#1B3FAB",
