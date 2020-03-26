@@ -2,13 +2,15 @@
 export default {
   breakpoints: ["40em", "52em", "64em"],
   colors: {
-    text: "#000",
+    text: "#0A0C0E",
     background: "#fff",
-    primary: "#6202EE",
-    secondary: "#30c",
-    muted: "#f6f6f9",
-    gray: "#808080",
-    highlight: "hsla(205, 100%, 40%, 0.125)",
+    primary: "#4491B5",
+    secondary: "#1E4454",
+    muted: "#e0e1e6",
+    gray: "#808c91",
+    accent: "#e38731",
+    darken: "#bfc5c8",
+    highlight: "#faecd9",
   },
   fonts: {
     body: "system-ui, sans-serif",
