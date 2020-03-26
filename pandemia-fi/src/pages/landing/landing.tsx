@@ -74,11 +74,6 @@ function LandingPage() {
           />
         </Card>
       </Box>
-      <Box px={2} width={[1, 1, 2 / 3]}>
-        <Card>
-          <GovernmentalBulletinCard />
-        </Card>
-      </Box>
       <Box px={2} width={[1, 1, 1 / 3]}>
         <Card>
           <LinksCard />
