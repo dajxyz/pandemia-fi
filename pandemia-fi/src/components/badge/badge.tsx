@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Link, Text } from "rebass";
+import { Box, Link } from "rebass";
 
 interface BadgeProps {
   title: string;

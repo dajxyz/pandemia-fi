@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Box, Card, Heading, Link, Text } from "rebass";
+import { Flex, Box, Card, Heading } from "rebass";
 import Badge from "../../components/badge";
 
 const Tietopankki: React.FunctionComponent = () => {
