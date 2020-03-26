@@ -1,5 +1,6 @@
 import React from "react";
-import { Flex, Box, Card, Heading } from "rebass";
+import { Flex, Box, Card, Heading, Link, Text } from "rebass";
+import Badge from "../../components/badge";
 
 const Tietopankki: React.FunctionComponent = () => {
   return (
@@ -7,6 +8,8 @@ const Tietopankki: React.FunctionComponent = () => {
       <Box p={2} width={[1]}>
         <Card p={4}>
           <Heading>Tietopankki</Heading>
+          <Badge title="Transmission" href="https://google.com/" />
+          <Badge title="Virus" />
         </Card>
       </Box>
     </Flex>
