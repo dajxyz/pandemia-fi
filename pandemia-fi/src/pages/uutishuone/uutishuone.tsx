@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Heading, Flex, Box, Button } from "rebass";
+import { SpinnerBlock } from "../../components/spinner";
 import NewsFeedItem from "./components/news-feed-item";
 import SidebarItem from "./components/sidebar-item";
 import fetchAllFeedsAndItems from "././../../lib/feeds-api";
@@ -47,6 +48,27 @@ const Uutishuone: React.FunctionComponent = () => {
     return filteredFeedItem.slice(0, PAGE_SIZE * pageNumber);
   }, [filteredFeedItem, pageNumber]);
 
+  const renderContent = () => (
+    <>
+      {paginatedFilteredFeedItems.map((feedItem, index) => (
+        <NewsFeedItem feedItem={feedItem} key={`${feedItem.feedId}-${index}`} />
+      ))}
+      <Flex justifyContent="center">
+        <Box>
+          <Button
+            variant="outline"
+            onClick={() => setPageNumber(pageNumber + 1)}
+            sx={{
+              cursor: "pointer"
+            }}
+          >
+            Näytä lisää
+          </Button>
+        </Box>
+      </Flex>
+    </>
+  );
+
   return (
     <Flex flexWrap="wrap" flexDirection="row-reverse" py={4}>
       <Box p={2} width={["100%", "100%", "30%"]}>
@@ -64,26 +86,8 @@ const Uutishuone: React.FunctionComponent = () => {
       <Box p={2} width={["100%", "100%", "70%"]}>
         <Card p={4}>
           <Heading>Uutishuone</Heading>
-          {isLoading && "Ladataan uutisia..."}
-          {paginatedFilteredFeedItems.map((feedItem, index) => (
-            <NewsFeedItem
-              feedItem={feedItem}
-              key={`${feedItem.feedId}-${index}`}
-            />
-          ))}
-          <Flex justifyContent="center">
-            <Box>
-              <Button
-                variant="outline"
-                onClick={() => setPageNumber(pageNumber + 1)}
-                sx={{
-                  cursor: "pointer"
-                }}
-              >
-                Näytä lisää
-              </Button>
-            </Box>
-          </Flex>
+          {isLoading && <SpinnerBlock />}
+          {!isLoading && renderContent()}
         </Card>
       </Box>
     </Flex>
