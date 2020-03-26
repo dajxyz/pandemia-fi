@@ -11,14 +11,15 @@ interface CaseEntry {
 }
 
 function LandingPage() {
-  const [numsConfirmed, setNumsConfirmed] = useState(0);
-  const [numsConfirmedToday, setNumsConfirmedToday] = useState(0);
-  const [numsRecovered, setNumsRecovered] = useState(0);
-  const [numsDeaths, setNumsDeaths] = useState(0);
-
-  const today = new Date();
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [numsConfirmed, setNumsConfirmed] = useState<number>(0);
+  const [numsConfirmedToday, setNumsConfirmedToday] = useState<number>(0);
+  const [numsRecovered, setNumsRecovered] = useState<number>(0);
+  const [numsDeaths, setNumsDeaths] = useState<number>(0);
 
   useEffect(() => {
+    const today = new Date();
+    setIsLoading(true);
     fetch(
       "https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData"
     )
@@ -37,8 +38,11 @@ function LandingPage() {
         );
         setNumsRecovered(data.recovered.length);
         setNumsDeaths(data.deaths.length);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
-  });
+  }, []);
 
   return (
     <Flex flexWrap="wrap" py={4}>
@@ -47,6 +51,7 @@ function LandingPage() {
           <Box width={[1 / 2]} p={2}>
             <Card>
               <NumberMetricCard
+                isLoading={isLoading}
                 metric={numsConfirmed}
                 explainer="Tartuntoja Suomessa"
               />
@@ -55,6 +60,7 @@ function LandingPage() {
           <Box width={[1 / 2]} p={2}>
             <Card>
               <NumberMetricCard
+                isLoading={isLoading}
                 metric={numsConfirmedToday}
                 explainer="Uusia tartuntoja tänään"
               />
@@ -63,6 +69,7 @@ function LandingPage() {
           <Box width={[1 / 2]} p={2}>
             <Card>
               <NumberMetricCard
+                isLoading={isLoading}
                 metric={numsRecovered}
                 explainer="Toipuneet Suomessa"
               />
@@ -71,6 +78,7 @@ function LandingPage() {
           <Box width={[1 / 2]} p={2}>
             <Card>
               <NumberMetricCard
+                isLoading={isLoading}
                 metric={numsDeaths}
                 explainer="Menehtyneitä Suomessa"
               />
