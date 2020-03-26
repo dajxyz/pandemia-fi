@@ -3,7 +3,6 @@ import { Flex, Box, Card } from "rebass";
 import HeroChartCard from "./components/hero-chart-card";
 import NumberMetricCard from "./components/number-metric-card";
 import LinksCard from "./components/links-card";
-import GovernmentalBulletinCard from "./components/governmental-bulletin-card";
 
 interface CaseEntry {
   id: number;
@@ -43,35 +42,43 @@ function LandingPage() {
 
   return (
     <Flex flexWrap="wrap" mx={2}>
-      <Box px={2} width={["100%", "100%", "75%"]}>
+      <Box px={2} width={[1, 1, 2 / 3]}>
+        <Flex flexWrap="wrap" mx={-2}>
+          <Box width={[1 / 2]} px={2}>
+            <Card mb={3}>
+              <NumberMetricCard
+                metric={numsConfirmed}
+                explainer="Tartuntoja Suomessa"
+              />
+            </Card>
+          </Box>
+          <Box width={[1 / 2]} px={2}>
+            <Card mb={3}>
+              <NumberMetricCard
+                metric={numsConfirmedToday}
+                explainer="Uusia tartuntoja tänään"
+              />
+            </Card>
+          </Box>
+          <Box width={[1 / 2]} px={2}>
+            <Card mb={3}>
+              <NumberMetricCard
+                metric={numsRecovered}
+                explainer="Toipuneet Suomessa"
+              />
+            </Card>
+          </Box>
+          <Box width={[1 / 2]} px={2}>
+            <Card mb={3}>
+              <NumberMetricCard
+                metric={258419}
+                explainer="Tartuntoja koko maailmassa"
+              />
+            </Card>
+          </Box>
+        </Flex>
         <Card mb={3}>
           <HeroChartCard />
-        </Card>
-      </Box>
-      <Box px={2} width={["100%", "100%", "25%"]}>
-        <Card mb={3}>
-          <NumberMetricCard
-            metric={numsConfirmed}
-            explainer="Tartuntoja Suomessa"
-          />
-        </Card>
-        <Card mb={3}>
-          <NumberMetricCard
-            metric={numsConfirmedToday}
-            explainer="Uusia tartuntoja tänään"
-          />
-        </Card>
-        <Card mb={3}>
-          <NumberMetricCard
-            metric={numsRecovered}
-            explainer="Toipuneet Suomessa"
-          />
-        </Card>
-        <Card mb={3}>
-          <NumberMetricCard
-            metric={258419}
-            explainer="Tartuntoja koko maailmassa"
-          />
         </Card>
       </Box>
       <Box px={2} width={[1, 1, 1 / 3]}>
