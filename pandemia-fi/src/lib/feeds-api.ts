@@ -80,7 +80,7 @@ const fetchAllFeedsAndItems = async (): Promise<{
       buildFeedItemsFromRawData(feed, rawData[feed.id].items ?? [])
     )
     .flat()
-    .sort((a: FeedItem, b: FeedItem) => a.dateTime.diff(b.dateTime));
+    .sort((a: FeedItem, b: FeedItem) => b.dateTime.diff(a.dateTime));
 
   return {
     feeds,
