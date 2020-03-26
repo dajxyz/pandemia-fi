@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Local temporary notes ignored while still allowing
+# to keep them locally in the same directory
+/NOTES.md
