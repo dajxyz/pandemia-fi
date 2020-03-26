@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Box, Image, Heading, Text, Link } from "rebass";
+import { Flex, Image, Heading, Text, Link } from "rebass";
 import LogoTHL from "./logo_thl.resized.png";
 import LogoWHO from "./logo_who.resized.png";
 import LogoECDC from "./logo_ecdc.resized.png";
@@ -7,7 +7,6 @@ import LogoUM from "./logo_um.resized.png";
 import LogoTTL from "./logo_ttl.resized.png";
 import LogoOM from "./logo_om.resized.png";
 import "./links-card.css";
-
 
 interface CardLinkProps {
   href: string;
@@ -18,18 +17,13 @@ interface CardLinkProps {
 
 const CardLink = ({ href, title, image, imageAlt }: CardLinkProps) => {
   return (
-    <Flex
-      className="links-card__link"
-      display="flex"
-      alignItems="center"
-      p="1"
-    >
+    <Flex className="links-card__link" display="flex" alignItems="center" p="1">
       <Image
         className="links-card__link__icon"
-        src={ image }
-        alt={ imageAlt }
+        src={image}
+        alt={imageAlt}
         sx={{
-          width: [ '32px', '32px' ],
+          width: ["32px", "32px"],
           borderRadius: 4,
           mr: 2
         }}
@@ -37,11 +31,11 @@ const CardLink = ({ href, title, image, imageAlt }: CardLinkProps) => {
 
       <Link
         className="number-metric-card__link__texts"
-        href={ href }
+        href={href}
         target="_blank"
         rel="noopener noreferrer"
         sx={{
-          ':hover': {
+          ":hover": {
             textDecoration: "underline"
           }
         }}
@@ -53,21 +47,17 @@ const CardLink = ({ href, title, image, imageAlt }: CardLinkProps) => {
           fontSize={[2, 2, 2]}
           color="text"
         >
-          { title }
+          {title}
         </Text>
       </Link>
     </Flex>
   );
 };
 
-
 const LinksCard = () => {
   return (
     <>
-      <Heading
-        fontSize={[ 3, 4 ]}
-        mb="1"
-      >
+      <Heading fontSize={[3, 4]} mb="1">
         Viranomaisten ohjeet
       </Heading>
 
@@ -92,13 +82,7 @@ const LinksCard = () => {
         imageAlt="WHO logo"
       />
 
-
-
-      <Heading
-        fontSize={[ 3, 4 ]}
-        mt="3"
-        mb="1"
-      >
+      <Heading fontSize={[3, 4]} mt="3" mb="1">
         Seuraa tiedotusta
       </Heading>
 
@@ -136,7 +120,6 @@ const LinksCard = () => {
         image={LogoECDC}
         imageAlt="ECDC logo"
       />
-
     </>
   );
 };
