@@ -41,47 +41,49 @@ function LandingPage() {
   });
 
   return (
-    <Flex flexWrap="wrap" mx={2}>
-      <Box px={2} width={[1, 1, 2 / 3]}>
-        <Flex flexWrap="wrap" mx={-2}>
-          <Box width={[1 / 2]} px={2}>
-            <Card mb={3}>
+    <Flex flexWrap="wrap" py={4}>
+      <Box width={[1, 1, 2 / 3]} p={2}>
+        <Flex flexWrap="wrap" m={-2}>
+          <Box width={[1 / 2]} p={2}>
+            <Card>
               <NumberMetricCard
                 metric={numsConfirmed}
                 explainer="Tartuntoja Suomessa"
               />
             </Card>
           </Box>
-          <Box width={[1 / 2]} px={2}>
-            <Card mb={3}>
+          <Box width={[1 / 2]} p={2}>
+            <Card>
               <NumberMetricCard
                 metric={numsConfirmedToday}
                 explainer="Uusia tartuntoja tänään"
               />
             </Card>
           </Box>
-          <Box width={[1 / 2]} px={2}>
-            <Card mb={3}>
+          <Box width={[1 / 2]} p={2}>
+            <Card>
               <NumberMetricCard
                 metric={numsRecovered}
                 explainer="Toipuneet Suomessa"
               />
             </Card>
           </Box>
-          <Box width={[1 / 2]} px={2}>
-            <Card mb={3}>
+          <Box width={[1 / 2]} p={2}>
+            <Card>
               <NumberMetricCard
                 metric={numsDeaths}
                 explainer="Menehtyneitä Suomessa"
               />
             </Card>
           </Box>
+          <Box width={[1]} p={2}>
+            <Card>
+              <HeroChartCard />
+            </Card>
+          </Box>
         </Flex>
-        <Card mb={3}>
-          <HeroChartCard />
-        </Card>
       </Box>
-      <Box px={2} width={[1, 1, 1 / 3]}>
+      <Box p={2} width={[1, 1, 1 / 3]}>
         <Card>
           <LinksCard />
         </Card>
