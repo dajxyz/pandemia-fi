@@ -36,13 +36,16 @@ const Uutishuone: React.FunctionComponent = () => {
     fetchFeedsAndItems();
   }, []);
 
+  const hasActiveFilters = React.useMemo(() => {
+    return Object.values(selectedFeedIds).some(Boolean);
+  }, [selectedFeedIds]);
+
   const filteredFeedItem = React.useMemo(() => {
-    const hasActiveFilters = Object.values(selectedFeedIds).some(Boolean);
     if (!hasActiveFilters) {
       return feedItems;
     }
     return feedItems.filter(item => selectedFeedIds[item.feedId]);
-  }, [feedItems, selectedFeedIds]);
+  }, [feedItems, selectedFeedIds, hasActiveFilters]);
 
   const paginatedFilteredFeedItems = React.useMemo(() => {
     return filteredFeedItem.slice(0, PAGE_SIZE * pageNumber);
