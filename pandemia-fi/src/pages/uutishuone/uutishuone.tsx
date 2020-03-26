@@ -22,6 +22,7 @@ const Uutishuone: React.FunctionComponent = () => {
       ...selectedFeedIds,
       [feedId]: !selectedFeedIds[feedId]
     });
+    setPageNumber(1);
   };
 
   React.useEffect(() => {
