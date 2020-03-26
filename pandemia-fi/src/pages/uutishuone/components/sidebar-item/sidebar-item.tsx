@@ -3,6 +3,7 @@ import { Box, Text } from "rebass";
 
 interface SidebarItemProps {
   feed: Feed;
+  onClick: () => void;
 }
 
 /**
@@ -11,10 +12,13 @@ interface SidebarItemProps {
  * @param {*} { feed }
  * @returns
  */
-const SidebarItem: React.FunctionComponent<SidebarItemProps> = ({ feed }) => {
+const SidebarItem: React.FunctionComponent<SidebarItemProps> = ({
+  feed,
+  onClick
+}) => {
   return (
     <Box py={3}>
-      <Text fontSize={[1, 1, 2]} color="gray">
+      <Text fontSize={[1, 1, 2]} color="gray" onClick={onClick}>
         {feed.title}
       </Text>
     </Box>

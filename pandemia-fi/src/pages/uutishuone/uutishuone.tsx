@@ -6,11 +6,23 @@ import fetchAllFeedsAndItems from "././../../lib/feeds-api";
 
 const PAGE_SIZE = 10;
 
+type SelectedFeedIds = { [key: number]: boolean };
+
 const Uutishuone: React.FunctionComponent = () => {
   const [isLoading, setIsLoading] = React.useState<boolean>(true);
   const [feeds, setFeeds] = React.useState<Feed[]>([]);
   const [feedItems, setFeedItems] = React.useState<FeedItem[]>([]);
   const [pageNumber, setPageNumber] = React.useState<number>(1);
+  const [selectedFeedIds, setSelectedFeedIds] = React.useState<SelectedFeedIds>(
+    {}
+  );
+
+  const toggleSelectedFeedId = (feedId: number) => {
+    setSelectedFeedIds({
+      ...selectedFeedIds,
+      [feedId]: !selectedFeedIds[feedId]
+    });
+  };
 
   React.useEffect(() => {
     async function fetchFeedsAndItems() {
@@ -30,10 +42,7 @@ const Uutishuone: React.FunctionComponent = () => {
     <Flex flexWrap="wrap">
       <Box width={["100%", "100%", "70%"]}>
         <Card p={4} mr={16}>
-          <Heading
-            as="h1"
-            fontSize={[ 4, 5 ]}
-          >
+          <Heading as="h1" fontSize={[4, 5]}>
             Uutishuone
           </Heading>
           {isLoading && "Ladataan uutisia..."}
@@ -62,7 +71,11 @@ const Uutishuone: React.FunctionComponent = () => {
         <Card>
           <Heading>Feeds</Heading>
           {feeds.map(feed => (
-            <SidebarItem feed={feed} key={feed.id} />
+            <SidebarItem
+              feed={feed}
+              onClick={() => toggleSelectedFeedId(feed.id)}
+              key={feed.id}
+            />
           ))}
         </Card>
       </Box>
