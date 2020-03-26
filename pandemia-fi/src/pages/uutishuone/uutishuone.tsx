@@ -48,12 +48,22 @@ const Uutishuone: React.FunctionComponent = () => {
   }, [filteredFeedItem, pageNumber]);
 
   return (
-    <Flex flexWrap="wrap">
+    <Flex flexWrap="wrap" flexDirection="row-reverse">
+      <Box width={["100%", "100%", "30%"]}>
+        <Card p={4}>
+          <Heading>Feeds</Heading>
+          {feeds.map(feed => (
+            <SidebarItem
+              feed={feed}
+              onClick={() => toggleSelectedFeedId(feed.id)}
+              key={feed.id}
+            />
+          ))}
+        </Card>
+      </Box>
       <Box width={["100%", "100%", "70%"]}>
         <Card p={4} mr={16}>
-          <Heading as="h1" fontSize={[4, 5]}>
-            Uutishuone
-          </Heading>
+          <Heading>Uutishuone</Heading>
           {isLoading && "Ladataan uutisia..."}
           {paginatedFilteredFeedItems.map((feedItem, index) => (
             <NewsFeedItem
@@ -74,18 +84,6 @@ const Uutishuone: React.FunctionComponent = () => {
               </Button>
             </Box>
           </Flex>
-        </Card>
-      </Box>
-      <Box width={["100%", "100%", "30%"]}>
-        <Card>
-          <Heading>Feeds</Heading>
-          {feeds.map(feed => (
-            <SidebarItem
-              feed={feed}
-              onClick={() => toggleSelectedFeedId(feed.id)}
-              key={feed.id}
-            />
-          ))}
         </Card>
       </Box>
     </Flex>
