@@ -35,9 +35,17 @@ const Uutishuone: React.FunctionComponent = () => {
     fetchFeedsAndItems();
   }, []);
 
-  const filteredFeedItems = React.useMemo(() => {
-    return feedItems.slice(0, PAGE_SIZE * pageNumber);
-  }, [feedItems, pageNumber]);
+  const filteredFeedItem = React.useMemo(() => {
+    const hasActiveFilters = Object.values(selectedFeedIds).some(Boolean);
+    if (!hasActiveFilters) {
+      return feedItems;
+    }
+    return feedItems.filter(item => selectedFeedIds[item.feedId]);
+  }, [feedItems, selectedFeedIds]);
+
+  const paginatedFilteredFeedItems = React.useMemo(() => {
+    return filteredFeedItem.slice(0, PAGE_SIZE * pageNumber);
+  }, [filteredFeedItem, pageNumber]);
 
   return (
     <Flex flexWrap="wrap">
@@ -47,7 +55,7 @@ const Uutishuone: React.FunctionComponent = () => {
             Uutishuone
           </Heading>
           {isLoading && "Ladataan uutisia..."}
-          {filteredFeedItems.map((feedItem, index) => (
+          {paginatedFilteredFeedItems.map((feedItem, index) => (
             <NewsFeedItem
               feedItem={feedItem}
               key={`${feedItem.feedId}-${index}`}
