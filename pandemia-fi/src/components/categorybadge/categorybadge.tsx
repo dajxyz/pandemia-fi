@@ -11,7 +11,7 @@ interface BadgeProps {
 /**
  * Badge component for labeling content
  */
-const Badge: React.FunctionComponent<BadgeProps> = ({
+const CategoryBadge: React.FunctionComponent<BadgeProps> = ({
   title,
   href,
   image,
@@ -49,4 +49,4 @@ const Badge: React.FunctionComponent<BadgeProps> = ({
   );
 };
 
-export default Badge;
+export default CategoryBadge;
