@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex, Box } from "rebass";
 import Link from "../link";
-import { ReactComponent as LogoPandemia } from './logo.svg';
+import { ReactComponent as LogoPandemia } from "./logo.svg";
 
 const HeaderLinks = () => (
   <Flex
@@ -13,31 +13,19 @@ const HeaderLinks = () => (
   >
     {/* TODO: Adjust HeaderLinks component to add `currentpage` when user has right section open. */}
     {/* <Link type="header__nav" currentpage href="/"></Link> */}
-    <Link
-      type="header__nav"
-      href="#/"
-    >
+    <Link type="header__nav" href="#/">
       Tilannekuva
     </Link>
 
-    <Link
-      type="header__nav"
-      href="#/uutishuone"
-    >
+    <Link type="header__nav" href="#/uutishuone">
       Uutishuone
     </Link>
 
-    <Link
-      type="header__nav"
-      href="#/tietopankki"
-    >
+    <Link type="header__nav" href="#/tietopankki">
       Tietopankki
     </Link>
 
-    <Link
-      type="header__nav"
-      href="#/sivustosta"
-    >
+    <Link type="header__nav" href="#/sivustosta">
       Tietoa meistä
     </Link>
   </Flex>
@@ -59,7 +47,7 @@ const Header = () => (
       alignItems="center"
       sx={{
         maxWidth: "1080px",
-        mx: 'auto',
+        mx: "auto",
         p: "0"
       }}
     >
@@ -69,28 +57,20 @@ const Header = () => (
           color: "rgba(0, 0, 0, 0.87)"
         }}
       >
-        <Link
-          type="header__brand"
-          href="/"
-        >
+        <Link type="header__brand" href="/">
           <Flex
             sx={{
               display: "block",
-              maxWidth: [ '60px' ],
+              maxWidth: ["60px"],
               mr: 1
             }}
           >
-            <LogoPandemia
-              title="Pandemia.fi logo"
-              height="60"
-              width="60"
-            />
+            <LogoPandemia title="Pandemia.fi logo" height="60" width="60" />
           </Flex>
         </Link>
       </Box>
 
       <HeaderLinks />
-
     </Flex>
   </Box>
 );
