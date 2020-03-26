@@ -34,3 +34,15 @@ and is a basic `create-react-app` setup. Feel free to post issues and even bake 
   - "Markdown linting and style checking for Visual Studio Code"
 - [eamodio/vscode-gitlens](https://github.com/eamodio/vscode-gitlens)
   - Additional Git tools for understanding existing code better
+
+## Understanding the application structure
+
+### source-map-explorer
+
+[source-map-explorer](https://www.npmjs.com/package/source-map-explorer) allows you to figure out what JavaScript is included in the build output of the application. It allows to debug potential size issues while also making it a bit more reasonable to eventually reduce the application size.
+
+```sh
+yarn run size
+```
+
+- [Analyzing the Bundle Size](https://create-react-app.dev/docs/analyzing-the-bundle-size)
