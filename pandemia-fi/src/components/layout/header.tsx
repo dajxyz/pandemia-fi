@@ -1,45 +1,98 @@
 import React from "react";
+import { Flex, Box } from "rebass";
 import Link from "../link";
-import "./header.css";
-import LogoPandemia from "./logo.svg";
+import { ReactComponent as LogoPandemia } from './logo.svg';
 
 const HeaderLinks = () => (
-  <nav className="layout__header__nav">
+  <Flex
+    as="nav"
+    className="layout__header__nav"
+    sx={{
+      fontSize: "18px"
+    }}
+  >
     {/* TODO: Adjust HeaderLinks component to add `currentpage` when user has right section open. */}
     {/* <Link type="header__nav" currentpage href="/"></Link> */}
-    <Link type="header__nav" href="#/">
+    <Link
+      type="header__nav"
+      href="#/"
+    >
       Tilannekuva
     </Link>
 
-    <Link type="header__nav" href="#/uutishuone">
+    <Link
+      type="header__nav"
+      href="#/uutishuone"
+    >
       Uutishuone
     </Link>
 
-    <Link type="header__nav" href="#/tietopankki">
+    <Link
+      type="header__nav"
+      href="#/tietopankki"
+    >
       Tietopankki
     </Link>
 
-    <Link type="header__nav" href="#/sivustosta">
+    <Link
+      type="header__nav"
+      href="#/sivustosta"
+    >
       Tietoa meistä
     </Link>
-  </nav>
+  </Flex>
 );
 
 const Header = () => (
-  <header className="layout__header">
-    <div className="layout__header__container">
-      <span className="layout__header__brand">
-        <Link type="header__brand" href="/">
-          <img
-            src={LogoPandemia}
-            alt="WHO"
-            className="links-card__link__logo"
-          />
+  <Box
+    as="header"
+    className="layout__header"
+    sx={{
+      width: "100%",
+      maxWidth: "100%",
+      color: "text",
+      background: "#fff",
+      p: "2"
+    }}
+  >
+    <Flex
+      alignItems="center"
+      sx={{
+        maxWidth: "1080px",
+        mx: 'auto',
+        p: "0"
+      }}
+    >
+      <Box
+        className="layout__header__brand"
+        sx={{
+          color: "rgba(0, 0, 0, 0.87)"
+        }}
+      >
+        <Link
+          type="header__brand"
+          href="/"
+        >
+          <Flex
+            sx={{
+              display: "block",
+              maxWidth: [ '60px' ],
+              mr: 1
+            }}
+          >
+            <LogoPandemia
+              title="Pandemia.fi logo"
+              height="60"
+              width="60"
+            />
+          </Flex>
         </Link>
-      </span>
+      </Box>
+
       <HeaderLinks />
-    </div>
-  </header>
+
+    </Flex>
+  </Box>
 );
 
 export default Header;

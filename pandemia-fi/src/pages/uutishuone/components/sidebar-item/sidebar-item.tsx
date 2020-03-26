@@ -5,6 +5,12 @@ interface SidebarItemProps {
   feed: Feed;
 }
 
+/**
+ * Sidebar item
+ *
+ * @param {*} { feed }
+ * @returns
+ */
 const SidebarItem: React.FunctionComponent<SidebarItemProps> = ({ feed }) => {
   return (
     <Box py={3}>

@@ -21,6 +21,10 @@ const chartOptionsByScale = {
   }
 };
 
+/**
+ * Nordics chart
+ * "Vahvistetut tapaukset suhteutettuna väkilukuun"
+ */
 const NordicsChart = ({ scale }: NordicsChartProps) => {
   return (
     <Chart
