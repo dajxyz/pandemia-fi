@@ -80,6 +80,7 @@ const Uutishuone: React.FunctionComponent = () => {
           {feeds.map(feed => (
             <SidebarItem
               feed={feed}
+              isSelected={!hasActiveFilters || !!selectedFeedIds[feed.id]}
               onClick={() => toggleSelectedFeedId(feed.id)}
               key={feed.id}
             />
