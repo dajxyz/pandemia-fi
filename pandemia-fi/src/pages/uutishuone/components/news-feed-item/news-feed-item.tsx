@@ -9,7 +9,7 @@ interface NewsFeedItemProps {
  * News feed item
  */
 const NewsFeedItem: React.FunctionComponent<NewsFeedItemProps> = ({
-  feedItem
+  feedItem,
 }) => {
   return (
     <Link
@@ -18,13 +18,8 @@ const NewsFeedItem: React.FunctionComponent<NewsFeedItemProps> = ({
       target="_blank"
       rel="noreferrer noopener"
     >
-      <Box
-        py={3}
-      >
-        <Heading
-          className="NewsFeedItem__title"
-          fontSize={[2, 2, 2]}
-        >
+      <Box py={3}>
+        <Heading className="NewsFeedItem__title" fontSize={[2, 2, 2]}>
           {feedItem.title}
         </Heading>
         <Text
@@ -34,12 +29,8 @@ const NewsFeedItem: React.FunctionComponent<NewsFeedItemProps> = ({
         >
           {feedItem.description}
         </Text>
-        <Text
-          className="NewsFeedItem__date"
-          fontSize={[1, 1, 2]}
-          color="gray"
-        >
-          {feedItem.dateTime.format("D.M.YYYY")}
+        <Text className="NewsFeedItem__date" fontSize={[1, 1, 2]} color="gray">
+          {feedItem.dateTime.format("D.M.YYYY HH:mm:ss")}
         </Text>
       </Box>
     </Link>
