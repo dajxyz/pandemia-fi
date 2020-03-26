@@ -48,8 +48,8 @@ const Uutishuone: React.FunctionComponent = () => {
   }, [filteredFeedItem, pageNumber]);
 
   return (
-    <Flex flexWrap="wrap" flexDirection="row-reverse">
-      <Box width={["100%", "100%", "30%"]}>
+    <Flex flexWrap="wrap" flexDirection="row-reverse" py={4}>
+      <Box p={2} width={["100%", "100%", "30%"]}>
         <Card p={4}>
           <Heading>Feeds</Heading>
           {feeds.map(feed => (
@@ -61,8 +61,8 @@ const Uutishuone: React.FunctionComponent = () => {
           ))}
         </Card>
       </Box>
-      <Box width={["100%", "100%", "70%"]}>
-        <Card p={4} mr={16}>
+      <Box p={2} width={["100%", "100%", "70%"]}>
+        <Card p={4}>
           <Heading>Uutishuone</Heading>
           {isLoading && "Ladataan uutisia..."}
           {paginatedFilteredFeedItems.map((feedItem, index) => (

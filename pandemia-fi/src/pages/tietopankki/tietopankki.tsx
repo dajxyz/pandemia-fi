@@ -1,18 +1,15 @@
 import React from "react";
-import { Card, Heading } from "rebass";
-import "./tietopankki.css";
+import { Flex, Box, Card, Heading } from "rebass";
 
 const Tietopankki: React.FunctionComponent = () => {
   return (
-    <div className="tietopankki-page__grid-container">
-      <div className="tietopankki-page__grid-item--large">
-        <Card>
-          <Heading as="h1" fontSize={[4, 5]}>
-            Tietopankki
-          </Heading>
+    <Flex flexWrap="wrap" py={4}>
+      <Box p={2} width={[1]}>
+        <Card p={4}>
+          <Heading>Tietopankki</Heading>
         </Card>
-      </div>
-    </div>
+      </Box>
+    </Flex>
   );
 };
 
