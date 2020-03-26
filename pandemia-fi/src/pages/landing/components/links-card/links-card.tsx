@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Image, Heading, Text, Link } from "rebass";
+import { Flex, Card, Image, Heading, Text, Link } from "rebass";
 import LogoTHL from "./logo_thl.resized.png";
 import LogoWHO from "./logo_who.resized.png";
 import LogoECDC from "./logo_ecdc.resized.png";
@@ -25,7 +25,7 @@ const CardLink = ({ href, title, image, imageAlt }: CardLinkProps) => {
         sx={{
           width: ["32px", "32px"],
           borderRadius: 4,
-          mr: 2
+          mr: 2,
         }}
       />
 
@@ -36,8 +36,8 @@ const CardLink = ({ href, title, image, imageAlt }: CardLinkProps) => {
         rel="noopener noreferrer"
         sx={{
           ":hover": {
-            textDecoration: "underline"
-          }
+            textDecoration: "underline",
+          },
         }}
       >
         <Text
@@ -54,72 +54,91 @@ const CardLink = ({ href, title, image, imageAlt }: CardLinkProps) => {
   );
 };
 
+const LinksCardStyle = {
+  borderRadius: 4,
+  mb: 3,
+  textAlign: "left",
+};
+
+const LinksCardHeadingStyle = {
+  mt: -4,
+  mb: 1,
+  p: 1,
+  backgroundColor: "white",
+  fontWeight: "500",
+  letterSpacing: "-0.1pt",
+};
+
 const LinksCard = () => {
   return (
     <>
-      <Heading fontSize={[3, 4]} mb="1">
-        Viranomaisten ohjeet
-      </Heading>
+      <Card sx={LinksCardStyle}>
+        <Heading fontSize={[1]} sx={LinksCardHeadingStyle}>
+          Terveysviranomaisten tietopankit
+        </Heading>
 
-      <CardLink
-        href="https://thl.fi/web/infektiotaudit-ja-rokotukset/ajankohtaista/wuhanin-koronavirus"
-        title="THL Infopankki"
-        image={LogoTHL}
-        imageAlt="THL logo"
-      />
+        <CardLink
+          href="https://thl.fi/web/infektiotaudit-ja-rokotukset/ajankohtaista/wuhanin-koronavirus"
+          title="THL Infopankki"
+          image={LogoTHL}
+          imageAlt="THL logo"
+        />
 
-      <CardLink
-        href="https://www.ecdc.europa.eu/en/novel-coronavirus-china"
-        title="ECDC Infopankki"
-        image={LogoECDC}
-        imageAlt="ECDC logo"
-      />
+        <CardLink
+          href="https://www.ecdc.europa.eu/en/novel-coronavirus-china"
+          title="ECDC Infopankki"
+          image={LogoECDC}
+          imageAlt="ECDC logo"
+        />
 
-      <CardLink
-        href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019"
-        title="WHO Infopankki"
-        image={LogoWHO}
-        imageAlt="WHO logo"
-      />
+        <CardLink
+          href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019"
+          title="WHO Infopankki"
+          image={LogoWHO}
+          imageAlt="WHO logo"
+        />
+      </Card>
 
-      <Heading fontSize={[3, 4]} mt="3" mb="1">
-        Seuraa tiedotusta
-      </Heading>
+      <Card sx={LinksCardStyle}>
+        <Heading fontSize={[1, 2]} sx={LinksCardHeadingStyle}>
+          Viranomaisten tietopankit
+        </Heading>
 
-      <CardLink
-        href="https://um.fi/ajankohtaista"
-        title="Ulkoministeriön tiedotteet"
-        image={LogoUM}
-        imageAlt="UM logo"
-      />
+        <CardLink
+          href="https://um.fi/ajankohtaista"
+          title="Ulkoministeriön tiedotteet"
+          image={LogoUM}
+          imageAlt="UM logo"
+        />
 
-      <CardLink
-        href="https://hyvatyo.ttl.fi/koronavirus/ohje-yrityksille"
-        title="Työterveyden laitos"
-        image={LogoTTL}
-        imageAlt="TTL logo"
-      />
+        <CardLink
+          href="https://hyvatyo.ttl.fi/koronavirus/ohje-yrityksille"
+          title="Työterveyden laitos"
+          image={LogoTTL}
+          imageAlt="TTL logo"
+        />
 
-      <CardLink
-        href="https://www.finlex.fi/fi/laki/ajantasa/2016/20161227"
-        title="Tartuntatautilaki"
-        image={LogoOM}
-        imageAlt="OM logo"
-      />
+        <CardLink
+          href="https://www.finlex.fi/fi/laki/ajantasa/2016/20161227"
+          title="Tartuntatautilaki"
+          image={LogoOM}
+          imageAlt="OM logo"
+        />
 
-      <CardLink
-        href="https://www.finlex.fi/fi/laki/ajantasa/2011/20111552"
-        title="Valmiuslaki"
-        image={LogoOM}
-        imageAlt="OM logo"
-      />
+        <CardLink
+          href="https://www.finlex.fi/fi/laki/ajantasa/2011/20111552"
+          title="Valmiuslaki"
+          image={LogoOM}
+          imageAlt="OM logo"
+        />
 
-      <CardLink
-        href="https://www.ecdc.europa.eu/en/novel-coronavirus-china/sources-updated"
-        title="EU-maiden terveysviranomaiset"
-        image={LogoECDC}
-        imageAlt="ECDC logo"
-      />
+        <CardLink
+          href="https://www.ecdc.europa.eu/en/novel-coronavirus-china/sources-updated"
+          title="EU-maiden terveysviranomaiset"
+          image={LogoECDC}
+          imageAlt="ECDC logo"
+        />
+      </Card>
     </>
   );
 };

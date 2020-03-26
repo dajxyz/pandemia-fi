@@ -23,8 +23,8 @@ function LandingPage() {
     fetch(
       "https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData"
     )
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         setNumsConfirmed(data.confirmed.length);
         setNumsConfirmedToday(
           data.confirmed.filter((entry: CaseEntry) => {
@@ -92,9 +92,7 @@ function LandingPage() {
         </Flex>
       </Box>
       <Box p={2} width={[1, 1, 1 / 3]}>
-        <Card>
-          <LinksCard />
-        </Card>
+        <LinksCard />
       </Box>
     </Flex>
   );
