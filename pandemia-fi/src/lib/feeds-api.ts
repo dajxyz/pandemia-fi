@@ -26,6 +26,14 @@ const feedURLs: string[] = [
   "https://app.meltwater.com/gyda/outputs/5e7b5a0f2122be1c1cdd2400/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss"
 ];
 
+const fetchAndParseRSSFeed = async (url: string): Promise<RSSOutput | null> => {
+  try {
+    return await parser.parseURL(url);
+  } catch {
+    return null;
+  }
+};
+
 /**
  * Build feed from the raw data
  */
@@ -63,9 +71,9 @@ const fetchAllFeedsAndItems = async (): Promise<{
   feeds: Feed[];
   feedItems: FeedItem[];
 }> => {
-  const rawData: RSSOutput[] = await Promise.all(
-    feedURLs.map(feedURL => parser.parseURL(feedURL))
-  );
+  const rawData: RSSOutput[] = (
+    await Promise.all(feedURLs.map(feedURL => fetchAndParseRSSFeed(feedURL)))
+  ).filter((outputOrNull): outputOrNull is RSSOutput => outputOrNull !== null);
   const feeds: Feed[] = rawData.map(buildFeedFromRawData);
   const feedItems: FeedItem[] = feeds
     .map((feed: Feed) =>
