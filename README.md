@@ -18,6 +18,19 @@ and is a basic `create-react-app` setup. Feel free to post issues and even bake 
 - [Yarn](https://classic.yarnpkg.com/en/)
 - [Node.js](https://nodejs.org/en/) (either directly or via a tool like nvm or similar)
 
-#### Good editors to consider
+### Good editors to consider
 
 - [Visual Studio Code](https://code.visualstudio.com/)
+
+#### Required extensions (for VS Code)
+
+- [EditorConfig for Visual Studio Code](https://github.com/editorconfig/editorconfig-vscode)
+- [prettier/prettier-vscode](https://github.com/prettier/prettier-vscode)
+  - "Visual Studio Code extension for Prettier"
+
+#### Recommended extensions (for VS Code)
+
+- [DavidAnson/vscode-markdownlint](https://github.com/DavidAnson/vscode-markdownlint)
+  - "Markdown linting and style checking for Visual Studio Code"
+- [eamodio/vscode-gitlens](https://github.com/eamodio/vscode-gitlens)
+  - Additional Git tools for understanding existing code better
