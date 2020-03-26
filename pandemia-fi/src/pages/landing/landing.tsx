@@ -10,6 +10,10 @@ interface CaseEntry {
   healthCareDistrict: string;
 }
 
+const LandingPageStyle = {
+  py: 2,
+};
+
 function LandingPage() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [numsConfirmed, setNumsConfirmed] = useState<number>(0);
@@ -45,7 +49,7 @@ function LandingPage() {
   }, []);
 
   return (
-    <Flex flexWrap="wrap" py={4}>
+    <Flex flexWrap="wrap" sx={LandingPageStyle}>
       <Box width={[1, 1, 2 / 3]} p={2}>
         <Flex flexWrap="wrap" m={-2}>
           <Box width={[1 / 2]} p={2}>
@@ -85,7 +89,7 @@ function LandingPage() {
             </Card>
           </Box>
           <Box width={[1]} p={2}>
-            <Card>
+            <Card width={[1]} p={2}>
               <HeroChartCard />
             </Card>
           </Box>

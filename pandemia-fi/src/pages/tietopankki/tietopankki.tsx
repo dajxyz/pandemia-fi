@@ -2,9 +2,13 @@ import React from "react";
 import { Flex, Box, Card, Heading } from "rebass";
 import CategoryBadge from "../../components/categorybadge";
 
+const TietopankkiStyle = {
+  py: 2,
+};
+
 const Tietopankki: React.FunctionComponent = () => {
   return (
-    <Flex flexWrap="wrap" py={4}>
+    <Flex flexWrap="wrap" sx={TietopankkiStyle}>
       <Box p={2} width={[1]}>
         <Card p={4}>
           <Heading>Tietopankki</Heading>
