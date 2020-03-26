@@ -5,20 +5,25 @@ const parser = new Parser();
 
 // TODO: Add more colors to the list so that feed list would not run out of colors
 const feedHighlightColors: string[] = [
-  "#153084",
-  "#1B3FAB",
-  "#214ED3",
-  "#4169E1",
-  "#6988E7",
-  "#90A8EE",
-  "#B8C7F4"
+  "#2979FF",
+  "#6202EE",
+  "#FF9800",
+  "#33D69F",
+  "#0DDEDE",
+  "#FF9CDD",
+  "#C20505",
+  "#808080"
 ];
 
 const feedURLs: string[] = [
   "https://app.meltwater.com/gyda/outputs/5e70ed19dea75e201037047f/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss",
   "https://app.meltwater.com/gyda/outputs/5e735eea1363521e1c685237/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss",
   "https://app.meltwater.com/gyda/outputs/5e71c8152ab0b4521c2db20c/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss",
-  "https://app.meltwater.com/gyda/outputs/5e70ed4d97e4a3b2ac4cbf0e/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss"
+  "https://app.meltwater.com/gyda/outputs/5e70ed4d97e4a3b2ac4cbf0e/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss",
+  "https://app.meltwater.com/gyda/outputs/5e7b59d61363521e1c6852c5/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss",
+  "https://app.meltwater.com/gyda/outputs/5e7b59f251615cb4acd82465/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss",
+  "https://app.meltwater.com/gyda/outputs/5e7b59b297e4a3b2ac4cc027/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss",
+  "https://app.meltwater.com/gyda/outputs/5e7b5a0f2122be1c1cdd2400/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss"
 ];
 
 /**
