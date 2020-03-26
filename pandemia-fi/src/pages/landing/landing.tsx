@@ -14,7 +14,7 @@ function LandingPage() {
   const [numsConfirmed, setNumsConfirmed] = useState(0);
   const [numsConfirmedToday, setNumsConfirmedToday] = useState(0);
   const [numsRecovered, setNumsRecovered] = useState(0);
-  // const [numsDeaths, setNumsDeaths] = useState(0);
+  const [numsDeaths, setNumsDeaths] = useState(0);
 
   const today = new Date();
 
@@ -36,7 +36,7 @@ function LandingPage() {
           }).length
         );
         setNumsRecovered(data.recovered.length);
-        // setNumsDeaths(data.deaths.length);
+        setNumsDeaths(data.deaths.length);
       });
   });
 
@@ -71,8 +71,8 @@ function LandingPage() {
           <Box width={[1 / 2]} px={2}>
             <Card mb={3}>
               <NumberMetricCard
-                metric={258419}
-                explainer="Tartuntoja koko maailmassa"
+                metric={numsDeaths}
+                explainer="Menehtyneitä Suomessa"
               />
             </Card>
           </Box>
