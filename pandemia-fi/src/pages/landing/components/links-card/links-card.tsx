@@ -1,11 +1,13 @@
 import React from "react";
 import { Flex, Card, Image, Heading, Text, Link } from "rebass";
+
 import LogoTHL from "./logo_thl.resized.png";
 import LogoWHO from "./logo_who.resized.png";
 import LogoECDC from "./logo_ecdc.resized.png";
 import LogoUM from "./logo_um.resized.png";
 import LogoTTL from "./logo_ttl.resized.png";
 import LogoOM from "./logo_om.resized.png";
+
 import "./links-card.css";
 
 interface CardLinkProps {
@@ -54,12 +56,6 @@ const CardLink = ({ href, title, image, imageAlt }: CardLinkProps) => {
   );
 };
 
-const LinksCardStyle = {
-  borderRadius: 4,
-  mb: 3,
-  textAlign: "left",
-};
-
 const LinksCardHeadingStyle = {
   mt: -4,
   mb: 1,
@@ -72,7 +68,13 @@ const LinksCardHeadingStyle = {
 const LinksCard = () => {
   return (
     <>
-      <Card sx={LinksCardStyle}>
+      <Card
+        sx={{
+          borderRadius: 4,
+          mb: 3,
+          textAlign: "left",
+        }}
+      >
         <Heading fontSize={[1]} sx={LinksCardHeadingStyle}>
           Terveysviranomaisten tietopankit
         </Heading>
@@ -99,7 +101,13 @@ const LinksCard = () => {
         />
       </Card>
 
-      <Card sx={LinksCardStyle}>
+      <Card
+        sx={{
+          borderRadius: 4,
+          mb: 3,
+          textAlign: "left",
+        }}
+      >
         <Heading fontSize={[1, 2]} sx={LinksCardHeadingStyle}>
           Viranomaisten tietopankit
         </Heading>
