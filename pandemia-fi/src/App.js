@@ -26,6 +26,7 @@ function App() {
           <Route path="/">
             <Message
               sx={{
+                ml: 2,
                 maxWidth: "42em",
                 borderRadius: 4,
               }}
