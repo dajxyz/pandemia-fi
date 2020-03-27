@@ -8,6 +8,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "@types/rebass": "^4.0.4",
+    "@types/theme-ui": "^0.3.1",
     "apexcharts": "^3.17.0",
     "classnames": "^2.2.6",
     "emotion-theming": "^10.0.27",
