@@ -10,7 +10,7 @@ const Tietopankki: React.FunctionComponent = () => {
   return (
     <Flex flexWrap="wrap" sx={TietopankkiStyle}>
       <Box p={2} width={[1]}>
-        <Card p={4}>
+        <Card p={3}>
           <Heading>Tietopankki</Heading>
           <CategoryBadge title="Transmission" href="https://google.com/" />
           <CategoryBadge title="Virus" />
