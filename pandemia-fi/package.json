@@ -27,6 +27,8 @@
   "scripts": {
     "size": "yarn run build && yarn run source-map-explorer",
     "source-map-explorer": "source-map-explorer 'build/static/js/*.js'",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -55,6 +57,7 @@
     "@types/react-dom": "^16.9.5",
     "@types/react-router-dom": "^5.1.3",
     "prettier": "2.0.2",
+    "react-styleguidist": "^11.0.4",
     "source-map-explorer": "2.4.1",
     "typescript": "^3.8.3"
   }

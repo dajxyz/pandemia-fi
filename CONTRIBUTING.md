@@ -112,6 +112,32 @@ feat: add new feature Y
 
 ## Understanding the application structure
 
+### React Styleguidist
+
+Style guide generator that helps with the component development & debugging.
+
+#### Starting component development environment
+
+```sh
+yarn run styleguide
+```
+
+#### Generating static website for the styleguide
+
+```sh
+yarn run styleguide:build
+```
+
+#### More details
+
+- Create React App (CRA) documentation:
+  - [Developing Components in Isolation](https://create-react-app.dev/docs/developing-components-in-isolation/)
+- [React Styleguidist](https://react-styleguidist.js.org/) documentation
+  - [Getting Started with React Styleguidist](https://react-styleguidist.js.org/docs/getting-started.html)
+  - [Locating your components and organizing your style guide](https://react-styleguidist.js.org/docs/components.html)
+  - [CLI commands and options](https://react-styleguidist.js.org/docs/cli.html)
+  - [Documenting components](https://react-styleguidist.js.org/docs/documenting.html)
+
 ### source-map-explorer
 
 [source-map-explorer](https://www.npmjs.com/package/source-map-explorer) allows you to figure out what JavaScript is included in the build output of the application. It allows to debug potential size issues while also making it a bit more reasonable to eventually reduce the application size.
