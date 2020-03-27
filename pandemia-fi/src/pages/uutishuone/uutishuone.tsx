@@ -9,6 +9,10 @@ const PAGE_SIZE = 10;
 
 type SelectedFeedIds = { [key: number]: boolean };
 
+const UutishuoneStyle = {
+  py: 2,
+};
+
 const Uutishuone: React.FunctionComponent = () => {
   const [isLoading, setIsLoading] = React.useState<boolean>(true);
   const [feeds, setFeeds] = React.useState<Feed[]>([]);
@@ -21,7 +25,7 @@ const Uutishuone: React.FunctionComponent = () => {
   const toggleSelectedFeedId = (feedId: number) => {
     setSelectedFeedIds({
       ...selectedFeedIds,
-      [feedId]: !selectedFeedIds[feedId]
+      [feedId]: !selectedFeedIds[feedId],
     });
     setPageNumber(1);
   };
@@ -44,7 +48,7 @@ const Uutishuone: React.FunctionComponent = () => {
     if (!hasActiveFilters) {
       return feedItems;
     }
-    return feedItems.filter(item => selectedFeedIds[item.feedId]);
+    return feedItems.filter((item) => selectedFeedIds[item.feedId]);
   }, [feedItems, selectedFeedIds, hasActiveFilters]);
 
   const paginatedFilteredFeedItems = React.useMemo(() => {
@@ -62,7 +66,7 @@ const Uutishuone: React.FunctionComponent = () => {
             variant="outline"
             onClick={() => setPageNumber(pageNumber + 1)}
             sx={{
-              cursor: "pointer"
+              cursor: "pointer",
             }}
           >
             Näytä lisää
@@ -73,11 +77,11 @@ const Uutishuone: React.FunctionComponent = () => {
   );
 
   return (
-    <Flex flexWrap="wrap" flexDirection="row-reverse" py={4}>
+    <Flex flexWrap="wrap" flexDirection="row-reverse" sx={UutishuoneStyle}>
       <Box p={2} width={["100%", "100%", "30%"]}>
-        <Card p={4}>
+        <Card p={3}>
           <Heading>Feeds</Heading>
-          {feeds.map(feed => (
+          {feeds.map((feed) => (
             <SidebarItem
               feed={feed}
               isSelected={!hasActiveFilters || !!selectedFeedIds[feed.id]}
@@ -88,7 +92,7 @@ const Uutishuone: React.FunctionComponent = () => {
         </Card>
       </Box>
       <Box p={2} width={["100%", "100%", "70%"]}>
-        <Card p={4}>
+        <Card p={3}>
           <Heading>Uutishuone</Heading>
           {isLoading && <SpinnerBlock />}
           {!isLoading && renderContent()}

@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { ThemeProvider } from "emotion-theming";
+import { ThemeProvider } from "theme-ui";
+
 import theme from "./theme";
 import "./fonts.css";
 import "./index.css";
+
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 

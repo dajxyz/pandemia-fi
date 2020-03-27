@@ -10,6 +10,10 @@ interface CaseEntry {
   healthCareDistrict: string;
 }
 
+const LandingPageStyle = {
+  py: 2,
+};
+
 function LandingPage() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [numsConfirmed, setNumsConfirmed] = useState<number>(0);
@@ -23,8 +27,8 @@ function LandingPage() {
     fetch(
       "https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData"
     )
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         setNumsConfirmed(data.confirmed.length);
         setNumsConfirmedToday(
           data.confirmed.filter((entry: CaseEntry) => {
@@ -45,7 +49,7 @@ function LandingPage() {
   }, []);
 
   return (
-    <Flex flexWrap="wrap" py={4}>
+    <Flex flexWrap="wrap" sx={LandingPageStyle}>
       <Box width={[1, 1, 2 / 3]} p={2}>
         <Flex flexWrap="wrap" m={-2}>
           <Box width={[1 / 2]} p={2}>
@@ -85,16 +89,14 @@ function LandingPage() {
             </Card>
           </Box>
           <Box width={[1]} p={2}>
-            <Card>
+            <Card width={[1]} p={2}>
               <HeroChartCard />
             </Card>
           </Box>
         </Flex>
       </Box>
       <Box p={2} width={[1, 1, 1 / 3]}>
-        <Card>
-          <LinksCard />
-        </Card>
+        <LinksCard />
       </Box>
     </Flex>
   );

@@ -22,7 +22,7 @@ const HeroChartCard = () => {
       <div className="hero-chart-card__header">
         <select<ChartSubject>
           value={subject}
-          onChange={event => {
+          onChange={(event) => {
             setSubject(event.currentTarget.value as ChartSubject);
           }}
         >
