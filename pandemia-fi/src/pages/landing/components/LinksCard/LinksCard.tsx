@@ -1,14 +1,14 @@
 import React from "react";
 import { Flex, Card, Image, Heading, Text, Link } from "rebass";
 
-import LogoTHL from "./logo_thl.resized.png";
-import LogoWHO from "./logo_who.resized.png";
-import LogoECDC from "./logo_ecdc.resized.png";
-import LogoUM from "./logo_um.resized.png";
-import LogoTTL from "./logo_ttl.resized.png";
-import LogoOM from "./logo_om.resized.png";
+import LogoTHL from "./images/logo_thl.resized.png";
+import LogoWHO from "./images/logo_who.resized.png";
+import LogoECDC from "./images/logo_ecdc.resized.png";
+import LogoUM from "./images/logo_um.resized.png";
+import LogoTTL from "./images/logo_ttl.resized.png";
+import LogoOM from "./images/logo_om.resized.png";
 
-import "./links-card.css";
+import "./LinksCard.css";
 
 interface CardLinkProps {
   href: string;

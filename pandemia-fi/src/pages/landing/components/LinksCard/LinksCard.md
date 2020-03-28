@@ -1,0 +1,5 @@
+LinksCard example:
+
+```js
+<LinksCard />
+```

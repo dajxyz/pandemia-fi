@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Flex, Box, Card } from "rebass";
 import HeroChartCard from "./components/hero-chart-card";
 import NumberMetricCard from "./components/number-metric-card";
-import LinksCard from "./components/links-card";
+import LinksCard from "./components/LinksCard";
 
 interface CaseEntry {
   id: number;
