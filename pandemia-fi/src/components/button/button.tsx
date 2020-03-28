@@ -4,8 +4,13 @@ import "./button.css";
 
 type ButtonType = "primary" | "muted";
 
+/**
+ * Button properties.
+ */
 interface ButtonProps {
+  /** onClick description */
   onClick: () => void;
+  /** type description */
   type?: ButtonType;
 }
 
@@ -15,13 +20,13 @@ interface ButtonProps {
 const Button: React.FunctionComponent<ButtonProps> = ({
   onClick,
   type = "primary",
-  children
+  children,
 }) => {
   return (
     <button
       className={classnames("button", {
         "button--primary": type === "primary",
-        "button--muted": type === "muted"
+        "button--muted": type === "muted",
       })}
       onClick={onClick}
     >

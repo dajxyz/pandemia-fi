@@ -3,7 +3,11 @@ import moment from "moment";
 
 const parser = new Parser();
 
-// TODO: Add more colors to the list so that feed list would not run out of colors
+/**
+ * Feed highlight colors
+ *
+ * TODO: Add more colors to the list so that feed list would not run out of colors
+ */
 const feedHighlightColors: string[] = [
   "#2979FF",
   "#6202EE",
@@ -12,9 +16,12 @@ const feedHighlightColors: string[] = [
   "#0DDEDE",
   "#FF9CDD",
   "#C20505",
-  "#808080"
+  "#808080",
 ];
 
+/**
+ * RSS Feed URL addresses
+ */
 const feedURLs: string[] = [
   "https://app.meltwater.com/gyda/outputs/5e70ed19dea75e201037047f/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss",
   "https://app.meltwater.com/gyda/outputs/5e735eea1363521e1c685237/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss",
@@ -23,9 +30,17 @@ const feedURLs: string[] = [
   "https://app.meltwater.com/gyda/outputs/5e7b59d61363521e1c6852c5/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss",
   "https://app.meltwater.com/gyda/outputs/5e7b59f251615cb4acd82465/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss",
   "https://app.meltwater.com/gyda/outputs/5e7b59b297e4a3b2ac4cc027/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss",
-  "https://app.meltwater.com/gyda/outputs/5e7b5a0f2122be1c1cdd2400/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss"
+  "https://app.meltwater.com/gyda/outputs/5e7b5a0f2122be1c1cdd2400/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss",
 ];
 
+/**
+ * Fetch and parse RSS feed
+ *
+ * Asyncronous RSS feed fetcher that checks whether the RSS feed contains something.
+ * If the URL contents are not available, function returns `null` for the caller.
+ *
+ * @param url string
+ */
 const fetchAndParseRSSFeed = async (url: string): Promise<RSSOutput | null> => {
   try {
     return await parser.parseURL(url);
@@ -44,7 +59,7 @@ const buildFeedFromRawData = (
   id: assignedId,
   color: feedHighlightColors[assignedId],
   title: rawDataItem.title as string,
-  description: rawDataItem.description as string
+  description: rawDataItem.description as string,
 });
 
 /**
@@ -61,7 +76,7 @@ const buildFeedItemsFromRawData = (
     link: rawItem.link as string,
     description: rawItem.content as string,
     creator: rawItem["dc:creator"],
-    dateTime: moment(rawItem.pubDate)
+    dateTime: moment(rawItem.pubDate),
   }));
 
 /**
@@ -72,9 +87,11 @@ const fetchAllFeedsAndItems = async (): Promise<{
   feedItems: FeedItem[];
 }> => {
   const rawData: RSSOutput[] = (
-    await Promise.all(feedURLs.map(feedURL => fetchAndParseRSSFeed(feedURL)))
+    await Promise.all(feedURLs.map((feedURL) => fetchAndParseRSSFeed(feedURL)))
   ).filter((outputOrNull): outputOrNull is RSSOutput => outputOrNull !== null);
+
   const feeds: Feed[] = rawData.map(buildFeedFromRawData);
+
   const feedItems: FeedItem[] = feeds
     .map((feed: Feed) =>
       buildFeedItemsFromRawData(feed, rawData[feed.id].items ?? [])
@@ -84,7 +101,7 @@ const fetchAllFeedsAndItems = async (): Promise<{
 
   return {
     feeds,
-    feedItems
+    feedItems,
   };
 };
 

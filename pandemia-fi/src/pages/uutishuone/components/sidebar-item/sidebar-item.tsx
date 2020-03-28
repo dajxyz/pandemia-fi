@@ -16,7 +16,7 @@ interface SidebarItemProps {
 const SidebarItem: React.FunctionComponent<SidebarItemProps> = ({
   feed,
   isSelected,
-  onClick
+  onClick,
 }) => {
   return (
     <Flex py={1}>
@@ -27,7 +27,7 @@ const SidebarItem: React.FunctionComponent<SidebarItemProps> = ({
           paddingLeft: "8px",
           borderLeftColor: feed.color,
           borderLeftStyle: "solid",
-          opacity: isSelected ? 1 : 0.6
+          opacity: isSelected ? 1 : 0.6,
         }}
       >
         <Text fontSize={[1, 1, 2]} color="gray" onClick={onClick}>

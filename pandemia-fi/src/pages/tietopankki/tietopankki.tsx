@@ -6,6 +6,9 @@ const TietopankkiStyle = {
   py: 2,
 };
 
+/**
+ * Tietopankki section of the website
+ */
 const Tietopankki: React.FunctionComponent = () => {
   return (
     <Flex flexWrap="wrap" sx={TietopankkiStyle}>

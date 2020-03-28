@@ -6,6 +6,9 @@ type LinkURL = string;
 type LinkCurrentPage = boolean;
 type LinkType = "primary" | "muted" | "header__brand" | "header__nav";
 
+/**
+ * Link properties
+ */
 interface LinkProps {
   // onClick: () => void;
   href: LinkURL;
@@ -20,7 +23,7 @@ const Link: React.FunctionComponent<LinkProps> = ({
   type = "primary",
   href,
   currentpage,
-  children
+  children,
 }) => {
   return (
     <a
@@ -29,9 +32,9 @@ const Link: React.FunctionComponent<LinkProps> = ({
         "link--muted": type === "muted",
         "link--header__brand": type === "header__brand",
         "link--header__nav": type === "header__nav",
-        "link--currentpage": currentpage === true
+        "link--currentpage": currentpage === true,
       })}
-      href={ href }
+      href={href}
     >
       {children}
     </a>

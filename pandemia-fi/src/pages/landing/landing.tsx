@@ -10,10 +10,17 @@ interface CaseEntry {
   healthCareDistrict: string;
 }
 
+/**
+ * Landing page wrapper styles
+ */
 const LandingPageStyle = {
   py: 2,
 };
-
+/**
+ * Landing page of the website
+ *
+ * @returns string
+ */
 function LandingPage() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [numsConfirmed, setNumsConfirmed] = useState<number>(0);

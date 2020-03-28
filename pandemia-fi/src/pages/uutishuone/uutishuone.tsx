@@ -13,6 +13,9 @@ const UutishuoneStyle = {
   py: 2,
 };
 
+/**
+ * Uutishuone section of the website
+ */
 const Uutishuone: React.FunctionComponent = () => {
   const [isLoading, setIsLoading] = React.useState<boolean>(true);
   const [feeds, setFeeds] = React.useState<Feed[]>([]);
