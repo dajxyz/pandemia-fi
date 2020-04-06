@@ -8,7 +8,7 @@ const HeaderLinks = () => (
     as="nav"
     className="layout__header__nav"
     sx={{
-      fontSize: "18px"
+      fontSize: "18px",
     }}
   >
     {/* TODO: Adjust HeaderLinks component to add `currentpage` when user has right section open. */}
@@ -40,21 +40,31 @@ const Header = () => (
       maxWidth: "100%",
       color: "text",
       background: "#fff",
-      p: "2"
+      pt: 0,
+      pb: 2,
     }}
   >
+    <Box
+      className="header__decoration"
+      sx={{
+        width: "100%",
+        height: "15px",
+        position: "relative",
+        background: "linear-gradient(90deg, #097290 0%, #AD6B83 100%)",
+      }}
+    />
     <Flex
       alignItems="center"
       sx={{
         maxWidth: "1080px",
         mx: "auto",
-        p: "0"
+        p: "0",
       }}
     >
       <Box
         className="layout__header__brand"
         sx={{
-          color: "rgba(0, 0, 0, 0.87)"
+          color: "rgba(0, 0, 0, 0.87)",
         }}
       >
         <Link type="header__brand" href="/">
@@ -62,7 +72,7 @@ const Header = () => (
             sx={{
               display: "block",
               maxWidth: ["60px"],
-              mr: 1
+              mr: 1,
             }}
           >
             <LogoPandemia title="Pandemia.fi logo" height="60" width="60" />
