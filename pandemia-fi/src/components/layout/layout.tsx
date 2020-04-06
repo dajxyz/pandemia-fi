@@ -1,14 +1,26 @@
 import React from "react";
+import { Box } from "rebass";
 import Header from "./header";
 import Footer from "./footer";
 import "./layout.css";
 
 const Layout: React.FunctionComponent = ({ children }) => (
-  <div className="layout">
+  <Box className="layout">
     <Header />
-    <main className="layout__content">{children}</main>
+    <Box
+      as="main"
+      className="layout__content"
+      sx={{
+        width: "100%",
+        maxWidth: "1080px",
+        "align-self": "center",
+        background: "#eee",
+      }}
+    >
+      {children}
+    </Box>
     <Footer />
-  </div>
+  </Box>
 );
 
 export default Layout;
