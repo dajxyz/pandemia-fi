@@ -18,14 +18,30 @@ const NewsFeedItem: React.FunctionComponent<NewsFeedItemProps> = ({
       target="_blank"
       rel="noreferrer noopener"
     >
-      <Box py={3}>
-        <Heading className="NewsFeedItem__title" fontSize={[2, 2, 2]}>
+      <Box
+        p={2}
+        sx={{
+          borderBottom: "1pt dashed #000",
+          backgroundColor: "#fff",
+        }}
+      >
+        <Heading
+          className="NewsFeedItem__title"
+          fontSize={[2, 2, 2]}
+          sx={{
+            color: "#1e4454",
+          }}
+        >
           {feedItem.title}
         </Heading>
         <Text
           className="NewsFeedItem__description"
           fontSize={[1, 1, 2]}
-          color="gray"
+          // color="gray"
+          sx={{
+            lineHeight: "18px",
+            color: "#1e4454",
+          }}
         >
           {feedItem.description}
         </Text>

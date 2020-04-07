@@ -11,12 +11,6 @@ interface CaseEntry {
 }
 
 /**
- * Landing page wrapper styles
- */
-const LandingPageStyle = {
-  py: 2,
-};
-/**
  * Landing page of the website
  *
  * @returns string
@@ -56,7 +50,7 @@ function LandingPage() {
   }, []);
 
   return (
-    <Flex flexWrap="wrap" sx={LandingPageStyle}>
+    <Flex flexWrap="wrap" sx={{ p: 0 }}>
       <Box width={[1, 1, 2 / 3]} p={2}>
         <Flex flexWrap="wrap" m={-2}>
           <Box width={[1 / 2]} p={2}>

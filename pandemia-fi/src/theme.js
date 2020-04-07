@@ -17,7 +17,7 @@ export default {
     heading: "inherit",
     monospace: "Menlo, monospace",
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
+  fontSizes: [12, 14, 16, 18, 20, 24, 30, 36, 48, 64, 96],
   fontWeights: {
     body: 400,
     heading: 700,
@@ -34,10 +34,12 @@ export default {
   radii: {
     default: 4,
     circle: 99999,
-    card: 4,
+    menu: 4,
+    card: 0,
   },
   shadows: {
-    card: "0 0 2pt rgba(0, 0, 0, .125)",
+    card: "0 0 2pt rgba(0, 0, 0, 1)",
+    menu: "0 0 2pt rgba(0, 0, 0, .5)",
   },
   // rebass variants
   text: {
@@ -64,13 +66,10 @@ export default {
       borderRadius: "circle",
     },
     card: {
-      p: 3,
+      p: 0,
       bg: "background",
-      boxShadow: "card",
+      // boxShadow: "card",
       borderRadius: "card",
-      borderWidth: "1pt",
-      borderStyle: "solid",
-      borderColor: "text",
     },
     link: {
       color: "primary",

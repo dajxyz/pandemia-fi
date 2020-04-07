@@ -9,9 +9,9 @@ import Person from "./Person";
  */
 const About: React.FunctionComponent = () => {
   return (
-    <Flex flexWrap="wrap" py={2}>
-      <Box p={2} width={[1]}>
-        <Card p={3}>
+    <Flex flexWrap="wrap">
+      <Box p={0} width={[1]}>
+        <Card p={2}>
           <Heading>Tietoa meistä</Heading>
           {/* <Text
             sx={{

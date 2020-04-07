@@ -24,18 +24,6 @@ function App() {
             <About />
           </Route>
           <Route path="/">
-            <Message
-              sx={{
-                ml: 2,
-                maxWidth: "42em",
-                borderRadius: 4,
-              }}
-            >
-              This is a testing environment for the development of a future
-              version of Pandemia.fi website. This staging environment might
-              have temporary content & functionality issues as we are building
-              the site forward.
-            </Message>
             <LandingPage />
           </Route>
         </Switch>

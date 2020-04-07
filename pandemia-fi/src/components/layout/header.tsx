@@ -21,9 +21,10 @@ const HeaderLinks = () => (
       Uutishuone
     </Link>
 
-    <Link type="header__nav" href="#/tietopankki">
+    {/* Disable showing menu item until we have some content for it */}
+    {/* <Link type="header__nav" href="#/tietopankki">
       Tietopankki
-    </Link>
+    </Link> */}
 
     <Link type="header__nav" href="#/sivustosta">
       Tietoa meistä
