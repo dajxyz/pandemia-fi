@@ -1,0 +1,5 @@
+Tietopankki example:
+
+```js
+<Tietopankki />
+```

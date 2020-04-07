@@ -1,13 +1,17 @@
 import React from "react";
 import { Card, Flex, Box, Heading, Text, Link } from "rebass";
 
-import Person from "./person";
+import Person from "./Person";
 
+/**
+ * About section of the website
+ * "Tietoa meistä"
+ */
 const About: React.FunctionComponent = () => {
   return (
-    <Flex flexWrap="wrap" py={2}>
-      <Box p={2} width={[1]}>
-        <Card p={3}>
+    <Flex flexWrap="wrap">
+      <Box p={0} width={[1]}>
+        <Card p={2}>
           <Heading>Tietoa meistä</Heading>
           {/* <Text
             sx={{

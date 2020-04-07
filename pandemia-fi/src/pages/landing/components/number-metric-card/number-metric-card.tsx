@@ -3,8 +3,11 @@ import { Flex, Box, Text } from "rebass";
 import Spinner from "../../../../components/spinner";
 
 interface NumberMetricCardProps {
+  /** tell whether the data is still getting loaded */
   isLoading?: boolean;
+  /** number amount for the metric card */
   metric: number;
+  /** description about what the metric is about */
   explainer: string;
 }
 

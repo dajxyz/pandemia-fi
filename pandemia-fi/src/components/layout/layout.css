@@ -3,9 +3,3 @@
   flex-flow: column nowrap;
   min-height: 100vh;
 }
-
-.layout__content {
-  width: 100%;
-  max-width: 1080px;
-  align-self: center;
-}

@@ -25,3 +25,7 @@ yarn-error.log*
 # Local temporary notes ignored while still allowing
 # to keep them locally in the same directory
 /NOTES.md
+
+# Ignore build output directory of the style guide generator
+/pandemia-fi/styleguide
+/styleguide

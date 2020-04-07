@@ -2,10 +2,16 @@ import React from "react";
 import { Flex, Box, Card, Heading } from "rebass";
 import CategoryBadge from "../../components/categorybadge";
 
+/**
+ * Styles for the Tietopankki section wrapper element
+ */
 const TietopankkiStyle = {
   py: 2,
 };
 
+/**
+ * Tietopankki section of the website
+ */
 const Tietopankki: React.FunctionComponent = () => {
   return (
     <Flex flexWrap="wrap" sx={TietopankkiStyle}>

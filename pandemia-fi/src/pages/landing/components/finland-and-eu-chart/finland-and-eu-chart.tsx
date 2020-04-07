@@ -4,6 +4,7 @@ import chartOptions from "./chart-options";
 import finlandAndEUTimeSeries from "./finland-and-eu-time-series.json";
 
 interface FinlandAndEUChartProps {
+  /** Define whether chart scale is `linear` or `logarithmic` */
   scale: ChartScaleType;
 }
 
@@ -13,12 +14,12 @@ const chartOptionsByScale = {
     yaxis: {
       ...chartOptions.yaxis,
       logarithmic: false,
-      min: 9
-    }
+      min: 9,
+    },
   },
   logarithmic: {
-    ...chartOptions
-  }
+    ...chartOptions,
+  },
 };
 
 /**

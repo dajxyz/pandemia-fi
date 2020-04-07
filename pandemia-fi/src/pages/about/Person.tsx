@@ -1,11 +1,17 @@
 import React from "react";
-import { Card, Image, Heading, Text, Link, Box } from "rebass";
+import { Card, Heading, Box } from "rebass";
+// import { Card, Image, Heading, Text, Link, Box } from "rebass";
 
 interface PersonProps {
+  /** name of a person */
   name: string;
+  /** job/role title */
   title?: string;
+  /** href URL to a profile page or website */
   href?: string;
+  /** profile image path/filename */
   image?: string;
+  /** image alt text for improved accessibility */
   imageAlt?: string;
   children?: any;
 }

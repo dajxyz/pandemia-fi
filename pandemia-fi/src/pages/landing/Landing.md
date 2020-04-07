@@ -1,0 +1,5 @@
+Landing example:
+
+```js
+<LandingPage />
+```

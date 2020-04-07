@@ -9,10 +9,9 @@ const PAGE_SIZE = 10;
 
 type SelectedFeedIds = { [key: number]: boolean };
 
-const UutishuoneStyle = {
-  py: 2,
-};
-
+/**
+ * Uutishuone section of the website
+ */
 const Uutishuone: React.FunctionComponent = () => {
   const [isLoading, setIsLoading] = React.useState<boolean>(true);
   const [feeds, setFeeds] = React.useState<Feed[]>([]);
@@ -77,10 +76,31 @@ const Uutishuone: React.FunctionComponent = () => {
   );
 
   return (
-    <Flex flexWrap="wrap" flexDirection="row-reverse" sx={UutishuoneStyle}>
+    <Flex
+      flexWrap="wrap"
+      flexDirection="row-reverse"
+      sx={{
+        p: 0,
+      }}
+    >
       <Box p={2} width={["100%", "100%", "30%"]}>
-        <Card p={3}>
-          <Heading>Feeds</Heading>
+        <Card
+          p={2}
+          sx={{
+            boxShadow: "menu",
+            borderWidth: "1pt",
+            borderStyle: "solid",
+            borderColor: "text",
+          }}
+        >
+          {/* Feeds selector heading */}
+          <Heading
+            sx={{
+              fontSize: 2,
+            }}
+          >
+            Valitse: tiedotteet, luetuimmat, poiminnat…
+          </Heading>
           {feeds.map((feed) => (
             <SidebarItem
               feed={feed}
@@ -91,7 +111,7 @@ const Uutishuone: React.FunctionComponent = () => {
           ))}
         </Card>
       </Box>
-      <Box p={2} width={["100%", "100%", "70%"]}>
+      <Box p={0} width={["100%", "100%", "70%"]}>
         <Card p={3}>
           <Heading>Uutishuone</Heading>
           {isLoading && <SpinnerBlock />}

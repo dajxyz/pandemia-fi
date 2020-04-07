@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Flex, Box, Card } from "rebass";
 import HeroChartCard from "./components/hero-chart-card";
 import NumberMetricCard from "./components/number-metric-card";
-import LinksCard from "./components/links-card";
+import LinksCard from "./components/LinksCard";
 
 interface CaseEntry {
   id: number;
@@ -10,10 +10,11 @@ interface CaseEntry {
   healthCareDistrict: string;
 }
 
-const LandingPageStyle = {
-  py: 2,
-};
-
+/**
+ * Landing page of the website
+ *
+ * @returns string
+ */
 function LandingPage() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [numsConfirmed, setNumsConfirmed] = useState<number>(0);
@@ -49,9 +50,9 @@ function LandingPage() {
   }, []);
 
   return (
-    <Flex flexWrap="wrap" sx={LandingPageStyle}>
-      <Box width={[1, 1, 2 / 3]} p={2}>
-        <Flex flexWrap="wrap" m={-2}>
+    <Flex flexWrap="wrap" sx={{ p: 0 }}>
+      <Box width={[1, 1, 2 / 3]} p={0}>
+        <Flex flexWrap="wrap">
           <Box width={[1 / 2]} p={2}>
             <Card>
               <NumberMetricCard
