@@ -51,8 +51,8 @@ function LandingPage() {
 
   return (
     <Flex flexWrap="wrap" sx={{ p: 0 }}>
-      <Box width={[1, 1, 2 / 3]} p={2}>
-        <Flex flexWrap="wrap" m={-2}>
+      <Box width={[1, 1, 2 / 3]} p={0}>
+        <Flex flexWrap="wrap">
           <Box width={[1 / 2]} p={2}>
             <Card>
               <NumberMetricCard

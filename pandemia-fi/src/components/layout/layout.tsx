@@ -14,7 +14,7 @@ const Layout: React.FunctionComponent = ({ children }) => (
         width: "100%",
         maxWidth: "1080px",
         "align-self": "center",
-        background: "#eee",
+        // background: "#eee",
       }}
     >
       {children}

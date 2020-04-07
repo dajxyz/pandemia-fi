@@ -19,7 +19,13 @@ interface CardLinkProps {
 
 const CardLink = ({ href, title, image, imageAlt }: CardLinkProps) => {
   return (
-    <Flex className="links-card__link" display="flex" alignItems="center" p="1">
+    <Flex
+      className="links-card__link"
+      display="flex"
+      alignItems="center"
+      p="1"
+      px="2"
+    >
       <Image
         className="links-card__link__icon"
         src={image}
@@ -48,6 +54,9 @@ const CardLink = ({ href, title, image, imageAlt }: CardLinkProps) => {
           flex="1"
           fontSize={[2, 2, 2]}
           color="text"
+          sx={{
+            py: 1,
+          }}
         >
           {title}
         </Text>
@@ -71,6 +80,7 @@ const LinksCard = () => {
       <Card
         sx={{
           borderRadius: 4,
+          mt: 3,
           mb: 3,
           textAlign: "left",
         }}
@@ -104,7 +114,8 @@ const LinksCard = () => {
       <Card
         sx={{
           borderRadius: 4,
-          mb: 3,
+          pt: 4,
+          pb: 1,
           textAlign: "left",
         }}
       >
