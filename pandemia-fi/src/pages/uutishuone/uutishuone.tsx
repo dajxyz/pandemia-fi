@@ -111,9 +111,26 @@ const Uutishuone: React.FunctionComponent = () => {
           ))}
         </Card>
       </Box>
-      <Box p={0} width={["100%", "100%", "70%"]}>
-        <Card p={3}>
-          <Heading>Uutishuone</Heading>
+      <Box
+        width={["100%", "100%", "70%"]}
+        sx={{
+          p: 0,
+        }}
+      >
+        <Card
+          sx={{
+            p: 0,
+          }}
+        >
+          <Heading
+            sx={{
+              fontSize: 4,
+              p: 2,
+              pb: 1,
+            }}
+          >
+            Uutishuone
+          </Heading>
           {isLoading && <SpinnerBlock />}
           {!isLoading && renderContent()}
         </Card>
