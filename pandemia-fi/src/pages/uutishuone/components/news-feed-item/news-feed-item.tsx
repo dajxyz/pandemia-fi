@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Box, Text, Heading } from "rebass";
+import { Flex, Box, Text, Heading, Link } from "rebass";
 
 interface NewsFeedItemProps {
   feedItem: FeedItem;
@@ -18,37 +18,54 @@ const NewsFeedItem: React.FunctionComponent<NewsFeedItemProps> = ({
       target="_blank"
       rel="noreferrer noopener"
     >
-      <Box
-        p={2}
+      <Flex
         sx={{
+          p: 2,
           borderBottom: "1pt dashed #000",
           backgroundColor: "#fff",
+          maxWidth: "100%",
         }}
       >
-        <Heading
-          className="NewsFeedItem__title"
-          fontSize={[2, 2, 2]}
+        <Box>
+          <Heading
+            className="NewsFeedItem__title"
+            fontSize={[2, 2, 2]}
+            sx={{
+              color: "#1e4454",
+            }}
+          >
+            {feedItem.title}
+          </Heading>
+          <Text
+            className="NewsFeedItem__description"
+            fontSize={[1, 1, 2]}
+            sx={{
+              lineHeight: "18px",
+              color: "#1e4454",
+            }}
+          >
+            {feedItem.description}
+          </Text>
+        </Box>
+        <Box
           sx={{
-            color: "#1e4454",
+            px: 1,
+            backgroundColor: "#fff",
+            minWidth: "10ex",
           }}
         >
-          {feedItem.title}
-        </Heading>
-        <Text
-          className="NewsFeedItem__description"
-          fontSize={[1, 1, 2]}
-          // color="gray"
-          sx={{
-            lineHeight: "18px",
-            color: "#1e4454",
-          }}
-        >
-          {feedItem.description}
-        </Text>
-        <Text className="NewsFeedItem__date" fontSize={[1, 1, 2]} color="gray">
-          {feedItem.dateTime.format("D.M.YYYY HH:mm:ss")}
-        </Text>
-      </Box>
+          <Text
+            className="NewsFeedItem__date"
+            fontSize={[1, 1, 2]}
+            sx={{
+              color: "#3A6579",
+              textAlign: "right",
+            }}
+          >
+            {feedItem.dateTime.format("D.M.YYYY HH:mm:ss")}
+          </Text>
+        </Box>
+      </Flex>
     </Link>
   );
 };

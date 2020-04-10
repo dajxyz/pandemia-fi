@@ -60,7 +60,11 @@ const Uutishuone: React.FunctionComponent = () => {
         <NewsFeedItem feedItem={feedItem} key={`${feedItem.feedId}-${index}`} />
       ))}
       <Flex justifyContent="center">
-        <Box>
+        <Box
+          sx={{
+            pt: 3,
+          }}
+        >
           <Button
             variant="outline"
             onClick={() => setPageNumber(pageNumber + 1)}
@@ -111,9 +115,27 @@ const Uutishuone: React.FunctionComponent = () => {
           ))}
         </Card>
       </Box>
-      <Box p={0} width={["100%", "100%", "70%"]}>
-        <Card p={3}>
-          <Heading>Uutishuone</Heading>
+      <Box
+        width={["100%", "100%", "70%"]}
+        sx={{
+          p: 0,
+        }}
+      >
+        <Card
+          sx={{
+            p: 0,
+            maxWidth: "100%",
+          }}
+        >
+          <Heading
+            sx={{
+              fontSize: 4,
+              p: 2,
+              pb: 1,
+            }}
+          >
+            Uutishuone
+          </Heading>
           {isLoading && <SpinnerBlock />}
           {!isLoading && renderContent()}
         </Card>
