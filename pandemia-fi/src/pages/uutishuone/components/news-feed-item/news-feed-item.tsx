@@ -19,8 +19,8 @@ const NewsFeedItem: React.FunctionComponent<NewsFeedItemProps> = ({
       rel="noreferrer noopener"
     >
       <Box
-        p={2}
         sx={{
+          p: 2,
           borderBottom: "1pt dashed #000",
           backgroundColor: "#fff",
         }}
@@ -37,7 +37,6 @@ const NewsFeedItem: React.FunctionComponent<NewsFeedItemProps> = ({
         <Text
           className="NewsFeedItem__description"
           fontSize={[1, 1, 2]}
-          // color="gray"
           sx={{
             lineHeight: "18px",
             color: "#1e4454",
@@ -45,7 +44,14 @@ const NewsFeedItem: React.FunctionComponent<NewsFeedItemProps> = ({
         >
           {feedItem.description}
         </Text>
-        <Text className="NewsFeedItem__date" fontSize={[1, 1, 2]} color="gray">
+        <Text
+          className="NewsFeedItem__date"
+          fontSize={[1, 1, 2]}
+          sx={{
+            color: "gray",
+            textAlign: "right",
+          }}
+        >
           {feedItem.dateTime.format("D.M.YYYY HH:mm:ss")}
         </Text>
       </Box>
