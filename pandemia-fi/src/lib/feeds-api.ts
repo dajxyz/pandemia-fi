@@ -23,10 +23,16 @@ const feedHighlightColors: string[] = [
  * RSS Feed URL addresses
  */
 const feedURLs: string[] = [
+/* Tärkeimmät tiedotteet VNK, TPK, STM, THL */
   "https://app.meltwater.com/gyda/outputs/5e70ed19dea75e201037047f/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss",
+
+/* Muut viranomaistiedotteet */
   "https://app.meltwater.com/gyda/outputs/5e735eea1363521e1c685237/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss",
-  "https://app.meltwater.com/gyda/outputs/5e71c8152ab0b4521c2db20c/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss",
+
+/* Most popular and shared in Finland */
   "https://app.meltwater.com/gyda/outputs/5e70ed4d97e4a3b2ac4cbf0e/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss",
+
+/* "Newsfeed is currently generating, please allow 15 minutes for generation to complete"... er.. what?" */
   "https://app.meltwater.com/gyda/outputs/5e7b59d61363521e1c6852c5/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss",
   "https://app.meltwater.com/gyda/outputs/5e7b59f251615cb4acd82465/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss",
   "https://app.meltwater.com/gyda/outputs/5e7b59b297e4a3b2ac4cc027/rendering?apiKey=5507cdbfa4b0adb412e15cf0&type=rss",
