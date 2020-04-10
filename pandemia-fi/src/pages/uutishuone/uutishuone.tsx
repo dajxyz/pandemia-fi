@@ -60,7 +60,11 @@ const Uutishuone: React.FunctionComponent = () => {
         <NewsFeedItem feedItem={feedItem} key={`${feedItem.feedId}-${index}`} />
       ))}
       <Flex justifyContent="center">
-        <Box>
+        <Box
+          sx={{
+            pt: 3,
+          }}
+        >
           <Button
             variant="outline"
             onClick={() => setPageNumber(pageNumber + 1)}
