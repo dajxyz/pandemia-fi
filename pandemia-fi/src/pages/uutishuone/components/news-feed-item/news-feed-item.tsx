@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Box, Text, Heading } from "rebass";
+import { Flex, Box, Text, Heading, Link } from "rebass";
 
 interface NewsFeedItemProps {
   feedItem: FeedItem;
@@ -25,35 +25,41 @@ const NewsFeedItem: React.FunctionComponent<NewsFeedItemProps> = ({
           backgroundColor: "#fff",
         }}
       >
-        <Heading
-          className="NewsFeedItem__title"
-          fontSize={[2, 2, 2]}
-          sx={{
-            color: "#1e4454",
-          }}
-        >
-          {feedItem.title}
-        </Heading>
-        <Text
-          className="NewsFeedItem__description"
-          fontSize={[1, 1, 2]}
-          sx={{
-            lineHeight: "18px",
-            color: "#1e4454",
-          }}
-        >
-          {feedItem.description}
-        </Text>
-        <Text
-          className="NewsFeedItem__date"
-          fontSize={[1, 1, 2]}
-          sx={{
-            color: "gray",
-            textAlign: "right",
-          }}
-        >
-          {feedItem.dateTime.format("D.M.YYYY HH:mm:ss")}
-        </Text>
+        <Flex>
+          <Box>
+            <Heading
+              className="NewsFeedItem__title"
+              fontSize={[2, 2, 2]}
+              sx={{
+                color: "#1e4454",
+              }}
+            >
+              {feedItem.title}
+            </Heading>
+            <Text
+              className="NewsFeedItem__description"
+              fontSize={[1, 1, 2]}
+              sx={{
+                lineHeight: "18px",
+                color: "#1e4454",
+              }}
+            >
+              {feedItem.description}
+            </Text>
+          </Box>
+          <Box>
+            <Text
+              className="NewsFeedItem__date"
+              fontSize={[1, 1, 2]}
+              sx={{
+                color: "gray",
+                textAlign: "right",
+              }}
+            >
+              {feedItem.dateTime.format("D.M.YYYY HH:mm:ss")}
+            </Text>
+          </Box>
+        </Flex>
       </Box>
     </Link>
   );
