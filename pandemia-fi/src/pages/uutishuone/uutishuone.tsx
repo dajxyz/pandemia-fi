@@ -124,6 +124,7 @@ const Uutishuone: React.FunctionComponent = () => {
         <Card
           sx={{
             p: 0,
+            maxWidth: "100%",
           }}
         >
           <Heading
