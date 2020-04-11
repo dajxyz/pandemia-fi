@@ -7,6 +7,7 @@ import LandingPage from "./pages/landing";
 import Uutishuone from "./pages/uutishuone";
 import Tietopankki from "./pages/tietopankki";
 import About from "./pages/about";
+import Julkaisuja from "./pages/julkaisuja";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path="/sivustosta">
             <About />
+          </Route>
+          <Route path="/julkaisuja">
+            <Julkaisuja />
           </Route>
           <Route path="/">
             <LandingPage />

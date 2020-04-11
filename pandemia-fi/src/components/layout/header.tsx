@@ -29,6 +29,10 @@ const HeaderLinks = () => (
     <Link type="header__nav" href="#/sivustosta">
       Tietoa meistä
     </Link>
+
+    <Link type="header__nav" href="#/julkaisuja">
+      Julkaisuja
+    </Link>
   </Flex>
 );
 
