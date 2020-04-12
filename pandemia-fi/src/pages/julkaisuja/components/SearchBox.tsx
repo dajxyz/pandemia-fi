@@ -15,8 +15,9 @@ const SearchBox = () => {
           className="SearchBoxInput"
           sx={{ maxWidth: "360px", display: "inline-block" }}
           placeholder="search"
-          value={this.state.filter}
-          onChange={(e) => this.setState({ filter: e.currentTarget.value })}
+          // TODO: Local state is problematic on this part of code, and should be rewritten
+          // value={this.state.filter}
+          // onChange={(e) => this.setState({ filter: e.currentTarget.value })}
         />
       </Box>
       ;
