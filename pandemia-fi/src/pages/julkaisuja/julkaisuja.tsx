@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Card, Flex } from "rebass";
+import { Box, Flex } from "rebass";
 import { Input } from "theme-ui";
 
 import CategoryBadge from "../../components/categorybadge";
@@ -150,25 +150,35 @@ export default class Julkaisuja extends React.Component<{}, State> {
     return (
       <Flex flexWrap="wrap" sx={{ p: 0 }}>
         <Box width={[1]} sx={{ p: 0 }}>
-          <Introduction />
+          <Box className="IntroductionWrapper" width={[1]} sx={{ p: 2 }}>
+            <Introduction />
+          </Box>
 
-          <Card sx={{ p: 0, maxWidth: "100%" }}>
-            {this.state.categories.map((t) => {
-              const color: { color: string; bg: string } = tagMapColors.get(t)!;
-              return (
-                <div
-                  onClick={() => this.setState({ filter: t })}
-                  style={{
-                    cursor: "pointer",
-                    display: "inline-block",
-                    margin: 3,
-                  }}
-                >
-                  <CategoryBadge title={t} color={color.color} bg={color.bg} />
-                </div>
-              );
-            })}
-            <br />
+          <Box className="researchList" sx={{ p: 0, maxWidth: "100%" }}>
+            <Box className="CategoryBadgeWrapper" width={[1]} sx={{ px: 1 }}>
+              {this.state.categories.map((t) => {
+                const color: { color: string; bg: string } = tagMapColors.get(
+                  t
+                )!;
+                return (
+                  <div
+                    onClick={() => this.setState({ filter: t })}
+                    style={{
+                      cursor: "pointer",
+                      display: "inline-block",
+                      margin: 3,
+                    }}
+                  >
+                    <CategoryBadge
+                      title={t}
+                      color={color.color}
+                      bg={color.bg}
+                    />
+                  </div>
+                );
+              })}
+            </Box>
+
             <div style={{ textAlign: "right", marginTop: 5, marginBottom: 5 }}>
               <Input
                 style={{ width: 400, display: "inline-block" }}
@@ -597,7 +607,7 @@ export default class Julkaisuja extends React.Component<{}, State> {
                 </Box>
               </Flex>
             </div>
-          </Card>
+          </Box>
         </Box>
       </Flex>
     );
