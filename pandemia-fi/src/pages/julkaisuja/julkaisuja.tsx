@@ -344,7 +344,11 @@ export default class Julkaisuja extends React.Component<{}, State> {
                       display={["none", "none", "block"]}
                     >
                       <div>
-                        <a target="_blank" href={publication.link}>
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={publication.link}
+                        >
                           {publication.name}
                         </a>
                         <br />
@@ -415,7 +419,11 @@ export default class Julkaisuja extends React.Component<{}, State> {
                       display={["none", "block", "none"]}
                     >
                       <div>
-                        <a target="_blank" href={publication.link}>
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={publication.link}
+                        >
                           {publication.name}
                         </a>
                       </div>
@@ -501,7 +509,11 @@ export default class Julkaisuja extends React.Component<{}, State> {
                       display={["block", "none", "none"]}
                     >
                       <div>
-                        <a target="_blank" href={publication.link}>
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={publication.link}
+                        >
                           {publication.name}
                         </a>
                       </div>
