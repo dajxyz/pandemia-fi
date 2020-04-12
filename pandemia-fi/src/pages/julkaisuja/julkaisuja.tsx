@@ -11,6 +11,9 @@ import "./julkaisuja.css";
 
 import Introduction from "./components/introduction";
 
+/* TODO: `<SearchBox />` component placeholder for later improvements */
+// import SearchBox from "./components/SearchBox";
+
 const allPublications = publications.map((p) => ({
   date: p.Date,
   name: p.Article,
@@ -179,16 +182,22 @@ export default class Julkaisuja extends React.Component<{}, State> {
               })}
             </Box>
 
-            <div style={{ textAlign: "right", marginTop: 5, marginBottom: 5 }}>
+            {/* TODO: This should be replaced with `<SearchBox />` later */}
+            <Box
+              className="SearchBox"
+              sx={{ textAlign: "right", my: 0, mx: 1 }}
+            >
               <Input
-                style={{ width: 400, display: "inline-block" }}
+                className="SearchBoxInput"
+                sx={{ maxWidth: "360px", display: "inline-block" }}
                 placeholder="search"
                 value={this.state.filter}
                 onChange={(e) =>
                   this.setState({ filter: e.currentTarget.value })
                 }
               />
-            </div>
+            </Box>
+
             <Flex flexWrap="wrap" className="research-table">
               <Box
                 className="cell head first"
