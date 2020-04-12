@@ -1,1 +1,1 @@
-export { default } from './julkaisuja';
+export { default } from "./julkaisuja";
