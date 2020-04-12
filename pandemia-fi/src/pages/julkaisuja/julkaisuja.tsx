@@ -9,7 +9,7 @@ import Button from "../../components/button";
 import publications from "./publications.json";
 import "./julkaisuja.css";
 
-import Introduction from "./components/introduction";
+import Introduction from "./components/Introduction";
 
 /* TODO: `<SearchBox />` component placeholder for later improvements */
 // import SearchBox from "./components/SearchBox";
