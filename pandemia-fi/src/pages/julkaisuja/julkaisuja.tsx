@@ -2,6 +2,9 @@ import React from "react";
 import {Box, Card, Flex, Heading} from "rebass";
 import CategoryBadge from "../../components/categorybadge";
 import publications from './publications.json';
+import './julkaisuja.css';
+import Button from "../../components/button";
+import {Input} from "theme-ui";
 
 const allPublications = publications.map(p => ({
   date: p.Date,
@@ -70,8 +73,6 @@ const tagMapColors: Map<string, { color: string, bg: string }> = new Map();
 categories.forEach((c, i) => {
   tagMapColors.set(c, colorsAndBgs[i % colorsAndBgs.length]);
 });
-
-console.log(categories, colorsAndBgs, tagMapColors);
 
 interface Publication {
   date: string;
@@ -161,42 +162,46 @@ export default class Julkaisuja extends React.Component<{}, State> {
               </div>;
             })}
             <br/>
-            <input placeholder="search" value={this.state.filter}
-                   onChange={e => this.setState({filter: e.currentTarget.value})}/>
-            <table>
-              <thead>
-              <tr>
-                <th onClick={() => this.setState({
-                  sort: 'date',
-                  sortDir: this.state.sort === 'date' ? (this.state.sortDir === 'asc' ? 'desc' : 'asc') : 'desc'
-                })}>Päivämäärä&nbsp;{this.renderSort('date')}</th>
-                <th onClick={() => this.setState({
-                  sort: 'name',
-                  sortDir: this.state.sort === 'name' ? (this.state.sortDir === 'asc' ? 'desc' : 'asc') : 'desc'
-                })}>Artikkelin nimi&nbsp;{this.renderSort('name')}</th>
-                <th onClick={() => this.setState({
-                  sort: 'authors',
-                  sortDir: this.state.sort === 'authors' ? (this.state.sortDir === 'asc' ? 'desc' : 'asc') : 'desc'
-                })}>Kirjoittanut&nbsp;{this.renderSort('authors')}</th>
-                <th onClick={() => this.setState({
-                  sort: 'citations',
-                  sortDir: this.state.sort === 'citations' ? (this.state.sortDir === 'asc' ? 'desc' : 'asc') : 'desc'
-                })}>Citations&nbsp;{this.renderSort('citations')}</th>
-                <th onClick={() => this.setState({
-                  sort: 'journal',
-                  sortDir: this.state.sort === 'journal' ? (this.state.sortDir === 'asc' ? 'desc' : 'asc') : 'desc'
-                })}>Journaali&nbsp;{this.renderSort('journal')}</th>
-                <th onClick={() => this.setState({
-                  sort: 'if',
-                  sortDir: this.state.sort === 'if' ? (this.state.sortDir === 'asc' ? 'desc' : 'asc') : 'desc'
-                })}>IF&nbsp;{this.renderSort('if')}</th>
-                <th onClick={() => this.setState({
-                  sort: 'tags',
-                  sortDir: this.state.sort === 'tags' ? (this.state.sortDir === 'asc' ? 'desc' : 'asc') : 'desc'
-                })}>Tags&nbsp;{this.renderSort('tags')}</th>
-              </tr>
-              </thead>
-              <tbody>
+            <div style={{textAlign: 'right', marginTop: 5, marginBottom: 5}}>
+              <Input style={{width: 400, display: "inline-block"}} placeholder="search" value={this.state.filter}
+                     onChange={e => this.setState({filter: e.currentTarget.value})}/>
+            </div>
+            <Flex flexWrap='wrap' className="research-table">
+              <Box className="cell head first" width={[1 / 5, 1 / 5, 1 / 2]} display={['none', 'block', 'block']}
+                   onClick={() => this.setState({
+                     sort: 'name',
+                     sortDir: this.state.sort === 'name' ? (this.state.sortDir === 'asc' ? 'desc' : 'asc') : 'desc'
+                   })}>
+                <div>Artikkelin nimi&nbsp;{this.renderSort('name')}</div>
+              </Box>
+              <Box className="cell head" width={[1 / 5, 1 / 5, 1 / 8]} display={['none', 'block', 'block']}
+                   onClick={() => this.setState({
+                     sort: 'date',
+                     sortDir: this.state.sort === 'date' ? (this.state.sortDir === 'asc' ? 'desc' : 'asc') : 'desc'
+                   })}>
+                <div>Päivämäärä&nbsp;{this.renderSort('date')}</div>
+              </Box>
+              <Box className="cell head" width={[1 / 5, 1 / 5, 1 / 8]} display={['none', 'block', 'block']}
+                   onClick={() => this.setState({
+                     sort: 'citations',
+                     sortDir: this.state.sort === 'citations' ? (this.state.sortDir === 'asc' ? 'desc' : 'asc') : 'desc'
+                   })}>
+                <div>Citations&nbsp;{this.renderSort('citations')}</div>
+              </Box>
+              <Box className="cell head" width={[1 / 5, 1 / 5, 1 / 8]} display={['none', 'block', 'block']}
+                   onClick={() => this.setState({
+                     sort: 'if',
+                     sortDir: this.state.sort === 'if' ? (this.state.sortDir === 'asc' ? 'desc' : 'asc') : 'desc'
+                   })}>
+                <div>IF&nbsp;{this.renderSort('if')}</div>
+              </Box>
+              <Box className="cell head" width={[1 / 5, 1 / 5, 1 / 8]} display={['none', 'block', 'block']}
+                   onClick={() => this.setState({
+                     sort: 'tags',
+                     sortDir: this.state.sort === 'tags' ? (this.state.sortDir === 'asc' ? 'desc' : 'asc') : 'desc'
+                   })}>
+                <div>Tags&nbsp;{this.renderSort('tags')}</div>
+              </Box>
               {this.state.current
                 .sort((p1, p2) => {
                   if (typeof p1[this.state.sort] === 'number' && typeof p2[this.state.sort] === 'number') {
@@ -217,35 +222,109 @@ export default class Julkaisuja extends React.Component<{}, State> {
                 })
                 .filter((c, i) => i >= (this.state.page * this.state.perPage) && i < ((this.state.page + 1) * this.state.perPage))
                 .map((publication, i) =>
-                  <tr key={i}>
-                    <td>{publication.date}</td>
-                    <td><a target="_blank" href={publication.link}>{publication.name}</a></td>
-                    <td>{publication.authors}</td>
-                    <td>{publication.citations}</td>
-                    <td>{publication.journal}</td>
-                    <td>{publication.if}</td>
-                    <td>{publication.tags.map(t => {
-                      const color: { color: string, bg: string } = tagMapColors.get(t)!;
-                      return <div style={{display: 'inline-block', margin: 3}}>
-                        <CategoryBadge title={t} color={color.color} bg={color.bg}/>
-                      </div>;
-                    })}</td>
-                  </tr>
+                  <React.Fragment key={i}>
+                    {/*FULL SIZE*/}
+                    <Box className="cell first" width={1 / 2} display={['none', 'none', 'block']}>
+                      <div><a target="_blank"
+                              href={publication.link}>{publication.name}</a><br/><br/>{publication.authors}</div>
+                    </Box>
+                    <Box className="cell" width={1 / 8} display={['none', 'none', 'block']}>
+                      <div>{publication.date}</div>
+                    </Box>
+                    <Box className="cell" width={1 / 8} display={['none', 'none', 'block']}>
+                      <div> Cited by: {publication.citations}<br/>n={publication.n}</div>
+                    </Box>
+                    <Box className="cell" width={1 / 8} display={['none', 'none', 'block']}>
+                      <div>{publication.if}<br/>{publication.journal}</div>
+                    </Box>
+                    <Box className="cell" width={1 / 8} display={['none', 'none', 'block']}>
+                      <div>{publication.tags.map((t, i2) => {
+                        const color: { color: string, bg: string } = tagMapColors.get(t)!;
+                        return <div key={i2} style={{display: 'inline-block', margin: 3}}>
+                          <CategoryBadge title={t} color={color.color} bg={color.bg}/>
+                        </div>;
+                      })}
+                      </div>
+                    </Box>
+                    {/*MIDDLE SIZE*/}
+                    <Box className="cell first no-border" width={3 / 5} display={['none', 'block', 'none']}>
+                      <div><a target="_blank" href={publication.link}>{publication.name}</a></div>
+                    </Box>
+                    <Box className="cell no-border" width={1 / 5} display={['none', 'block', 'none']}>
+                      <div>{publication.if}</div>
+                    </Box>
+                    <Box className="cell no-border" width={1 / 5} display={['none', 'block', 'none']}>
+                      <div>{publication.tags.map((t, i2) => {
+                        const color: { color: string, bg: string } = tagMapColors.get(t)!;
+                        return <div key={i2} style={{display: 'inline-block', margin: 3}}>
+                          <CategoryBadge title={t} color={color.color} bg={color.bg}/>
+                        </div>;
+                      })}
+                      </div>
+                    </Box>
+
+                    <Box className="cell" width={1 / 5} display={['none', 'block', 'none']}>
+                      <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                        <div style={{textAlign: 'left'}}>{publication.authors}</div>
+                        <div style={{textAlign: 'right'}}>n={publication.n}</div>
+                      </div>
+                    </Box>
+                    <Box className="cell" width={1 / 5} display={['none', 'block', 'none']}>
+                      <div> Cited by: {publication.citations}</div>
+                    </Box>
+                    <Box className="cell" width={1 / 5} display={['none', 'block', 'none']}>
+                      <div>{publication.date}</div>
+                    </Box>
+                    <Box className="cell" width={2 / 5} display={['none', 'block', 'none']}>
+                      <div>&nbsp;</div>
+                    </Box>
+                    {/*SMALL SIZE*/}
+                    <Box className="cell first no-border" width={3 / 4} display={['block', 'none', 'none']}>
+                      <div><a target="_blank" href={publication.link}>{publication.name}</a></div>
+                    </Box>
+                    <Box className="cell no-border" width={1 / 4} display={['block', 'none', 'none']}>
+                      <div>{publication.if}<br/>{publication.journal}</div>
+                    </Box>
+
+                    <Box className="cell first no-border" width={1 / 4} display={['block', 'none', 'none']}>
+                      <div>{publication.authors}</div>
+                    </Box>
+                    <Box className="cell no-border" width={1 / 4} display={['block', 'none', 'none']}>
+                      <div>Cited by: {publication.citations}</div>
+                    </Box>
+                    <Box className="cell no-border" width={1 / 4} display={['block', 'none', 'none']}>
+                      <div>n={publication.n}</div>
+                    </Box>
+                    <Box className="cell no-border" width={1 / 4} display={['block', 'none', 'none']}>
+                      <div>{publication.date}</div>
+                    </Box>
+
+                    <Box className="cell first" width={1} display={['block', 'none', 'none']}>
+                      <div>{publication.tags.map((t, i2) => {
+                        const color: { color: string, bg: string } = tagMapColors.get(t)!;
+                        return <div key={i2} style={{display: 'inline-block', margin: 3}}>
+                          <CategoryBadge title={t} color={color.color} bg={color.bg}/>
+                        </div>;
+                      })}
+                      </div>
+                    </Box>
+                  </React.Fragment>
                 )}
-              </tbody>
-            </table>
-            <div>
-              <div>
-                Näytetään
-                rivit {(this.state.perPage * this.state.page) + 1} - {Math.min(this.state.current.length, this.state.perPage * (1 + this.state.page))} (yhteensä {this.state.current.length})
-              </div>
-              <div>
-                <button onClick={() => this.setState({page: Math.max(0, this.state.page - 1)})}>Edellinen</button>
-                {this.renderPages()}
-                <button
-                  onClick={() => this.setState({page: Math.min(this.state.page + 1, Math.floor(this.state.current.length / this.state.perPage))})}>Seuraava
-                </button>
-              </div>
+            </Flex>
+            <div className="pagination-controls">
+              <Flex flexWrap="wrap" justifyContent="space-between" alignItems="center">
+                <Box width={[1, 1 / 4, 1 / 4]}>
+                  Näytetään
+                  rivit {(this.state.perPage * this.state.page) + 1} - {Math.min(this.state.current.length, this.state.perPage * (1 + this.state.page))} (yhteensä {this.state.current.length})
+                </Box>
+                <Box width={[1, 3 / 4, 3 / 4]} style={{textAlign: "right"}}>
+                  <Button onClick={() => this.setState({page: Math.max(0, this.state.page - 1)})}>Edellinen</Button>
+                  {this.renderPages()}
+                  <Button
+                    onClick={() => this.setState({page: Math.min(this.state.page + 1, Math.floor(this.state.current.length / this.state.perPage))})}>Seuraava
+                  </Button>
+                </Box>
+              </Flex>
             </div>
           </Card>
         </Box>
@@ -270,8 +349,8 @@ export default class Julkaisuja extends React.Component<{}, State> {
     for (let i = 0; i < this.state.current.length; i = i + this.state.perPage) {
       let page = Math.floor(i / this.state.perPage);
       buttons.push(
-        <button style={{fontWeight: this.state.page === page ? 'bold' : 'inherit'}}
-                onClick={() => this.setState({page: page})}>{(page) + 1}</button>
+        <Button key={i} type={this.state.page === page ? 'muted' : 'primary'}
+                onClick={() => this.setState({page: page})}>{(page) + 1}</Button>
       )
     }
     return buttons;
