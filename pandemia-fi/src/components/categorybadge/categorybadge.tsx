@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, Link} from "rebass";
+import { Box, Link } from "rebass";
 
 interface BadgeProps {
   title: string;
@@ -15,15 +15,15 @@ interface BadgeProps {
  * Badge component for labeling content
  */
 const CategoryBadge: React.FunctionComponent<BadgeProps> = ({
-                                                              title,
-                                                              href,
-                                                              image,
-                                                              imageAlt,
-                                                              color,
-                                                              bg,
-                                                              border,
-                                                              children,
-                                                            }) => {
+  title,
+  href,
+  image,
+  imageAlt,
+  color,
+  bg,
+  border,
+  children,
+}) => {
   return (
     <Link
       className="Badge"
@@ -41,7 +41,7 @@ const CategoryBadge: React.FunctionComponent<BadgeProps> = ({
           display: "inline-block",
           color: color || "black",
           bg: bg || "white",
-          border: `1pt solid ${border || '#aaa'}`,
+          border: `1pt solid ${border || "#aaa"}`,
           fontSize: "10pt",
           px: 2,
           py: 1,
