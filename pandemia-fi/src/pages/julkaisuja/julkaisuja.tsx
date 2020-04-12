@@ -146,7 +146,7 @@ export default class Julkaisuja extends React.Component<{}, State> {
       <Flex flexWrap="wrap" sx={{ p: 0 }}>
         <Box width={[1]} sx={{ p: 0 }}>
           <Card sx={{ p: 0, maxWidth: "100%" }}>
-            <Heading sx={{ fontSize: 4, p: 2, pb: 1 }}>
+            <Heading sx={{ fontSize: 4, p: 0, pb: 1 }}>
               Tieteellisiä julkaisuja
             </Heading>
             <p>
