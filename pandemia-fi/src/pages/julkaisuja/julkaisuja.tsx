@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Box, Flex } from "rebass";
-import { Input } from "theme-ui";
+import { Input, Text } from "theme-ui";
 
 import CategoryBadge from "../../components/categorybadge";
 import Button from "../../components/button";
@@ -164,12 +164,12 @@ export default class Julkaisuja extends React.Component<{}, State> {
                   t
                 )!;
                 return (
-                  <div
+                  <Box
                     onClick={() => this.setState({ filter: t })}
-                    style={{
+                    sx={{
                       cursor: "pointer",
                       display: "inline-block",
-                      margin: 3,
+                      margin: 1,
                     }}
                   >
                     <CategoryBadge
@@ -177,7 +177,7 @@ export default class Julkaisuja extends React.Component<{}, State> {
                       color={color.color}
                       bg={color.bg}
                     />
-                  </div>
+                  </Box>
                 );
               })}
             </Box>
@@ -215,7 +215,7 @@ export default class Julkaisuja extends React.Component<{}, State> {
                   })
                 }
               >
-                <div>Artikkelin nimi&nbsp;{this.renderSort("name")}</div>
+                <Text>Artikkelin nimi&nbsp;{this.renderSort("name")}</Text>
               </Box>
               <Box
                 className="cell head"
@@ -233,7 +233,7 @@ export default class Julkaisuja extends React.Component<{}, State> {
                   })
                 }
               >
-                <div>Päivämäärä&nbsp;{this.renderSort("date")}</div>
+                <Text>Päivämäärä&nbsp;{this.renderSort("date")}</Text>
               </Box>
               <Box
                 className="cell head"
@@ -251,7 +251,7 @@ export default class Julkaisuja extends React.Component<{}, State> {
                   })
                 }
               >
-                <div>Citations&nbsp;{this.renderSort("citations")}</div>
+                <Text>Citations&nbsp;{this.renderSort("citations")}</Text>
               </Box>
               <Box
                 className="cell head"
@@ -269,7 +269,7 @@ export default class Julkaisuja extends React.Component<{}, State> {
                   })
                 }
               >
-                <div>IF&nbsp;{this.renderSort("if")}</div>
+                <Text>IF&nbsp;{this.renderSort("if")}</Text>
               </Box>
               <Box
                 className="cell head"
@@ -287,7 +287,7 @@ export default class Julkaisuja extends React.Component<{}, State> {
                   })
                 }
               >
-                <div>Tags&nbsp;{this.renderSort("tags")}</div>
+                <Text>Tags&nbsp;{this.renderSort("tags")}</Text>
               </Box>
               {this.state.current
                 .sort((p1, p2) => {
@@ -331,74 +331,74 @@ export default class Julkaisuja extends React.Component<{}, State> {
                       width={1 / 2}
                       display={["none", "none", "block"]}
                     >
-                      <div>
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href={publication.link}
-                        >
-                          {publication.name}
-                        </a>
-                        <br />
-                        <br />
-                        {publication.authors}
-                      </div>
+                      <Box>
+                        <Box>
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={publication.link}
+                          >
+                            {publication.name}
+                          </a>
+                        </Box>
+                        <Box sx={{ pt: 1 }}>{publication.authors}</Box>
+                      </Box>
                     </Box>
                     <Box
                       className="cell"
                       width={1 / 8}
                       display={["none", "none", "block"]}
                     >
-                      <div>{publication.date}</div>
+                      <Text>{publication.date}</Text>
                     </Box>
                     <Box
                       className="cell"
                       width={1 / 8}
                       display={["none", "none", "block"]}
                     >
-                      <div>
+                      <Text>
                         {" "}
                         Cited by: {publication.citations}
                         <br />
                         n={publication.n}
-                      </div>
+                      </Text>
                     </Box>
                     <Box
                       className="cell"
                       width={1 / 8}
                       display={["none", "none", "block"]}
                     >
-                      <div>
+                      <Text>
                         {publication.if}
                         <br />
                         {publication.journal}
-                      </div>
+                      </Text>
                     </Box>
                     <Box
                       className="cell"
                       width={1 / 8}
                       display={["none", "none", "block"]}
                     >
-                      <div>
+                      <Box>
                         {publication.tags.map((t, i2) => {
                           const color: {
                             color: string;
                             bg: string;
                           } = tagMapColors.get(t)!;
                           return (
-                            <div
+                            <Box
                               key={i2}
-                              style={{ display: "inline-block", margin: 3 }}
+                              sx={{ display: "inline-block", margin: "3px" }}
                             >
                               <CategoryBadge
                                 title={t}
                                 color={color.color}
                                 bg={color.bg}
                               />
-                            </div>
+                            </Box>
                           );
                         })}
-                      </div>
+                      </Box>
                     </Box>
                     {/*MIDDLE SIZE*/}
                     <Box
@@ -406,7 +406,7 @@ export default class Julkaisuja extends React.Component<{}, State> {
                       width={3 / 5}
                       display={["none", "block", "none"]}
                     >
-                      <div>
+                      <Text>
                         <a
                           target="_blank"
                           rel="noopener noreferrer"
@@ -414,40 +414,40 @@ export default class Julkaisuja extends React.Component<{}, State> {
                         >
                           {publication.name}
                         </a>
-                      </div>
+                      </Text>
                     </Box>
                     <Box
                       className="cell no-border"
                       width={1 / 5}
                       display={["none", "block", "none"]}
                     >
-                      <div>{publication.if}</div>
+                      <Text>{publication.if}</Text>
                     </Box>
                     <Box
                       className="cell no-border"
                       width={1 / 5}
                       display={["none", "block", "none"]}
                     >
-                      <div>
+                      <Box>
                         {publication.tags.map((t, i2) => {
                           const color: {
                             color: string;
                             bg: string;
                           } = tagMapColors.get(t)!;
                           return (
-                            <div
+                            <Box
                               key={i2}
-                              style={{ display: "inline-block", margin: 3 }}
+                              sx={{ display: "inline-block", margin: "3px" }}
                             >
                               <CategoryBadge
                                 title={t}
                                 color={color.color}
                                 bg={color.bg}
                               />
-                            </div>
+                            </Box>
                           );
                         })}
-                      </div>
+                      </Box>
                     </Box>
 
                     <Box
@@ -455,40 +455,40 @@ export default class Julkaisuja extends React.Component<{}, State> {
                       width={1 / 5}
                       display={["none", "block", "none"]}
                     >
-                      <div
+                      <Box
                         style={{
                           display: "flex",
                           justifyContent: "space-between",
                         }}
                       >
-                        <div style={{ textAlign: "left" }}>
+                        <Text style={{ textAlign: "left" }}>
                           {publication.authors}
-                        </div>
-                        <div style={{ textAlign: "right" }}>
+                        </Text>
+                        <Text style={{ textAlign: "right" }}>
                           n={publication.n}
-                        </div>
-                      </div>
+                        </Text>
+                      </Box>
                     </Box>
                     <Box
                       className="cell"
                       width={1 / 5}
                       display={["none", "block", "none"]}
                     >
-                      <div> Cited by: {publication.citations}</div>
+                      <Text>Cited by: {publication.citations}</Text>
                     </Box>
                     <Box
                       className="cell"
                       width={1 / 5}
                       display={["none", "block", "none"]}
                     >
-                      <div>{publication.date}</div>
+                      <Text>{publication.date}</Text>
                     </Box>
                     <Box
                       className="cell"
                       width={2 / 5}
                       display={["none", "block", "none"]}
                     >
-                      <div>&nbsp;</div>
+                      <Text>&nbsp;</Text>
                     </Box>
                     {/*SMALL SIZE*/}
                     <Box
@@ -496,7 +496,7 @@ export default class Julkaisuja extends React.Component<{}, State> {
                       width={3 / 4}
                       display={["block", "none", "none"]}
                     >
-                      <div>
+                      <Text>
                         <a
                           target="_blank"
                           rel="noopener noreferrer"
@@ -504,18 +504,18 @@ export default class Julkaisuja extends React.Component<{}, State> {
                         >
                           {publication.name}
                         </a>
-                      </div>
+                      </Text>
                     </Box>
                     <Box
                       className="cell no-border"
                       width={1 / 4}
                       display={["block", "none", "none"]}
                     >
-                      <div>
+                      <Text>
                         {publication.if}
                         <br />
                         {publication.journal}
-                      </div>
+                      </Text>
                     </Box>
 
                     <Box
@@ -523,28 +523,28 @@ export default class Julkaisuja extends React.Component<{}, State> {
                       width={1 / 4}
                       display={["block", "none", "none"]}
                     >
-                      <div>{publication.authors}</div>
+                      <Text>{publication.authors}</Text>
                     </Box>
                     <Box
                       className="cell no-border"
                       width={1 / 4}
                       display={["block", "none", "none"]}
                     >
-                      <div>Cited by: {publication.citations}</div>
+                      <Text>Cited by: {publication.citations}</Text>
                     </Box>
                     <Box
                       className="cell no-border"
                       width={1 / 4}
                       display={["block", "none", "none"]}
                     >
-                      <div>n={publication.n}</div>
+                      <Text>n={publication.n}</Text>
                     </Box>
                     <Box
                       className="cell no-border"
                       width={1 / 4}
                       display={["block", "none", "none"]}
                     >
-                      <div>{publication.date}</div>
+                      <Text>{publication.date}</Text>
                     </Box>
 
                     <Box
@@ -552,31 +552,32 @@ export default class Julkaisuja extends React.Component<{}, State> {
                       width={1}
                       display={["block", "none", "none"]}
                     >
-                      <div>
+                      <Box>
                         {publication.tags.map((t, i2) => {
                           const color: {
                             color: string;
                             bg: string;
                           } = tagMapColors.get(t)!;
                           return (
-                            <div
+                            <Box
                               key={i2}
-                              style={{ display: "inline-block", margin: 3 }}
+                              sx={{ display: "inline-block", margin: "3px" }}
                             >
                               <CategoryBadge
                                 title={t}
                                 color={color.color}
                                 bg={color.bg}
                               />
-                            </div>
+                            </Box>
                           );
                         })}
-                      </div>
+                      </Box>
                     </Box>
                   </React.Fragment>
                 ))}
             </Flex>
-            <div className="pagination-controls">
+
+            <Box className="pagination-controls">
               <Flex
                 flexWrap="wrap"
                 justifyContent="space-between"
@@ -615,7 +616,7 @@ export default class Julkaisuja extends React.Component<{}, State> {
                   </Button>
                 </Box>
               </Flex>
-            </div>
+            </Box>
           </Box>
         </Box>
       </Flex>
