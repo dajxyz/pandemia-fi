@@ -26,6 +26,10 @@ const HeaderLinks = () => (
       Tietopankki
     </Link> */}
 
+    <Link type="header__nav" href="#/julkaisuja">
+      Julkaisuja
+    </Link>
+
     <Link type="header__nav" href="#/sivustosta">
       Tietoa meistä
     </Link>

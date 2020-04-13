@@ -6,6 +6,9 @@ interface BadgeProps {
   href?: string;
   image?: string;
   imageAlt?: string;
+  color?: string;
+  bg?: string;
+  border?: string;
 }
 
 /**
@@ -16,6 +19,9 @@ const CategoryBadge: React.FunctionComponent<BadgeProps> = ({
   href,
   image,
   imageAlt,
+  color,
+  bg,
+  border,
   children,
 }) => {
   return (
@@ -33,9 +39,9 @@ const CategoryBadge: React.FunctionComponent<BadgeProps> = ({
       <Box
         sx={{
           display: "inline-block",
-          color: "black",
-          bg: "white",
-          border: "1pt solid #aaa",
+          color: color || "black",
+          bg: bg || "white",
+          border: `1pt solid ${border || "#aaa"}`,
           fontSize: "10pt",
           px: 2,
           py: 1,

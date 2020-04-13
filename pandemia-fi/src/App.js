@@ -6,6 +6,7 @@ import Layout from "./components/layout";
 import LandingPage from "./pages/landing";
 import Uutishuone from "./pages/uutishuone";
 import Tietopankki from "./pages/tietopankki";
+import Julkaisuja from "./pages/julkaisuja";
 import About from "./pages/about";
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route path="/tietopankki">
             <Tietopankki />
+          </Route>
+          <Route path="/julkaisuja">
+            <Julkaisuja />
           </Route>
           <Route path="/sivustosta">
             <About />
