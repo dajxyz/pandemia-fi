@@ -207,6 +207,22 @@ yarn run styleguide
 yarn run styleguide:build
 ```
 
+### webhint
+
+Use [`webhint`](https://webhint.io/) ([source code](https://github.com/webhintio/hint)) to test application locally.
+
+To make it work, first start local development server with:
+
+```sh
+yarn run start
+```
+
+After that, run command to
+
+```sh
+yarn run webhint http://localhost:3000
+```
+
 #### More details
 
 - Create React App (CRA) documentation:
