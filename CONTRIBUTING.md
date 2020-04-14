@@ -209,7 +209,7 @@ yarn run styleguide:build
 
 ### webhint
 
-Use [`webhint`](https://webhint.io/) ([source code](https://github.com/webhintio/hint)) to test application locally.
+You can use [`webhint`](https://webhint.io/) ([source code](https://github.com/webhintio/hint)) to test application locally.
 
 To make it work, first start local development server with:
 
@@ -217,11 +217,24 @@ To make it work, first start local development server with:
 yarn run start
 ```
 
-After that, run command to
+After that, run command with the local address of the site:
 
 ```sh
 yarn run webhint http://localhost:3000
 ```
+
+Results will be generated to a HTML file under `hint-report` directory.
+
+For testing individual sections of the application:
+
+```sh
+yarn run webhint http://localhost:3000/#/
+yarn run webhint http://localhost:3000/#/uutishuone
+yarn run webhint http://localhost:3000/#/julkaisuja
+yarn run webhint http://localhost:3000/#/sivustosta
+```
+
+More details about local testing can be read from the official webhint documentation: [Test a local server](https://webhint.io/docs/user-guide/development-flow-integration/local-server/)
 
 #### More details
 
