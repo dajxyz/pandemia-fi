@@ -1,5 +1,4 @@
 {
-  "cSpell.words": ["browserconfig"],
   "markdownlint.config": {
     "default": true,
     "MD003": {
@@ -10,15 +9,11 @@
     "MD033": false,
     "MD041": false
   },
-  "color-highlight.markerType": "underline",
-  "color-highlight.markRuler": false,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.renderWhitespace": "all",
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
-  "javascript.validate.enable": false,
-  "window.restoreWindows": "all",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.fixAll.tslint": true,
@@ -35,13 +30,5 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "css.trace.server": "off",
-  "gitlens.advanced.telemetry.enabled": false,
-  "html.trace.server": "off",
-  "json.trace.server": "off",
-  "markdown.trace": "off",
-  "screencastMode.onlyKeyboardShortcuts": true,
-  "telemetry.enableCrashReporter": false,
-  "telemetry.enableTelemetry": false
+  }
 }
