@@ -22,6 +22,11 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Python virtual environments
+# - https://docs.python.org/3/library/venv.html
+# - https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
+.venv
+
 # Local temporary notes ignored while still allowing
 # to keep them locally in the same directory
 /NOTES.md
