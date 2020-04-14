@@ -65,10 +65,10 @@ use following steps to setup your local environment.
 - Run command to create venv virtual environment.
 
 ```sh
-python3 -m venv .venv
+python3 -m venv venv
 ```
 
-This will create a `.venv` directory for your Python-related project dependencies. It is ignored on the project-level `.gitignore` file to avoid adding of any unneeded files to the Git repository.
+This will create a `venv` directory for your Python-related project dependencies. It is ignored on the project-level `.gitignore` file to avoid adding of any unneeded files to the Git repository.
 
 ##### Virtual environments described
 
@@ -89,13 +89,13 @@ Use of virtual environments is recommended by the official Python documentation:
 On macOS and Linux:
 
 ```sh
-source .venv/bin/activate
+source venv/bin/activate
 ```
 
 On Windows:
 
 ```cmd
-.\.venv\Scripts\activate
+.\venv\Scripts\activate
 ```
 
 #### Leaving the virtual environment
@@ -113,7 +113,7 @@ On Windows:
 - Install Python packages that are defined in the `requirements.txt` file
 
 ```sh
-source .venv/bin/activate
+source venv/bin/activate
 cd pandemia-fi/tools
 pip3 install -r requirements.txt
 ```
@@ -125,7 +125,7 @@ pip3 install -r requirements.txt
 - Start command to get latest data for the charts
 
 ```sh
-source .venv/bin/activate
+source venv/bin/activate
 cd pandemia-fi
 python3 tools/generate_charts.py
 ```
