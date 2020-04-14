@@ -1,0 +1,153 @@
+{
+    "data_format": "pandemia-fi-today-numbers-v1",
+    "sources": {
+        "ECDC": {
+            "source_link": "https://opendata.ecdc.europa.eu/covid19/casedistribution/json/",
+            "source_data_fecthed_UTC": "2020-04-13T21:30:33.629185+00:00"
+        }
+    },
+    "today_numbers_by_country": {
+        "Finland": {
+            "cumulative_confirmed_cases": 2974,
+            "cumulative_deaths": 56,
+            "new_confirmed_compared_to_yesterday": 69,
+            "new_confirmed_compared_to_yesterday_percentage": 2.38,
+            "new_deaths_compared_to_yesterday": 7,
+            "new_deaths_compared_to_yesterday_percentage": 14.29,
+            "last_date": "2020-04-13",
+            "source": "ECDC"
+        },
+        "Sweden": {
+            "cumulative_confirmed_cases": 10483,
+            "cumulative_deaths": 899,
+            "new_confirmed_compared_to_yesterday": 332,
+            "new_confirmed_compared_to_yesterday_percentage": 3.27,
+            "new_deaths_compared_to_yesterday": 12,
+            "new_deaths_compared_to_yesterday_percentage": 1.35,
+            "last_date": "2020-04-13",
+            "source": "ECDC"
+        },
+        "Norway": {
+            "cumulative_confirmed_cases": 6415,
+            "cumulative_deaths": 103,
+            "new_confirmed_compared_to_yesterday": 95,
+            "new_confirmed_compared_to_yesterday_percentage": 1.5,
+            "new_deaths_compared_to_yesterday": 5,
+            "new_deaths_compared_to_yesterday_percentage": 5.1,
+            "last_date": "2020-04-13",
+            "source": "ECDC"
+        },
+        "Estonia": {
+            "cumulative_confirmed_cases": 1309,
+            "cumulative_deaths": 25,
+            "new_confirmed_compared_to_yesterday": 5,
+            "new_confirmed_compared_to_yesterday_percentage": 0.38,
+            "new_deaths_compared_to_yesterday": 1,
+            "new_deaths_compared_to_yesterday_percentage": 4.17,
+            "last_date": "2020-04-13",
+            "source": "ECDC"
+        },
+        "Denmark": {
+            "cumulative_confirmed_cases": 6174,
+            "cumulative_deaths": 273,
+            "new_confirmed_compared_to_yesterday": 178,
+            "new_confirmed_compared_to_yesterday_percentage": 2.97,
+            "new_deaths_compared_to_yesterday": 13,
+            "new_deaths_compared_to_yesterday_percentage": 5.0,
+            "last_date": "2020-04-13",
+            "source": "ECDC"
+        },
+        "Russia": {
+            "cumulative_confirmed_cases": 15770,
+            "cumulative_deaths": 130,
+            "new_confirmed_compared_to_yesterday": 2186,
+            "new_confirmed_compared_to_yesterday_percentage": 16.09,
+            "new_deaths_compared_to_yesterday": 24,
+            "new_deaths_compared_to_yesterday_percentage": 22.64,
+            "last_date": "2020-04-13",
+            "source": "ECDC"
+        },
+        "Italy": {
+            "cumulative_confirmed_cases": 156363,
+            "cumulative_deaths": 19901,
+            "new_confirmed_compared_to_yesterday": 4092,
+            "new_confirmed_compared_to_yesterday_percentage": 2.69,
+            "new_deaths_compared_to_yesterday": 431,
+            "new_deaths_compared_to_yesterday_percentage": 2.21,
+            "last_date": "2020-04-13",
+            "source": "ECDC"
+        },
+        "Spain": {
+            "cumulative_confirmed_cases": 166019,
+            "cumulative_deaths": 16972,
+            "new_confirmed_compared_to_yesterday": 4167,
+            "new_confirmed_compared_to_yesterday_percentage": 2.57,
+            "new_deaths_compared_to_yesterday": 619,
+            "new_deaths_compared_to_yesterday_percentage": 3.79,
+            "last_date": "2020-04-13",
+            "source": "ECDC"
+        },
+        "France": {
+            "cumulative_confirmed_cases": 95403,
+            "cumulative_deaths": 14393,
+            "new_confirmed_compared_to_yesterday": 1613,
+            "new_confirmed_compared_to_yesterday_percentage": 1.72,
+            "new_deaths_compared_to_yesterday": 561,
+            "new_deaths_compared_to_yesterday_percentage": 4.06,
+            "last_date": "2020-04-13",
+            "source": "ECDC"
+        },
+        "Germany": {
+            "cumulative_confirmed_cases": 123016,
+            "cumulative_deaths": 2799,
+            "new_confirmed_compared_to_yesterday": 2537,
+            "new_confirmed_compared_to_yesterday_percentage": 2.11,
+            "new_deaths_compared_to_yesterday": 126,
+            "new_deaths_compared_to_yesterday_percentage": 4.71,
+            "last_date": "2020-04-13",
+            "source": "ECDC"
+        },
+        "United_Kingdom": {
+            "cumulative_confirmed_cases": 84279,
+            "cumulative_deaths": 10612,
+            "new_confirmed_compared_to_yesterday": 5288,
+            "new_confirmed_compared_to_yesterday_percentage": 6.69,
+            "new_deaths_compared_to_yesterday": 737,
+            "new_deaths_compared_to_yesterday_percentage": 7.46,
+            "last_date": "2020-04-13",
+            "source": "ECDC"
+        },
+        "United_States_of_America": {
+            "cumulative_confirmed_cases": 557571,
+            "cumulative_deaths": 22108,
+            "new_confirmed_compared_to_yesterday": 27620,
+            "new_confirmed_compared_to_yesterday_percentage": 5.21,
+            "new_deaths_compared_to_yesterday": 1500,
+            "new_deaths_compared_to_yesterday_percentage": 7.28,
+            "last_date": "2020-04-13",
+            "source": "ECDC"
+        }
+    },
+    "today_numbers_by_area": {
+        "Europe": {
+            "cumulative_confirmed_cases": 782311,
+            "cumulative_deaths": 74670,
+            "new_confirmed_compared_to_yesterday": 23621,
+            "new_confirmed_compared_to_yesterday_percentage": 3.11,
+            "new_deaths_compared_to_yesterday": 3007,
+            "new_deaths_compared_to_yesterday_percentage": 4.2,
+            "last_date": "2020-04-13",
+            "source": "ECDC"
+        },
+        "World": {
+            "cumulative_confirmed_cases": 1807308,
+            "cumulative_deaths": 113513,
+            "new_confirmed_compared_to_yesterday": 72395,
+            "new_confirmed_compared_to_yesterday_percentage": 4.17,
+            "new_deaths_compared_to_yesterday": 5321,
+            "new_deaths_compared_to_yesterday_percentage": 4.92,
+            "last_date": "2020-04-13",
+            "source": "ECDC"
+        }
+    }
+}
