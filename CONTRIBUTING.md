@@ -53,6 +53,85 @@ If you are planning to contribute improvements to that, please ask for extra det
 
 ---
 
+### Tools for Python development
+
+If you are running or making modifications to the Python scripts on this repository,
+use following steps to setup your local environment.
+
+- Open project directory with a terminal.
+
+#### Python virtual environments
+
+- Run command to create venv virtual environment.
+
+```sh
+python3 -m venv .venv
+```
+
+This will create a `.venv` directory for your Python-related project dependencies. It is ignored on the project-level `.gitignore` file to avoid adding of any unneeded files to the Git repository.
+
+##### Virtual environments described
+
+> "The venv module provides support for creating lightweight “virtual environments” with their own site directories, optionally isolated from system site directories. Each virtual environment has its own Python binary (which matches the version of the binary that was used to create this environment) and can have its own independent set of installed Python packages in its site directories."
+>
+> — [venv — Creation of virtual environments](https://docs.python.org/3/library/venv.html). Python 3.8.2 documentation.
+
+Use of virtual environments is recommended by the official Python documentation:
+
+> "When you switch projects, you can simply create a new virtual environment and not have to worry about breaking the packages installed in the other environments. It is always recommended to use a virtual environment while developing Python applications."
+>
+> — [Installing packages using pip and virtual environments](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/). Python Packaging User Guide.
+
+#### Activating a virtual environment
+
+> "Before you can start installing or using packages in your virtual environment you’ll need to activate it. Activating a virtual environment will put the virtual environment-specific python and pip executables into your shell’s PATH."
+
+On macOS and Linux:
+
+```sh
+source .venv/bin/activate
+```
+
+On Windows:
+
+```cmd
+.\.venv\Scripts\activate
+```
+
+#### Leaving the virtual environment
+
+> "If you want to switch projects or otherwise leave your virtual environment, simply run:
+>
+> `deactivate`
+>
+> If you want to re-enter the virtual environment just follow the same instructions above about activating a virtual environment. There’s no need to re-create the virtual environment."
+
+### Install dependencies
+
+- Activate virtual environment
+- Go to `pandemia-fi/tools` directory
+- Install Python packages that are defined in the `requirements.txt` file
+
+```sh
+source .venv/bin/activate
+cd pandemia-fi/tools
+pip3 install -r requirements.txt
+```
+
+### Run tool to get latest data
+
+- Activate virtual environment
+- Go to `pandemia-fi/` directory
+- Start command to get latest data for the charts
+
+```sh
+source .venv/bin/activate
+cd pandemia-fi
+python3 tools/generate_charts.py
+```
+
+---
+
 ## Source code
 
 The new code lives under the `pandemia-fi` directory,
