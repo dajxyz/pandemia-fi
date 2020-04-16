@@ -111,6 +111,13 @@ interface State {
 }
 
 /**
+ * Cell head display value
+ *
+ * Define how to display the Box component on different screen sizes
+ */
+const cellHeadDisplay = ["none", "block", "block"];
+
+/**
  * Julkaisuja section of the website
  */
 export default class Julkaisuja extends React.Component<{}, State> {
@@ -202,7 +209,7 @@ export default class Julkaisuja extends React.Component<{}, State> {
               <Box
                 className="cell head first"
                 width={[1 / 5, 1 / 5, 1 / 2]}
-                display={["none", "block", "block"]}
+                display={cellHeadDisplay}
                 onClick={() =>
                   this.setState({
                     sort: "name",
@@ -220,7 +227,7 @@ export default class Julkaisuja extends React.Component<{}, State> {
               <Box
                 className="cell head"
                 width={[1 / 5, 1 / 5, 1 / 8]}
-                display={["none", "block", "block"]}
+                display={cellHeadDisplay}
                 onClick={() =>
                   this.setState({
                     sort: "date",
@@ -238,7 +245,7 @@ export default class Julkaisuja extends React.Component<{}, State> {
               <Box
                 className="cell head"
                 width={[1 / 5, 1 / 5, 1 / 8]}
-                display={["none", "block", "block"]}
+                display={cellHeadDisplay}
                 onClick={() =>
                   this.setState({
                     sort: "citations",
@@ -256,7 +263,7 @@ export default class Julkaisuja extends React.Component<{}, State> {
               <Box
                 className="cell head"
                 width={[1 / 5, 1 / 5, 1 / 8]}
-                display={["none", "block", "block"]}
+                display={cellHeadDisplay}
                 onClick={() =>
                   this.setState({
                     sort: "if",
@@ -274,7 +281,7 @@ export default class Julkaisuja extends React.Component<{}, State> {
               <Box
                 className="cell head"
                 width={[1 / 5, 1 / 5, 1 / 8]}
-                display={["none", "block", "block"]}
+                display={cellHeadDisplay}
                 onClick={() =>
                   this.setState({
                     sort: "tags",
