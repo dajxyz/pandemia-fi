@@ -172,6 +172,7 @@ export default class Julkaisuja extends React.Component<{}, State> {
                 )!;
                 return (
                   <Box
+                    key={t}
                     onClick={() => this.setState({ filter: t })}
                     sx={{
                       cursor: "pointer",

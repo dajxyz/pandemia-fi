@@ -13,7 +13,7 @@ const Layout: React.FunctionComponent = ({ children }) => (
       sx={{
         width: "100%",
         maxWidth: "1080px",
-        "align-self": "center",
+        alignSelf: "center",
         // background: "#eee",
       }}
     >
