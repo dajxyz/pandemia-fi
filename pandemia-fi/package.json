@@ -19,7 +19,7 @@
     "react-fetch-hook": "^1.8.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "react-spinners": "^0.8.1",
+    "react-spinners": "^0.8.3",
     "rebass": "^4.0.7",
     "rss-parser": "^3.7.6",
     "theme-ui": "0.3.1"
