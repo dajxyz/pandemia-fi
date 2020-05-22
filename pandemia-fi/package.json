@@ -21,7 +21,7 @@
     "react-scripts": "3.4.1",
     "react-spinners": "^0.8.3",
     "rebass": "^4.0.7",
-    "rss-parser": "^3.7.6",
+    "rss-parser": "^3.8.0",
     "theme-ui": "0.3.1"
   },
   "scripts": {
